@@ -37,7 +37,8 @@ liststotoc, % Uncomment to add the list of figures/tables/etc to the table of co
 %toctotoc, % Uncomment to add the main table of contents to the table of contents (not recommended)
 parskip, % Add space between paragraphs (recommended)
 %nohyperref, % Uncomment to not load the hyperref package (not recommended)
-nohyperreflinkcolor, % hyperref links are not colored (comment to color links, for example to produce an electronic-only version)
+nohyperreflinkcolor, % hyperref links are not colored (comment to color links, for 
+example to produce an electronic-only version)
 headsepline, % Uncomment to get a line under the header
 ]{tmdei-style} % The class file specifying the document structure
 
@@ -46,6 +47,8 @@ headsepline, % Uncomment to get a line under the header
 
 \usepackage{pgfplots} % Required for drawing high--quality function plots (can be removed if not used)
 \pgfplotsset{compat=newest}
+
+\usepackage[hidelinks]{hyperref} % no borders on links
 
 %
 % Next you have examples of admissable citation styles; we recomend using the authoryear-comp citation style (which resembles Harvard); don't forget to only uncomment one
