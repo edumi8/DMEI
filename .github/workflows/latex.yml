@@ -1,0 +1,59 @@
+name: Build LaTeX PDF
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+jobs:
+    build-pdf:
+        name: Compile LaTeX and upload PDF
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Cache LaTeX build artifacts
+              uses: actions/cache@v4
+              with:
+                  path: |
+                      build
+                      fdb_latexmk
+                      **/*.aux
+                      **/*.fls
+                      **/*.fdb_latexmk
+                  key: ${{ runner.os }}-latex-${{ hashFiles('**/*.tex','**/*.bib') }}
+                  restore-keys: |
+                      ${{ runner.os }}-latex-
+
+            - name: Compile using xu-cheng/latex-action
+              uses: xu-cheng/latex-action@v3
+              with:
+                  root_file: main.tex
+
+            - name: Show files (debug)
+              run: |
+                  echo "Workspace files:"
+                  ls -la
+
+            - name: Upload build logs and aux files
+              if: always()
+              uses: actions/upload-artifact@v4
+              with:
+                  name: latex-logs
+                  path: |
+                      *.log
+                      *.fls
+                      *.aux
+                      *.out
+                      build/**/*.log
+                      build/**/*.aux
+
+            - name: Upload PDF artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: thesis-pdf
+                  path: |
+                      main.pdf
+                      build/main.pdf
