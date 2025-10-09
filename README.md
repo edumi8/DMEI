@@ -8,11 +8,23 @@ This template explains the main formatting rules to apply to a Master Dissertati
 
 Based on MastersDoctoralThesis version 1.2 by Vel (vel@latextemplates.com) and Johannes Böttcher, downloaded from [LaTeXTemplates](http://www.LaTeXTemplates.com) in November/2015. Adapted to TMDEI/ISEP style (Dec/2015) by Nuno Pereira and Paulo Baltarejo (DEI/ISEP).
 
-## Also on Overleaf (recommended for Windows users) ##
+## Online LaTeX Editors
+
+You can use online editors to avoid setting up LaTeX and to enable easier collaboration. Our template is available as an Overleaf Template. Alternatively, you can also use Crixet.
+
+### Overleaf
 
 "Overleaf is an online LaTeX and Rich Text collaborative writing and publishing tool that makes the whole process of writing, editing and publishing scientific documents much quicker and easier".
 
 This template is also available as a [template at Overleaf](https://www.overleaf.com/latex/templates/dissertation-template-for-the-msc-in-computer-engineering-dei-isep/dtvkwwtwzccc).
+
+**Note:** Due to compilation time restrictions imposed by Overleaf, the template may not compile on free accounts.
+
+### Crixet: The Overleaf Alternative ##
+
+"Crixet runs in your browser, skipping complex LaTeX setups so you can collaborate, use AI, and start writing in minutes"   
+
+If you are unable to compile the template on Overleaf, you may consider [Crixet](https://crixet.com/) as an alternative. 
 
 ## How do I get set up? ##
 
