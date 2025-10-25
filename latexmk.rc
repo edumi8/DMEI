@@ -1,0 +1,23 @@
+#!/usr/bin/perl
+# Minimal latexmk configuration to ensure glossaries are built when latexmk runs.
+# This file is intentionally small and only adds a custom dependency to invoke
+# makeglossaries on the document base name. The Makefile runs latexmk with
+# -outdir=build and -auxdir=build, so we call makeglossaries with -d build.
+
+# Add a custom dependency: .glo -> .gls via makeglossaries
+add_cus_dep('glo','gls',0,'makeglossaries');
+
+sub makeglossaries {
+    my ($basename) = @_;
+    # latexmk will put auxiliary files in the build directory when invoked
+    # with -outdir=build. Call makeglossaries with that directory.
+    my $cmd = "makeglossaries -d build $basename";
+    print "Running: $cmd\n";
+    my $rv = system($cmd);
+    if ($rv != 0) {
+        print "Warning: makeglossaries returned $rv — continuing build (glossary may be empty)\n";
+    }
+    return 1;
+}
+
+1;
