@@ -17,8 +17,8 @@ If you are new to \LaTeX{}, there is a very good eBook -- freely available onlin
 
 It is also available in several other languages. Find yours from the list on this page: \url{http://www.ctan.org/tex-archive/info/lshort/}
 
-It is recommended to take a little time out to learn how to use \LaTeX{} by creating several, small `test' documents, or having a close look at several templates on:\\
-\url{http://www.LaTeXTemplates.com}\\
+It is recommended to take a little time out to learn how to use \LaTeX{} by creating several, small `test' documents, or having a close look at several templates on:\\ 
+\url{http://www.LaTeXTemplates.com}\\ 
 Making the effort now means you're not stuck learning the system when what you \emph{really} need to be doing is writing your thesis.
 
 \subsection{A Short Math Guide for \LaTeX{}}
@@ -40,8 +40,8 @@ E = mc^{2}
 
 This will produce Einstein's famous energy-matter equivalence equation:
 \begin{equation}
-	E = mc^{2}
-	\label{eqn:Einstein}
+E = mc^{2}
+\label{eqn:Einstein}
 \end{equation}
 
 All equations you write (which are not in the middle of paragraph text) are automatically given equation numbers by \LaTeX{}. If you don't want a particular equation numbered, use the unnumbered form:
@@ -52,7 +52,7 @@ All equations you write (which are not in the middle of paragraph text) are auto
 \LaTeX{} automatically adjusts the style of the math expressions according to the case if they are inline or not (so that they occupy more or less space), but you can set this explicitly. For instance, if you want an in-line mathematical element to display as a equation-like element put \verb|\displaystyle| before that element. Use \verb|\textstyle| for small, inline-like maths, before the command that generates the element.
 
 \subsection{Obtaining \LaTeX{}}
-
+ 
 The \LaTeX{} distribution is available for many systems including Windows, Linux and Mac OS X. Check the webpage for the \LaTeX{} project for more information: \url{https://latex-project.org/ftp.html}.
 
 %----------------------------------------------------------------------------------------
@@ -89,7 +89,7 @@ This template is composed of several files and folders. The folder names are mos
 \keyword{appendices} -- this is the folder where you put the appendices. Each appendix should go into its own separate \file{.tex} file. An example and template are included in the directory.
 
 \keyword{build} -- this is the folder where the output of building your document is put. Everytime you build your document,
-\LaTeX{} creates a number of auxiliary files that are written to this folder. These auxiliary files can be ignored or deleted as \LaTeX{} and BibTeX will regenerate them\footnote{Some changes require rebuilding temporary files again; actually, a document with citations may require up to three passes. For this reason, we recommend using the included \keyword{Makefile} which deals with such details}. Note that the resulting \file{pdf} file is written to this folder and then copied to the root folder of the template.
+ \LaTeX{} creates a number of auxiliary files that are written to this folder. These auxiliary files can be ignored or deleted as \LaTeX{} and BibTeX will regenerate them\footnote{Some changes require rebuilding temporary files again; actually, a document with citations may require up to three passes. For this reason, we recommend using the included \keyword{Makefile} which deals with such details}. Note that the resulting \file{pdf} file is written to this folder and then copied to the root folder of the template.
 
 \subsection{Files}
 
@@ -97,13 +97,13 @@ Included are also several files, most of them are plain text and you can see the
 
 \keyword{main-bibliography.bib} -- this is an important file that contains all the bibliographic information and references that you will be citing in the thesis for use with BibTeX. You can write it manually, but there are reference manager programs available that will create and manage it for you. Bibliographies in \LaTeX{} are a large subject and you may need to read about BibTeX before starting with this (check, for example: \url{http://www.bibtex.org/Using/}). Many modern reference managers will allow you to export your references in BibTeX format which greatly eases the amount of work you have to do.
 
-\keyword{tmdei-style.cls} -- this is an important file. It is the class file that tells \LaTeX{} how to format the thesis.
+\keyword{tmdei-style.cls} -- this is an important file. It is the class file that tells \LaTeX{} how to format the thesis. 
 
 \keyword{main.pdf} -- this is your beautifully typeset thesis (in the PDF file format) created by \LaTeX{}. It is supplied in the PDF with the template and after you compile the template you should get an identical version.
 
 \keyword{main.tex} -- this is an important file. This is the file that you tell \LaTeX{} to compile to produce your thesis as a PDF file. It contains the framework and constructs that tell \LaTeX{} how to layout the thesis. It is heavily commented so you can read exactly what each line of code does and why it is there. After you put your own information into the \emph{THESIS INFORMATION} block -- you have now started your thesis!
 
-\keyword{Makefile} -- this is an important file. This file describes the steps that need to be taken to transform the \keyword{main.tex} into a PDF file. It uses the command \keyword{latexmk} which knows how to properly build a \LaTeX{} source file. To use it, open a command line and type \keyword{make} in the base folder of the template. You can also remove temporary files with \keyword{make clean}.
+\keyword{Makefile} -- this is an important file. This file describes the steps that need to be taken to transform the \keyword{main.tex} into a PDF file. It uses the command \keyword{latexmk} which knows how to properly build a \LaTeX{} source file. To use it, open a command line and type \keyword{make} in the base folder of the template. You can also remove temporary files with \keyword{make clean}. 
 
 \keyword{latexmk.rc} -- this file is required to appropriately build documents with glossaries using \keyword{latexmk}. Essentially, it tells \keyword{latexmk} that it also needs to run the command  \keyword{makeglossaries} to build the document.
 
@@ -113,9 +113,9 @@ To build the document and create a \file{pdf} file from the \LaTeX{} source, you
 
 The \keyword{Makefile} can be used by invoking the command \keyword{make}:
 \begin{itemize}
-	\item \code{make} -- Builds the document using the command \keyword{latexmk} which knows how to properly build a \LaTeX{} source file;
-	\item \code{make clean} -- Deletes auxiliary files using the command \keyword{latexmk} which knows the files created every time the document is built;
-	\item \code{make clean-all} -- Deletes all auxiliary files and bibliography cache.
+\item \code{make} -- Builds the document using the command \keyword{latexmk} which knows how to properly build a \LaTeX{} source file;
+\item \code{make clean} -- Deletes auxiliary files using the command \keyword{latexmk} which knows the files created every time the document is built;
+\item \code{make clean-all} -- Deletes all auxiliary files and bibliography cache.
 \end{itemize}
 
 \subsubsection*{Manually Building the Document}
@@ -123,15 +123,15 @@ The \keyword{Makefile} can be used by invoking the command \keyword{make}:
 The general process of building the document is as follows. You can execute these commands to manually build your document. This can be convenient also for debug purposes, should you encounter any problem.
 
 \begin{enumerate}
-	\item \code{pdflatex -aux-directory=build -output-directory=build main} -- The command \keyword{pdflatex} writes all \verb|\cite{...}| arguments to an auxiliary file.
+  \item \code{pdflatex -aux-directory=build -output-directory=build main} -- The command \keyword{pdflatex} writes all \verb|\cite{...}| arguments to an auxiliary file.
 
-	\item \code{biber -input-directory=build -output-directory=build main} -- The command \keyword{biber}, processes the previously created auxiliary file and the bibliography is produced.
+  \item \code{biber -input-directory=build -output-directory=build main} -- The command \keyword{biber}, processes the previously created auxiliary file and the bibliography is produced.
 
-	\item \code{makeglossaries -d build main} -- The command \keyword{makeglossaries}, goes through the document to process the \verb|\gls{...}| commands.
+  \item \code{makeglossaries -d build main} -- The command \keyword{makeglossaries}, goes through the document to process the \verb|\gls{...}| commands.
 
-	\item \code{pdflatex -aux-directory=build -output-directory=build main} -- \keyword{pdflatex} is run again to include the bibliography, and write the correct labels in the auxiliary file.
+  \item \code{pdflatex -aux-directory=build -output-directory=build main} -- \keyword{pdflatex} is run again to include the bibliography, and write the correct labels in the auxiliary file.
 
-	\item \code{pdflatex -aux-directory=build -output-directory=build main} -- \keyword{pdflatex} is run once again, to include the labels and produce the final document.
+  \item \code{pdflatex -aux-directory=build -output-directory=build main} -- \keyword{pdflatex} is run once again, to include the labels and produce the final document.
 \end{enumerate}
 
 The above commands should be executed in the root folder of the template. Note that some of the commands might be omitted if the necessary auxiliary files were constructed previously, and no changes that require the auxiliary files to be rebuilt were made.
@@ -154,7 +154,7 @@ When you have done this, save the file and recompile \code{main.tex}. All the in
 
 The \file{main.tex} file contains the structure of the thesis. There are plenty of written comments that explain what pages, sections and formatting the \LaTeX{} code is creating. Each major document element is divided into commented blocks with titles in all capitals to make it obvious what the following bit of code is doing. Initially there seems to be a lot of \LaTeX{} code, but this is all formatting, and it has all been taken care of so you don't have to do it.
 
-Begin by checking that your information on the title page is correct. It can be changed by editing the block titled \emph{THESIS INFORMATION} in \file{main.tex}.
+Begin by checking that your information on the title page is correct. It can be changed by editing the block titled \emph{THESIS INFORMATION} in \file{main.tex}. 
 
 After the title page, the frontmatter is included. The frontmatter includes the dedicatory, abstract, acknowledgement, contents pages, list of figures and tables. The frontmatter is further detailed in Section~\ref{sec:frontmatter}.
 
@@ -197,15 +197,15 @@ The text is set to 11 point by default with single line spacing, again, you can 
 
 The \code{biblatex} package is used to format the bibliography and inserts references such as this one \parencite{Reference1}. The options used in the \file{main.tex} file mean that the in-text citations of references are formatted with the author(s) listed with the date of the publication. Multiple references are separated by semicolons (e.g. \parencite{Reference2, Reference1}) and references with more than three authors only show the first author with \emph{et al.} indicating there are more authors (e.g. \parencite{Reference3}). This is done automatically for you. To see how you use references, have a look at the \file{Chapter2.tex} source file. Many reference managers allow you to simply drag the reference into the document as you type.
 
-Scientific references should come \emph{before} the punctuation mark if there is one (such as a comma or period). The same goes for footnotes\footnote{Such as this footnote, here down at the bottom of the page.}. You can change this but the most important thing is to keep the convention consistent throughout the document. Footnotes themselves should be full, descriptive sentences (beginning with a capital letter and ending with a full stop).
+Scientific references should come \emph{before} the punctuation mark if there is one (such as a comma or period). The same goes for footnotes\footnote{Such as this footnote, here down at the bottom of the page.}. You can change this but the most important thing is to keep the convention consistent throughout the document. Footnotes themselves should be full, descriptive sentences (beginning with a capital letter and ending with a full stop). 
 
 The bibliography is typeset with references listed in alphabetical order by the first author's last name. This is similar to the Harvard referencing style. To see how \LaTeX{} typesets the bibliography, have a look at the very end of this document (or just click on the reference number links in in-text citations).
 
 \subsubsection*{More citation examples}
 
-\begin{enumerate} \item A citation command \verb!\parencite{Reference1}! results in a citation in parentheses: \parencite{Reference1}.
-	\item A citation command \verb!\textcite{Reference2}!, can used in the flow of text: As \textcite{Reference2} said \dots
-	\item A citation command \verb!\autocite{Reference3}! automatically switches style depending on location and the option setting in the package declaration. In this case, it produces a citation in parentheses: \autocite{Reference3}. \end{enumerate}
+\begin{enumerate} \item A citation command \verb!\parencite{Reference1}! results in a citation in parentheses: \parencite{Reference1}. 
+\item A citation command \verb!\textcite{Reference2}!, can used in the flow of text: As \textcite{Reference2} said \dots 
+\item A citation command \verb!\autocite{Reference3}! automatically switches style depending on location and the option setting in the package declaration. In this case, it produces a citation in parentheses: \autocite{Reference3}. \end{enumerate}
 
 \subsubsection*{A Note on bibtex}
 
@@ -236,19 +236,19 @@ Tables are an important way of displaying your results, Table~\ref{tab:treatment
 }
 
 \begin{table}
-	\caption{The effects of treatments X and Y on the four groups studied.}
-	\label{tab:treatments}
-	\centering
-	\begin{tabular}{l l l}
-		\toprule
-		\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
-		\midrule
-		1                & 0.2                   & 0.8                   \\
-		2                & 0.17                  & 0.7                   \\
-		3                & 0.24                  & 0.75                  \\
-		4                & 0.68                  & 0.3                   \\
-		\bottomrule                                                      \\
-	\end{tabular}
+\caption{The effects of treatments X and Y on the four groups studied.}
+\label{tab:treatments}
+\centering
+\begin{tabular}{l l l}
+\toprule
+\tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment Y} \\
+\midrule
+1 & 0.2 & 0.8\\
+2 & 0.17 & 0.7\\
+3 & 0.24 & 0.75\\
+4 & 0.68 & 0.3\\
+\bottomrule\\
+\end{tabular}
 \end{table}
 
 You can reference tables with \verb|\ref{<label>}| where the label is defined within the table environment. See \file{Chapter2.tex} for an example of the label and citation (e.g. Table~\ref{tab:treatments}).
@@ -265,28 +265,28 @@ There will hopefully be many figures in your thesis (that should be placed in th
 \label{fig:Electron}
 \end{figure}
 \end{verbatim}
-Also look in the source file. Note that the path is relative to the \file{main.tex} file location. Putting this code into the source file produces the picture of the electron that you can see in Figure~\ref{fig:electron}.
+Also look in the source file. Note that the path is relative to the \file{main.tex} file location. Putting this code into the source file produces the picture of the electron that you can see in Figure~\ref{fig:electron}. 
 
 \begin{figure}[b]
-	\centering
-	\includegraphics[scale=0.5]{ch2/assets/electron}
-	\caption[An Electron]{An electron (artist's impression).}
-	\label{fig:electron}
+\centering
+\includegraphics[scale=0.5]{ch2/assets/electron}
+\caption[An Electron]{An electron (artist's impression).}
+\label{fig:electron}
 \end{figure}
 
-Sometimes figures don't always appear where you specify in the source. The placement depends on how much space there is on the page for the figure. Sometimes there is not enough room to fit a figure directly where it should go (in relation to the text) and so \LaTeX{} puts it at the top of the next page. In this case, the argument ("[b]") of the \verb|\begin{figure}[b]| command indicates that the Figure~\ref{fig:electron} should be on the bottom (for example, "t" would be used to place the figure on top). Figures consistently placed on top or bottom of the page usually make life easier for the reader. Note that positioning figures is the job of \LaTeX{} and so you should focus on making them look good!
+Sometimes figures don't always appear where you specify in the source. The placement depends on how much space there is on the page for the figure. Sometimes there is not enough room to fit a figure directly where it should go (in relation to the text) and so \LaTeX{} puts it at the top of the next page. In this case, the argument ("[b]") of the \verb|\begin{figure}[b]| command indicates that the Figure~\ref{fig:electron} should be on the bottom (for example, "t" would be used to place the figure on top). Figures consistently placed on top or bottom of the page usually make life easier for the reader. Note that positioning figures is the job of \LaTeX{} and so you should focus on making them look good! 
 
-Figures should have captions (such as in Figure~\ref{fig:electron}). The \verb|\caption| command contains two parts, the first part, inside the square brackets is the title that will appear in the \emph{List of Figures}, and so should be short. The second part in the curly brackets should contain the longer and more descriptive caption text.
+Figures should have captions (such as in Figure~\ref{fig:electron}). The \verb|\caption| command contains two parts, the first part, inside the square brackets is the title that will appear in the \emph{List of Figures}, and so should be short. The second part in the curly brackets should contain the longer and more descriptive caption text. 
 
 You should also put a label (such as \verb|\label{fig:electron}|) in all your figures so you can refer to them (for example with \verb|\ref{fig:electron}|). {\bf All graphical elements in your document must have accompanying text (a paragraph, or a sentence) describing it!}
 
 Another example illustration is included in Figure~\ref{fig:comic}, which shows a comic about thesis writing.
 
 \begin{figure}[t]
-	\centering
-	\includegraphics[width=\textwidth,keepaspectratio]{ch2/assets/comic}
-	\caption[Thesis Writing Comic]{A Thesis Writing Comic (from www.phdcomics.com).}
-	\label{fig:comic}
+\centering
+\includegraphics[width=\textwidth,keepaspectratio]{ch2/assets/comic}
+\caption[Thesis Writing Comic]{A Thesis Writing Comic (from www.phdcomics.com).}
+\label{fig:comic}
 \end{figure}
 
 \LaTeX{} is capable of using images in pdf, jpg and png format.
@@ -297,7 +297,7 @@ There are some additional commands created to keep the formatting separated from
 
 \keyword{keyword} -- Used to highlight keywords. For example, this is \keyword{somekeyword} (the command that produces this output is \verb|\keyword{somekeyword}|).
 
-\keyword{tabhead} -- Used to highlight table headers.
+\keyword{tabhead} -- Used to highlight table headers. 
 
 \keyword{code} -- Used to output code. For example, this \code{statement is formatted as code} (the command that produces this output is \verb|\code{...}|).
 
@@ -322,7 +322,7 @@ You have reached the end of this mini-guide. You can now rename or overwrite thi
 Good luck and have lots of fun!
 
 \begin{flushright}
-	Guide written by ---\\
-	Sunil Patel: \url{http://www.sunilpatel.co.uk}{www.sunilpatel.co.uk}\\
-	Vel: \url{http://www.LaTeXTemplates.com}{LaTeXTemplates.com}
+Guide written by ---\\
+Sunil Patel: \url{http://www.sunilpatel.co.uk}{www.sunilpatel.co.uk}\\
+Vel: \url{http://www.LaTeXTemplates.com}{LaTeXTemplates.com}
 \end{flushright}
