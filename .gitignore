@@ -1,15 +1,71 @@
-main.acn
-main.aux
-main.bcf
-main.glo
-main.glsdefs
-main.ist
-main.loa
-main.lof
-main.lol
-main.lot
-main.out
-main.synctex.gz
-main.toc
-main.run.xml
-main.pdf
+# LaTeX build files
+*.acn
+*.aux
+*.bcf
+*.glo
+*.glsdefs
+*.ist
+*.loa
+*.lof
+*.lol
+*.lot
+*.out
+*.synctex.gz
+*.toc
+*.run.xml
+*.log
+*.fls
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.ptc
+*.bbl
+*.blg
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.pdfsync
+
+# Bibliography auxiliary files
+*.brf
+
+# Build directory
+build/
+
+# Generated PDF (uncomment if you don't want to track PDFs)
+# *.pdf
+
+# Glossary and acronyms
+*.acr
+*.glg
+*.gls
+
+# System files
+## Mac/OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+## Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+
+## Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*~
