@@ -1,5 +1,22 @@
 # AI Assistant Instructions for TMDEI LaTeX Dissertation Template
 
+# Bibliography Review Workflow
+
+When you request a bibliography review (e.g., for `mainbibliography.bib`), the assistant must:
+
+1. **Harvard Style & BibTeX Compliance**: Check each entry for correct BibTeX fields and Harvard citation style (author initials, year in parentheses, title, etc.).
+2. **Citation Key Validation**: Ensure every citation key matches those used in all `.tex` files (no missing or unused keys).
+3. **Duplicate & Missing Entries**: Identify duplicate keys and warn about missing references.
+4. **Formatting Consistency**: Suggest improvements for field formatting, capitalization, punctuation, and LaTeX encoding of special characters.
+5. **Grammar & Spelling**: Check for grammar and spelling errors in BibTeX entry fields (title, abstract, etc.).
+6. **Warnings**: Clearly warn about any issues found (style, missing, duplicates, formatting, grammar).
+
+Always follow all steps above when the user requests a bibliography review, and notify the user of any problems or improvements needed.
+
+**Tip:** Run a LaTeX linter or spell checker before submission to catch errors early.
+
+Always follow all steps above when the user requests a bibliography review, and notify the user of any problems or improvements needed.
+
 ## Document Structure
 
 ### Core Components
@@ -116,19 +133,27 @@
 ### Code Listings
 
 - Use language-specific formatting:
-  ]
+  ```java
   public class Example {
+      // ...existing code...
+  }
+  ```
 - Include captions and labels
 - Reference with `\ref{lst:label}`
-  \begin{table}[htbp]
+
+Example table:
+
+```latex
+\begin{table}[htbp]
   \centering
   \caption{Sample Data}
   \label{tab:data}
   A & 10 & +5\% \\
   B & 20 & -2\% \\
   \bottomrule
-  \end{tabular}
-  \end{table}
+\end{tabular}
+\end{table}
+```
 
 ```
   \includegraphics[width=0.8\textwidth]{path/to/image}
@@ -220,7 +245,7 @@
 
 ### Glossary & Nomenclature Rules
 
-- Define all acronyms in `glossary.tex` using `\newacronym{key}{abbr}{Full term}`
+- Define all acronyms in `glossary.tex` using `\newacronym{key}{abbr}{Full term}` (use consistent capitalization)
 - Reference using `\gls{key}`
 - Include nomenclature with `\nomenclature{symbol}{definition}`
 - Regenerate glossary after edits: `make glossary`
@@ -291,7 +316,7 @@
 
 #### Technical Writing
 
-- Write in active voice when possible
+- Use the active voice whenever possible
 - Keep sentences concise and clear
 - Define technical terms at first use
 - Use consistent terminology throughout
@@ -303,8 +328,13 @@
 - Integrate naturally in text:
   - As shown by \textcite{smith2020}...
   - This approach \parencite{jones2019}...
+- Always ensure every citation key used in LaTeX source files exists in `mainbibliography.bib`, and the bibliography compiles without missing references.
 
 ### Document Sections
+
+**Note:** Avoid redundancy between sections (e.g., do not repeat the same background in Abstract and Introduction).
+
+- Check for spelling and grammar errors in all written content.
 
 #### Abstract
 

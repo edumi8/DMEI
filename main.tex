@@ -66,27 +66,30 @@ headsepline, % Uncomment to get a line under the header
 
 \addbibresource{mainbibliography.bib} % The filename of the bibliography
 
-\makeglossaries % build the glossary
+% \makeglossaries % build the glossary -- commented out as main glossary is empty; uncomment when adding glossary entries
 
 %----------------------------------------------------------------------------------------
 %	THESIS INFORMATION
 %----------------------------------------------------------------------------------------
 
-\thesistitle{{[}Thesis Title{]}} % Your thesis title, this is used in the title, print it elsewhere with \ttitle
+% Working title — update if you prefer a different one
+\thesistitle{CI/CD Observability in Containerized Environments} % Your thesis title, this is used in the title, print it elsewhere with \ttitle
 
 %\thesissubtitle{{[}Thesis Subtitle{]}} % Your thesis title, this is used in the title, print it elsewhere with \tsubtitle
 
-\author{John \textsc{Smith}} % Your name, this is used in the title page, print it elsewhere with \authorname
+% Replace with your full name as you want it to appear on the title page
+
+\author{Eduardo \textsc{Sousa} } % Your name, this is used in the title page, print it elsewhere with \authorname
 
 \subjectarea{Cybersecurity And Systems Administration} % Specialisation area (Cybersecurity and Systems Administration; Data Engineering; Software Engineering;Games, Graphics and Interactive Systems; Information and Knowledge Systems), used in the title page, print it elsewhere with \areaname
 
-\advisor{Dr. Jane \textsc{Smith}} % Your advisors's (academic mentor) name, this is used in the title page, print it elsewhere with \advname
+\advisor{Dr. Alexandre \textsc{Bragança}} % Your advisors's (academic mentor) name, this is used in the title page, print it elsewhere with \advname
 
 %\advisors{Dr. Jane \textsc{Smith} and Dr. Jake Smith} % In case you have multiple advisors and/or do not want to distinguish between advisor and co-advisor, use \advisors; if defined, will override \advisor
 
 %\coadvisor{Dr. Jack \textsc{Smith}} % Your co-advisors's name, this is used in the title page, print it elsewhere with \coadvname (comment, if no co-advisor)
 
-\supervisor{Dr. James \textsc{Smith}} % Your supervisor's (company, hosting institution mentor) name, this is used in the title page, print it elsewhere with \supname (comment, if no supervisor, or same as advisor)
+\supervisor{Dr. Joao \textsc{Silva}} % Your supervisor's (company, hosting institution mentor) name, this is used in the title page, print it elsewhere with \supname (comment, if no supervisor, or same as advisor)
 
 %\supervisors{Dr. James \textsc{Smith} and Jace Smith} % In case you have multiple supervisors and/or do not want to distinguish between supervisor and co-supervisor use \supervisors; if defined, will override \advisor
 
@@ -97,11 +100,12 @@ headsepline, % Uncomment to get a line under the header
 
 %\committeemembers{Dr. Jaimie Smith, Professor, DEI/ISEP\\Dr. Jones Smith, Professor, DEI/ISEP\\Dr. Jagger Smith, Professor, DEI/ISEP} % Name of the evaluation committee members (up to four), print it elsewhere with \committee
 
-\keywords{Keyword1, ..., Keyword6} % Please define up to 6 keywords that better describe your work, print it elsewhere with \keywordnames
+\keywords{CI/CD, Observability, Containers, Tracing, Logging, Monitoring} % Define up to 6 keywords that better describe your work
 
-\university{\href{http://www.university.com}{University Name}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
+% Update the university/department links if necessary
+\university{\href{https://www.isep.ipp.pt}{Instituto Superior de Engenharia do Porto (ISEP)}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
 
-\department{\href{http://department.university.com}{Department or School Name}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
+\department{\href{https://www.dei.isep.ipp.pt}{DEI / ISEP -- Department of Electronic and Industrial Engineering}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
 
 \thesisdate{Porto, \today} % thesis date,  print it elsewhere with \tdate
 
@@ -145,9 +149,9 @@ headsepline, % Uncomment to get a line under the header
 % Uncomment the lines as you write the Appendices
 \begin{appendices}
 
-\input{appendices/appendixA}
-%\input{appendices/appendixB}
-%\input{appendices/appendixC}
+	\input{appendices/appendixA}
+	%\input{appendices/appendixB}
+	%\input{appendices/appendixC}
 
 \end{appendices}
 %----------------------------------------------------------------------------------------
