@@ -89,19 +89,19 @@
 \ifbool{nolistspace}{
 	\patchcmd{\listoffigures}{%
 		\@starttoc{lof}}{%
-			\begingroup%
-			\singlespace\@starttoc{lof}\endgroup%
-		}{}{}%
+		\begingroup%
+		\singlespace\@starttoc{lof}\endgroup%
+	}{}{}%
 	\patchcmd{\listoftables}{%
 		\@starttoc{lot}}{%
-			\begingroup%
-			\singlespace\@starttoc{lot}\endgroup%
-		}{}{}%
+		\begingroup%
+		\singlespace\@starttoc{lot}\endgroup%
+	}{}{}%
 	\patchcmd{\tableofcontents}{%
 		\@starttoc{toc}}{%
-			\begingroup%
-			\singlespace\@starttoc{toc}\endgroup%
-		}{}{}%
+		\begingroup%
+		\singlespace\@starttoc{toc}\endgroup%
+	}{}{}%
 }{}
 
 % Addchap provides unnumbered chapters with an entry in the table of contents as well as an updated header
@@ -171,31 +171,31 @@
 
 \RequirePackage{listings} % Required for code listings
 \lstset{ %
-  backgroundcolor=\color{white},   % choose the background color; 
-  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
-  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
-  breaklines=true,                 % sets automatic line breaking
-  captionpos=b,                    % sets the caption-position to bottom
-  commentstyle=\color{green},    % comment style
-  deletekeywords={...},            % if you want to delete keywords from the given language
-  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
-  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-  frame=single,	                   % adds a frame around the code
-  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code 
-  keywordstyle=\color{blue},       % keyword style
-  language=Java,                 % the default language of the code
-  otherkeywords={*,...},           % if you want to add more keywords to the set
-  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
-  numbersep=5pt,                   % how far the line-numbers are from the code
-  numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
-  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text
-  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
-  showstringspaces=false,          % underline spaces within strings only
-  showtabs=false,                  % show tabs within strings adding particular underscores
-  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
-  stringstyle=\color{MidnightBlue},     % string literal style
-  tabsize=2,	                   % sets default tabsize to 2 spaces
-  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+	backgroundcolor=\color{white},   % choose the background color; 
+	basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{green},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	frame=single,	                   % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code 
+	keywordstyle=\color{blue},       % keyword style
+	language=Java,                 % the default language of the code
+	otherkeywords={*,...},           % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{MidnightBlue},     % string literal style
+	tabsize=2,	                   % sets default tabsize to 2 spaces
+	title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
 
 \RequirePackage[acronym,nonumberlist,toc]{glossaries} %Required to define acronyms and make glossaries
@@ -207,7 +207,7 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\checktoopen}{% New command to move content to the next page which prints to the next odd page if twosided mode is active  
-\if@openright\cleardoublepage\else\clearpage\fi
+	\if@openright\cleardoublepage\else\clearpage\fi
 }
 
 \newcommand\bhrule{\typeout{--------------------}}
@@ -220,8 +220,8 @@
 
 \setcounter{tocdepth}{3} % The depth to which the document sections are printed to the table of contents
 \providecommand\addchaptertocentry[1]{%
-\ifdef{\phantomsection}{\phantomsection}{}% The \phantomsection command is necessary for hyperref to jump to the correct page
-\addcontentsline{toc}{chapter}{#1}%
+	\ifdef{\phantomsection}{\phantomsection}{}% The \phantomsection command is necessary for hyperref to jump to the correct page
+	\addcontentsline{toc}{chapter}{#1}%
 }
 
 %----------------------------------------------------------------------------------------
@@ -257,16 +257,16 @@
 
 \RequirePackage[markcase=used]{scrlayer-scrpage}
 \providepairofpagestyles{thesisSimple}{%
-\clearpairofpagestyles%
-\automark[chapter]{chapter}
-\ihead{\headmark}% Inner header
-\ohead[\pagemark]{\pagemark}% Outer header
+	\clearpairofpagestyles%
+	\automark[chapter]{chapter}
+	\ihead{\headmark}% Inner header
+	\ohead[\pagemark]{\pagemark}% Outer header
 }
 \ifoot{}% Inner footer
 \ofoot{}% Outer footer
 \pagestyle{thesisSimple}
 \providepairofpagestyles[thesisSimple]{thesis}{%
-\automark*[section]{}%
+	\automark*[section]{}%
 }
 \providepairofpagestyles[thesisSimple]{review}{%
 	\ofoot[\ttitle/\authorname]{\ttitle/\authorname}
@@ -275,19 +275,19 @@
 \pagestyle{thesis}
 \ifbool{headsepline}{\KOMAoption{headsepline}{true}}{}
 \PreventPackageFromLoading[\ClassError{\classname}{Package `fancyhdr' is
-incompatible\MessageBreak with this class}{The pagesyles are defined 
-using package `scrlayer-scrpage', please consult the\MessageBreak 
-KOMA-script documentation for details.}]{fancyhdr}
+		incompatible\MessageBreak with this class}{The pagesyles are defined
+		using package `scrlayer-scrpage', please consult the\MessageBreak
+		KOMA-script documentation for details.}]{fancyhdr}
 
 
 \newcommand{\blank@p@gestyle}{empty}
 \newcommand{\blankpagestyle}[1]{\def\blank@p@gestyle{#1}}
 
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-\hbox{}
-\thispagestyle{\blank@p@gestyle}
-\newpage
-\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+			\hbox{}
+			\thispagestyle{\blank@p@gestyle}
+			\newpage
+			\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 %----------------------------------------------------------------------------------------
 %	DEFINE CUSTOM THESIS INFORMATION COMMANDS
@@ -344,35 +344,35 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\maketitlepage}{
 	\checktoopen
 	\begin{titlepage}
-	{\centering \includegraphics[width=3in]{/frontmatter/assets/isep_logo.pdf} \\}
-	\null\vfill
-	\begin{center}
-	{\Huge \bfseries \ttitle}\\ % Thesis title
-	\ifdefined\tsubtitle {\huge \bfseries \tsubtitle} \\ \fi % thesis sub title, if exists
-	\vfill
-	{\huge \bfseries \authorname}\\
-	\vfill
-	{\Large \bfseries \dissertationdisclamer~\subjectname}
-	\end{center}
-	\vfill
-	{\large \bfseries \noindent \advisorlabel: \advname } \\
-	\ifdefined\cosupname {\large \bfseries \coadvisorlabel: \coadvname} \\ \fi
-	{\large \bfseries \noindent \supervisorlabel: \supname } \\
-	\ifdefined\cosupname {\large \bfseries \cosupervisorlabel: \cosupname} \\ \fi
-	\vfill
-        % add the thesis committee, if committeepresident is defined
-        \ifdefined\presidentname { 
-    	{\normalsize \bfseries \noindent \evallabel:} \\
-    	{\normalsize \presidentlabel: } \\
-    	\bigskip
-    	{\normalsize \presidentname } \\
-    	{\normalsize \memberslabel:} \\
-    	{\normalsize \committee } \\
-    	\smallskip \\}
-        \fi 
-	\begin{center}
-	{\normalsize \tdate} % Date
-	\end{center}
+		{\centering \includegraphics[width=3in]{/frontmatter/assets/isep_logo.pdf} \\}
+		\null\vfill
+		\begin{center}
+			{\Huge \bfseries \ttitle}\\ % Thesis title
+			\ifdefined\tsubtitle {\huge \bfseries \tsubtitle} \\ \fi % thesis sub title, if exists
+			\vfill
+			{\huge \bfseries \authorname}\\
+			\vfill
+			{\Large \bfseries \dissertationdisclamer~\subjectname}
+		\end{center}
+		\vfill
+		{\large \bfseries \noindent \advisorlabel: \advname } \\
+		\ifdefined\cosupname {\large \bfseries \coadvisorlabel: \coadvname} \\ \fi
+		{\large \bfseries \noindent \supervisorlabel: \supname } \\
+		\ifdefined\cosupname {\large \bfseries \cosupervisorlabel: \cosupname} \\ \fi
+		\vfill
+		% add the thesis committee, if committeepresident is defined
+		\ifdefined\presidentname {
+			{\normalsize \bfseries \noindent \evallabel:} \\
+			{\normalsize \presidentlabel: } \\
+			\bigskip
+			{\normalsize \presidentname } \\
+			{\normalsize \memberslabel:} \\
+			{\normalsize \committee } \\
+			\smallskip \\}
+		\fi
+		\begin{center}
+			{\normalsize \tdate} % Date
+		\end{center}
 	\end{titlepage}
 }
 
@@ -396,7 +396,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\statementtext
 }
 {
-  \vfil\vfil\vfil\null
+	\vfil\vfil\vfil\null
 }
 
 %----------------------------------------------------------------------------------------
@@ -414,9 +414,9 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\chapter*{\dedicationlabel}
 }
 {
-  \vfil\vfil\vfil\null
+	\vfil\vfil\vfil\null
 }
-    
+
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE DESIGN
 %----------------------------------------------------------------------------------------
@@ -432,17 +432,17 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\tttypeout{\abstractname}
 	%\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
 	\thispagestyle{plain}
-	\chapter*{\abslabel}	
+	\chapter*{\abslabel}
 }
 {
-  \bigskip
-  {\bf \keywordslabel:} {\keywordnames}
-  \vfil\vfil\vfil\null
+	\bigskip
+	{\bf \keywordslabel:} {\keywordnames}
+	\vfil\vfil\vfil\null
 }
 
 \newcommand{\abslabelotherlang}{Resumo}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\abslabelotherlang}{Resumo}
-\providecaptionname{portuguese}{\abslabelotherlang}{Abstract}  
+\providecaptionname{portuguese}{\abslabelotherlang}{Abstract}
 \newenvironment{abstractotherlanguage}{
 	\checktoopen
 	\tttypeout{\abslabel}
@@ -451,7 +451,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\chapter*{\abslabelotherlang}
 }
 {
-  \vfil\vfil\vfil\null
+	\vfil\vfil\vfil\null
 }
 
 %----------------------------------------------------------------------------------------
@@ -465,10 +465,10 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\ifbool{nolistspace}{\begingroup\singlespacing}{}
 	\ifbool{listtoc}{\addchap{\abbrevname}}{\addchap*{\abbrevname}}
 	\begin{longtable}{#1}
-}{%
-\end{longtable}
-\addtocounter{table}{-1} % Don't count this table as one of the document tables
-\ifbool{nolistspace}{\endgroup}{}
+		}{%
+	\end{longtable}
+	\addtocounter{table}{-1} % Don't count this table as one of the document tables
+	\ifbool{nolistspace}{\endgroup}{}
 }
 
 %----------------------------------------------------------------------------------------
@@ -483,10 +483,10 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\ifbool{nolistspace}{\begingroup\singlespacing}{}
 	\ifbool{listtoc}{\addchap{\constantsname}}{\addchap*{\constantsname}}
 	\begin{longtable}{#1}
-}{%
-\end{longtable}
-\addtocounter{table}{-1} % Don't count this table as one of the document tables
-\ifbool{nolistspace}{\endgroup}{}
+		}{%
+	\end{longtable}
+	\addtocounter{table}{-1} % Don't count this table as one of the document tables
+	\ifbool{nolistspace}{\endgroup}{}
 }
 
 %----------------------------------------------------------------------------------------
@@ -500,10 +500,10 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\ifbool{nolistspace}{\begingroup\singlespacing}{}
 	\ifbool{listtoc}{\addchap{\symbolsname}}{\addchap*{\symbolsname}}
 	\begin{longtable}{#1}
-}{%
-\end{longtable}
-\addtocounter{table}{-1} % Don't count this table as one of the document tables
-\ifbool{nolistspace}{\endgroup}{}
+		}{%
+	\end{longtable}
+	\addtocounter{table}{-1} % Don't count this table as one of the document tables
+	\ifbool{nolistspace}{\endgroup}{}
 }
 
 %----------------------------------------------------------------------------------------
@@ -521,7 +521,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\chapter*{\acknowledgementlabel}
 }
 {
-  \vfil\vfil\vfil\null
+	\vfil\vfil\vfil\null
 }
 
 %----------------------------------------------------------------------------------------
@@ -530,25 +530,25 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 
 \ifbool{hyperrefsupport}{% If the nohyperref class option has not been specified
-\AfterPackage{biblatex}{ % Load the hyperref package after the biblatex package for compatibility 
-\RequirePackage{hyperref} % Required for customising links and the PDF
-\hypersetup{pdfpagemode={UseOutlines},
-bookmarksopen=true,
-bookmarksopenlevel=0,
-hypertexnames=false,
-colorlinks=\hreflinkcolor, % Set coloring of links
-citecolor=CadetBlue, % The color of citations
-linkcolor=NavyBlue, % The color of references to document elements (sections, figures, etc)
-urlcolor=CadetBlue, % The color of hyperlinks (URLs)
-pdfstartview={FitV},
-unicode,
-breaklinks=true,
-}
+	\AfterPackage{biblatex}{ % Load the hyperref package after the biblatex package for compatibility 
+		\RequirePackage{hyperref} % Required for customising links and the PDF
+		\hypersetup{pdfpagemode={UseOutlines},
+			bookmarksopen=true,
+			bookmarksopenlevel=0,
+			hypertexnames=false,
+			colorlinks=\hreflinkcolor, % Set coloring of links
+			citecolor=CadetBlue, % The color of citations
+			linkcolor=NavyBlue, % The color of references to document elements (sections, figures, etc)
+			urlcolor=CadetBlue, % The color of hyperlinks (URLs)
+			pdfstartview={FitV},
+			unicode,
+			breaklinks=true,
+		}
 
-\pdfstringdefDisableCommands{% If there is an explicit linebreak in a section heading (or anything printed to the pdf-bookmarks), it is replaced by a space
-   \let\\\space%
-}
-}
+		\pdfstringdefDisableCommands{% If there is an explicit linebreak in a section heading (or anything printed to the pdf-bookmarks), it is replaced by a space
+			\let\\\space%
+		}
+	}
 }{%nothing
 }
 
