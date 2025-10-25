@@ -46,6 +46,61 @@ Based on MastersDoctoralThesis version 1.2 by Vel (vel@latextemplates.com) and J
 
 --------------------------------------
 # Added by the Student
+
+## Quick Release for Submissions
+
+To create a release package for submitting to your teacher/supervisor:
+
+```bash
+# Standard submission
+./release.sh
+# or
+make release
+
+# Draft version
+./release.sh --draft
+# or
+make release-draft
+
+# Final submission
+./release.sh --final
+# or
+make release-final
+
+# Create GitHub Release (recommended for easy sharing)
+./release.sh --github-release
+make github-release
+
+# Final submission on GitHub
+./release.sh --final --github-release
+make github-final
+```
+
+The script will:
+1. Clean and rebuild your thesis PDF
+2. Create a versioned release package
+3. Generate submission documentation
+4. Create checksums for integrity verification
+5. Optionally create a git tag
+6. Package everything in a ZIP archive
+7. **Optionally create a GitHub release with automatic file hosting**
+
+**GitHub Release Benefits:**
+- Share via simple URL (no email attachments)
+- Professional presentation with release notes
+- Permanent archival and version tracking
+- Easy access for committee members
+
+**Setup GitHub CLI (one-time):**
+```bash
+sudo apt install gh
+gh auth login
+```
+
+See [RELEASE_GUIDE.md](RELEASE_GUIDE.md) for detailed usage instructions.
+
+---
+
 # Titulo: Observability for Containerized CI/CD Services: Improving Reliability
 # Problema
 Modern DevOps teams rely heavily on CI/CD platforms such as GitLab, Jenkins, Nexus, between others to manage the software delivery process. These services, often deployed in internal containerized environments, are critical to the daily functioning of development teams. Failures or misconfigurations can lead to downtime, reduced productivity, and delays in software delivery. 

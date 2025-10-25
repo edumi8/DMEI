@@ -74,6 +74,31 @@
       \verb http://link.aip.org/link/?RSI/69/1236/1
       \endverb
     \endentry
+    \entry{example2020}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fc28afc38463fc50015fe72243a7efd9}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={Example},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fc28afc38463fc50015fe72243a7efd9}
+      \strng{fullhash}{fc28afc38463fc50015fe72243a7efd9}
+      \strng{bibnamehash}{fc28afc38463fc50015fe72243a7efd9}
+      \strng{authorbibnamehash}{fc28afc38463fc50015fe72243a7efd9}
+      \strng{authornamehash}{fc28afc38463fc50015fe72243a7efd9}
+      \strng{authorfullhash}{fc28afc38463fc50015fe72243a7efd9}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Placeholder entry -- update with actual reference details}
+      \field{title}{Example Title -- Please Update This Entry}
+      \field{year}{2020}
+    \endentry
     \entry{Reference1}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=35dd546e1a595cf3f1a5d42e457d7ab2}{%
