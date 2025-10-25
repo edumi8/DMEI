@@ -23,9 +23,9 @@
 %
 %\dedicatory{For/Dedicated to/To my\ldots}
 \begin{dedicatory}
-	The dedicatory is optional. Below is an example of a humorous dedication.
+    The dedicatory is optional. Below is an example of a humorous dedication.
 
-	"To my computer, without which this thesis would not have been possible. It has been a constant companion, always ready to crash at the most inconvenient times, reminding me of the fragility of digital existence. May it rest in peace."
+    "To my computer, without which this thesis would not have been possible. It has been a constant companion, always ready to crash at the most inconvenient times, reminding me of the fragility of digital existence. May it rest in peace."
 \end{dedicatory}
 
 %----------------------------------------------------------------------------------------
@@ -34,28 +34,28 @@
 
 \begin{abstract}
 
-	% here you put the abstract in the main language of the work.
+    % here you put the abstract in the main language of the work.
 
-	This document explains the main formatting rules to apply to a TMDEI Master Dissertation work for the MSc in Computer Engineering of the Computer Engineering Department (DEI) of the School of Engineering (ISEP) of the Polytechnic of Porto (IPP).
+    This document explains the main formatting rules to apply to a TMDEI Master Dissertation work for the MSc in Computer Engineering of the Computer Engineering Department (DEI) of the School of Engineering (ISEP) of the Polytechnic of Porto (IPP).
 
-	The rules here presented are a set of recommended good practices for formatting the dissertation work. Please note that this document does not have definite hard rules, and the discussion of these and other aspects of the development of the work should be discussed with the respective supervisor(s).
+    The rules here presented are a set of recommended good practices for formatting the dissertation work. Please note that this document does not have definite hard rules, and the discussion of these and other aspects of the development of the work should be discussed with the respective supervisor(s).
 
-	This document is based on a previous document prepared by Dr. Fátima Rodrigues (DEI/ISEP).
+    This document is based on a previous document prepared by Dr. Fátima Rodrigues (DEI/ISEP).
 
-	The abstract should usually not exceed 200 words, or one page. When the work is written in Portuguese, it should have an abstract in English.
+    The abstract should usually not exceed 200 words, or one page. When the work is written in Portuguese, it should have an abstract in English.
 
-	Please define up to 6 keywords that better describe your work, in the \emph{THESIS INFORMATION} block of the \file{main.tex} file.
+    Please define up to 6 keywords that better describe your work, in the \emph{THESIS INFORMATION} block of the \file{main.tex} file.
 
 \end{abstract}
 
 \begin{abstractotherlanguage}
-	% here you put the abstract in the "other language": English, if the work is written in Portuguese; Portuguese, if the work is written in English.
+    % here you put the abstract in the "other language": English, if the work is written in Portuguese; Portuguese, if the work is written in English.
 
-	Trabalhos escritos em língua Inglesa devem incluir um resumo alargado com cerca de 1000 palavras, ou duas páginas.
+    Trabalhos escritos em língua Inglesa devem incluir um resumo alargado com cerca de 1000 palavras, ou duas páginas.
 
-	Se o trabalho estiver escrito em Português, este resumo deveria ser em língua Inglesa, com cerca de 200 palavras, ou uma página.
+    Se o trabalho estiver escrito em Português, este resumo deveria ser em língua Inglesa, com cerca de 200 palavras, ou uma página.
 
-	Para alterar a língua basta ir às configurações do documento no ficheiro \file{main.tex} e alterar para a língua desejada ('english' ou 'portuguese')\footnote{Alterar a língua requer apagar alguns ficheiros temporários; O target \keyword{clean} do \keyword{Makefile} incluído pode ser utilizado para este propósito.}. Isto fará com que os cabeçalhos incluídos no template sejam traduzidos para a respetiva língua.
+    Para alterar a língua basta ir às configurações do documento no ficheiro \file{main.tex} e alterar para a língua desejada ('english' ou 'portuguese')\footnote{Alterar a língua requer apagar alguns ficheiros temporários; O target \keyword{clean} do \keyword{Makefile} incluído pode ser utilizado para este propósito.}. Isto fará com que os cabeçalhos incluídos no template sejam traduzidos para a respetiva língua.
 
 \end{abstractotherlanguage}
 
@@ -65,9 +65,9 @@
 
 \begin{acknowledgements}
 
-	The optional Acknowledgment goes here\ldots Below is an example of a humorous acknowledgment.
+    The optional Acknowledgment goes here\ldots Below is an example of a humorous acknowledgment.
 
-	I would like to express my deepest gratitude to my coffee machine, whose unwavering support and endless supply of caffeine have been instrumental in the completion of this thesis. Without its tireless efforts, I would have undoubtedly succumbed to the perils of sleep and procrastination. May it continue to brew excellence for generations of students to come.
+    I would like to express my deepest gratitude to my coffee machine, whose unwavering support and endless supply of caffeine have been instrumental in the completion of this thesis. Without its tireless efforts, I would have undoubtedly succumbed to the perils of sleep and procrastination. May it continue to brew excellence for generations of students to come.
 \end{acknowledgements}
 
 %----------------------------------------------------------------------------------------
@@ -81,7 +81,7 @@
 \listoftables % Prints the list of tables
 
 \iflanguage{portuguese}{
-	\renewcommand{\listalgorithmname}{Lista de Algor\'itmos}
+    \renewcommand{\listalgorithmname}{Lista de Algor\'itmos}
 }
 \listofalgorithms % Prints the list of algorithms
 \addchaptertocentry{\listalgorithmname}
@@ -89,7 +89,7 @@
 
 \renewcommand{\lstlistlistingname}{List of Source Code}
 \iflanguage{portuguese}{
-	\renewcommand{\lstlistlistingname}{Lista de C\'odigo}
+    \renewcommand{\lstlistlistingname}{Lista de C\'odigo}
 }
 \lstlistoflistings % Prints the list of listings (programming language source code)
 \addchaptertocentry{\lstlistlistingname}
@@ -109,13 +109,13 @@
 
 \begin{symbols}{lll} % Include a list of Symbols (a three column table)
 
-	$a$ & distance & \si{\meter} \\
-	$P$ & power & \si{\watt} (\si{\joule\per\second}) \\
-	%Symbol & Name & Unit \\
+    $a$ & distance & \si{\meter} \\
+    $P$ & power & \si{\watt} (\si{\joule\per\second}) \\
+    %Symbol & Name & Unit \\
 
-	\addlinespace % Gap to separate the Roman symbols from the Greek
+    \addlinespace % Gap to separate the Roman symbols from the Greek
 
-	$\omega$ & angular frequency & \si{\radian} \\
+    $\omega$ & angular frequency & \si{\radian} \\
 
 \end{symbols}
 
@@ -127,7 +127,7 @@
 
 \newcommand{\listacronymname}{List of Acronyms}
 \iflanguage{portuguese}{
-	\renewcommand{\listacronymname}{Lista de Acr\'onimos}
+    \renewcommand{\listacronymname}{Lista de Acr\'onimos}
 }
 
 %Use GLS

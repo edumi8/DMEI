@@ -145,9 +145,9 @@ headsepline, % Uncomment to get a line under the header
 % Uncomment the lines as you write the Appendices
 \begin{appendices}
 
-	\input{appendices/appendixA}
-	%\input{appendices/appendixB}
-	%\input{appendices/appendixC}
+\input{appendices/appendixA}
+%\input{appendices/appendixB}
+%\input{appendices/appendixC}
 
 \end{appendices}
 %----------------------------------------------------------------------------------------
