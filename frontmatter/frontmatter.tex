@@ -22,11 +22,11 @@
 %----------------------------------------------------------------------------------------
 %
 %\dedicatory{For/Dedicated to/To my\ldots}
-\begin{dedicatory}
-	The dedicatory is optional. Below is an example of a humorous dedication.
+% \begin{dedicatory}
+% 	The dedicatory is optional. Below is an example of a humorous dedication.
 
-	"To my wife Marganit and my children Ella Rose and Daniel Adam without whom this book would have been completed two years earlier." in "An Introduction To Algebraic Topology" by Joseph J. Rotman.
-\end{dedicatory}
+% 	"To my wife Marganit and my children Ella Rose and Daniel Adam without whom this book would have been completed two years earlier." in "An Introduction To Algebraic Topology" by Joseph J. Rotman.
+% \end{dedicatory}
 
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE
@@ -80,17 +80,14 @@
 
 \listoftables % Prints the list of tables
 
-\iflanguage{portuguese}{
-	\renewcommand{\listalgorithmname}{Lista de Algor\'itmos}
-}
+% Keep English name by default; remove conditional Portuguese redefinitions
+\renewcommand{\listalgorithmname}{List of Algorithms}
 \listofalgorithms % Prints the list of algorithms
 \addchaptertocentry{\listalgorithmname}
 
 
 \renewcommand{\lstlistlistingname}{List of Source Code}
-\iflanguage{portuguese}{
-	\renewcommand{\lstlistlistingname}{Lista de C\'odigo}
-}
+\renewcommand{\lstlistlistingname}{List of Source Code}
 \lstlistoflistings % Prints the list of listings (programming language source code)
 \addchaptertocentry{\lstlistlistingname}
 
@@ -126,9 +123,6 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\listacronymname}{List of Acronyms}
-\iflanguage{portuguese}{
-	\renewcommand{\listacronymname}{Lista de Acr\'onimos}
-}
 
 %Use GLS
 \glsresetall

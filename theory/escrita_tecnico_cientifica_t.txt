@@ -1,0 +1,757 @@
+Escrita Técnico-
+cien/ﬁca
+NUNO PEREIRA (NAP@ISEP.IPP.PT)
+Conteúdos
+Objetivos e método de escrita de uma dissertação
+Elementos de uma dissertação
+Linguagem técnica
+Recursos/referências úteis
+
+
+
+
+                                                   2
+              Objetivos do
+              Mestrado (1/2)
+              Obje>vos do trabalho de Mestrado e as duas entregas (Projeto 2 de PREPD e Dissertação Final)
+              1. Interpretar o problema a resolver, adotando ciências e boas prá7cas de engenharia informá7ca
+
+
+
+
+                                                                                                                      PREPD
+              2. Sinte7zar o conhecimento existente de ciências e boas prá7cas de engenharia informá7ca para a
+                 resolução do problema
+Dissertação
+
+
+
+
+              3. Avaliar diferentes abordagens para a resolução do problema
+              4. Desenhar uma solução para o problema adotando ciências e boas prá7cas de engenharia informá7ca
+              5. Construir a solução para o problema aplicando ciências e boas prá7cas de engenharia informá7ca
+              6. Avaliar a solução desenhada/implementada aplicando ciências e boas prá7cas de engenharia
+                 informá7ca
+
+
+
+
+                                                                                                                      PREPD
+              7. Descrever de forma sintá7ca e seman7camente rigorosa os processos e resultados dos pontos
+                 anteriores, adotando ciências e boas prá7cas de engenharia informá7ca
+
+              (fonte: ﬁcha de unidade curricular do projeto de mestrado)
+
+
+
+                                                                                                                  3
+Objetivos do
+Mestrado (2/2)
+A dissertação:
+◦ documenta o trabalho levado a cabo para obter o grau de Mestre,
+◦ constituí prova dos conhecimentos do autor.
+
+
+
+
+Dissertação vs. Tese
+◦ Uma dissertação é um trabalho académico onde não é estritamente necessária uma contribuição
+  inédita para o conhecimento e é adequada para trabalhos conducentes ao grau de Mestre
+◦ Numa tese é necessária uma contribuição inédita e é mais adequada para trabalhos de Doutoramento
+◦ Em alguns contextos os termos são utilizados de forma indistinta
+
+
+
+
+                                                                                                     4
+Desenvolvimento do Trabalho: Uma
+estratégia de 6 fases
+  1. Plano           Preparação da
+                        Dissertação           Dissertação
+
+                                        6. Introdução
+                  2. Levantamento
+                  do Estado da Arte
+
+
+                                      4. Corpo Principal
+ 3. Trabalho de                                             In “Algumas Orientações para
+                                                            a Elaboração de uma Tese de
+   Pesquisa e                                               Mestrado”, Fá?ma Rodrigues
+     Criação                                                6 Novembro 2013, apud
+                                                            “Estratégia para a Elaboração
+                                        5. Conclusões       de uma Tese”, Figueiredo,
+                                                            António Dias
+
+
+                                                                           5
+1. Plano (1/3)
+O plano deve:
+ ◦ identificar e justificar o tema da tese,
+ ◦ identificar os objetivos gerais e específicos
+ ◦ indica quais a metodologias, técnicas e questão de investigação.
+
+
+Ao longo do semestre importa detalhar e concretizar este plano, e listar os tópicos e tarefas
+que se pretende tratar
+
+
+Pode ser alterado/melhorado ao longo do trabalho
+
+
+                                                                      Baseado em “Algumas Orientações para a Elaboração de uma
+                                                                      Tese de Mestrado”, Fá?ma Rodrigues 6 Novembro 2013.
+
+
+                                                                                                                  6
+2. Levantamento do Estado da Arte
+ Desde o início do trabalho, deve manter-se um
+levantamento gradual do estado da arte
+                                                    1. Plano
+Este levantamento será parte da dissertação                            Preparação da
+                                                                          Dissertação                  Dissertação
+
+                                                                                                  6. Introdução
+O estado da arte pode progredir ao longo do                          2. Levantamento
+                                                                       do Estado da
+tempo, pelo que, numa fase inicial não é                                   Arte
+necessária muita preocupação em aﬁnar o texto                                                       4. Corpo
+                                                                                                    Principal
+                                                    3. Trabalho de
+                                                      Pesquisa e
+É importante colecionar a bibliograﬁa de forma          Criação
+adequada, com fontes ﬁáveis                                                                       5. Conclusões
+
+
+ ◦ Ver apresentação “Pesquisa de Informação”, por
+   Nuno Pereira.
+                                                       Baseado em “Algumas Orientações para a Elaboração de uma
+                                                       Tese de Mestrado”, Fá?ma Rodrigues 6 Novembro 2013.
+
+
+                                                                                                   7
+3. Trabalho de Pesquisa e Criação
+Trabalho fundamental que irá conduzir à
+dissertação
+                                                   1. Plano           Preparação da
+                                                                         Dissertação                  Dissertação
+
+ Progride normalmente num ciclo de retorno que o                                                 6. Introdução
+liga ao levantamento do estado da arte                              2. Levantamento
+                                                                      do Estado da
+                                                                          Arte
+                                                                                                   4. Corpo
+                                                                                                   Principal
+ A sua evolução pode levar a rever o plano e a     3. Trabalho de
+                                                     Pesquisa e
+introdução. À medida medida que se vai                 Criação
+
+contruindo o trabalho pode-se escrever capítulos                                                 5. Conclusões
+
+que vão constituir o corpo da dissertação
+
+                                                      Baseado em “Algumas Orientações para a Elaboração de uma
+                                                      Tese de Mestrado”, Fá?ma Rodrigues 6 Novembro 2013.
+
+
+                                                                                                  8
+4. Corpo principal
+Inclui todas as contribuições do trabalho
+
+
+Essencialmente duas partes:                                  1. Plano           Preparação da
+                                                                                                                Dissertação
+                                                                                   Dissertação
+◦ Revisão de literatura/trabalho
+  relacionado/tecnologias                                                     2. Levantamento
+                                                                                                           6. Introdução
+
+
+◦ (Outras) Contribuições                                                        do Estado da
+                                                                                    Arte
+  ◦ (a revisão da literatura pode ser uma contribuição...)                                                   4. Corpo
+                                                                                                             Principal
+                                                             3. Trabalho de
+                                                               Pesquisa e
+                                                                 Criação
+                                                                                                           5. Conclusões
+
+
+
+
+                                                                Baseado em “Algumas Orientações para a Elaboração de uma
+                                                                Tese de Mestrado”, Fá?ma Rodrigues 6 Novembro 2013.
+
+
+                                                                                                            9
+4. Corpo principal - Revisão da
+literatura
+Revisão da literatura/trabalho relacionado/tecnologias relevantes
+
+
+Um ou mais capítulos que:
+◦ descrevem conceitos e tecnologias relevantes para o trabalho
+◦ apresentam outros trabalhos e abordagens relacionadas
+◦ estas secções devem ser essencialmente factuais e não incluir nenhuma
+  das contribuições do trabalho
+◦ Objetivos principais
+  ◦ demonstrar o conhecimento do autor sobre a temática do trabalho
+  ◦ apresentar lacunas no estado atual do conhecimento/métodos/tecnologia1
+
+
+                                                   1que, idealmente, são atacadas pelo trabalho!
+
+
+
+
+                                                                                                   10
+4. Corpo principal - Contribuições
+Contribuições
+
+
+Um ou mais capítulos que descrevem a abordagem
+tomada e solução proposta
+◦ Descrever os algoritmos/mecanismos/dados/...
+  desenvolvidos
+◦ Argumentar porque a solução é boa e faz sentido
+◦ Análise/comparação
+  ◦ por argumentação, comparação com outros trabalhos, provas
+    matemáticas, casos de estudo, demonstrações, ...
+
+
+
+
+                                                                11
+5. Conclusões
+A conclusões devem fazer uma análise ﬁnal do trabalho
+
+◦ Apresentar um balanço crí7co, recomendações, trabalho   1. Plano           Preparação da
+                                                                                                              Dissertação
+  futuro                                                                        Dissertação
+
+                                                                                                        6. Introdução
+                                                                           2. Levantamento
+◦ Rever o problema e os obje7vos, resumindo como estes                       do Estado da
+                                                                                 Arte
+  foram atacados e em que medida foram resolvidos                                                         4. Corpo
+                                                                                                          Principal
+                                                          3. Trabalho de
+                                                            Pesquisa e
+◦ Ajuda escrever as conclusões em parágrafos ordenados        Criação
+  por importância. Todas as conclusões devem ser                                                        5. Conclusões
+  diretamente relacionados com os obje7vos do trabalho.
+
+
+                                                             Baseado em “Algumas Orientações para a Elaboração de uma
+                                                             Tese de Mestrado”, Fá?ma Rodrigues 6 Novembro 2013.
+
+
+                                                                                                         12
+6. Introdução (1/2)
+Contém, pelo menos:
+◦ um enunciado breve, em linguagem acessível, do
+  trabalho
+                                                    1. Plano           Preparação da
+◦ um resumo do estado da arte                                             Dissertação                   Dissertação
+
+◦ uma descrição dos objetivos e contribuições e                                                   6. Introdução
+  argumentação sobre porque constitui um trabalho                    2. Levantamento
+                                                                       do Estado da
+  válido e útil                                                            Arte
+
+◦ uma descrição dos capítulos seguintes                                                             4. Corpo
+                                                                                                    Principal
+                                                    3. Trabalho de
+                                                      Pesquisa e
+                                                        Criação
+                                                                                                  5. Conclusões
+
+
+
+
+                                                       Baseado em “Algumas Orientações para a Elaboração de uma
+                                                       Tese de Mestrado”, Fátima Rodrigues 6 Novembro 2013.
+
+
+                                                                                                   13
+6. Introdução (2/2)
+Subsecções habituais:
+ ◦ Problema
+ ◦ Contexto/Estado da arte
+ ◦ Mo7vação
+ ◦ Procedimentos/Método
+ ◦ Contribuições
+ ◦ Estrutura do Documento
+
+
+ Notas:
+ ◦ Não é necessário ter exatamente os nomes indicados
+ ◦ Algumas secções podem ser omi7das e/ou unidas
+ ◦ Algumas secções podem ser transformadas em capítulos
+
+
+
+                                                          14
+PREPD – Projeto
+No âmbito de PREPD pretende-se desenvolver um plano e estado da arte que reflete o
+desenvolvimento do trabalho durante o primeiro semestre.
+
+
+Em traços gerais, o Projeto de PREDEP deve:
+◦ Apresentar o contexto e justificar o projeto a desenvolver, demonstrando uma interpretação crítica do
+  problema a resolver, incluindo questões técnicas, éticas e societais
+◦ Descrever os objetivos específicos, questões e métodos utilizados
+◦ Incluir uma revisão do estado da arte relevante
+◦ Detalhar um planeamento de atividades até à versão final
+
+
+
+
+                                                                                                      15
+Os Vários Aspetos de uma Dissertação
+                 Conteúdos
+                 • Mensagem a passar
+
++ importante
+
+                 Es7lo
+                 • Como a mensagem é apresentada:
+                   estrutura, linguagem, ﬁguras
+
+
+                 Forma
+                 • Aspecto da mensagem: gramá?ca,
+                   pontuação, formatação, ...
+- importante
+
+
+
+
+                                                    16
+Organização e Persuasão
+Uma dissertação apresenta argumentos no sentido de persuadir o leitor da qualidade do
+trabalho realizado
+ ◦ Se as premissas do trabalho são válidas e pertinentes
+ ◦ Se os objetivos (e.g. de analisar, projetar, implementar a solução) foram cumpridos
+ ◦ ...
+
+
+A organização é também um veículo importante da persuasão!
+ ◦ A organização da dissertação deve tornar claras as contribuições do trabalho e como estas estão
+   suportadas
+ ◦ Fornecer ao leitor um mapa intuitivo, fácil de seguir, que guie o leitor
+
+
+
+
+                                                                                                     17
+Uma Organização Genérica (1/2)
+
+     Início                  Meio                     Fim
+• Título                • Introdução            •Referências
+• Capa                  • Contexto/Revisão da   •Anexos
+• Resumo                  Literatura
+• Tabela de Conteúdos   • Contribuições
+• Índices               • Conclusões
+• Agradecimentos
+
+
+
+
+                                                               18
+Uma Organização Genérica (2/2)
+Atenção! Esta organização (e aspectos da discussão anterior) poderá não se aplicar a todos os
+trabalhos
+ ◦ Alguns exemplos:
+  ◦ Um trabalho pode jus?ﬁcar ter um capítulo só de Contexto
+  ◦ Alguns trabalhos podem ter um capítulo dedicado à descrição do problema
+  ◦ Pode-se jus?ﬁcar um capítulo dedicado a outros conteúdos (e.g. requisitos da aplicação)
+  ◦ Outros trabalhos podem optar por ter capítulos de contribuições mais autocon?dos: por exemplo, cada capítulo apresenta o seu
+    contexto, mo?vação, e contribuição
+  ◦ ...
+
+
+ Não pode haver uma estrutura ﬁxa para todos os trabalhos; É algo que deve ser pensado especiﬁcamente
+ para cada trabalho
+ ◦ Pedir ajuda ao orientador!
+
+
+
+
+                                                                                                                                   19
+O Início da Dissertação
+Todas as dissertações devem conter os seguintes elementos no início.
+Estes elementos são normalmente adicionados/revistos na fase final
+◦ Título
+  ◦ Deve resumir a essência do trabalho
+◦ Capa
+◦ Resumo
+  ◦ Em Português e Inglês
+◦ Tabela de Conteúdos
+◦ Índices
+  ◦ De figuras, tabelas, notações, termos
+◦ Agradecimentos (opcional)
+
+
+                                                                       Wikipedia: The Mathematical Principles of
+                                                                       Natural Philosophy – 1729, Isaac Newton
+
+
+                                                                                                   20
+Meio (Miolo/Núcleo) da Dissertação
+Introdução
+◦ Descrever o que vamos dizer
+
+Corpo Principal
+◦ Contexto/revisão da literatura, contribuições
+
+Conclusões
+◦ Descrever resumidamente o que acabamos de dizer
+
+
+
+
+                                                    21
+O Fim da Dissertação
+Todas as dissertações devem conter os seguintes
+elementos no ﬁnal.
+
+ ◦ Referências
+  ◦ Lista de todas as referências citadas
+
+
+ ◦ Anexos (opcional)
+  ◦ Exemplos: Manual de U?lizador, Documentos de Especiﬁcação e Projeto,
+    Testes, Código Fonte
+
+
+
+
+                                                                           22
+Um Exemplo (I)
+
+
+
+
+                 23
+Um Exemplo (II)
+
+
+
+
+                  24
+Lista de verificação
+  Descrição                                                           Obrigatório ?   Número de página
+  Capa                                                                Sim             Não
+  Página de rosto (1ª página do modelo)                               Sim             Não
+  Resumo (Português)                                                  Sim             Numeração romana
+  Resumo (Inglês)                                                     Sim             Numeração romana
+  Agradecimentos                                                      Não             Numeração romana
+  Tabela de Conteúdos                                                 Sim             Numeração romana
+  Lista de Figuras                                                    Sim             Numeração romana
+  Lista de Tabelas                                                    Sim             Numeração romana
+  Lista de Acrónimos e Símbolos                                       Sim             Numeração romana
+  Corpo da Dissertação (com introdução, contribuições e conclusões)   Sim             Numeração árabe
+  Referências                                                         Sim             Numeração árabe
+  Anexos e Outros Índices                                             Não             Numeração árabe
+
+                                                                                                         25
+Linguagem Técnica
+“Informar é comunicar e fazer compreender — isto é, redigir de forma simples,
+concisa, clara e precisa, quaisquer que sejam a complexidade do assunto ou o    Precisa
+género da mensagem jornalís;ca.” in “O PÚBLICO - Livro de Es5lo”.
+
+                                                                 Simples                        Clara
+Muito alinhado com a linguagem técnica de
+uma dissertação!
+
+
+O PÚBLICO - Livro de Es5lo (também no moodle):
+                                                                 Concisa                    Obje-va
+hcps://sta>c.publico.pt/ﬁles/provadosfactos/livro-de-es>lo.pdf
+Ver, em par>cular, a secção ”O Rigor da Escrita”
+                                                                                Familiar
+
+
+                                                                                           26
+Frases Simples e Diretas (I)
+“Preferir a frase aﬁrma7va e o es7lo directo, recusar a imprecisão e a ambiguidade, […]”
+ ◦ Exemplo: “Não pinte esta parede de azul.” (frase nega7va, que leva a ambiguidade)
+
+   ◦ Não é para pintar? Ou é para pintar de qualquer cor menos azul? De que cor? “Pinte esta parede
+
+     de amarelo.” é linguagem aﬁrma7va, obje7va e eﬁcaz.
+
+
+
+40 palavras por frase
+ ◦ “Estudos adaptados à estrutura da língua portuguesa demonstram que a capacidade de
+
+   memorização imediata de uma pessoa média é limitada a um máximo de 40 palavras por frase […]”
+
+
+
+
+in “O PÚBLICO - Livro de Es7lo”.
+                                                                                                      27
+Frases Simples e Diretas (II)
+Vocabulário simples e familiar
+ ◦ “[…] temas abstratos ou com vocabulário rebuscado diﬁcultam a leitura e a compreensão.”
+
+
+Respeitar a sequência sujeito-predicado
+ ◦ “A sequência lógica de uma frase em português (sujeito-predicado-complemento) facilitará sempre a ﬂuência e
+   compreensão da mensagem…”
+ ◦ Exemplo: “O autor realizou o trabalho.” vs “O trabalho foi realizado pelo autor”
+   ◦ Sujeito: “O autor”; Predicado: “realizou.”; Complemento: “o trabalho.”
+
+
+
+
+ GenAI
+ Footprint!
+
+in “O PÚBLICO - Livro de Estilo”.
+                                                                                                             28
+Substan^vos Fortes; Voz a^va
+Usar Substan>vos fortes e verbos na voz a>va
+ ◦ “Substan7vos fortes e verbos na voz a7va reforçam a densidade indispensável na escrita jornalís7ca:
+   raramente necessitam de qualiﬁcação [adje7vação] e permitem reduzir consideravelmente o recurso
+   aos adje7vos”.
+
+Evitar as formas condicionais, compostas, passivas, …
+ ◦ “Verbos de preferência no modo indica7vo, na voz a7va e nas formas simples e aﬁrma7vas; as formas
+   condicionais, compostas, passivas e perifrás7cas ou nega7vas prejudicam e desvalorizam o es7lo
+   direto…”
+ ◦ “O abuso da voz passiva e dos tempos compostos desmerece a linguagem jornalís7ca.
+      ◦ Exemplo: "Foram tomadas resoluções a ﬁm de ser posto ﬁm à greve" quer simplesmente dizer "resolveu-se acabar com a
+         greve”.”
+
+
+
+
+in “O PÚBLICO - Livro de Es7lo”.
+                                                                                                                             29
+Escolher as Palavras
+“O leitor compreenderá melhor o que está a acontecer sempre que se empregar palavras
+adequadas e com carga semântica, que fixem a leitura e alimentem o interesse.”
+
+
+
+                                                “A diferença entre o termo exato e o
+“Pelo contrário, um termo desconhecido ou       termo aproximado é a diferença entre o
+deslocado é um obstáculo à imediata
+compreensão.”                                   relâmpago e o pirilampo."
+                                                Mark Twain, in "American Humorist”.
+
+
+
+
+in “O PÚBLICO - Livro de Es7lo”.
+                                                                                       30
+Adje^vação
+Evitar a adje>vação
+ ◦ “A adje7vação excessiva ou inadequada enfraquece a qualidade e o impacte informa7vo do texto”
+
+
+
+ ◦ “Se cada palavra ou expressão con7verem o         “Apaga os adjetivos e terás os factos."
+   máximo de carga signiﬁcante, a qualiﬁcação
+   [adje7vação] — que quebra o ritmo da leitura —    Harper Lee.
+   torna-se dispensável”
+
+
+
+
+ GenAI
+ Footprint!
+
+in “O PÚBLICO - Livro de Es7lo”.
+                                                                                                   31
+Sinónimos
+A u>lização de sinónimos, por vezes, é desaconselhada
+
+
+Exemplo:
+◦ “Convecção natural é um mecanismo, ou 7po de transporte de calor, no qual o
+  movimento do ﬂuido não é gerado por qualquer fonte externa [...]. Em
+  convecção livre, o...”
+◦ Convecção natural = convecção livre ?
+◦ Estamos a criar confusão no leitor!
+
+
+
+
+                                                                                32
+Signiﬁcado de Termos Técnicos
+Existem palavras com signiﬁcados bem deﬁnidos, que podem
+ser diferentes da linguagem comum
+Exemplo da palavra “Teoria”:
+◦ Em linguagem corrente, pode-se u7lizar a expressão “isso é uma
+  teoria” referindo a uma ideia aleatória, conjeturada no momento.
+◦ Num contexto técnico/cienuﬁco, “Teoria” refere-se a uma ideia
+  amplamente aceite na comunidade cienuﬁca e rigorosamente
+  testada.
+
+Exemplo da palavra “Signiﬁca>vo”:
+◦ Um “esta7s7camente signiﬁca7vo” não quer dizer “importante”,
+  mas sim que é improvável que o fator estudado tenha ocorrido por
+  acaso
+
+
+
+
+                                                                     33
+Evitar Expressões Pouco Precisas
+“Convém evitar as expressões "cerca de" e "à volta de":
+por norma, fornecem-se números precisos ao leitor;
+quando não for possível, aponta-se um valor mínimo (ou
+máximo),[...] “
+Exemplo:
+"mais de 980 contos" em vez de "cerca de mil contos”.”
+
+in “O PÚBLICO - Livro de Estilo”.
+
+Os casos onde não é possível fornecer
+números precisos devem ser muito           GenAI
+raros.                                     Footprint!
+
+
+                                                          34
+Repe^ção
+Evitar a repe>ção, mas cuidado
+◦ “A repe7ção de palavras denota pobreza lexical, mas o recurso a uma variante vocabular pode cair no
+  preciosismo e no rebuscamento desnecessários. É também deselegante u7lizar repe7damente a
+  mesma construção ou estrutura de frase.”
+  in “O PÚBLICO - Livro de Es?lo”.
+
+
+
+
+GenAI
+Footprint!
+
+
+
+                                                                                                        35
+Siglas
+Uso moderado de siglas e definição destas sempre que aparecem
+pela primeira vez
+◦ “As siglas — cujo uso deve ser moderado e que devem ser
+  "decifradas" ou explicadas na primeira vez que aparecem no texto
+  (excepto se já forem de conhecimento e uso generalizado) — não
+  contêm pontos.”
+  in “O PÚBLICO - Livro de Estilo”.
+
+
+
+
+                                                                     36
+                                                                               GenAI
+Inteligência Ar^ﬁcial                                                          Footprint!
+
+A escrita por Inteligência Ar7ﬁcial deixa algumas pegadas importantes, como:
+◦ Excesso de adjeMvação;
+◦ Linguagem repeMMva;
+◦ Linguagem pouco habitual;
+◦ Falta de profundidade.
+◦ ...
+
+
+Que enfraquecem a mensagem. Mas:
+
+◦ Erros fatuais;
+◦ Alucinações;
+
+São muito graves!
+
+
+
+
+                                                                                            37
+Alguns Aspetos Adicionais (1/2)
+Seguir o modelo fornecido (no Moodle)!
+ ◦ Tem indicações sobre estrutura e formatação de páginas, capítulos, secções, tabelas, figuras, ...
+
+
+Gramática, sintaxe, pontuação, ortografia
+ ◦ Rever o texto cuidadosamente e em várias iterações
+ ◦ Usar o corretor ortográfico!
+
+
+Utilizar tabelas e figuras sempre
+que possível, mas pertinentes!
+ ◦ Todas as tabelas e figuras têm de
+   ter texto a acompanhar que as
+   cita e explica
+
+                                                                                                   http://dilbert.com/
+
+                                                                                                          38
+Alguns Aspetos Adicionais (2/2)
+U>lizar secções e subsecções para organizar o documento e salientar aspetos importantes
+◦ Evitar capítulos e secções demasiado longas ou demasiado pequenas
+◦ Evitar subsecções de nível 4 ou superior: “1.2.3.4 Título da subsecção”
+  ◦ Se necessário ter uma subsecção de nível 4 ou superior, não a numerar
+
+
+
+Títulos com iniciais em caixa alta
+◦ Os utulos de capítulos e secções escrevem-se com iniciais em caixa alta nas palavras variáveis (exceto
+  nos ar7gos deﬁnidos) e minúsculas nas palavras invariáveis.
+  ◦ Este é um “Exemplo de Título Corretamente Grafado” (vs “Este é um exemplo de itulo incorretamente grafado”).
+
+
+
+
+                                                                                                                   39
+Escrita é um Processo
+ Reservar tempo para escrever
+ Escrever! Qualquer coisa!
+ Uma lista de items, um parágrafo, …
+ Não precisa de ser sequencial
+
+
+
+
+                                       40
+Livros
+Leslie C.Perelman, Edward Barrett, and James Paradis, “The Mayfield
+Handbook of Technical & Scientific Writing”, (New York: McGraw-Hill,
+2001). Online: http://www.mit.edu/course/21/21.guide/
+
+
+Alley, Michael. "The craft of scientiﬁc writing.”, (New York: Springer
+Science, 1996).
+
+
+Strunk W. Jr.., White E. B. (1979). The elements of style (4th Ed.).
+Needham Heights: Longman.
+
+
+
+
+                                                                         41
+Outros Recursos Online
+Modelo para as Dissertações do DEI/ISEP
+ ◦ ver área de TMDEI no Moodle
+
+Guia da American Psychological Associa7on (APA):
+ ◦ hjps://apastyle.apa.org/
+
+O PÚBLICO - Livro de Es7lo (no Moodle)
+ ◦ hjps://sta?c.publico.pt/ﬁles/provadosfactos/livro-de-es?lo.pdf
+ ◦ hjp://sta?c.publico.pt/nos/livro_es?lo/13-rigor-e.html
+
+Duke Scien7ﬁc Wri7ng Resource
+ ◦ hjps://cgi.duke.edu/web/sciwri?ng/index.php
+
+Sentence Structure of Technical Wri7ng (no Moodle)
+ ◦ hjp://web.mit.edu/me-ugoﬃce/communica?on/technical-wri?ng.pdf
+
+
+
+
+                                                                    42
+43
+

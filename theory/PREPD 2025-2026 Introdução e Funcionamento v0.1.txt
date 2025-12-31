@@ -1,0 +1,104 @@
+Preparação para Dissertação
+       Introdução e Funcionamento
+               2025-2026
+Propósitos
+• CO1. Análise
+    • Interpretar problemas analiticamente, criticamente e eticamente com a adoção de ciência da engenharia e das
+      melhores práticas (Bloom Level (BL): 5/6)
+
+• CO2. Revisão da literatura
+    • Formular analiticamente e criticamente uma revisão da literatura respeitando princípios éticos (BL 6/6)
+
+• CO3. Planeamento
+    • Criar um plano de projeto integrado considerando o seu âmbito, cronograma, custo, qualidade e risco para construir
+      uma linha temporal alcançável e definir marcos e pontos de controlo para monitorizar o progresso (BL 6/6)
+
+• CO4. Design
+    • Criar analiticamente, criticamente e eticamente uma proposta de trabalho, incluindo os elementos que o guiaram e
+      um plano de projeto integrado com tarefas necessárias para responder às questões de investigação e alcançar uma
+      solução, incluindo as necessárias para a aquisição de competências em falta e avaliação de trabalho (BL 6 /6)
+
+• CO5. Comunicação escrita e oral
+    • Apresentar um trabalho oralmente e de forma escrita com rigor técnico, científico e ético e discuti-lo assertivamente
+      (BL 5/6)
+Aulas
+• 1 Hora T semanal
+• 2 Horas TP semanal
+• Módulos curriculares
+Módulos curriculares
+Semana   Módulo                               Docente
+  1      Objetivos e funcionamento da UC      Nuno Silva (NPS)
+  2      Revisão de literatura                Alberto Sampaio (ACS)
+  3      Métodos de investigação              Nuno Pereira (NAP)
+  4      Escrita técnico-científica           Nuno Pereira (NAP)
+  5      Auto-organização                     Mafalda Ferreira (MLF)
+  6      (a definir)
+  7      Planeamento de projeto               Alberto Pereira (ABP)
+  8      Planeamento de projeto               Alberto Pereira (ABP)
+  9      Auto-organização                     Mafalda Ferreira (MLF)
+  10     Planeamento de projeto               Alberto Pereira (ABP)
+  11     Planeamento de projeto               Alberto Pereira (ABP)
+  12     Planeamento de projeto               Alberto Pereira (ABP)
+  13     Ética em Engenharia e Investigação   Isabel Azevedo (IFP)
+Avaliação
+• Prova oral
+• Sobre documento submetido
+• Síncrona
+• Online
+• 30 minutos de duração
+    • 5 minutos de apresentação
+    • 25 minutos de debate e sugestões
+• Júri
+    • Presidente
+    • Orientador
+    • Arguente
+• 100% da nota
+• Critérios de avaliação (cf. próximo slide)
+PREPD vs. DIMEI
+                 Seleção    Formalização   Equipa de    Obs.
+                 de                        Orientação
+                 Proposta
+PREPD à DIMEI    1          1              1 (ou 2)     Se necessário, equipa de orientação pode mudar
+PREPD != DIMEI   2          2              2
+Apenas PREPD     1          1              1            Tema/abordagem diferente de DIMEI anterior
+Apenas DIMEI     1          1              1            Cf. regras de DIMEI
+Propostas e Projeto
+Processo e Datas
+Fase       Tarefa                           Quem                                               Desde         Até
+
+           Submissão                        Proponente: docente, investigador, empresa       2025-07-01
+
+           Candidatura                      Estudante
+Proposta
+
+
+
+
+           Atribuição                       Proponente                                                    2025-10-08
+                                                                                             2025-09-15
+           Aceitação                        Estudante
+
+           Aprovação                        RUC
+
+           Convite de orientador            Estudante
+                                                                                                          2025-10-15
+           Submissão de Formalização        Estudante (+ Orientadores)
+
+           Revisão de Formalização          RUC + Revisor                                                 2025-10-25
+Projeto
+
+
+
+
+           Submissão de Extended Abstract   Estudante (+ Orientadores)                                    2025-12-15
+
+           Submissão de documento final     Estudante (+ Orientadores)                                    2026-01-07
+
+           Avaliação                        Estudante + Orientador + Arguente + Presidente   2026-01-05   2026-01-16
+Portal de Projetos Curriculares
+
+
+
+
+                                  DEMO
+

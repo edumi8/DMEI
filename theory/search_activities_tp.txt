@@ -1,0 +1,43 @@
+Preparação para Dissertação; DEI/ISEP
+
+
+  ACTIVITY: SEARCH DIGITAL LIBRARIES
+  1. SEARCH THE ACM DIGITAL LIBRARY
+     Enter the ACM Digital Library: http://dl.acm.org/advsearch.cfm
+     A. Search the author Ion Stoica
+        i.    Do “Refine by People” to make sure that the results are from this researcher.
+       ii.    Identify the most cited Works.
+      iii.    Identify the areas where the researcher worked.
+     B. Search for papers in the conference entitled “USENIX Symposium on Networked
+          Systems Design and Implementation (NSDI)”.
+     C. Search for papers in the journal “IEEE Transactions on Pattern Analysis and
+          Machine Intelligence”, ISSN: 0162-8828.
+
+
+  2. SEARCH THE SCIMAGO JOURNAL & COUNTRY RANK (SJR)
+     Enter the SJR: http://www.scimagojr.com/journalrank.php
+     A. Search for the journals with the best classification in the area of Computer Science.
+     B. Search for the journals with the best classification in the Subject Category of
+         Artificial Intelligence, in the Computer Science area.
+
+
+  3. SEARCH THE WEB OF SCIENCE (WOS)
+     Enter the WoS (you will need to register): http://webofknowledge.com/
+     A. Suppose you identified the following keywords “cloud computing”, “cloud service”,
+          “public cloud”, “private”.
+        i.   Perform a search for these keywords1.
+       ii.   Limit the search results to “Computer Science” research area1.
+      iii.   Identify the most cited authors.
+     B. Suppose now that the author called Nancy Lynch was mentioned to you as an
+          important author in the area of your work.
+        i.   Search for publications by Nancy Lynch (aka Lynch N.)
+       ii.   Make sure the results are only from the Research Area of Computer Science1.
+      iii.   Make sure that the results are from 2010 or later1.
+
+
+
+
+     1
+      See the reference for the advanced search:
+     https://images.webofknowledge.com/WOKRS514B4/help/WOS/hp_advanced_examples.html
+

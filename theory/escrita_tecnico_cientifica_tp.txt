@@ -1,0 +1,380 @@
+Escrita Técnico-
+científica (TP)
+NUNO PEREIRA (NAP@ISEP.IPP.PT)
+Conteúdos
+Citações e plágio
+Leitura de artigos científicos
+Recursos/referências úteis
+
+
+
+
+                                 2
+Citações
+Todas as fontes de informação devem ser citadas no
+trabalho
+
+
+Citações Diretas
+ ◦ Quando reproduzimos o texto da fonte de forma quase fiel
+ ◦ O texto da fonte deve estar entre aspas e ser acompanhado de
+   uma citação à fonte
+
+
+Citações Indiretas
+ ◦ Quando elaboramos uma redação pessoal da ideia ou dados do
+   texto da fonte                                                 http://xkcd.com/
+ ◦ O texto elaborado deve ser acompanhado de uma citação à
+   fonte
+
+
+
+                                                                          3
+        Exemplo: Citação Direta (1/2)
+         Um estudo (Enck et al. 2014) analisou 30 aplicações Android escolhidas aleatoriamente e “[...] revelou
+         que 15 dessas aplicações reportavam a localização do utilizador a servidores de publicidade remotos.
+         Sete aplicações recolhiam o identificador do dispositivo e, em alguns casos, o número de telefone e o
+         número de série do cartão SIM.”2.
+
+        Importante:
+         ◦ se possível, indicar a página/secção onde o texto se encontra na fonte. E.g.: (Enck et al. 2014, p. 2)
+         ◦ se omitimos alguma parte da frase, utilizamos reticências
+         ◦ indicamos que a tradução é de nossa autoria (preferencialmente com o texto original em rodapé).
+
+        Referência (nos exemplos seguintes vamos usar sempre esta referência):
+           Enck, W. et al., 2014. TaintDroid: an information flow tracking system for real-time privacy monitoring on smartphones.
+            Communications of the ACM, 57(3), pp.99–106. Available at: http://dl.acm.org/citation.cfm?doid=2566590.2494522 [Accessed
+            November 24, 2015].
+
+
+2 Tradução livre do autor. No original “... we discovered that 15 of the 30 applications reported users' locations to remote advertising servers. Seven
+
+applications collected the device ID and, in some cases, the phone number and the SIM card serial number.”.
+
+                                                                                                                                             4
+Exemplo: Citação Direta (2/2)
+Podemos necessitar de adicionar algum texto no meio da citação para a esclarecer
+
+Um estudo (Enck et al. 2014) analisou aplicações Android e “[...] revelou que 15 dessas
+aplicações [30 no total, escolhidas aleatoriamente] reportavam a localização do utilizador a
+servidores de publicidade remotos. Sete aplicações recolhiam o identificador do dispositivo
+e, em alguns casos, o número de telefone e o número de série do cartão SIM.” (tradução livre
+do autor).
+
+
+
+
+                                                                                               5
+Exemplo: Citação Direta (longa)
+Se a citação tem mais de 3 linhas, é colocada num parágrafo recuado e em itálico:
+
+      Um estudo (Enck et al. 2014) analisou 30 aplicações
+      Android escolhidas aleatoriamente:
+
+          “[...] 15 dessas aplicações reportavam a localização do utilizador a
+          servidores de publicidade remotos. Sete aplicações recolhiam o
+          identificador do dispositivo e, em alguns casos, o número de telefone e
+          o número de série do cartão SIM” (tradução livre do autor).
+
+Nota: Neste caso, em que assinalamos a citação adequadamente, a utilização de aspas
+é opcional.
+
+
+                                                                                      6
+Exemplo: Citação Indireta
+Aqui descrevemos o trabalho de forma mais geral (o que é o TaintDroid; factos descobertos)
+
+O TaintDroid (Enck et al. 2014) apresentou mecanismos para automaticamente revelar como
+as aplicações utilizam informação sensível. Estes mecanismos ajudaram a descobrir a
+transmissão inadvertida de informação de localização em aplicações Android selecionadas
+aleatoriamente.
+
+
+Foram propostos e utilizados mecanismos para revelar automaticamente como aplicações
+Android utilizam informação sensível em (Enck et al. 2014). Estes mecanismos foram utilizados
+descobrir que 20 das 30 aplicações analisadas tratavam informação sensível de forma pouco
+adequada.
+
+
+
+
+                                                                                             7
+Exemplo: Citação (Indireta) de vários
+autores
+Podemos citar dois ou mais autores/trabalhos:
+ Vários trabalhos desenvolveram proteções de segurança para sistemas operativos de
+ telemóveis (Enck et al. 2009; Ongtang et al. 2009; Jeong et al. 2014)...
+ (Por exemplo, no Mendeley, temos de juntar as citação com a opção “Merge Citations”)
+Referências:
+Enck, W., Ongtang, M. & McDaniel, P., 2009. On lightweight mobile phone application certification. In Proceedings of the 16th ACM
+conference on Computer and communications security - CCS ’09. New York, New York, USA: ACM Press, p. 235. Available at:
+http://dl.acm.org/citation.cfm?id=1653662.1653691 [Accessed November 4, 2015].
+Jeong, Y. et al., 2014. A kernel-based monitoring approach for analyzing malicious behavior on Android. In Proceedings of the 29th
+Annual ACM Symposium on Applied Computing - SAC ’14. New York, New York, USA: ACM Press, pp. 1737–1738. Available at:
+http://dl.acm.org/citation.cfm?id=2554850.2559915 [Accessed November 24, 2015].
+Ongtang, M. et al., 2009. Semantically Rich Application-Centric Security in Android. In 2009 Annual Computer Security Applications
+Conference. IEEE, pp. 340–349. Available at: http://dl.acm.org/citation.cfm?id=1723192.1723245 [Accessed November 24, 2015].
+
+
+
+
+                                                                                                                                     8
+Plágio
+Definição (in Wikipedia):
+◦ “O plágio é o ato de assinar ou apresentar uma obra intelectual de qualquer natureza (texto, música,
+  obra pictórica, fotografia, obra audiovisual, etc.) contendo partes de uma obra que pertença a outra
+  pessoa sem colocar os créditos para o autor original”.
+
+
+É importante citar todas as fontes!
+◦ Livros, artigos, websites, jornais, revistas, tabelas, imagens, gráficos, ...
+
+
+
+Não é plágio quando citamos de forma apropriada as fontes (com citações diretas ou indiretas)
+
+
+
+
+                                                                                                         9
+Quando é Plágio ? (1)
+ É plágio se fazemos citações diretas sem
+  ◦ (i) citar a fonte e/ou
+  ◦ (ii) as assinalar devidamente (colocar aspas ou em parágrafo recuado em itálico)
+
+
+ É plágio fazer citações diretas sem as assinalar devidamente, mesmo citando a fonte
+
+  Um estudo a 30 aplicações Android escolhidas aleatoriamente (Enck et al. 2014) revelou que 15 dessas
+  aplicações reportavam a localização do utilizador a servidores de publicidade remotos. Sete aplicações
+  recolhiam o identificador do dispositivo e, em alguns casos, o número de telefone e o número de série
+  do cartão SIM.
+O texto a vermelho é uma tradução ipsis verbis do texto original da fonte e não está entre aspas ou em
+parágrafo recuado em itálico
+
+
+
+
+                                                                                                         10
+Quando é Plágio ? (2)
+É plágio se fazemos citações indiretas, sem as assinalar devidamente, mesmo citando a fonte e
+alterando ligeiramente o texto original
+
+ Um estudo a 30 aplicações Android escolhidas aleatoriamente (Enck et al. 2014) revelou que
+ 15 dessas aplicações enviam localização do utilizador para servidores remotos. Sete aplicações
+ recolhiam o identificador do dispositivo, o número de telefone e o número de série do cartão
+ SIM.
+Compare-se com o texto original traduzido
+“revelou que 15 dessas aplicações reportavam a localização do utilizador a servidores de
+publicidade remotos. Sete aplicações recolhiam o identificador do dispositivo e, em alguns
+casos, o número de telefone e o número de série do cartão SIM” (Enck et al. 2014); texto
+traduzido a partir do original em inglês.
+
+
+                                                                                              11
+Alguns Aspetos Adicionais (1/2)
+Seguir o modelo fornecido (no Moodle)!
+ ◦ Tem indicações sobre estrutura e formatação de páginas, capítulos, secções, tabelas, figuras, ...
+
+
+Gramática, sintaxe, pontuação, ortografia
+ ◦ Rever o texto cuidadosamente e em várias iterações
+ ◦ Usar o corretor ortográfico!
+
+
+Utilizar tabelas e figuras sempre
+que possível, mas pertinentes!
+ ◦ Todas as tabelas e figuras têm de
+   ter texto a acompanhar que as
+   cita e explica
+
+                                                                                                   http://dilbert.com/
+
+                                                                                                          13
+Alguns Aspetos Adicionais (2/2)
+Utilizar secções e subsecções para organizar o documento e salientar aspetos importantes
+◦ Evitar capítulos e secções demasiado longas ou demasiado pequenas
+◦ Evitar subsecções de nível 4 ou superior: “1.2.3.4 Título da subsecção”
+  ◦ Se necessário ter uma subsecção de nível 4 ou superior, não a numerar
+
+
+
+Títulos com iniciais em caixa alta
+◦ Os títulos de capítulos e secções escrevem-se com iniciais em caixa alta nas palavras variáveis (exceto
+  nos artigos definidos) e minúsculas nas palavras invariáveis.
+  ◦ Este é um “Exemplo de Título Corretamente Grafado” (vs “Este é um exemplo de título incorretamente grafado”).
+
+
+
+
+                                                                                                                    14
+How to Read Papers
+
+
+
+
+               NUNO PEREIRA, DEI/ISEP.   15
+Paper Structure (1/9)
+A typical structure:
+◦ Title and Authors
+◦ Abstract
+◦ Introduction
+◦ Related Work and/or Background (Optional)
+◦ System or Model
+◦ Contribution
+◦ Performance or Evaluation
+◦ Conclusions
+◦ References
+
+
+
+
+                                          NUNO PEREIRA, DEI/ISEP.   16
+Paper Structure (2/9)
+Title and Authors
+◦ Title is descriptive (often states the main finding) and is not about being creative and “catchy”!
+
+◦ Order of authors is important.
+
+
+
+
+                                              NUNO PEREIRA, DEI/ISEP.                                  17
+Paper Structure (3/9)
+Abstract/Summary
+◦ Brief background of subject
+◦ Purpose for the work
+◦ Major findings of the work
+◦ Relationship between these findings and the field
+
+◦ First thing you read. Eventually (with some experience), you should be able to decide if the paper is
+  worth reading based on the abstract
+
+
+
+
+                                              NUNO PEREIRA, DEI/ISEP.                                     18
+Paper Structure (4/9)
+Introduction
+◦ Presents the background information for a fellow researcher (possibly in another field) to understand
+  why the work is relevant.
+
+◦ Structure is usually:
+  ◦ Accepted state of knowledge in the field
+  ◦ Focus on a particular aspect of the field
+  ◦ Hypothesis being tested
+  ◦ Conclusions (researchers don’t really like surprise endings!)
+
+
+
+
+                                                   NUNO PEREIRA, DEI/ISEP.                                19
+Paper Structure (5/9)
+Related Work
+◦ Describes what has already taken place in this area, and how is this paper different
+◦ Often, it is necessary to read some of the cited work to get a better overview
+
+
+
+
+                                             NUNO PEREIRA, DEI/ISEP.                     20
+Paper Structure (6/9)
+System or Model:
+◦ Highlights the basic system-level model and assumptions
+◦ Might contain mathematical definitions necessary to read the rest of the paper
+
+
+
+
+                                            NUNO PEREIRA, DEI/ISEP.                21
+Paper Structure (7/9)
+Contribution
+◦ One or two sections describing the contributions of the work
+  ◦ Describes the protocol/algorithm/mechanism/architecture propose
+  ◦ Often also includes arguments/reasoning why the solution is good/valid
+  ◦ Could take different forms
+    ◦ Algorithm
+    ◦ Mathematical derivation of solution
+    ◦ Architecture reasoning
+    ◦ …
+
+
+
+
+                                            NUNO PEREIRA, DEI/ISEP.          22
+Paper Structure (8/9)
+Evaluation
+◦ Usually, proposing a solution is not sufficient for a research paper
+◦ The evaluation section provides further arguments, implementation details, and/or experiments
+◦ Performance comparison with existing work
+
+
+
+
+                                           NUNO PEREIRA, DEI/ISEP.                                23
+Paper Structure (9/9)
+Conclusions
+◦ Third Section to read
+  ◦ After abstract and introduction
+  ◦ Sums-up the contributions of the paper
+  ◦ Often includes future work identified by the authors
+
+
+
+
+                                             NUNO PEREIRA, DEI/ISEP.   24
+ The 3-Pass
+ Approach
+BASED ON: KESHAV, S. "HOW TO READ
+A PAPER." ACM SIGCOMM COMPUTER
+COMMUNICATION REVIEW 37.3 (2007):
+83-84.
+The 3-Pass Approach (1-2)
+Do not read the paper in detail from start to bottom
+
+
+Read the paper in up to three passes
+ ◦ First pass
+   ◦ gives you a general idea about the paper.
+ ◦ Second pass
+   ◦ lets you grasp the paper’s content, but not its details.
+ ◦ Third Pass
+   ◦ The third pass helps you understand the paper in depth
+
+Each pass accomplishes specific goals and builds upon the previous pass
+
+
+
+                                         NUNO PEREIRA, DEI/ISEP.          26
+The 3-Pass Approach (2-2)
+Some notes about active reading
+◦ These are not novels… try to get yourself active during the reading
+  ◦ Jump around, re-read, go backwards
+◦ Get rid of distractions
+◦ Take notes, highlight sentences, …
+◦ Talk to others
+
+
+
+
+                                             NUNO PEREIRA, DEI/ISEP.    27
+Activity I: Paper Reading
+In Search of an Understandable Consensus Algorithm1
+https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro
+
+
+This paper presents RAFT, a consensus algorithm that manages a replicated log consistent
+across a group of machines/servers so that the service the group provides survives even if some
+of its members fail.
+
+
+Let us give (short) answers to the research paper reading questions (see “Activity III: Paper
+Reading” in Moodle)
+
+1 also in Moodle, folder “Additional Resources”, file atc14-paper-ongaro.pdf
+
+
+
+
+                                                                                                28
+

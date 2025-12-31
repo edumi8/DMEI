@@ -199,6 +199,12 @@
 }
 
 \RequirePackage[acronym,nonumberlist,toc]{glossaries} %Required to define acronyms and make glossaries
+% Provide compatibility wrappers for common acronym commands used in the
+% template. If another package already defines them, these \providecommand
+% calls will do nothing.
+\providecommand{\ac}[1]{\gls{#1}}
+\providecommand{\acrshort}[1]{\glsentryshort{#1}}
+\providecommand{\acrfull}[1]{\glsentrylong{#1}}
 
 \RequirePackage[centerlast,small,sc]{caption} % Required for customising the captions
 \setlength{\captionmargin}{50pt}
@@ -317,7 +323,7 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\dissertationdisclamer}{A dissertation submitted in partial fulfilment of the \\ requirements for the degree of Master of Science, Area of}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dissertationdisclamer}{A dissertation submitted in partial fulfillment of \\ the requirements for the degree of Master of Science, Specialisation Area of}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dissertationdisclamer}{A dissertation preparation for the degree of \\ of Master of Science, Specialisation Area of}
 \providecaptionname{portuguese}{\dissertationdisclamer}{Disserta\c{c}\~ao para obten\c{c}\~ao do Grau de Mestre em \\ Engenharia Inform\'atica, \'Area de Especializa\c{c}\~ao em\\} % Portuguese 
 \newcommand{\advisorlabel}{Advisor}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\advisorlabel}{\ifdefined\advplural{Advisors}\else{Advisor}\fi}

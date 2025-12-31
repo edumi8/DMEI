@@ -1,0 +1,52 @@
+Formaliza)on: Review process of the proposal that involves the student submi6ng the
+following data to the pla8orm, with prior approval from the ISEP and business advisor
+(if applicable), of the following data:
+a) Title
+
+b) Guidance team
+
+c1) Problem
+
+c2) Does the problem have one or more of the following characterisDcs?
+1. involves wide-ranging or conﬂicDng technical issues,
+2. having no obvious soluDon,
+3. addressing problems not encompassed by current standards and codes,
+4. involving diverse groups of stakeholders,
+5. includes many component parts or subproblems, involving mulDple disciplines,
+6. having signiﬁcant consequences in a variety of contexts.
+
+c3) If yes, indicate which ones:
+
+__ 1. JusDﬁcaDon: _____________
+__ 2. JusDﬁcaDon: _____________
+...
+__ 6. JusDﬁcaDon: _____________
+
+
+d) ObjecDves
+
+e) Will there be an interpretaDon of the problem to be solved?
+Yes. How?_____________
+No
+
+f) Will there be systemaDzaDon of exisDng knowledge to solve the problem?
+Yes. How?_____________
+No
+
+g) Will there be an evaluaDon of diﬀerent approaches to solving the problem?
+Yes. How?_____________
+No
+
+h) Will a soluDon be designed (product, component, process)?
+Yes. How?_____________
+No
+
+i) Will a soluDon be created?
+Yes. How?_____________
+No
+j) Will there be an evaluaDon of the soluDon designed/implemented?
+Yes. How?_____________
+No
+
+k) Bibliographic references
+

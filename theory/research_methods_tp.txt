@@ -1,0 +1,368 @@
+Research Methods (TP)
+Practice: Research Methodology and
+Research Literature
+Nuno Pereira, DEI/ISEP, 2025
+Activity I: Draft of your Research
+Question
+Write your research question(s)
+     ▪   What do you want to research in the form of 1-2 questions that capture the work’s
+         essence
+
+Briefly think about
+     ▪   How will you answer your research questions (selecting case/artifact, data collection) ?
+     ▪   How will you analyze the data ?
+     ▪   What results do you expect to obtain?
+
+▪   Optional: Sketch an Illustration of your research process
+
+
+▪   Discuss with the instructor
+                                                                                                    2
+Research Literature
+
+
+                      3
+Research Papers 1/3
+These are an important source of information for your project
+
+
+Peer-reviewed articles, written by experts in academic or
+professional fields
+
+
+They are excellent sources for your work
+
+
+Most of the databases/libraries on B-On
+
+
+
+
+                                           NUNO PEREIRA, DEI/ISEP.   4
+   Research Papers 2/3
+    Let us see an example (ACM Digital library)
+
+
+
+
+Who ?
+                                                                        When ?
+
+
+
+
+    The contents of the paper should clearly answer What?, Where? and Why?
+                                             NUNO PEREIRA, DEI/ISEP.             5
+Research Papers 3/3
+Can we use this information (venue, citations) further ?
+
+
+
+
+                                                                   Publication venue ?
+
+
+                                         How many
+                                        times cited ?
+
+
+
+                                         NUNO PEREIRA, DEI/ISEP.                     6
+Evaluating Citations
+Citations do give us some measure of how many times other researchers have found the work “useful”
+
+
+Beware, though:
+◦ Citations are counted automatically, and this process has errors
+◦ “Matthew effect”
+  ◦ as highly cited papers tend to have higher visibility, they gain more citations
+◦ Not all citations are “good” citations:
+  ◦ “… we have found previous work [1] that has an error…”
+  ◦ “… we have found many previous works [1-10] using an inadequate approach”
+  ◦ Self citations, tangent citations, biased citations (e.g. acknowledge a famous work/professor in a field), …
+◦ Some work might be very useful in industry, but the people that use it do not write papers…
+◦ Scientific communities have different dimensions
+  ◦ a high citation count in one community might be a very low count in another
+◦ Age plays a role in citation count
+◦ …
+
+
+
+                                                                NUNO PEREIRA, DEI/ISEP.                            7
+Evaluating
+Citations
+Places to find citation counts
+Google Scholar
+◦ https://scholar.google.pt/
+
+
+
+ACM Digital Library
+◦ http://dl.acm.org/
+
+
+
+
+                                 NUNO PEREIRA, DEI/ISEP.   8
+Evaluating Citations
+Places to find citation counts
+Semantic Scholar
+◦ https://www.semanticscholar.org/
+
+
+
+
+                                     NUNO PEREIRA, DEI/ISEP.   9
+Evaluating Citations
+Places to find citation counts
+
+
+Web of Science
+◦ https://www.webofknowledg
+  e.com/
+
+
+
+
+                                 NUNO PEREIRA, DEI/ISEP.   10
+Evaluating Publication Venues
+Papers are published in essentially two types of venues
+◦ Conference proceedings
+◦ Journals
+
+
+
+Publication venues do not say everything about a paper, but
+◦ Tend do indicate that the paper went through additional scrutiny
+◦ Provide some pillars for the non-expert (prominent journals,
+  conferences, …)
+
+
+
+
+                                            NUNO PEREIRA, DEI/ISEP.   11
+Evaluating Journals
+A common way to assess journals is using a
+measure of their impact
+ ◦ Impact is measured based on citation counts
+ ◦ Has the same flaws as paper citation counts
+   ◦ bias towards authors, journals, disciplines, institutions,
+     countries…
+
+
+
+A high impact journal does not guarantee papers are flawless or relevant, but:
+ ◦ Papers go through a rigorous peer review
+ ◦ Editors try to maintain good quality and relevance of selected articles
+
+
+
+
+                                                             NUNO PEREIRA, DEI/ISEP.   12
+Journal Impact – JCR and Scopus
+Journal Citation Reports (JCR) – ISI Thomson
+◦ Impact Factor (IF) of journals based on citation information of
+  journals indexed in Web of Science (WoS)
+◦ “Rigorous” process to determine included journals
+◦ Widely used, but somewhat weak coverage of Computer Science
+◦ http://webofknowledge.com/
+
+
+SciMago Journal & Country Rank (SJR) - Elsevier
+◦ Journal & Country Rank (JCR) of journals based on citation
+  information of journals indexed in Scopus
+◦ “More inclusive” process to determine included journals
+◦ http://www.scimagojr.com/
+
+
+
+                                             NUNO PEREIRA, DEI/ISEP.   13
+Journal Impact – JCR and Scopus
+Coverage
+
+
+
+
+                                                                                   http://www.harzing.com/
+                                                                                   popbook/ch16_2_1.htm
+      Number of citations for ISI and Scopus General Search: Science disciplines
+
+                                    NUNO PEREIRA, DEI/ISEP.                                    14
+Journal Impact - JCR
+Browse journals in JCR
+
+
+
+
+                         NUNO PEREIRA, DEI/ISEP.   15
+Journal Impact – Google Scholar
+Google Scholar (GS) Top Publications
+
+◦ https://scholar.google.com/citations?view_op=top_ve
+  nues&hl=en&vq=eng
+
+◦ Top 20 publications in several fields, based on GS
+  citation count
+
+
+
+
+                                              NUNO PEREIRA, DEI/ISEP.   16
+Evaluating Conferences
+Data about conferences can be even less conclusive
+◦ ISI Web of Science includes the “Conference Proceedings Citation index”
+◦ Google Scholar and Microsoft Academic provide some information regarding conferences
+◦ The CORE Conference Ranking is a reference often used
+  ◦ Conferences are assigned to one of the following categories:
+    ◦ A* - flagship conference, a leading venue in a discipline area
+    ◦ A - excellent conference, and highly respected in a discipline area
+    ◦ B - good conference, and well regarded in a discipline area
+    ◦ C - other ranked conference venues that meet minimum standards
+    ◦ Australasian - A conference for which the audience is primarily Australians and New Zealanders
+    ◦ Unranked - A conference for which no ranking decision has been made
+  ◦ http://portal.core.edu.au/conf-ranks/
+
+
+
+
+                                                         NUNO PEREIRA, DEI/ISEP.                       17
+The CORE Conference Ranking
+
+
+
+
+               NUNO PEREIRA, DEI/ISEP.   18
+ Use With Caution
+ Citations and rankings have very important flaws
+   ◦ Do no cover all scholarly publications
+   ◦ Include non-scholarly publications
+   ◦ Can be “gamed”1
+   ◦ Perform worst for older publications
+   ◦ (other flaws previously)
+   ◦ …
+
+
+
+ Nevertheless, they provide a good initial indication for the non-expert
+
+1https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2004089
+
+
+
+
+                                                                     NUNO PEREIRA, DEI/ISEP.   19
+Libraries and Online Literature
+Databases
+Academic libraries focus on organizing information to meet the needs of academics
+
+
+Organized by, e.g.:
+◦ established fields of research, types of publication
+  (books, thesis, journals,…)
+
+
+Online Libraries
+◦ Scientific Repository of the Polytechnic Institute of Porto
+  ◦ https://recipp.ipp.pt/
+  ◦ DEI MSc Dissertations: https://recipp.ipp.pt/handle/10400.22/364
+
+
+◦ B-On
+  ◦ http://www.b-on.pt/
+
+ACM Digital Library (Pay walled; B-On)                 NUNO PEREIRA, DEI/ISEP.      20
+Examples of Relevant Online
+Libraries/Databases
+ ACM Digital Library (Pay walled; B-On)
+  ◦ http://dl.acm.org/
+
+ IEEE Explore (Pay walled; B-On)
+  ◦ http://ieeexplore.ieee.org/
+
+DBLP
+  ◦ http://dblp.uni-trier.de/ (Free)
+The Collection of Computer Science
+Bibliographies (Free)
+  ◦ http://liinwww.ira.uka.de/bibliography/
+
+Arxiv.org (Free)
+  ◦ http://arxiv.org/
+
+
+                                              NUNO PEREIRA, DEI/ISEP.   21
+Recording and Organizing Information
+Always record your findings adequately
+ ◦ Record:
+   ◦   author(s),
+   ◦   title,
+   ◦   year of publication,
+   ◦   publisher,
+   ◦   edition/version/issue/volume,
+   ◦   access information (URL, DOI, Reference ID…),
+   ◦   location,
+   ◦   abstract, keywords (preferably)...
+
+Don’t trust your memory!…
+Many different ways:
+ ◦ Cards with notes (physically or on the computer)
+ ◦ Articles (physically or on the computer) with text highlighted and notes
+ ◦ Reference management software
+
+
+
+
+                                                       NUNO PEREIRA, DEI/ISEP.   22
+Reference Management Software
+There are many tools to help you collect, organize, cite, and share your
+research sources
+Zotero
+ ◦ free reference manager
+ ◦ https://www.zotero.org/
+Mendeley
+ ◦ free reference manager and academic social network
+ ◦ https://www.mendeley.com/
+EndNote
+ ◦ commercial reference manager
+ ◦ http://endnote.com/
+
+Use one!
+
+
+
+                                               NUNO PEREIRA, DEI/ISEP.     23
+Activity II: Search Digital Libraries
+Develop the suggested activity (see ”Activity II: Search Digital Libraries” in Moodle):
+    1.   Search the Acm Digital Library
+    2.   Search the SciMago Journal & Country Rank (JSR)
+    3.   Search the Web of Science (WoS)
+
+
+
+
+                                                                                          24
+Resources
+◦ S. Keshav, “How to Read a Paper”. Online:
+  http://ccr.sigcomm.org/online/files/p83-keshavA.pdf
+
+◦ William G. Griswold, “How to Read an Engineering Research Paper”. Online:
+  http://cseweb.ucsd.edu/~wgg/CSE210/howtoread.html
+
+
+Also in Moodle, folder “Resources”
+
+
+
+
+                                 NUNO PEREIRA, DEI/ISEP.                      25
+Summary
+Drafting your Research Question
+
+Guidelines to start looking into research literature and their caveats
+
+Tools for managing your references and reference styles
+
+
+
+
+                                                                         26
+

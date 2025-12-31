@@ -1,0 +1,624 @@
+                      Instituto Superior de Engenharia do Porto
+                               Mestrado em Engenharia Informática
+
+
+
+
+                Preparação para a Dissertação
+                               Revisão da Literatura
+
+
+
+                                             T: ACS
+
+
+
+
+1
+
+
+
+
+    Introduction
+    Engineering:
+
+    • Importance of concepts
+
+    • Fact oriented
+
+    • Scientific basis
+
+    • Critical thinking (rationalism)
+           – Rational critic to any claim – in this context, claims must
+             be analyzed, informed by facts. So, claims should be
+             subjected to tests
+
+
+    (c) PREPD, ISEP             Mestrados no Dep. de Engenharia Informática   2
+
+
+2
+
+
+
+
+                                                                                  1
+    Facts/Evidence
+    • Decisions concerning the choice of engineering
+      (SE) techniques and tools should rest on facts and
+      not just on opinions            [Fenton…,2014]
+
+
+
+
+    • Facts - are evidence usually resulting from
+      accomplished empirical research
+
+    • This leads to an evidence-based informatics
+      engineering, an important step toward an
+      engineering discipline with scientific bases
+                        “Informatics” Engineering is the application of an empirical,
+                        scientific approach to finding efficient, economic solutions
+                        to practical problems in software. [adapted from Farley, 2022]
+    (c) PREPD, ISEP      Mestrados no Dep. de Engenharia Informática            3
+
+
+3
+
+
+
+
+    Some General Characteristics of
+    Quality Research
+    General characteristics:
+
+    • Understanding of the problem and provides
+      clearly defined research question(s)
+           – What do we want?
+
+    • Well defined research process (protocol)
+           – Research is not simple, think in advance
+
+    • Can be easily repeated (replicated)
+           – Need to be confirmed
+
+    (c) PREPD, ISEP      Mestrados no Dep. de Engenharia Informática            4
+
+
+4
+
+
+
+
+                                                                                         2
+    Motivation
+    Overview of the Research Process
+    1. Start by defining the problem
+
+    2. Provide a strong literature review of the area
+
+    3. Choose and apply the research strategy and
+       method(s) to be used according a research design
+
+    4. Disseminate study results
+
+
+
+
+    (c) PREPD, ISEP                 Mestrados no Dep. de Engenharia Informática   5
+
+
+5
+
+
+
+
+    Evidence-based SW Engineering
+    • Evidence-based (software or other) engineering
+      (EBSE)
+
+    Goal:
+    to provide the means by which current best evidence
+    from research can be integrated with practical
+    experience in the decision-making process regarding
+    the development and maintenance of software. Adapted
+    from [Kitchenham et al, 2004]
+
+
+
+
+    How: by reviewing the evidence
+
+    (c) PREPD, ISEP                 Mestrados no Dep. de Engenharia Informática   6
+
+
+6
+
+
+
+
+                                                                                      3
+                 Evidence based Engineering
+                 What EB (informatics in a broad sense) engineer can
+                 provide:
+                 • Better assurance that research is directed to the
+                   requirements of industry and other stakeholders
+                 • A means by which industry practitioners can make
+                   rational decisions about technology adoption
+                 • A means to improve the dependability on software
+                   intensive systems, as a result of better choice of
+                   development technologies
+                 • A means to increase the acceptability of software
+                   intensive systems by society
+                                                                                                            [Adapted from Kitchenham et al, 2004]
+
+
+                 (c) PREPD, ISEP                                     Mestrados no Dep. de Engenharia Informática                                    7
+
+
+       7
+
+
+
+
+                 Experts and Reviews
+                 • Some History
+                         – Medical studies from the late 80s and early 90s showed
+                           that        :  [Kitchenham et al, 2004]
+
+                                 • failure to organize medical research in systematic review could
+                                   cost lives
+                                 • clinical judgement of experts compared unfavorably with the
+                                   results of systematic reviews
+
+
+
+
+                 • Need of a systematic review method
+
+                 (c) PREPD, ISEP                                     Mestrados no Dep. de Engenharia Informática                                    8
+
+
+       8
+
+
+
+
+This Photo by Unknown Author is licensed under CC BY-NC-ND
+
+                                                                                                                                                        4
+     Literature Reviews and the Engineer
+     • An engineer does not have to be an expert about
+       all subjects
+
+
+
+
+     (c) PREPD, ISEP   Mestrados no Dep. de Engenharia Informática    9
+
+
+9
+
+
+
+
+     Literature Reviews
+     Who cares
+     • Professionals need to evaluate proposals of
+       innovations
+     • Students and researchers need to develop
+       state of the art reports
+     • Professionals need to choose among
+       several (innovative) tools, techniques or
+       methods, or develop new ones
+        Should start by finding what is already
+                known about the subject
+
+     (c) PREPD, ISEP   Mestrados no Dep. de Engenharia Informática   10
+
+
+10
+
+
+
+
+                                                                          5
+     Literature Review
+
+     Definition
+     • Literature review is a research activity
+       intended to organize and summarize the
+       research work already done in the area of
+       interest [Sampaio,2015]
+
+     • Literature reviews are secondary studies –
+       because they review original studies
+
+     (c) PREPD, ISEP    Mestrados no Dep. de Engenharia Informática                        11
+
+
+11
+
+
+
+
+     Literature Reviews
+     Goals of a Literature Review
+     1. Provide a solid theoretical foundation for the proposed
+        study in the dissertation course (related to “what is
+        already known?”)
+     2. To help the student understand the existing body of
+        knowledge including where excess research exists (i.e.
+        what is already know?) and where new research is needed
+        (i.e. what is needed to be known?)
+     3. Substantiate the presence of the research problem
+        (related to “what is needed to be known?”)
+     4. Frame the valid research methodologies, approach, goals,
+        and research questions for the proposed study
+        (dissertation)
+     5. In certain cases, justify the proposed study as one that
+        contributes something new to the body of knowledge
+                                                                      Adapted from
+                                                                      [Levy&Ellis, 2006]
+     (c) PREPD, ISEP    Mestrados no Dep. de Engenharia Informática                        12
+
+
+12
+
+
+
+
+                                                                                                6
+     Literature Reviews
+     Methods
+     Main Methods for Literature Review:
+     • Narrative literature review (not systematic)
+            – Possibly with no clear scientific value
+     • Systematic Methods:
+            – Systematic literature Reviews
+                   • In depth, requiring significant time and statistical analysis
+            – Systematic mapping (scoping) reviews
+                   • A simplified version of the previous
+                   • Adequate for our purpose
+     • All easier today with digital libraries
+     (c) PREPD, ISEP             Mestrados no Dep. de Engenharia Informática   13
+
+
+13
+
+
+
+
+     Literature Reviews
+     Methods - Narrative literature review
+     • It is the traditional method
+     • Has no clear scientific value
+     Procedure
+     1. Start a search from an initial reference, or
+        a limited set or references
+     2. Try to find other interesting papers
+     3. Finish when satisfied
+
+     (c) PREPD, ISEP             Mestrados no Dep. de Engenharia Informática   14
+
+
+14
+
+
+
+
+                                                                                     7
+      Literature Reviews
+      Narrative literature review
+                                                                                  Snowball
+     Using snowball improves narrative review
+
+
+                                                                              References             Citations
+     If with snowball, proceed
+     through the references until the
+     research is satisfied or no new
+     references found (and/or
+                                                               References            Citations
+     through citations)
+                                                            …                 …    …             …
+                                                        Backw                                    Forwa
+                                                         ard                                       rd
+
+
+
+
+      (c) PREPD, ISEP           Mestrados no Dep. de Engenharia Informática                              15
+
+
+15
+
+
+
+
+      Literature Reviews
+      Syatematic Reviews
+      • Traditional review is very dependent on the researcher’ “mood”
+        and initial choices!!
+
+      • Works that summarizes research (primary studies) should not
+        engage in glossing over applicable studies
+             – Glossing over here means omit, downplay, or avoid certain studies
+               intentionally or unintentionally
+
+      • If studies' contributions are ignored, they do not inform and
+        impact practice, and evidence-based informatics engineering
+        has gaps
+
+      • The actual context of evidence-based Informatics Engineering,
+        requires a systematic approach
+
+
+      (c) PREPD, ISEP           Mestrados no Dep. de Engenharia Informática                              16
+
+
+16
+
+
+
+
+                                                                                                                 8
+     Literature Reviews
+     Systematic Literature Review (SLR)
+     SLR
+     Definition: A systematic literature review is a formalized
+     method to address a specific question by analyzing
+     the breadth of published literature while minimizing bias
+     (adapted from [Smith et al., 2022] )
+
+
+
+
+     • “address a specific question” is a concrete test
+                                                          Example: does drug A cures disease X
+     • However, this is not always needed
+     • MEI/PREPD is such a case, where the goal of the
+       review is not to answer a specific question
+
+     (c) PREPD, ISEP                        Mestrados no Dep. de Engenharia Informática                      17
+
+
+17
+
+
+
+
+     Literature Reviews
+     Mapping study (MS)                                                                   The method we
+                                                                                          are going to use
+     Mapping Study (MS)
+     Definition: A method to provide a wide overview of a
+     research area, to establish if exists research evidence
+     on a topic and provide an indication of the quantity of
+     the evidence
+
+     • Also know as systematic mapping study, systematic
+       scoping review, or simply a mapping study (MS)
+
+     • Can be more or less “rapid” depending on the
+       constraints of time and resources. More rapid when
+       the area, or the situation, changes fast.
+
+     (c) PREPD, ISEP                        Mestrados no Dep. de Engenharia Informática                      18
+
+
+18
+
+
+
+
+                                                                                                                  9
+     Literature Reviews
+     Mapping- Goal
+     Main goals of mapping studies:
+     • To provide an overview of a research area,
+       to evaluate the quantity and type of
+       research and results available in the area
+       and,
+     • to determine the publications where
+       research is published
+     • to identify gaps in the research
+
+     (c) PREPD, ISEP              Mestrados no Dep. de Engenharia Informática   19
+
+
+19
+
+
+
+
+     Literature Reviews
+     Mapping- A Method
+     Stages:
+     1. Protocol and deﬁnition of research questions
+     2. Conducting the search for primary studies
+     3. Screening
+     4. Classiﬁcation system
+     5. Coding: data extraction and aggregation
+     6. Analysis and report
+
+     • The method complements each step with:
+           –      Purpose
+           –      Outcomes                       Not applicable parts in GREY
+           –      QA activities
+
+     (c) PREPD, ISEP              Mestrados no Dep. de Engenharia Informática   20
+
+
+20
+
+
+
+
+                                                                                     10
+     Literature Reviews
+     Mapping- The Method
+     • The method allows for
+       obtaining the information in the
+       figure, and with the same flow.
+       This is the PRISMA information
+       flow
+
+     • PRISMA (Preferred Reporting
+       Items for Systematic reviews
+       and Meta-Analyses) is an
+       evidence-based minimum set
+       of items for reporting in
+       systematic reviews and meta-
+       analyses
+
+
+     (c) PREPD, ISEP      Mestrados no Dep. de Engenharia Informática   21
+
+
+21
+
+
+
+
+     Literature Reviews
+     Literature Review – Conclusion
+     • Final Notes:
+            – An analysis step is fundamental
+            – Include limitations
+            – Draw conclusions relevant to the state of the
+              art, ie, relevant to your work
+
+
+     • Review in the Dissertation
+            – A section in the “State of the Art” chapter
+
+     (c) PREPD, ISEP      Mestrados no Dep. de Engenharia Informática   22
+
+
+22
+
+
+
+
+                                                                             11
+     Literature Reviews
+     Literature Review – Conclusion
+     • Review in the Dissertation
+            Dissertation                                                        Estado da Arte
+
+             Introduction                                                           Introduction/Protocol
+             • Goal(s)/Research question(s)                                         • Goal(s)/Research Question(s) for the Review
+             • ...                                                                  • ...
+
+
+
+              State of the Art                                                       Method Application
+             • ...
+             • Literature Review
+             • ...
+
+
+
+
+                                    ...                                                                  ...
+
+     (c) PREPD, ISEP                           Mestrados no Dep. de Engenharia Informática                                       23
+
+
+23
+
+
+
+
+     Literature Reviews
+     Systematic vs Narrative
+     •
+                                    Narrative                           Systematic
+      Question for research         Not existent or broad in scope Yes
+      Sources of research           Not specific, biased                Previously specified and wide-ranging, with
+                                                                        an explicit search strategy
+      Selection of studies          Not specific, biased                Criterion based selection, systematically
+                                                                        applied
+      Appraisal                     Variable                            Rigorous and complete
+      Synthesis                     Qualitative summary                 Quantitative or semi quantitative (at least
+                                                                        graphical and/or tabular) summary
+      Inferences                    Uncommon, but sometimes Always evidence-based
+                                    evidence-based
+      Protocol                      Brief method description Yes
+
+                                                                                                               [Adapted from Varandas,
+                                                                                                               Carneiro,2006]
+
+
+
+
+     (c) PREPD, ISEP                           Mestrados no Dep. de Engenharia Informática                                       24
+
+
+24
+
+
+
+
+                                                                                                                                         12
+     Literature Reviews
+     Mapping vs SLR
+                       Item                   SLR                               Mapping
+     Goal Type                Very specific                           Broader
+     Protocol                 Yes (include statistical                Yes
+                              methods)
+     Search strategy          Defined and Systematic                  Defined and Systematic
+     Inclusion/exclusion      Defined a priori                        Defined a priori, but
+     criteria                                                         flexible
+     Appraisal of studies     Always                                  Not usual (but possible)
+     Synthseis                Quantitative                            Usually qualitative, or semi
+                                                                      quantitative, but graphical
+                                                                      or tabular
+     Goal                     Comparison of alternatives Overview of studies
+
+
+
+     (c) PREPD, ISEP           Mestrados no Dep. de Engenharia Informática                           25
+
+
+25
+
+
+
+
+     Literature Reviews
+     AULA TP
+     • Para a próxima aula TP o aluno deverá:
+     • Escolher um tópico para revisão da
+       literatura
+     • Preferencialmente, mas não obrigatoria/e
+       sobre o tema escolhido pelo aluno para a
+       disciplina de Dissertação
+
+
+
+     (c) PREPD, ISEP           Mestrados no Dep. de Engenharia Informática                           26
+
+
+26
+
+
+
+
+                                                                                                          13
+     FIM
+
+
+
+
+     (c) PREPD, ISEP   Mestrados no Dep. de Engenharia Informática   27
+
+
+27
+
+
+
+
+                                                                          14
+

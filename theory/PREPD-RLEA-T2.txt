@@ -1,0 +1,522 @@
+                      Instituto Superior de Engenharia do Porto
+                               Mestrado em Engenharia Informática
+
+
+
+
+                Preparação para a Dissertação
+                               Revisão da Literatura
+
+
+
+                                           TP: ACS
+
+
+
+
+1
+
+
+
+
+    Revisão da Literatura
+    Methods
+    • We saw the need for a systematic method
+    • The Systematic Mapping Review method
+      was the most adequate
+                  • A simplified version of the SLR
+
+
+
+
+    (c) PREPD, ISEP             Mestrados no Dep. de Engenharia Informática   2
+
+
+2
+
+
+
+
+                                                                                  1
+    Revisão da Literatura
+    Mapping- Goal
+    Main goals of mapping studies:
+    • To provide an overview of a research area,
+      to evaluate the quantity and type of
+      research and results available in the area
+      and,
+    • to determine the publications where
+      research is published
+    • to identify gaps in the research
+
+    (c) PREPD, ISEP              Mestrados no Dep. de Engenharia Informática    3
+
+
+3
+
+
+
+
+    Revisão da Literatura
+    Mapping- The Method
+    Stages:
+    1. Protocol and deﬁnition of research questions
+    2. Conducting the search for primary studies
+    3. Screening
+    4. Classiﬁcation system
+    5. Coding: data extraction and aggregation
+    6. Analysis and report
+
+    • The method includes, for each step:
+          –      Purpose
+          –      Outcomes                       Parts not applicable parts in
+          –      QA activities                  GREY
+
+    (c) PREPD, ISEP              Mestrados no Dep. de Engenharia Informática    4
+
+
+4
+
+
+
+
+                                                                                    2
+    Revisão da Literatura
+    Mapping- The Method
+    • The method allows to obtain the information
+      in the figure, and with the same flow
+
+
+
+           PRISMA flow à
+           of information
+
+
+
+
+    (c) PREPD, ISEP          Mestrados no Dep. de Engenharia Informática     5
+
+
+5
+
+
+
+
+    Revisão da Literatura
+    1. Protocol
+    • Stage Purpose: Develop the protocol that
+      will guide the MS eﬀort in a rigorous way.
+    • Outcomes: A protocol able to guide the
+      review and covering all the stages.
+    • QA: Using the PICOCS structure, verify if
+      the search strings are part of the I/E criteria.
+    •    Review the protocol to know if it is complete - covers all stages - and
+         is coherent with the goals of the systematic mapping review, so it
+         allows the researchers to answer the research questions. Protocol can
+         be reviewed later
+
+    (c) PREPD, ISEP          Mestrados no Dep. de Engenharia Informática     6
+
+
+6
+
+
+
+
+                                                                                   3
+    Revisão da Literatura
+    1. Protocol Main Points
+    • Goal(s) and research question(s);
+    • Deﬁne a draft of inclusion/exclusion criteria,
+      the search strategy, the screening process
+      and, possibly, a ﬁrst approach to the
+      categories and forms to be used during the
+      data extraction stage.
+
+
+
+
+    (c) PREPD, ISEP                   Mestrados no Dep. de Engenharia Informática   7
+
+
+7
+
+
+
+
+    Revisão da Literatura
+    1. Protocol Process
+
+
+
+
+                      PICOCS is not
+                      mandatory
+
+
+
+
+    (c) PREPD, ISEP                   Mestrados no Dep. de Engenharia Informática   8
+
+
+8
+
+
+
+
+                                                                                        4
+     Revisão da Literatura
+     1. Protocol
+     • Research questions
+     • All research should be guided by research questions
+     • To help framing a research question for a review, you can use
+       the PICOCS model
+     • PICOCS Goal: help understand what the reviewer wants
+
+     • Model with examples:
+            – Population of interest: studies in English, or more restrictive, as for
+                example, financial domain
+            – Intervention: introduction of TDD
+            – Comparison: no use in MS
+            – Outcomes: number of defects after software delivery
+            – Context: student projects, final course project, professional.
+            – Study design: case study
+
+
+     (c) PREPD, ISEP              Mestrados no Dep. de Engenharia Informática            9
+
+
+9
+
+
+
+
+     Revisão da Literatura
+     1. Protocol
+     • RQ example: What studies are there about the
+       security of air transfer methods of trained ML
+       models to resource-constrained embedded
+       systems?
+     • RQ framed
+            – Population: studies involving Resource-Constrained
+              Embedded Systems
+            – Intervention: air transfer methods of trained ML models
+            – Comparison: --
+            – Outcomes: security
+            – Context: practitioners
+            – Study design: empirical studies
+
+                                     Mestrado em Engenharia de Sistemas
+     (c) TRPDE, MESCC, ISEP                Computacionais Críticos                      10
+
+
+10
+
+
+
+
+                                                                                             5
+     Revisão da Literatura
+     1. Protocol
+     • RQ example (adapted from) : What studies are
+       there about estimation models for predicting
+       effort for Web projects?
+     • RQ framed
+            – Population: studies involving web projects
+            – Intervention: project effort estimation model
+            – Comparison: --
+            – Outcomes: prediction or estimate accuracy.
+            – Context: practitioners
+            – Study design: empirical studies
+
+     (c) PREPD, ISEP       Mestrados no Dep. de Engenharia Informática   11
+
+
+11
+
+
+
+
+     Revisão da Literatura
+     1. Protocol
+     • RQ example: Are there empirical studies and
+       experience reports about automated software
+       testing observed benefits and limitations in industry
+       at large?
+     • RQ framed
+            – Population: studies in industry at large
+            – Intervention: automation of software testing
+            – Comparison: --
+            – Outcomes: benefits and limitations
+            – Context: practitioners
+            – Study design: empirical studies and experience reports
+
+     (c) PREPD, ISEP       Mestrados no Dep. de Engenharia Informática   12
+
+
+12
+
+
+
+
+                                                                              6
+      Revisão da Literatura
+      1. Protocol
+      • PICOCS guidance: by filling the table
+        horizontally.
+      • It is not mandatory to use a table, the flow is
+        what matters
+      • Example next
+
+
+
+
+      (c) PREPD, ISEP                      Mestrados no Dep. de Engenharia Informática                          13
+
+
+13
+
+
+
+
+      Revisão da Literatura
+      1. Protocol
+      • PICOCS use. RQ:
+             – Are there empirical studies and experience reports about automated
+               software testing observed benefits and limitations in industry at large?
+
+     PICOCS RQ part                                I/E                                     Sub String
+       P        Studies in industry                I-Studies in industry                   >=2010
+                                                   E-prior 2010
+       I        Automated testing                  I_Studies about automation testing      Automated testing; test
+                                                   I-Studies comparing automated with no   automation;
+                                                   automated                               Comparing; comparison
+       C        ---
+
+       O        Benefits and limitations           E- studies not presenting limitations   Benefits; limitations;
+                                                                                           impact
+       C        Industry                           I-with professionals only               Industry; professionals
+
+       S        Empirical and experience           E- surveys                              Empirical study;
+                reports                                                                    Case study;
+
+      (c) PREPD, ISEP                      Mestrados no Dep. de Engenharia Informática                          14
+
+
+14
+
+
+
+
+                                                                                                                     7
+     Revisão da Literatura
+     2.Conducting the Search
+     • Purpose: Find the primary studies potentially
+       relevant for reviewing.
+     • Outcomes: All the papers selected by the searches
+       with the information related to each search.
+     • The returned information can include: the library,
+       date of the search, restrictions to the search, search
+       strings, records, number of records and any other
+       information relevant to the search.
+     • QA: For the search, repeat some or all of the
+       searches and compare the results.
+
+
+     (c) PREPD, ISEP   Mestrados no Dep. de Engenharia Informática   15
+
+
+15
+
+
+
+
+     Revisão da Literatura
+     2.Conducting the Search
+     • If the researcher was already in possession
+       of other studies, these should be added to
+       the result of the search.
+     • Check for duplicates among all the studies
+       and remove them. Record the excluded.
+
+
+
+
+     (c) PREPD, ISEP   Mestrados no Dep. de Engenharia Informática   16
+
+
+16
+
+
+
+
+                                                                          8
+     Revisão da Literatura
+     3. Screening
+     • Purpose: Select the relevant studies for
+       reviewing.
+     • Outcomes: The set of relevant papers for
+       coding, that is, the primary studies that pass
+       the criteria together with the all the criteria
+       (and codes) applied to each paper reﬂecting
+       the decisions taken.
+
+
+     (c) PREPD, ISEP   Mestrados no Dep. de Engenharia Informática   17
+
+
+17
+
+
+
+
+     Revisão da Literatura
+     4. Classification System
+     • Purpose: Deﬁne the classiﬁcation system to be
+       used to classify the papers, paying attention to
+       the Research questions.
+     • Outcomes: A way (classiﬁcation system) to
+       organize the papers in order to answer the
+       research questions.
+     • QA: Verify if the classiﬁcation system is
+       aligned with the research goals and questions
+       using the PICOCS model by checking if the
+       categories are covered by the search strings
+     (c) PREPD, ISEP   Mestrados no Dep. de Engenharia Informática   18
+
+
+18
+
+
+
+
+                                                                          9
+     Revisão da Literatura
+     5. Coding
+     • Purpose: The goal of this stage is to extract
+       and record data from the relevant primary
+       studies, and map these studies to the
+       categories (of the system) developed
+       previously.
+     • Outcomes: The outcome of this stage is a
+       synthesis, that is, the relevant papers
+       organized (classiﬁed) according the
+       classiﬁcation system, possibly in the form of a
+       map, or a table.
+
+     (c) PREPD, ISEP   Mestrados no Dep. de Engenharia Informática   19
+
+
+19
+
+
+
+
+     Revisão da Literatura
+     6. Analysis and Report
+     • Purpose: Analyze the map and produce a
+       report
+     • Outcomes: An informative analysis of the
+       studies presented in a report describing all
+       the stages; answer to the research
+       questions
+     • QA: Check if the research questions were
+       answered and the order and coherence of
+       the diagram of ﬂow information
+
+     (c) PREPD, ISEP   Mestrados no Dep. de Engenharia Informática   20
+
+
+20
+
+
+
+
+                                                                          10
+     Revisão da Literatura
+     6. Analysis and Report
+     • How to describe the flow of information?
+     • Use PRISMA - is an evidence-based
+       minimum set of items for reporting in
+       systematic reviews
+            à next slide PRISMA flow
+
+
+
+
+     (c) PREPD, ISEP    Mestrados no Dep. de Engenharia Informática                            21
+
+
+21
+
+
+
+
+                                                             PRISMA - Preferred Reporting Items for
+                                                             Systematic reviews and Meta-Analyses. It is
+                                                             an evidence-based minimum set of items for
+                                                             reporting in systematic reviews and meta-
+     (c) PREPD, ISEP    Mestrados no Dep. de Engenharia Informática                              22
+                                                             analyses
+
+22
+
+
+
+
+                                                                                                           11
+     Literature Reviews
+     Conclusion
+     • Systematic Methods: main activities.
+
+
+                      Develop                                                      Process
+                                                  Search
+                   search criteria                                                 Results
+
+
+
+
+     • The process can be iterative
+
+     (c) PREPD, ISEP                 Mestrados no Dep. de Engenharia Informática             23
+
+
+23
+
+
+
+
+     Digital Libraries
+
+     • For the exercise, the digital library of ACM
+       can be used:
+                       dl.acm.org
+
+
+
+
+     (c) PREPD, ISEP                 Mestrados no Dep. de Engenharia Informática             24
+
+
+24
+
+
+
+
+                                                                                                  12
+     FIM
+
+
+
+
+     (c) PREPD, ISEP   Mestrados no Dep. de Engenharia Informática   25
+
+
+25
+
+
+
+
+                                                                          13
+

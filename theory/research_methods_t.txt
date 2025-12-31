@@ -1,0 +1,1046 @@
+Research Methods
+Intro to Research in Computer Science
+and Sources of Information
+Nuno Pereira, DEI/ISEP, 2024
+Com inspiração e materiais de anos anteriores pelo Prof. Carlos Vaz de Carvalho (disponíveis no moodle)
+Objectives
+ Intro to Research in Computer Science
+ ▪ Basics of designing research in computer science
+ ▪ Principles to formulate research questions, research
+   strategies, data generation and analysis methods.
+
+
+ Sources of Information
+ ▪   Reflect and evaluate about your sources
+
+
+
+
+                                       NUNO PEREIRA, DEI/ISEP.   2
+Sources
+▪ Slides from previous editions, by Prof. Carlos Vaz de Carvalho (available in Moodle).
+▪ Babak A. Farshchian, “Empirical research methods in IT and digitalization”, NTU.Oates, B.J.,
+  2005. Researching information systems and computing. Sage.
+▪ Shaw, M. (2002), What Makes Good Research in Software Engineering?, International Journal
+  of Software Tools for Technology Transfer, 2002, vol. 4, no. 1, pp. 1-7.
+▪ Easterbrook S., Singer J., Storey MA., Damian D. (2008) Selecting Empirical Methods for
+  Software Engineering Research. In: Shull F., Singer J., Sjøberg D.I.K. (eds) Guide to Advanced
+  Empirical Software Engineering. Springer, London.
+
+
+
+
+                                          NUNO PEREIRA, DEI/ISEP.                                3
+             Research
+             Process                                            Strategies
+                                                                                            Data Generation
+                                                                      Survey                Methods
+     Experiences and
+       motivation                                                                               Interviews
+                                                                    Design and
+                                       Research                      creation
+                                                                                                              Data Analysis
+                                       questions
+                                                                    Experiment                 Observations
+                                                                                                                 Quantitative
+     Literature review                             Usually                          Often
+                                                    1:1                              1:N
+                                                                    Case Study                Questionnaire      Qualitative
+                                      Conceptual
+                                      Framework
+                                                                  Action research
+                                                                                                Documents
+
+                                                                   Ethnography
+
+
+In Oates, B.J., 2005. Researching information systems and computing. Sage.
+             Research Process
+             Example                                            Strategies
+                                                                                            Data Generation
+                                                                      Survey                Methods
+     Experiences and
+       motivation                                                                               Interviews
+                                                                    Design and
+                                       Research                      creation
+                                                                                                              Data Analysis
+                                       questions
+                                                                    Experiment                 Observations
+                                                                                                                 Quantitative
+     Literature review                             Usually                          Often
+                                                    1:1                              1:N
+                                                                    Case Study                Questionnaire      Qualitative
+                                      Conceptual
+                                      Framework
+                                                                  Action research
+                                                                                                Documents
+
+                                                                   Ethnography
+
+
+In Oates, B.J., 2005. Researching information systems and computing. Sage.
+Starting your Research
+Select a topic
+    ▪   By now, you should have a topic                                Experiences and
+    ▪   Possibly based on your preferences, prior knowledge and          motivation
+        availability
+                                                                                           Research
+Literature review                                                                          questions
+    ▪   Assessment of a body of research that addresses
+        a research question                                            Literature review
+    ▪   Discussed in other lectures
+Conceptual framework
+                                                                                           Conceptual
+    ▪   Ideas and theories that help identify the problem, frame questions and guide       Framework
+        the literature review
+
+
+
+
+                                                                                               6
+                                                                                                                                       Strategies
+                                                                                                                                                      Data Generation
+                                                                                                                                           Survey     Methods
+                                                                                                          Experiences
+                                                                                                         and motivation
+                                                                                                                                                         Interviews
+                                                                                                                                         Design and
+                                                                                                                          Research        creation
+                                                                                                                          questions                                       Data Analysis
+
+                                                                                                                                         Experiment    Observations
+                                                                                                           Literature                                                      Quantitative
+                                                                                                            review
+
+                                                                                                                                         Case Study    Questionnaire        Qualitative
+
+
+
+
+             Research Questions (1-5)
+                                                                                                                          Conceptual
+                                                                                                                          Framework
+                                                                                                                                           Action
+                                                                                                                                          research
+                                                                                                                                                        Documents
+
+                                                                                                                                        Ethnography
+
+
+
+
+                                                                                             Most often, our MSc work stems from practical problems
+
+
+             ”Research questions may be about methods for
+            developing software, about methods for analyzing
+            software, about the design, evaluation, or
+            implementation of specific systems, about
+            generalizations over whole classes of systems, or about
+            the sheer feasibility of a task.”
+            (Shaw, 2002)
+
+
+
+
+                                                                                                Figure in Booth, Colomb, and Williams, The Craft of Research, 2003
+Shaw, M. (2002), What Makes Good Research in Software Engineering?, International Journal of Software Tools for Technology Transfer, 2002, vol. 4, no. 1, pp. 1-7.
+
+                                                                                                                                                                      7
+                                                                                                   Strategies
+                                                                                                                  Data Generation
+                                                                                                       Survey     Methods
+                                                                      Experiences
+                                                                     and motivation
+                                                                                                                     Interviews
+                                                                                                     Design and
+                                                                                      Research        creation
+                                                                                      questions                                       Data Analysis
+
+                                                                                                     Experiment    Observations
+                                                                       Literature                                                      Quantitative
+                                                                        review
+
+                                                                                                     Case Study    Questionnaire        Qualitative
+
+
+
+
+Research Questions (2-5)
+                                                                                      Conceptual
+                                                                                      Framework
+                                                                                                       Action
+                                                                                                      research
+                                                                                                                    Documents
+
+                                                                                                    Ethnography
+
+
+
+
+Method or means of development                                       How to design system to drive autonomously in
+    How can we do/create (or automate doing) X?                      urban environments containing other vehicles, speed
+    What is a better way to do/create X?                             limits, and traffic-light regulated intersections?
+
+Method for analysis
+    How can I evaluate the quality/correctness of X?                 Can a model trained on simulated data achieve
+                                                                     similar performance to full training on real sensor
+    How do I choose between X and Y?                                 data after limited fine-tuning?
+Design, evaluation, or analysis of a particular instance
+    What is a (better) design or implementation for application X?
+    What is property X of artifact/method Y?                         What object detection and pose estimation methods
+    How does X compare to Y?                                         are suitable to generate a realistic human face?
+    What is the current state of X / practice of Y?
+
+
+
+
+                                                                                                                                  8
+                                                                                        Strategies
+                                                                                                       Data Generation
+                                                                                            Survey     Methods
+                                                           Experiences
+                                                          and motivation
+                                                                                                          Interviews
+                                                                                          Design and
+                                                                           Research        creation
+                                                                           questions                                       Data Analysis
+
+                                                                                          Experiment    Observations
+                                                            Literature                                                      Quantitative
+                                                             review
+
+                                                                                          Case Study    Questionnaire        Qualitative
+
+
+
+
+Research Questions (3-5)
+                                                                           Conceptual
+                                                                           Framework
+                                                                                            Action
+                                                                                           research
+                                                                                                         Documents
+
+                                                                                         Ethnography
+
+
+
+
+Generalization or characterization
+    Given X, what will Y (necessarily) be?               What are the relevant factors to implement a
+    What, exactly, do we mean by X?                      cybersecurity policy?
+    What are the important characteristics of X?
+    What is a good formal/empirical model for X?
+    What are the varieties of X, how are they related?
+Feasibility
+                                                         Is it possible to create a human scene capture
+    Does X even exist, and if so what is it like?        system that provides a semantic representation of
+    Is it possible to accomplish X at all?               the scene ?
+
+
+
+
+                                                                                                                       9
+Research Questions (4-5)                                Problem
+                                                         Space
+
+
+Research questions should be focused
+                                       Research Area
+
+
+
+
+                                       Research Topic
+
+
+
+
+                                         Research
+                                         Question
+
+
+
+
+                                                                  10
+Research Questions (5-5)
+Research questions guide the research process
+                                                                      Strategies
+                                                                                                 Data Generation
+                                                                           Survey                Methods
+                           Experiences and
+                             motivation
+                                                                                                     Interviews
+                                                                         Design and
+                                               Research                   creation
+                                                                                                                   Data Analysis
+                                               questions
+                                                                                                    Observations
+                                                                         Experiment                                   Quantitative
+                           Literature review                Usually                      Often
+                                                             1:1                          1:N
+                                                                         Case Study                Questionnaire      Qualitative
+                                               Conceptual
+                                               Framework
+                                                                       Action research
+                                                                                                     Documents
+
+                                                                        Ethnography
+
+
+
+
+                                                                                                                       11
+Research Strategies (1-8)
+Use a combination of strategies to address a research problem
+Choice depends on background, access to resources (data, subjects)
+and alignment of strategies with the research question   Strategies
+                                                                            Data Generation
+                                                              Survey        Methods
+                         Experiences
+                        and motivation                                         Interviews
+                                                            Design and
+                                           Research          creation
+                                                                                              Data Analysis
+                                           questions
+                                                            Experiment        Observations
+                          Literature                                                            Quantitative
+                           review
+
+                                                            Case Study       Questionnaire         Qualitative
+                                          Conceptual
+                                          Framework
+                                                          Action research
+                                                                               Documents
+
+                                                           Ethnography
+
+
+
+                                                                                              12
+                                                                                                               Strategies
+                                                                                                                                 Data Generation
+                                                                                                                   Survey        Methods
+                                                                                  Experiences
+                                                                                 and motivation                                     Interviews
+                                                                                                                 Design and
+                                                                                                  Research        creation
+                                                                                                                                                   Data Analysis
+                                                                                                  questions
+                                                                                                                                   Observations
+                                                                                   Literature                    Experiment                          Quantitative
+                                                                                    review
+
+                                                                                                                 Case Study       Questionnaire      Qualitative
+
+
+
+
+Research Strategies (2-8)
+                                                                                                  Conceptual
+                                                                                                  Framework
+                                                                                                               Action research
+                                                                                                                                    Documents
+
+                                                                                                                 Ethnography
+
+
+
+
+Survey
+   ▪     Survey research is used to identify the characteristics of a broad population of individuals. It is
+         most closely associated with the use of questionnaires for data collection. However, survey
+         research can also be conducted by using structured interviews, or data logging techniques.
+   ▪     The defining characteristic of survey research is the selection of a representative sample from a
+         well-defined population, and the data analysis techniques used to generalize from that sample to
+         the population, usually to answer base-rate questions.
+
+   ▪     Examples
+          ▪ User Experience and Satisfaction Surveys: Conducting a survey to measure user satisfaction with a
+              newly developed software application or website.
+          ▪   Security Awareness and Practices: Surveying employees in an organization to assess their awareness of
+              cybersecurity best practices and their compliance with security policies.
+          ▪   Data Privacy and GDPR Compliance: Surveying businesses to gauge their level of compliance with data
+              protection regulations like GDPR
+
+
+
+                                                                                                                                         13
+                                                                                                                Strategies
+                                                                                                                                  Data Generation
+                                                                                                                    Survey        Methods
+                                                                                   Experiences
+                                                                                  and motivation                                     Interviews
+                                                                                                                  Design and
+                                                                                                   Research        creation
+                                                                                                                                                    Data Analysis
+                                                                                                   questions
+                                                                                                                                    Observations
+                                                                                    Literature                    Experiment                          Quantitative
+                                                                                     review
+
+                                                                                                                  Case Study       Questionnaire      Qualitative
+
+
+
+
+Research Strategies (3-8)
+                                                                                                   Conceptual
+                                                                                                   Framework
+                                                                                                                Action research
+                                                                                                                                     Documents
+
+                                                                                                                  Ethnography
+
+
+
+
+Design and Creation
+    ▪   Design and creation is a strategy used to define how the system should be (design), implementing
+        the artefact (build), evaluate it, and draw conclusions from this process (conclusions).
+
+    ▪   Example
+         Design: A novel user interface concept based on some theory
+         Build: Create an application based on your design
+         Evaluate: Observe users and interview them after they have used the system
+         Conclusions: Explain how the results of your evaluation supports or refutes the underlying theory
+
+
+
+
+                                                                                                                                          14
+                                                                                                                Strategies
+                                                                                                                                  Data Generation
+                                                                                                                    Survey        Methods
+                                                                                   Experiences
+                                                                                  and motivation                                     Interviews
+                                                                                                                  Design and
+                                                                                                   Research        creation
+                                                                                                                                                    Data Analysis
+                                                                                                   questions
+                                                                                                                                    Observations
+                                                                                    Literature                    Experiment                          Quantitative
+                                                                                     review
+
+                                                                                                                  Case Study       Questionnaire      Qualitative
+
+
+
+
+Research Strategies (4-8)
+                                                                                                   Conceptual
+                                                                                                   Framework
+                                                                                                                Action research
+                                                                                                                                     Documents
+
+                                                                                                                  Ethnography
+
+
+
+
+Experiment
+   ▪   A controlled experiment is an investigation of a testable hypothesis where one or more
+       independent variables are manipulated to measure their effect on one or more dependent
+       variables.
+   ▪   Controlled experiments allow us to determine in precise terms how the variables are related and,
+       specifically, whether a cause-effect relationship exists between them.
+
+   ▪   Examples
+        ▪ Performance Evaluation: Comparing the runtime efficiency and memory usage of different algorithms
+             on various input data types and sizes.
+        ▪    A/B Testing for Website Optimization: Conducting A/B tests to determine which version of a website
+             interface leads to higher user engagement, conversion rates, or user satisfaction.
+        ▪    Network Protocol Evaluation: Analyzing the performance of a new network protocol under different
+             network conditions (e.g., latency, packet loss) to assess its suitability for a specific application.
+
+
+
+
+                                                                                                                                          15
+                                                                                                               Strategies
+                                                                                                                                 Data Generation
+                                                                                                                   Survey        Methods
+                                                                                  Experiences
+                                                                                 and motivation                                     Interviews
+                                                                                                                 Design and
+                                                                                                  Research        creation
+                                                                                                                                                   Data Analysis
+                                                                                                  questions
+                                                                                                                                   Observations
+                                                                                   Literature                    Experiment                          Quantitative
+                                                                                    review
+
+                                                                                                                 Case Study       Questionnaire      Qualitative
+
+
+
+
+Research Strategies (5-8)
+                                                                                                  Conceptual
+                                                                                                  Framework
+                                                                                                               Action research
+                                                                                                                                    Documents
+
+                                                                                                                 Ethnography
+
+
+
+
+Case Study
+   ▪   Yin (2002) introduces the case study as “an empirical inquiry that investigates a contemporary
+       phenomenon within its real-life context, especially when the boundaries between phenomenon
+       and context are not clearly evident.”
+   ▪   Case studies offer in-depth understanding of how and why certain phenomena occur and can
+       reveal the mechanisms by which cause-effect relationships occur.
+   ▪   A variety of different data sources are typically used in case study research. Qualitative data,
+       including interviews and observation, play a central role, as these offer rich insights into the case.
+
+   ▪   Examples
+        ▪ User Studies and Usability Testing: A study on the usability of a new mobile application, involving user
+             testing sessions and user feedback to identify and address usability issues.
+        ▪    Machine Learning Model Evaluation: Evaluating the performance of a machine learning model for image
+             recognition, comparing various architectures like Convolutional Neural Networks (CNNs) and Recurrent
+             Neural Networks (RNNs) on a specific dataset.
+        ▪    Security and Privacy Analysis: Analyzing the vulnerabilities of a specific web application and proposing
+             security measures to mitigate potential threats.
+                                                                                                                                         16
+                                                                                                      Strategies
+                                                                                                                        Data Generation
+                                                                                                          Survey        Methods
+                                                                         Experiences
+                                                                        and motivation                                     Interviews
+                                                                                                        Design and
+                                                                                         Research        creation
+                                                                                                                                          Data Analysis
+                                                                                         questions
+                                                                                                                          Observations
+                                                                          Literature                    Experiment                          Quantitative
+                                                                           review
+
+                                                                                                        Case Study       Questionnaire      Qualitative
+
+
+
+
+Research Strategies (6-8)
+                                                                                         Conceptual
+                                                                                         Framework
+                                                                                                      Action research
+                                                                                                                           Documents
+
+                                                                                                        Ethnography
+
+
+
+
+Action Research
+    ▪   In Action Research, the researchers attempt to solve a real-world problem while simultaneously
+        studying the experience of solving the problem (Davison et al, 2004).
+    ▪   Action research has been pioneered in fields such as education, where major changes in
+        educational strategies cannot be studied without implementing them, and where implementation
+        implies a long-term commitment, because the effects may take years to emerge. It has also been
+        adopted in information science, where organizational change can sometimes require a long time
+        to have an impact.
+    ▪   A precondition for action research is to have a problem owner willing to collaborate to both
+        identify a problem and engage in an effort to solve it. In action research, the problem owners
+        become collaborators in the research. In some cases, the researcher and the problem owner
+        may be the same person.
+
+
+
+
+                                                                                                                                17
+                                                                                                   Strategies
+                                                                                                                     Data Generation
+                                                                                                       Survey        Methods
+                                                                      Experiences
+                                                                     and motivation                                     Interviews
+                                                                                                     Design and
+                                                                                      Research        creation
+                                                                                                                                       Data Analysis
+                                                                                      questions
+                                                                                                                       Observations
+                                                                       Literature                    Experiment                          Quantitative
+                                                                        review
+
+                                                                                                     Case Study       Questionnaire      Qualitative
+
+
+
+
+Research Strategies (7-8)
+                                                                                      Conceptual
+                                                                                      Framework
+                                                                                                   Action research
+                                                                                                                        Documents
+
+                                                                                                     Ethnography
+
+
+
+
+Action Research Examples
+   ▪   Agile Software Development Improvement: Collaborate with a software development team to
+       implement and assess agile development practices.
+   ▪   Educational Technology Implementation: Work with educators to integrate new technology tools
+       into the classroom and assess their impact on learning outcomes.
+   ▪   Cybersecurity Incident Response Improvement: Collaborate with a cybersecurity team to refine
+       incident response procedures and tools.
+   ▪   IT Infrastructure Optimization: Partner with an organization to improve the performance and
+       efficiency of their IT infrastructure.
+
+
+
+
+                                                                                                                             18
+                                                                                                               Strategies
+                                                                                                                                 Data Generation
+                                                                                                                   Survey        Methods
+                                                                                  Experiences
+                                                                                 and motivation                                     Interviews
+                                                                                                                 Design and
+                                                                                                  Research        creation
+                                                                                                                                                   Data Analysis
+                                                                                                  questions
+                                                                                                                                   Observations
+                                                                                   Literature                    Experiment                          Quantitative
+                                                                                    review
+
+                                                                                                                 Case Study       Questionnaire      Qualitative
+
+
+
+
+Research Strategies (8-8)
+                                                                                                  Conceptual
+                                                                                                  Framework
+                                                                                                               Action research
+                                                                                                                                    Documents
+
+                                                                                                                 Ethnography
+
+
+
+
+Ethnography
+   ▪   Ethnography is a form of research focusing on the sociology of meaning through field observation.
+   ▪   The goal is to study a community of people to understand how the members of that community
+       make sense of their social interactions (Robinson, et al, 2007).
+   ▪   For software engineering, ethnography can help to understand how technical communities build
+       a culture of practices and communication strategies that enables them to perform technical
+       work collaboratively.
+
+   ▪   Examples
+        ▪ Telemedicine and Healthcare IT: Researchers can investigate how healthcare professionals and patients
+            use digital tools for remote consultations and health monitoring.
+        ▪   Gaming and Virtual Worlds: Researchers may immerse themselves in these environments to understand
+            player behavior, social structures, and the impact of gaming on individuals.
+        ▪   Technology Adoption and Diffusion: Researchers can immerse themselves in communities or
+            organizations to study the factors influencing technology adoption, resistance to change, and the impact
+            of technology on culture and practices.
+
+
+                                                                                                                                         19
+Data Generation Methods
+Provide you with data to back up or refute your theories and hypotheses.
+Interview
+    ▪   Direct input collected from a specific person
+Observation
+    ▪   Indirect input collected through observing a phenomenon             Strategies
+                                                                                           Data
+                                                                                           Generation
+Questionnaire                                  Experiences
+                                                                                Survey     Methods
+                                              and motivation
+    ▪   Direct input collected from a                                         Design and
+                                                                                             Interviews
+                                                                                                                 Data
+                                                               Research        creation
+        number of people                                       questions
+                                                                                                                 Analysis
+
+                                                                              Experiment    Observations
+                                                Literature                                                        Quantitative
+Documents                                        review
+
+    ▪   Collection and analysis of relevant                                  Case Study     Questionnaire          Qualitative
+                                                               Conceptual
+        documents                                              Framework
+                                                                                Action
+                                                                               research
+                                                                                             Documents
+
+                                                                             Ethnography
+
+
+
+                                                                                                            20
+Data Analysis
+Looking for (hidden) patterns in collected/generated data
+Drawing conclusions based on patterns
+    ▪   Proposing new theories
+    ▪   Discovering evidence supporting of existing theories or evidence for fallacy of such
+    ▪   Identifying the need for new research
+                                                                             Strategies
+                                                                                               Data
+Quantitative                                                                     Survey
+                                                                                               Generation
+                                                                                               Methods
+    ▪   For number data                        Experiences
+                                              and motivation                                     Interviews
+                                                                               Design and
+    ▪   Mostly statistical                                     Research         creation                             Data
+                                                                                                                     Analysis
+                                                               questions
+                                                                                                Observations
+Qualitative                                     Literature
+                                                 review
+                                                                               Experiment                             Quantitative
+
+    ▪   For text and other media                                              Case Study        Questionnaire          Qualitative
+    ▪   Mostly based on researcher interpretation              Conceptual
+                                                               Framework
+                                                                                 Action
+                                                                                research
+                                                                                                 Documents
+
+                                                                              Ethnography
+
+
+
+                                                                                                                21
+                                                                                                                            Strategies
+
+                                                                                                                                                        Data Generation
+                                                                                                                                 Survey                 Methods
+                                                                                Experiences and
+                                                                                   motivation
+                                                                                                                                                            Interviews
+                                                                                                                               Design and
+                                                                                                                                creation
+
+
+
+
+A Complete Example
+                                                                                                       Research                                                                Data Analysis
+                                                                                                       questions
+                                                                                                                                                           Observations
+                                                                                                                               Experiment                                        Quantitat ive
+                                                                                Literature review
+                                                                                                                   Usuall                       Often
+                                                                                                                   y 1:1                         1:N
+                                                                                                                               Case Study                 Questionnaire           Qualitative
+Research Question: “How is inter-team coordination affected by change of agile                      Conceptual
+                                                                                                    Framework
+methodology in a large-scale agile software development project?”                                                            Act ion research
+                                                                                                                                                           Documents
+Strategy: “This thesis aims to get an in-depth insight into the topic of large-scale agile
+development projects with focus on inter-team coordination, and contribute as basis for future                                Ethnography
+
+
+research. Studying a real-life large-scale agile development project can provide the information
+needed to gain insight on this topic. Runeson and Höst (2009) also states that using a case study
+as research strategy is well suited for software engineering research, as one can achieve a deep
+understanding of the studied topic. Therefore, an exploratory case study has been chosen as
+research strategy”.
+Data Generation: “For this thesis a semi-structured interview was chosen. This is due to the
+need for exploration on the topic and gathering in-depth information. With limited time for each
+interview, as well as specific topics the interviewer wanted to cover, it was necessary to have some
+structure”… “In addition to interviews, documentation has been used as a source of data for
+this thesis. The documentation consisted of project descriptions, plans and reports received from
+informants that has been involved in the investigated project. “
+Data Analysis: “Based on the collected data, a case study database was created... The database
+was created by using QSR International’s NVivo 12, which is a qualitative analysis software
+tool. Transcribed interviews were imported into the software and then thoroughly examined to find
+relevant information.”
+
+                                                                           Camilla Tøftum Ranner, “Large-scale Agile Software Development - An Exploratory Case Study
+                                                                           of Changes In Agile Practices and Its Effects on Inter-team Coordination”, NTNU MSc Thesis,
+                                                                           2020
+
+                                                                                                                                                                          22
+Using Sources of Information
+
+
+                               23
+Sources of Information
+You can use many different sources of information
+
+Two main categories:
+ ◦ Web publications
+   ◦ Weblogs, personal webpages, institutional webpages
+
+
+ ◦ Traditional publications:
+   ◦ Technical Books, encyclopedias, newspapers/magazines
+   ◦ Some traditional publications have both online and print resources/versions
+     ◦ Contents (online vs printed publication) might differ
+
+
+
+
+                                                         NUNO PEREIRA, DEI/ISEP.   24
+Different Types of Sources
+Primary Sources
+◦ Primary sources are original materials. They are from the time period involved and have not been
+  filtered through interpretation or evaluation.
+
+Secondary Sources
+◦ Works that interpret or critique primary literature sources. Less easily defined.
+
+Tertiary Sources
+◦ Tertiary sources consist of information which is a distillation and collection of primary and secondary
+  sources.
+
+
+
+
+                                              NUNO PEREIRA, DEI/ISEP.                                       25
+Primary Sources
+Research papers
+◦ Original data
+◦ First published record of the findings of an experiment of series of experiments
+◦ Peer reviewed (most of the times)
+◦ Often a group of authors
+
+
+Case studies
+◦ Medical/veterinary/psychology literature
+◦ Peer reviewed (most of the times)
+◦ Report the circumstances of a particular case
+  ◦ i.e. an unusual repair technique for a ruptured achilles tendon
+
+
+
+
+                                                         NUNO PEREIRA, DEI/ISEP.     26
+Primary Sources (ctnd)
+Conference proceedings
+◦ Vary significantly in length and quality!
+◦ Peer reviewed (most of the times)
+◦ Often preliminary data
+◦ Often a collection of research papers
+  ◦ Example, many Lecture Notes on Computer Science (LNCS)
+    by Springer are Conference Proceedings
+
+Dissertations
+◦ Undergraduate research (BSc, MSc, BEng or MEng)
+◦ Graduate research (MSc, PhD)
+◦ University published
+◦ All BSc dissertations that achieve mark of 50% or above
+◦ MSc & PhD theses are examined and corrected
+
+
+
+
+                                                        NUNO PEREIRA, DEI/ISEP.   27
+Secondary Literature
+Review articles
+◦ Information about primary sources
+◦ Compilation or synthesis of ideas and data
+◦ Should be reasonably objective (although often aren’t)
+◦ Peer reviewed (most of the times)
+
+
+Magazine and newspaper articles
+◦ Present a compilation of facts from different sources
+◦ Usually add some (objective) analysis
+
+
+
+
+                                             NUNO PEREIRA, DEI/ISEP.   28
+Tertiary Sources
+Textbooks
+◦ present science theory rather than contributing to it
+
+
+
+Application Manual
+◦ presents facts about the application
+
+
+
+
+                                             NUNO PEREIRA, DEI/ISEP.   29
+The Web
+Extremely diverse quality of contents
+
+
+The web is:
+ ◦ Unfiltered, Unedited, Unorganized
+
+
+
+ Not the best source of information to find organized
+information about a specific topic
+
+
+A very useful source of free information, but it cannot             from http://www.frankandernest.com/ by Thaves
+be the only source!
+
+
+                                          NUNO PEREIRA, DEI/ISEP.                                               30
+31
+https://www.londondaily.news/lawyers-sanctioned-for-citing-fake-cases-generated-by-chatgpt   32
+             Types of Errors Detected
+             in GenAI Output
+             Overfitting
+             Logic errors
+             Reasoning errors
+             Mathematical errors
+             Unfounded fabrication
+             Factual errors
+             Text output errors
+             Other errors
+
+AI hallucination: towards a comprehensive classification of distorted
+information in artificial intelligence-generated content (2024)
+https://www.nature.com/articles/s41599-024-03811-x
+
+                                                                        33
+              OpenAI: Do not Trust
+              ChatGPT ?
+
+
+
+
+https://help.openai.com/en/articles/8313428-does-
+chatgpt-tell-the-truth
+
+                                                    34
+           OpenAI: GPT-5                       Benchmark Performance
+
+
+           Hallucionation
+           Performace
+
+
+                                               Production Conversations Performance
+
+
+    GPT-5 has an hallucination
+    rate between ~5% (thinking)
+    and ~10% (main)
+
+
+
+
+https://cdn.openai.com/gpt-5-system-card.pdf
+
+                                                                                      35
+36
+            Hallucinating References
+
+
+                               16% of the references
+                               were not found!
+
+
+
+Exploring the Boundaries of Reality: Investigating the Phenomenon
+of Artificial Intelligence Hallucination in Scientific Writing Through
+ChatGPT References (2023)
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10173677/
+
+                                                                         37
+Important Recommendations
+Avoid asking for a list of articles: The ability to find relevant articles may be limited, depending
+on the topic; results may include articles that don't exist.
+
+
+Be careful when asking to summarize an article or write some type of literature review: It
+doesn't capture nuances that may be important; it may summarize the wrong source, mix
+subjects or even create facts.
+
+
+Avoid shortcuts in the learning process: Analyzing, interpreting, presenting information and
+related work is part of the learning process. AI can help a lot, but it can also short-circuit this
+process.
+
+
+
+
+                                                                                                      38
+                                                                                             More
+                                                                                             Mature
+
+         Maturity of Sources
+                                                                                                               Books
+                                                                                                                Books take years to be
+                                                                               Journals                         published, and are usually
+                                                                               Used by researchers to           authored by recognized
+  GenAI ?                                                                      communicate mature results.      experts. Books report their
+                                                                               Usually these are peer-reviewed; sources and present well
+                                       Conference Papers                       quality can vary                 established materials.
+                                       Used by researchers to communicate
+                                       their latest results. Usually these are
+                                       peer-reviewed; quality can vary
+                 Newspapers/Magazines
+Less             Authored by professionals. Sometimes hard to
+                 recognize the source of the information.
+Mature           Magazine articles tend to report some analysis
+                 and research by the author
+     Internet
+     Often the first place
+     information is posted;
+     hard to access quality
+
+                                                           NUNO PEREIRA, DEI/ISEP.                                             39
+Evaluating Sources
+ Think critically about the sources
+ ◦ Who has written, produced or published the information?
+ ◦ Can you verify the information?
+ ◦ What is the motivation?
+ ◦ When was the information produced?
+
+
+Next, you have an evaluation matrix to help systematically evaluate your sources
+ ◦ How to Use:
+   ◦ Score: 1 is low (information not so valuable, reliable or relevant) to 5 (high: information very valuable, reliable and relevant).
+   ◦ Add up all of the scores. A high score (max 25) indicates a very useful, reliable and relevant piece of information.
+ ◦ This evaluation matrix is based in https://www.sconul.ac.uk/sites/default/files/documents/5_5.pdf, and
+   is available in moodle.
+
+
+
+
+                                                            NUNO PEREIRA, DEI/ISEP.                                                       40
+               Source Evaluation Matrix (also in Moodle)
+                                         1                             2                                 3                         4                           5                    Mark
+
+Who? – is the author        Author background is          Some evidence author           Evidence of some              Author has several          Author is a known
+                            unknown                       works in the area, but         publications in the area by   published works in the      authority in the area
+                                                          very few                       the author                    area
+                    Score
+What? – is the relevance    Contents and arguments        Only of peripheral/little      Some of the content is        Several points made are     Contents and arguments
+of points made              of little or no relevance     relevance for the task         relevant to task              of relevance to task        closely match the needs
+                            for the task                                                 requirements
+                    Score
+Where? – context for the    Situation to which author     Minimal similarity             Author’s situation and        Reasonable similarity       Author’s context and that
+points made                 applies points is different   between author’s context       that of the task have         between author’s and        of the task very similar
+                            to that of the task           and the task context           some similarity               task context
+                    Score
+When? – was the source      Date is unknown or older      Old reference – between        References if between 5       Recent reference – 2 and    Up-to-date source –
+published                   than 20 years old             10 and 20 years old            and 10 years old              5 years old                 published in last two years
+                    Score
+Why? – author’s             No apparent motivation        Newspaper (or online)          Trade                         Book source/conference      Academic journal paper –
+reason/purpose              seen in article               article opinion – not          magazine/commercial           paper or subject interest   peer reviewed
+                                                          evidenced                      paper – might have some       forum/blog
+                                                                                         bias
+                    Score
+
+
+                                                                                      NUNO PEREIRA, DEI/ISEP.                                                                  41
+Summary
+Basics of designing and conducting research in computer science
+
+Think critically about your sources and their maturity
+
+
+
+
+                                   NUNO PEREIRA, DEI/ISEP.        42
+

@@ -1,0 +1,553 @@
+YOUR GUIDE TO
+HARVARD STYLE
+REFERENCING
+
+
+
+
+UNIVERSITY
+LIBRARY
+INTRODUCTION TO THE HARVARD AUTHOR-DATE REFERENCING STYLE
+The Harvard system is another name given to the Author-Date style of referencing and citation.
+Examples in this document have been based on the following text; Style manual for authors, editors and printers 2002, 6th edn, rev. Snooks & Co., Wiley, Milton, Qld
+
+IN-TEXT REFERENCES
+
+    •   Harvard uses the ‘author-date’ style of referencing. That is, in-text references (generally) appear in the following format:
+
+        (Author’s Last Name Year of Publication, Page Number(s))
+
+        Example: (Austen 1813, p. 64)
+
+    •   You are also permitted to include the author’s name in a sentence, omitting it from the brackets.
+
+        Example: Austen (1813, p. 64-67) observes that…
+
+    •   If you are referring to an entire work, include only the author’s last name and year of publication in brackets. If you are referring to part of a work, you must
+        include page numbers or their equivalent (see specific examples for more information).
+
+    •   When citing a source you have not read yourself, but which is referred to in a source you have read, use the following method:
+
+        Moore (as cited in Maxwell 1999, p. 25) stated that…
+
+        Important: You would cite Maxwell, not Moore, in the Reference List
+        Please Note: It is always preferable to cite the original source
+
+REFERENCE LIST
+
+    •   The reference list should appear at the end of your work on a separate page
+    •   Only include references you have cited in your work
+    •   References should be listed in alphabetical order
+    •   All references should have a hanging indent. That is, all lines of a reference subsequent to the first should be indented
+
+Acknowledgement: The material contained in this document has been adapted, with permission of the authors, from the following publication:
+
+University of Canberra Library & Academic Skills Program 2010, A guide to referencing with examples in the APA & Harvard styles, 6th edn, University of Canberra Library, Canberra,
+viewed 20 January 2011, http://www.canberra.edu.au/library/attachments/pdf/referencing-guide.pdf
+
+
+                                                                                          1
+                                              IN-TEXT REFERENCE                                                        REFERENCE LIST
+
+BOOKS
+One author – in-text reference                ‘Information prominent’ (the author’s name is within                     Cochrane, A 2007, Understanding urban policy: a critical
+placement                                     parentheses):                                                            approach, Blackwell Publishing, Malden, MA.
+
+Note: There are two main ways to use in-      The conclusion reached in a recent study (Cochrane 2007) was
+text references. Firstly, to focus on the     that…
+information from your source – ‘information
+prominent’. Secondly, to focus on the         OR
+author – ‘author prominent’.
+                                              ‘Author prominent’ (the author’s name is outside the
+                                              parentheses):
+
+                                              Cochrane (2007) concluded that…
+
+One author – when fewer than 30 words         An interesting view was expressed that ‘the connection of high profile   Cochrane, A 2007, Understanding urban policy: a critical
+are quoted                                    developments to their surrounding environment has increasingly been      approach, Blackwell Publishing, Malden, MA.
+                                              questioned’ (Cochrane 2007, p. 117).
+Include the material in the paragraph and
+include specific page number/s.               OR
+
+Use single quotation marks to show the        An interesting view was expressed by Cochrane (2007, p. 117) that
+exact words.                                  ‘the connection of high profile developments to their surrounding
+                                              environment has increasingly been questioned’.
+
+
+
+
+                                                                                            2
+                                                 IN-TEXT REFERENCE                                                       REFERENCE LIST
+One author – when 30 or more                     Much has been written about acute care. Finkelman (2006, p. 184),       Finkelman, AW 2006, Leadership and management in nursing,
+words are quoted                                                                                                         Pearson Hall, Upper Saddle River, NJ.
+                                                 for example, points out that:
+Begin quoting the material on a new line,
+indent it 5 spaces (use the Indent tool to
+keep all lines of the quote evenly indented),         There are many changes in acute care services occurring
+and include specific page number/s.                   almost daily, and due to the increasing use of outpatient
+                                                      surgery, surgical services have experienced major changes.
+Omit the quotation marks.
+                                                      Hospitals are increasing the size of their outpatient or
+Use double spacing for your text and                  ambulatory surgery departments and adjusting to the need of
+single spacing for the indented quote.                moving patients into and out of the surgical service in 1 day or
+                                                      even a few hours.
+Make sure the quote is exactly as it was
+published.                                       Recently, this trend has been seen in some Australian hospitals and
+
+                                                 research here…
+
+
+Two or three authors                             When considering the Howard Government’s Indigenous health              Palmer, GR & Short, SD 2010, Health care and public policy:
+                                                 expenditure, Palmer and Short (2010, p. 63) maintain that…              an Australian analysis, 4th edn, Palgrave Macmillan, South Yarra,
+                                                                                                                         Vic.
+
+More than three authors – when                   A recent study (Seeley et al. 2011, p. 143) concluded that…             Seeley, R, VanPutte, C, Regan, J & Russo, A 2011, Seeley’s
+reference to specific page/s required                                                                                    anatomy & physiology, McGraw-Hill, New York, NY.
+                                                 OR
+For in-text references, use the first author’s
+family name followed by ‘et al.’                 Seeley et al. (2011, p. 143) concluded that…
+
+Use all names in the reference list
+
+Several works by same author, same               Leadership and change in schools have been major topics of              Fullan, M 1996a, ‘Leadership for change’, in International
+year                                             discussion for several years (Fullan 1996a, 1996b) and this             handbook for educational leadership and administration, Kluwer
+                                                 conference…                                                             Academic Publishers, New York, NY.
+Arrange alphabetically by title in the
+Reference List. Place lowercase letters          ‘Educational change’ has taken on a new meaning in recent years         Fullan, M 1996b, The new meaning of educational change,
+(“a”, “b”, “c”, etc.) immediately after the      (Fullan 1996b) …                                                        Cassell, London
+year.
+
+
+
+
+                                                                                                3
+                                                 IN-TEXT REFERENCE                                                       REFERENCE LIST
+Several authors, different years,                The cyclical process (Carr & Kemmis 1986; Dick 2000; Kemmis             Carr, W & Kemmis, S 1986, Becoming critical: education
+referred to collectively in your work            & McTaggart 1988; MacIsaac 1995) suggests…                              knowledge and action research, Falmer Press, London.
+
+List sources alphabetically by family name                                                                               Dick, B 2000, A beginner’s guide to action research, viewed 3 June
+in the in-text reference in the order in which                                                                           2004, http://www.scu.edu.au/schools/gcm/ar/arp/guide.html
+they appear in the Reference List.
+                                                                                                                         Kemmis, S & McTaggart, R (eds) 1988, The action research
+Separate each reference with a semicolon.                                                                                planner, 3rd edn, Deakin University, Melbourne.
+
+                                                                                                                         MacIsaac, D 1995, An introduction to action research, viewed 28
+                                                                                                                         May 2004,
+                                                                                                                         http://physicsed.buffalostate.edu/danowner/actionrsch.html
+
+E-Book – online book                             We found helpful information about deaf children (Niemann,              Niemann, S, Greenstein, D, & David, D 2004, Helping children
+                                                 Greenstein, & David, 2004) that meant we could…                         who are deaf: family and community support for children who do
+                                                                                                                         not hear well, Hesperian Foundation, Berkley, CA, viewed 11 June
+                                                                                                                         2007, http://www.hesperian.org/publications_download_deaf.php
+
+Chapter in edited book                           A discussion about Australia’s place in today’s world (Richards 1997)   Richards, KC 1997, ‘Views on globalization’, in HL Vivaldi (ed.),
+                                                 included reference to…                                                  Australia in a global world, Century, North Ryde, NSW.
+
+
+Brochure – author is also publisher              The security of personal information is addressed in the TransACT       TransACT n.d., Guide to equipment and service, brochure,
+                                                 brochure (TransACT, n.d.).                                              TransACT, Canberra.
+
+Editor                                           Best practice: process innovation management, edited by Zairi (1999)    Zairi, M (ed.) 1999, Best practice: process innovation
+                                                 provided useful steps to identify…                                      management, Butterworth-Heinemann, Oxford.
+For one editor use the abbreviation (ed.);
+for more than one editor, use (eds)              OR
+
+                                                 Indentifying best practice indicators in management are available
+                                                 (ed. Zairi 1999) and…
+
+
+
+
+                                                                                              4
+                                                   IN-TEXT REFERENCE                                                   REFERENCE LIST
+Compiler, or Reviser, or Translator                This novel by Gaarder (1994) provides an appealing approach to…     Gaarder, J 1994, Sophie’s world: a novel about the history of
+                                                                                                                       philosophy, trans. P Møller, Phoenix House, London, original work
+Use the following abbreviations before                                                                                 published 1991.
+the person’s name in the Reference List:
+
+comp.
+rev.
+trans.
+
+No author or editor                                Macroeconomics considers prices and quantities (Macroeconomics,     Macroeconomics, prices and quantities: essays in memory of
+                                                   prices and quantities 1983, pp. 43-57), so it is important to…      Arthur M. Okun 1983, Blackwell, Oxford.
+- Use the title in the position of the author.
+
+- The title may be shortened to the main
+ title (omitting the sub-title) or the first few
+ words of the title.
+
+Approximate date of publication                    Other academics have provided more up-to-date information           Smythe, V c. 2007, Ant colonies: how they communicate,
+                                                   (Smythe c. 2007) that…                                              Emu Press, Canberra.
+
+No date of publication                             Some aspects of forensic science are more challenging than others   Browne, JD n.d., Forensic science as a career, Tower Publishing,
+                                                   (Browne n.d.) and for this reason…                                  London.
+
+Corporate author – when the author is              A recent study (Australian Institute of Health and Welfare [AIHW]   Australian Institute of Health and Welfare 2009, Indigenous
+also the publisher                                 2009) highlighted …                                                 housing needs 2009: a multi-measure needs model, AIHW cat. no.
+                                                                                                                       HOU 214, AIHW, Canberra.
+Spell out the full name of the corporate           Subsequent in-text reference/s:
+body and include an abbreviation in the            The AIHW (2009) found that…
+first instance. Use the abbreviation in
+subsequent references.
+
+Corporate author – commissioned                    The report prepared by the South Australian Centre for Economic     Local Government Association of South Australia 2009, Local
+reports                                            Studies (2009) was discussed.                                       government’s current and potential role in water management and
+                                                                                                                       conservation: final report, prepared by the South Australian Centre
+                                                                                                                       for Economic Studies, SACES, Adelaide.
+
+Second or later edition                            Peters (2001, p. 6) argued that ‘...’                               Peters, T 2001, The elements of counselling, 2nd edn, Macmillan,
+                                                                                                                       Brisbane.
+
+
+
+
+                                                                                                 5
+                                             IN-TEXT REFERENCE                                                       REFERENCE LIST
+Multi-volume work                            Inge, Duke and Bryer (1978, p. 27) claim that there is much to learn    Inge, MT, Duke, M & Bryer, JR (eds) 1978, Black American writers:
+                                             about these writers which results in…                                   bibliographical essays, vols 1 & 2, St Martins, New York.
+
+                                             OR                                                                      Clark, CMH 1978, A history of Australia, vol. 4, The earth abideth
+                                                                                                                     for ever,1851-1888, Melbourne University Press.
+                                             There is so much to learn about our country (Clark 1978, p. 42)
+                                             that we kept returning to…
+
+
+
+
+JOURNAL, NEWSPAPER & NEWSLETTER ARTICLES
+Journal article with one author –            In an earlier article, it was proposed (Jackson 2007)…                  Jackson, A 2007, ‘New approaches to drug therapy’, Psychology
+separated paging (paginated by issue)                                                                                Today and Tomorrow, vol. 27, no. 1, pp. 54-9.
+
+If each issue of a journal begins on page
+1, include the issue number
+
+Journal article with two or three authors    Kramer and Bloggs (2002) stipulated in their latest article…            Kramer, E & Bloggs, T 2002, ‘On quality in art and art therapy’,
+– continuous paging throughout a                                                                                     American Journal of Art Therapy, vol. 40, pp. 218-31.
+volume.                                      OR
+
+If the journal volume page numbers run       This article on art (Kramer & Bloggs 2002) stipulated that…
+continuously throughout the year,
+regardless of issue number, do not include
+the issue number in your Reference List
+entry.
+
+Journal article with more than three         A recent study to investigate the effects of an organisational stress   Elo, A, Ervasti, J, Kuosma, E, & Mattila, P 2008, ‘Evaluation of
+authors                                      management program on employees (Elo et al. 2008, p. 11)                an organizational stress management program in a municipal
+                                             concluded that…                                                         public works organization’, Journal of Occupational Health
+For all in-text reference, give the first                                                                            Psychology, vol. 13, no. 1, pp. 10-23.
+author’s family name followed by ‘et al.’
+
+
+
+
+                                                                                            6
+                                            IN-TEXT REFERENCE                                                       REFERENCE LIST
+Journal or magazine article with no         Wychick and Thompson (2005) foreshadow that scam will still be          Wychick, J & Thompson, L 2005, ‘Fallen for a scam lately?’
+volume or issue number                      enticing…                                                               AustraliaToday, 24 November, pp. 54-60.
+
+                                            OR
+
+                                            An interesting approach to scam (Wychick & Thompson 2005)
+                                            suggested that…
+
+Article in online journal or magazine       An article linking ethical behaviour and religion (Noor 2008)…          Noor, A 2008, ‘Ethics, religion and good governance’, JOAAG:
+                                                                                                                    Journal of Administration & Governance, vol. 3, no. 2, pp. 62-77,
+                                                                                                                    viewed 17 November 2009,
+                                                                                                                    http://www.joaag.com/Home_Page.php
+
+Journal article retrieved from a            A study examining priming (Johns & Mewhort 2009) discovered …           Johns, E & Mewhort, D 2009, ‘Test sequence priming in
+database                                                                                                            recognition memory’, Journal of Experimental Psychology:
+                                                                                                                    Learning, Memory and Cognition, vol. 35, pp. 1162-1174, viewed
+                                                                                                                    20 November 2009, PsyARTICLES database.
+
+Book review in a journal                    In his review of Thomas Samaras’ latest book, Marson (2009)             Marson, SM 2009, ‘How big should we be? A Herculean task
+                                            identifies…                                                             accomplished’, review of Human body size and the laws of
+                                                                                                                    scaling: physiological, performance, growth, longevity and
+                                                                                                                    ecological ramification, by T Samaras, Public Health Nutrition, vol.
+                                                                                                                    12, pp. 1299–1300, viewed 20 November 2009, EBSCO EJS
+                                                                                                                    database.
+
+Newspaper article – with an author          The notion of a Bill of Rights may be inappropriate in the Australian   Waterford, J 2007, ‘Bill of Rights gets it wrong’, Canberra Times,
+                                            context (Waterford 2007).                                               30 May, p. 11.
+
+Newspaper article – without an author       The redesign of the Internet (‘Internet pioneer’ 2007) is said to…      ‘Internet pioneer to oversee network redesign’ 2007, Canberra
+                                                                                                                    Times, 28 May, p. 15.
+
+Newspaper article retrieved from a          In an attempt to save the tiger, Darby (2002) provided…                 Darby, A 2002, ‘Rarest tiger skin a rugged survivor’, Sydney
+database                                                                                                            Morning Herald, 20 August, viewed 10 May 2006, Factiva
+                                                                                                                    database.
+Do a Web search to locate the URL of the
+newspaper’s home page & include it in the
+Reference List.
+
+
+
+
+                                                                                           7
+                                               IN-TEXT REFERENCE                                                       REFERENCE LIST
+Online newspaper or newsletter article         Saulwick (2011) referred specifically to…                               Saulwick, J 2011, ‘Sydney train project derails Downer’, Sydney Morning
+                                                                                                                       Herald, 27 January, viewed 12 February 2011, http://www.smh.com.au.
+
+
+
+
+GOVERNMENT PUBLICATIONS
+Government department as author                The need for guidelines to manage and use multiple channels to          Department of Finance and Administration 2006, Delivering
+                                               deliver e-government services (Department of Finance and                Australian Government services: managing multiple channels,
+For corporate authors with long names,         Administration [DOFA] 2006) presents Australian Government              DOFA, Canberra.
+spell out the full name of the body and        agencies with…
+include an abbreviation in the first in-text
+reference.                                     Subsequent in-text reference/s:
+Use the abbreviation in subsequent             DOFA (2006) identified …
+references.
+
+Legislation                                    First in-text reference:                                                Trade Practices Act 1974 (Cwlth), viewed 20 November 2009,
+                                               In relation to action regarding unsuitable goods, s. 74B of the Trade   http://www.comlaw.gov.au/
+                                               Practices Act 1974 states…
+
+                                               Subsequent in-text reference/s:
+                                               According to the Trade Practices Act…
+
+Government publication – with                  Recently released statistics from the Australian Bureau of Statistics   Australian Bureau of Statistics 2007, Australian social trends, cat.
+identifying number                             (ABS 2007) reveal interesting changes in Australian society.            no. 4102.0, ABS, Canberra.
+
+Includes report numbers, catalogue             Subsequent in-text reference/s:
+numbers, etc.                                  The ABS (2007) reported that …
+
+Government report – online                     First in-text reference:                                                Department of the Prime Minister and Cabinet 2008, Families in
+                                               A recent government report (Department of the Prime Minister and        Australia: 2008, viewed 20 November 2009,
+                                               Cabinet [PM&C] 2008) examines a selection of key topics …               http://www.dpmc.gov.au/publications/families/index.cfm#contact
+
+                                               Subsequent in-text reference/s:
+                                               Families in Australia were highlighted (PM&C 2008)…
+
+
+
+
+                                                                                              8
+                                                IN-TEXT REFERENCE                                                       REFERENCE LIST
+Government approved standards                   …and “including data in computer systems, created or received and       Standards Australia 1996, Australian Standard AS4390: Records
+                                                maintained by an organisation” (Standards Australia 1996, p. 7) as      Management, Standards Australia, Sydney.
+                                                well as…
+
+
+
+
+UNIVERSITY PROVIDED STUDY MATERIAL
+Lecture / tutorial notes, etc. – online         Septicemia is one of many infections commonly acquired in hospitals     Maw, M 2010, NURS5082 Developing nursing practice, lecture 2,
+                                                (Maw 2010).                                                             week 1: Healthcare-associated infections and their prevention,
+                                                                                                                        lecture PowerPoint slides, viewed 18 March 2010, http://learn-on-
+                                                                                                                        line.ce.usyd.edu.au/
+
+
+
+
+OTHER SOURCES
+Blog post                                       The plight of the flapper skate was recently highlighted (Keim 2009)…   Keim, B 2009, ‘ID error leaves fish at edge of extinction’, Wired
+                                                                                                                        Science blog, web log post, 18 November, viewed 20 November
+- List the author’s name as it is used in the                                                                           2009, http://www.wired.com/wiredscience/2009/11/extinction-error/
+ posting (including nicknames).
+
+- For a blog comment, use ‘web log
+ comment’ instead of ‘web log post’ and
+ include the exact title (including ‘Re:’ if
+ used)
+
+CD recording – music                            Lyrics from Paul Kelly’s song “From little things big things grow”      ‘From little things big things grow’ 1997, on Songs from the south:
+                                                (1997) were used in recent television advertisements.                   Paul Kelly’s greatest hits, CD, Mushroom Records, Melbourne.
+                                                                                                                        Written and performed by Paul Kelly.
+
+
+
+
+                                                                                               9
+                                             IN-TEXT REFERENCE                                                      REFERENCE LIST
+Conference or seminar papers in              In a paper about conservation of photographs (Edge 1996),              Edge, M 1996, ‘Lifetime prediction: fact or fancy?’, in MS Koch, T
+published proceedings – print                the proposition that…                                                  Padfield, JS Johnsen & UB Kejser (eds), Proceedings of the
+                                                                                                                    Research techniques in photographic conservation conference,
+                                                                                                                    Royal Danish Academy of Fine Arts, Copenhagen, pp. 97-100.
+
+Conference or seminar papers in              Tester (2008) points to the value of using geothermal sources for      Tester, JW 2008, ‘The future of geothermal energy as a major
+published proceedings – online               power and energy.                                                      global energy supplier’, in H Gurgenci & AR Budd (eds),
+                                                                                                                    Proceedings of the Sir Mark Oliphant International frontiers of
+                                                                                                                    science and technology Australian geothermal energy conference,
+                                                                                                                    Geoscience Australia, Canberra, viewed 5 January 2010,
+                                                                                                                    http://www.ga.gov.au/image_cache/GA11825.pdf
+
+Dictionary / Encyclopaedia – print           According to one definition of “bivalence” (VandenBos 2007, p. 123)…   VandenBos, GR (ed.) 2007, APA dictionary of psychology,
+                                                                                                                    American Psychological Association, Washington, DC.
+Include information about editions, volume
+numbers and page numbers in parenthesis
+following the title in the Reference List.
+
+Dictionary / Encyclopaedia – online          A psychological overview of ADHD (Arcus 2001)…                         Arcus, D 2001, ‘Attention deficit / hyperactivity disorder (ADHD)’,
+                                                                                                                    in B Strickland (ed.), The Gale encyclopedia of psychology,
+                                                                                                                    viewed 21 November 2009, Oxford Reference Online Database.
+
+Discussion group, list, etc. – online        There are strongly held views about knowledge management               Weidner, D 2007, ‘KM reducing in popularity’, discussion list
+                                             (Weidner 2007) and from personal experience…                           message, 11 June, ActKM, viewed 11 June,
+                                                                                                                    http://actkm.org/mailman/listinfo/actkm_actkm.org
+
+DVD / Videorecording                         Jane Austen’s world came alive in Sense and sensibility (1995)         Sense and sensibility 1995, DVD, Columbia TriStar Home Video,
+                                                                                                                    Australia. Directed by Ang Lee.
+
+Email – NEVER cite addresses without         Ms Coleman provided details in an email on 11 July 2007.               Usually, no entry in Reference List.
+permission of the owner of the address
+                                                                                                                    Only included if permission to include the address has been
+                                                                                                                    granted, and if it is considered helpful to your reader. If
+                                                                                                                    included, this is the format to use in the Reference list:
+
+                                                                                                                    Coleman, M 2007, email, 11 July, mcoleman@hometown.com.au
+
+
+
+
+                                                                                          10
+                                              IN-TEXT REFERENCE                                                          REFERENCE LIST
+Facebook update                               $52 million will be provided to deploy Australian civilian troops (Rudd,   Rudd, K 2009, ‘Australian civilian corps to help in crises’, Kevin
+                                              2009)                                                                      Rudd and Labor, Facebook update, 24 October, viewed 20
+List the author’s name as it is written                                                                                  November 2009,
+(including nicknames).                                                                                                   http://www.facebook.com/note.php?note_id=200124043571&ref=
+                                                                                                                         mf
+
+Figure, Table, Graph, Map or Chart            Graph                                                                      Graph
+                                              The internal processes were well described (Kaplan & Norton 2004)          Kaplan, RS & Norton, DP 2004, ‘Internal processes deliver value
+Cite each of these as you would for a book.   which led to…                                                              over different time horizons’, graph, in Strategy maps: converting
+Include the type of entry immediately after                                                                              intangible assets into tangible outcomes, Harvard Business
+the title:                                    Map                                                                        School, Boston, MA, p. 48
+                                              To locate a property just outside the Australian Capital Territory, use
+                                              the 1:100 000 map produced by Geoscience Australia (2004) which            Map
+                                              covers…                                                                    Geoscience Australia [NATMAP] 2004, ACT region, New South
+                                                                                                                         Wales and Australian Capital Territory, map, Geoscience
+                                                                                                                         Australia, Canberra.
+
+Image – online                                The effective use of light in Monet’s ‘Haystacks’ (Monet 1890)…            Monet, C 1890, Haystacks, midday, painting, National Gallery of
+                                                                                                                         Australia, Canberra, viewed 18 November 2009,
+                                                                                                                         http://artsearch.nga.gov.au/
+                                                                                                                         Detail-LRG.cfm?IRN=29073&View=LRG
+
+Interview – on radio                          In a recent interview with the Prime Minister (Mornings with Neil          Mornings with Neil Mitchell 2009, radio broadcast, Radio 3AW,
+                                              Mitchell 2009)…                                                            Melbourne, 16 October. Interview with the Prime Minister, Kevin
+                                                                                                                         Rudd.
+
+Interview – on television                     He demonstrated his professionalism and sensitivity in an interview        Enough Rope with Andrew Denton 2006, television broadcast,
+                                              with Raelene Boyle (Enough Rope with Andrew Denton 2006) and…              Australian Broadcasting Corporation, Sydney, 25 September.
+                                                                                                                         Interview with Raelene Boyle.
+
+Motion picture (movie)                        The evidence (The lord of the rings 2003) that belief in a world…          The lord of the rings: the return of the king 2003, motion picture,
+                                                                                                                         Imagine Films, Auckland, NZ. Produced by Steve Pyke; directed
+                                                                                                                         by Peter Jackson.
+
+
+
+
+                                                                                            11
+                                                 IN-TEXT REFERENCE                                                      REFERENCE LIST
+Personal communication                           J. Francis (personal communication, 6 August 2007) was able to         Not included in Reference List. Cite in-text only.
+                                                 confirm that the floods had not reached their area.
+Includes private letters, memos, email,
+telephone conversations, personal
+interviews, etc. These are cited in-text only,
+not in the Reference List.
+
+Podcast (audio)                                  Listening to the news on my MP3 player (AM: news & current affairs     AM: news & current affairs 2007, audio podcast, ABC Radio,
+                                                 2007) was a new experience and I decided…                              Sydney, 28 April, accessed 28 May 2007,
+                                                                                                                        http://abc.net.au/news/subscribe/amrss.sml
+
+Radio program – broadcast                        When discussing how people write about music, (The Book Show           The Book Show 2009, radio broadcast, ABC Radio National,
+                                                 2009)…                                                                 Melbourne, 19 November.
+
+Radio program – transcript                       The views of the internationally renowned author and public speaker,   ‘Are we hardwired for creativity?’ 2005, Innovations, radio program
+                                                 De Bono, prompted me to follow up one of the interviews (‘Are we       transcript, Radio Australia, Melbourne, 14 February, viewed 6
+                                                 hardwired for creativity?’ 2005) which…                                June 2007,
+                                                                                                                        http://www.abc.net.au/ra/innovations/stories/s1302318.htm
+                                                                                                                        Interview with Edward de Bono.
+
+Speech                                           Amongst the views expressed about war and peace (Hodson 2000)          Hodson, A 2000, ‘Peace in today’s world’, Remembrance Day
+                                                 were…                                                                  Speech presented at the Australian Veterans Memorial Service,
+                                                                                                                        Lightning Ridge, NSW, 11 November.
+
+Speech – online                                  In her ANZAC Day speech (Clark 2007), the Prime Minister of New        Clark, H 2007, ‘Prime Minister’s 2007 Anzac Day message’, 25
+                                                 Zealand referred to…                                                   April, viewed 5 June 2007, http://www.anzac.govt.nz
+
+Television advertisement                         The problems of teenage anxiety were graphically captured              Beyondblue 2009, Beyondblue: anxiety, television advertisement,
+                                                 (Beyondblue 2009)…                                                     WIN TV, Canberra, 29 November.
+
+Television program – broadcast                   Examining future plans for Canberra’s city area (Stateline 2009)…      Stateline 2009, television broadcast, ABC TV, Canberra, 4
+                                                                                                                        September. Presented by Chris Kimball.
+
+                                                                                                                        Always check the television station’s website and use the
+                                                                                                                        transcript, if one is available, for direct quotes.
+
+
+
+
+                                                                                             12
+                                            IN-TEXT REFERENCE                                                      REFERENCE LIST
+Television program – transcript             Cyclones often affect Australia, especially in the north (‘Cyclone     ‘Cyclone Tracy’ 2004, Rewind, television program transcript, ABC
+                                            Tracy’ 2004) and it is worthwhile…                                     TV, Sydney, 7 November, viewed 21 May 2007,
+                                                                                                                   http://www.abc.net.au/tv/rewind/txt/s1233697.htm
+
+Thesis or Dissertation – print              Nurses working in an acute care environment tend to experience a       Duddle, M 2009, ‘Intraprofessional relations in nursing: A case
+                                            high degree of workplace conflict (Duddle 2009, p. ii).                study’ PhD thesis, University of Sydney.
+
+Thesis or Dissertation – retrieved from a   The field of engineering has largely developed around the positivist   Hector, DCA 2008, ‘Towards a new philosophy of engineering:
+database                                    philosophical position (Hector 2008).                                  Structuring the complex problems from the sustainability
+                                                                                                                   discourse’ PhD thesis, viewed 13 September 2010, Australasian
+                                                                                                                   Digital Theses database.
+
+Thesis or Dissertation – retrieved from     Lacey (2011, p. 12) differentiates between instrumental violence and   Lacey, D 2011, ‘The role of humiliation in collective political
+the web                                     violence inflicting injury for its own sake.                           violence’, Masters thesis, University of Sydney, viewed 8 July,
+                                                                                                                   2011, http://hdl.handle.net/2123/7128
+
+Video blog post                             The Prime Minister, speaking about Australia’s role in the G20 forum   Rudd, K 2009, Update on new G20 arrangements, online video,
+                                            (Rudd 2009)…                                                           29 September, viewed 20 November 2009,
+                                                                                                                   http://www.youtube.com/watch?v=i8IdJ-0S5rs
+
+Web document – dated & author or            An RBA paper (Simon, Smith & West 2009) found that participation in    Simon, J, Smith, K & West, T 2009, Price incentives and
+sponsor given                               a loyalty program and access to an interest-free period…               consumer payment behaviour, Reserve Bank of Australia, Sydney,
+                                                                                                                   viewed 24 November 2009,
+                                                                                                                   http://www.rba.gov.au/PublicationsAndResearch/RDP/RDP2009-
+                                                                                                                   04.html
+
+Web document – author or sponsor            The Commonwealth Scientific and Industrial Research Organisation       Commonwealth Scientific and Industrial Research Organisation
+given but not dated                         (CSIRO) is designing several energy-efficient electric machines to     n.d., Reducing Australia’s greenhouse emissions factsheet,
+                                            reduce greenhouse gas emissions (CSIRO n.d.).                          CSIRO, Canberra, viewed 21 November 2009,
+                                                                                                                   http://www.csiro.au/resources/ps282.html
+
+
+
+
+                                                                                          13
+                                                IN-TEXT REFERENCE                                                  REFERENCE LIST
+Web source with no page numbers                 Usually the author or creator of a work is the copyright owner     University of Sydney 2010, Guide to copyright, University of
+                                                (University of Sydney 2010, ‘Who owns copyright?’, para. 1).       Sydney, viewed 24 January 2011,
+Include in in-text references:                                                                                     http://sydney.edu.au/copyright/students/coursework.shtml#who
+                                                Note: The heading of the section was ‘Who owns copyright?’
+- A paragraph number with the abbreviation
+ ‘para’ (count paragraphs if numbers are
+ not visible)
+
+OR
+
+- A section heading and paragraph number
+ (e.g. Introduction, para. 3). A long section
+ heading may be shortened and enclosed
+ in single quotation marks.
+
+Website – entire website                        The new website of the Department of Education, Employment and     Department of Education, Employment and Workplace Relations
+                                                Workplace Relations (DEEWR 2009) includes useful                   2009, DEEWR, Canberra, viewed 21 November 2009,
+                                                information on current government education policy.                http://www.deewr.gov.au/
+
+Wiki                                            The role of media corporations in the media literacy movement is   ‘Great debates in media literacy: theory and practice of media
+                                                discussed (‘Great debates’ n.d.)                                   literacy’ n.d., Wikiversity, wiki article, viewed October 27 2009,
+Include the date retrieved, as the                                                                                 http://en.wikiversity.org/wiki/Great_Debates_in_Media_Literacy
+information is likely to change in these
+sources.
+
+
+
+
+                                                                                             14
+

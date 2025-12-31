@@ -9,32 +9,14 @@
 %
 \section{Introduction}
 \label{sec:chap1_introduction} %For referencing this section elsewhere, use Section~\ref{sec:chap1_introduction}
+Internal \ac{CICD} services (GitLab, Jenkins, SonarQube, Nexus, Dependency‑Track) deployed in Docker containers are critical to software delivery pipelines. Reliability issues directly affect development velocity and release cadence. However, constrained deployment contexts, non‑privileged containers, no host administrative access, and heterogeneous operating systems (Linux and Windows).
 
-The goal of a Master dissertation is to document the work developed and highlight its importance. Firstly, the author should aim to follow the best practices in terms of writing style and organise the contents such that the message is clear. The language style used should be clear, and avoid colloquial expressions.
+This research examines integrated observability (systematic collection, correlation and analysis of metrics, logs and distributed traces) in such constrained environments. The proposed solution combines non‑privileged telemetry collection (sidecar exporters, agent collectors, runtime APIs) with correlation mechanisms to improve \ac{MTTD}, \ac{MTTR}, and pipeline throughput while maintaining sub-5\% resource overhead. The work is grounded in a real‑world, four‑server on‑premise deployment (three Linux, one Windows) with no administrative access, exemplifying operational constraints typical of internally‑managed infrastructure where third‑party services deployed via Docker~\cite{docker2014} cannot be modified.
 
-Please use an automated spell checker during the writing of your work.
-
-This chapter provides some brief recommendations for the writing of your dissertation.
-
-\section{Structure}
-
-The structure of the document can be divided in three major parts: Introduction, Body and Conclusions.
-
-The introduction includes, at least, a statement of what was the work developed; a brief, focused, state of the art; an explanation of how the work fits into the current state of the art, and how it contributes to it; a description of the structure of the document.
-
-The Body of the dissertation should include a literature review (in one or more chapters) and one or more chapters that describe the work developed and the results, justifying them adequately.
-
-The conclusions make a final balance of the work, highlighting the main aspects of the work and making critical judgments about what was accomplished, and providing suggestions for future work, if appropriate.
-
-\section{Formatting}
-
-The document can be written in Portuguese or English. The minimum number of pages is 60 and the maximum is 120 (not counting the Annexes). Small deviations are allowed. Please follow the margins and fonts  defined in this template. The font size should be 11pt. The document should be printed double sided.
-
-Note that the graphical aspect of the thesis is important, but does not replace a well-written and well-organized presentation of ideas.
-
-
-% Academic paragraph with Harvard-style citation
-\par
-Observability in CI/CD pipelines is essential for ensuring reliable software delivery, especially in containerized environments where system complexity and limited access rights pose significant challenges. Effective monitoring and distributed tracing enable teams to identify bottlenecks and optimize performance, contributing to improved system resilience and maintainability \parencite{example2020}.
-
-Please refer to Chapter~\ref{chap:Chapter2} and Chapter~\ref{chap:Chapter3} for details about this template, how to format the document and insert citations, figures, tables, equations and other elements.
+The central research problem is: \textit{How can an integrated observability framework be designed and implemented for containerized \ac{CICD} platforms operating under non‑privileged access constraints and heterogeneous infrastructure, to measurably improve reliability and reduce incident response times?}
+\section{Problem Statement}
+\section{Research Objectives}
+\section{Research Question}
+\section{Methodology Overview}
+\section{Ethical Considerations}
+\section{Structure of the Dissertation}

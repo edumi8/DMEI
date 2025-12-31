@@ -1,0 +1,35 @@
+1 Introduction 1
+1.1 Context and Motivation . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.2 Problem Statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.3 Research Objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.4 Research Questions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.5 Methodology Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.6 Ethical Considerations . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.7 Structure of the Dissertation . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2 Skill Management and Project Planning 5
+2.1 Skill Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2.1.1 Skills Identification . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+2.1.2 Skills Assessment . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+2.1.3 Strategy to Improve Skills . . . . . . . . . . . . . . . . . . . . . . 7
+2.2 Project Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+2.2.1 Project Charter . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+2.2.2 Scope of Work - WBS . . . . . . . . . . . . . . . . . . . . . . . . 9
+2.2.3 Integrated Project Schedule . . . . . . . . . . . . . . . . . . . . . 11
+2.2.4 Monitoring and Controlling Procedures . . . . . . . . . . . . . . . 12
+2.2.5 Risk Identification and Management . . . . . . . . . . . . . . . . . 12
+3 Literature review 17
+3.1 PRISMA Methodology Overview . . . . . . . . . . . . . . . . . . . . . . . 17
+3.1.1 Identification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+3.1.2 Screening . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+3.1.3 Eligibility . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+3.1.4 Inclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+3.2 PRISMA Flow Diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+3.3 Results of the Literature Review . . . . . . . . . . . . . . . . . . . . . . . 20
+3.3.1 Introduction to Electricity Price Forecasting . . . . . . . . . . . . . 20
+3.3.2 Short-Term Electricity Price Forecasting . . . . . . . . . . . . . . 20
+3.3.3 Long-Term Electricity Price Forecasting . . . . . . . . . . . . . . . 22
+3.3.4 Machine Learning in Electricity Price Forecasting . . . . . . . . . . 23
+3.3.5 Evaluation of Forecasting Models . . . . . . . . . . . . . . . . . . 26
+3.3.6 Emerging Trends and Future Directions . . . . . . . . . . . . . . . 27
+3.3.7 Datasets used in the articles . . . . . . . . . . . . . . . . . . . . . 29
+3.4 Answering the Research Qu

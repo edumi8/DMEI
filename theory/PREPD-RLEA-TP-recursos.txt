@@ -1,0 +1,53 @@
+            !               Departamento de Engenharia Informá3ca
+
+
+                              Preparação para Dissertação
+                                          Teórico Prá+ca
+
+                                            Recursos
+
+Os resultados de uma revisão da literatura podem ser apresentados de variadas formas,
+habitualmente mais do que uma. Para isso são u3lizados gráﬁcos, como o gráﬁco de barras, circular,
+ou outro, e/ou forma tabular, como uma tabela com a listagem dos estudos por categoria. Um outro
+exemplo de forma tabular, especíﬁca de estudos de revisão, é o mapa de evidências (ver por exemplo
+[1]). Este é idên3co ao “bubble chart” também muito u3lizado em revisões da literatura.
+
+Resumindo, os resultados podem ser apresentados de diversas formas, que não serão mutuamente
+exclusivas. A u3lização de gráﬁcos deve ser feita com ponderação para não diﬁcultar a leitura dos
+resultados. Um exemplo de várias formas possíveis de apresentação de resultados pode ser
+encontrado em [2].
+
+Neste módulo não se prescrevem quaisquer ferramentas, contudo, o estudante deve saber que
+existem várias ferramentas que podem ajudar no processo de revisão de literatura. A sua u3lização
+deverá ser benéﬁca.
+
+Apresenta-se em seguida uma lista de ferramentas a htulo meramente exempliﬁca3vo e sem seguir
+qualquer ordem especíﬁca.
+
+hBps://provalisresearch.com/products/qualita3ve-data-analysis-soiware/ (versão gratuita: QDA
+Miner Lite)
+
+hBps://estech.shinyapps.io/eviatlas/
+
+hBps://evidencemap.com
+
+hBps://eppi.ioe.ac.uk/eppireviewer-web/home
+
+hBps://openknowledgemaps.org/index
+
+
+
+Para um conhecimento mais aprofundado da área das revisões da literatura na engenharia
+informá3ca, consultar, por exemplo: Kitchenham, B. A., Budgen, D., & Brereton, P. (2015). Evidence-
+based soiware engineering and systema3c reviews. CRC press.
+
+
+
+
+[1] Sobre Mapa de evidências, ver por exemplo: hBps://eme.cochrane.org/evidence-gap-maps-
+mapas-de-evidencias/
+
+[2]
+hBps://www.researchgate.net/publica3on/352812287_Energy_Storage_Ceramics_A_Bibliometric_
+Review_of_Literature/ﬁgures?lo=1
+

@@ -1,0 +1,284 @@
+The Information
+Source Evaluation
+Matrix: a
+quick, easy and
+transferable
+content
+evaluation tool
+Kaye Towlson
+Senior Assistant Librarian in Library
+Services, De Montfort University
+Tel: 0116 207 8039
+E-mail: kbt@dmu.ac.uk
+
+               Mike Leigh
+               Principal Lecturer,
+               Informatics Department,
+               De Montfort University
+               Tel: 0116 207 8469
+               E-mail: ml@dmu.ac.uk
+
+Lucy Mathers
+Senior Lecturer, Media Technology
+Department, De Montfort University
+Tel: 0116 257 7477
+E-mail: lmathers@dmu.ac.uk
+
+ The Information Source Evaluation Matrix was
+ developed by Leigh, Mathers and Towlson with
+ funding as part of a Research Informed Teaching
+Award project at De Montfort University.1 The
+ matrix is the result of cross-departmental research
+ co-operation: Lucy Mathers and Mike Leigh are
+ academics within the faculty of technology and
+ Kaye Towlson is a senior assistant librarian in
+ library services. The framework was developed
+ within the context of specific technology courses
+– ‘Multimedia animation production’, ‘Object-ori-
+ ented systems analysis and design’ and ‘Systems
+ analysis and design’ – but it is readily transferable
+ to other subject areas.
+
+This work was based upon previous research by
+Mathers and Leigh which revealed a significant
+gap between students’ self-assessment of infor-
+mation evaluation skills and those evident in
+material posted on a learning community wiki as
+part of an assignment.2 In their work Mathers and
+
+
+                           SCONUL Focus 47 2009 15
+Leigh found that nearly 69% of students agreed/        students completed the self-assessment and were
+strongly agreed that they had the ability to evalu-    then reminded about the skills and criteria of
+ate the academic worth and relevance of materials      information source evaluation. They were then
+they posted. However, an examination of these          introduced to the Information Source Evaluation
+materials, using initial evaluation criteria, found    Matrix, which they used to assess material made
+that this was not true and revealed a need for         available within the context of a given task (from
+students to enhance their ability to evaluate the      books, journal articles and web sites). After this
+academic worth and relevance of these materials.       they completed the self-assessment again to meas-
+Building on this evidence and experience and in        ure any change in their confidence and attitude
+order to help to fill the skills gap, Leigh, Mathers   towards information source evaluation. Students
+and Towlson took an action research approach to        were then asked to comment on the Information
+develop:                                               Source Evaluation Matrix and its use.
+
+  • students’ information evaluation skills            The Information Source Evaluation Matrix: what does
+     within the curriculum                             it do?
+
+   an information evaluation skills self-assess-
+     ment questionnaire                                The matrix enables the user to allocate a score
+  • a quick, readily available and easy-to-use         between 1 (low) and 5 (high) as an indicator of
+     tool to facilitate students’ evaluation of aca-   the value of an item of information, for exam-
+     demic and non-academic material.3                 ple, a web site, journal article or book, using five
+                                                       discrete criteria (see Figure 1). The criteria are the
+What did we do?                                        following ‘5 Ws’:
+
+To develop these tools the action research was           • Who is the author?
+embedded into the existing curricula for ‘Multi-         • What is the relevance of points made?
+media animation production’, ‘Object-oriented            • Where is the context for points made?
+systems analysis and design’ and ‘Systems                • When was the source published?
+analysis and design’. The first two modules were         • Why: what was the author’s reason/purpose
+for second-year undergraduates and the third was           for writing the resource?
+at Masters level. All the student cohorts engaged
+in a similar assignment demanding the creation of      The framework enables the user to consider each
+an online wiki for a specific learning community       criterion, allocate an individual mark and then
+of their peers and the evaluation of information       generate an overall mark to judge the usefulness,
+posted on this wiki. For both modules a face-to-       relevance and reliability of the material in relation
+face seminar was given to introduce and reinforce      to a specific task or piece of academic work. The
+the essential skills and practice of information       framework also reinforces the concept of informa-
+evaluation. Students then utilised these skills in     tion evaluation by forcing the user to consider all
+the production of a wiki. In the ‘Multimedia ani-      of the criteria in allocating a specific indicative
+mation’ module this was taken further by the pro-      value score. It enables quick and easy compari-
+duction of articles on a specific topic by students    son with other material to help guide the user to
+for evaluation by their peers. Anecdotally it was      include the most relevant material in their result-
+felt by course tutors that the information evalua-     ing work, be it a wiki (as in the Leigh, Mathers
+tion tuition had improved the quality of material      and Towlson project; see note 1), or a written or
+posted in comparison with the previous academic        other assignment.
+year. Reflection on this work revealed a need for
+a specific tool to enable a more systematic evalu-
+ation of information sources plus a means of self-
+assessment of students’ understanding of and atti-
+tudes towards evaluation of information sources.
+These tools were then developed in the form of
+the Information Source Evaluation Matrix and a
+self-assessment Likert scale for information evalu-
+ation. These tools were then piloted via focus-
+group workshops populated by students from the
+module cohorts. Workshop attendees were volun-
+teers who received a small payment and refresh-
+ments. Workshops followed a set pattern whereby
+
+
+16 SCONUL Focus 47 2009
+                                         Information Source Evaluation Matrix
+
+
+
+                   1                 2               3               4                5                Mark
+   Who? - is       Author            Some evi-       Evidence        Author has       Author is
+   the author      background        dence author    of some         several pub-     a known
+                   is unknown        works in this   publications    lished works     authority in
+                                     area but few    in this area    in this area     this area
+                                     articles        by author
+
+          Score
+
+   What ? - is     Content and       Only of         Some of the     Several          Content and
+   the relevance   arguments         periph-         content is      points           arguments
+   of points       of little or no   eral /little    relevant to     made are of      closely match
+   made            relevance to      relevance to    task require-   relevance to     your needs
+                   the task          task being      ments           task
+                                     undertaken
+
+          Score
+
+   Where? –        Situation to      Minimal         Author’s      Reasonable         Author’s con-
+   context for     which author      similarity      situation     similarity         text and that
+   points made     applies           between         and that of   between            of the task
+                   points is dif-    author’s        the task have author’s and       very similar
+                   ferent to that    context & the   some similar- task context
+                   of the task       task context    ity
+
+          Score
+
+   When? –         Date is       Old reference       Reference is    Recent refer-    Up-to-date
+   was the         unknown or – between 10           between 5 to    ence is 2 to 5   source – pub-
+   source          older than 20 and 20 years        10 years old    years old        lished in last
+   published       years old     old                                                  two years
+
+
+          Score
+
+   Why? –          No apparent       News paper     Trade maga- Book source     Academic
+   author’s        motiva-           (or online)    zine / com-   / conference  journal
+   reason/         tion seen in      article        mercial paper paper or sub- paper – peer
+   purpose for     article           opinion – not – might have   ject interest reviewed
+   writing the                       evidenced      some bias     forum/blog
+   article
+
+          Score
+
+
+   Source/Reference:                                                                  Total marks
+
+
+
+
+  Task/Question:
+
+  Leigh, Mathers and Towlson (2009)
+
+Figure 1. The Information Source Evaluation Matrix.
+
+The authors would be pleased to receive any feed-
+back concerning the use of this matrix.
+
+
+
+                                                                                            SCONUL Focus 47 2009 17
+Reception and results                                 part of the matrix’s appeal and transferability
+                                                      value lies within its simplicity and ease of use. We
+At the end of the focus-group workshops students      intend to promote the use of the matrix in a range
+were asked to ‘Write two statements outlining         of subject areas.
+what you found useful in the use of the Informa-
+tion Source Evaluation Matrix’ and to ‘Write two      A librarian’s perspective
+ways in which the Information Source Evalu-
+ation Matrix could be improved.’ Results from         As a central service with faculty and subject con-
+this exercise were very positive for both under-      nections across the breadth of the university, the
+graduates and postgraduates. All the focus-group      library is in a prime position to spread the use of
+students engaged with the matrix and found it         the Information Source Evaluation Matrix across
+useful in evaluating the given material. All found    different subject areas. This work has already
+the matrix easy to use; no one mentioned any          started and the matrix has been well received in
+difficulty in its utilisation. All the suggestions    the faculty of humanities, where there is a plan
+for improvement were positive; some suggested         to utilise it in a critical-reading exercise within a
+a variation in the points allocation for the indi-    media module on the undergraduate programme.
+vidual criteria within the matrix as they felt some   Plans are also in progress to make it available to
+criteria were more important than others. There       librarians teaching within the curriculum and
+was also a suggestion that the importance of the      study support services. Easy access to faculties
+individual criteria may vary depending on the         enabling wide dissemination of this tool is an
+task in hand and that the matrix should allow for     added bonus of the cross-departmental nature of
+this contextualisation. Others suggested a use of     the project.
+colour coding to distinguish the criteria. There
+were also suggestions of an inclusion of space for    From a librarian’s perspective the project provides
+annotations to aid future comparison and use of       evidence that confirms the need for the high
+the matrix as a comparative tool was acknowl-         volume of information literacy work in which
+edged. The comments showed an increased               many of us engage. It also reveals the need for a
+awareness of the importance of particular criteria    quick and easy-to-use tool to aid content or infor-
+when evaluating a source for academic work. One       mation evaluation. In the recent research of Math-
+participant made specific mention of the useful-      ers and Leigh,4 students were made aware of the
+ness of the ‘5 Ws’ as a mechanism to focus on the     study and evaluation tools provided by the Open
+elements of the source.                               University’s Safari5 and Intute’s Internet Detec-
+                                                      tive,6 but they declined to utilise these resources.
+The Information Source Evaluation Matrix has          This led to the conclusion that a quick and readily
+been presented to a gathering of librarians and       available tool for evaluation was required and
+information professionals at a one-day confer-        that the application of the tool should be built into
+ence on teaching practice in libraries organised by   the curriculum.
+CILIP’s University, College and Research Group,
+East Midlands (28 April 2009), at a De Montfort       In conclusion
+University internal library staff training session
+(1 June 2009) and at the SOLSTICE conference,         This research has confirmed the need for an
+Edge Hill University, 4 June 2009. It has been well   explicit, easy-to-use, readily available informa-
+received by academics and librarians. Results         tion evaluation tool and enabled the development
+from the focus-group workshops reflected the          of such a tool. The tool, the Information Source
+positive response received from students.             Evaluation Matrix, is flexible and applicable to
+                                                      different pedagogic environments, for example
+Future plans                                          traditional, blended learning or online. It enables
+                                                      the comparison of material as well as the initial
+Future plans include the development of an            evaluation. This helps students to build up a
+online matrix, a review and enhancement of the        bank of relevant material for an assignment or
+information evaluation self-assessment tool and       task and then compare material for inclusion and
+the development of an online tutorial to support      decide on the order or context of the usage of that
+their use. There are also plans to investigate a      material. As a tool developed within and for a
+customisation of the matrix to fit different con-     subject-specific environment it remains for it to be
+texts and subject areas, enabling the allocation of   tested beyond these boundaries. As a mechanism
+greater importance to some criteria in relation to    developed in a library/faculty research project,
+others. However, this may confuse the user and        the Information Source Evaluation Matrix is in an
+
+
+18 SCONUL Focus 47 2009
+ideal place to be disseminated across new subject
+areas and reviewed in the light of different subject
+demands and experiences.
+
+References
+
+1    M. Leigh, E.L. Mathers, and K.B. Towlson,
+    ‘Using face-to-face sessions and focus groups
+     to develop online support to enhance student
+     content evaluation skills in VLE learning com-
+     munities’, paper delivered at the SOLSTICE
+     conference, ‘It’s all in the blend?’, Edge Hill
+     University, 4 June 2009, see www.edgehill.
+     ac.uk/solstice/Conference2009 [accessed 20
+     July 2009]
+
+2   E.L. Mathers, and M. Leigh, ‘Facilitators and
+    barriers to developing learning communi-
+    ties’, paper delivered at the higher education
+    annual conference ‘Transforming the student
+    experience’, Harrogate, 1–3 July 2008, see
+    www.aces.shu.ac.uk/support/staff/HEA_
+    Harrogate [accessed 20 July 2009]
+
+3   ‘Using face-to-face sessions’
+
+4   ‘Facilitators and barriers’
+
+5   The Open University, ‘Safari, an expedition
+    through the information world’ (n.d.), avail-
+    able at http://www.open.ac.uk/safari/
+    [accessed 18 June 2009]
+
+6   Intute staff at the Institute for Learning and
+    Research Technology, University of Bristol,
+    and Learn Higher staff at the Department
+    of Information and Communications, Man-
+    chester Metropolitan University, ‘Internet
+    detective’ (2006), available at http://www.vts.
+    intute.ac.uk/detective/about.html [accessed
+    18 June 2009]
+
+
+
+
+                                                       SCONUL Focus 47 2009 19
+

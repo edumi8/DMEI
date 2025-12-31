@@ -75,3 +75,19 @@ releases/
 *.zip
 *.tar.gz
 *.tar.bz2
+.example
+papers/.gitkeep
+papers/design_science.pdf
+papers/Docker_ Lightweight Linux Containers for Consistent Development and Deployment.html
+papers/IJERET-V2I4P106.pdf
+papers/README.md
+papers/siddiqui2023jenkins.pdf
+papers/Docker_ Lightweight Linux Containers for Consistent Development and Deployment_files/11600f1.webp
+papers/Docker_ Lightweight Linux Containers for Consistent Development and Deployment_files/11600f3.png
+papers/Docker_ Lightweight Linux Containers for Consistent Development and Deployment_files/11600f4.webp
+papers/Docker_ Lightweight Linux Containers for Consistent Development and Deployment_files/a.html
+papers/Docker_ Lightweight Linux Containers for Consistent Development and Deployment_files/a_data/main.js
+papers/notes/docker_merkel_2014.md
+papers/notes/hevner_2004_misq.md
+papers/notes/pappula_2021_ijeret.md
+papers/notes/siddiqui_2023_ismsit.md

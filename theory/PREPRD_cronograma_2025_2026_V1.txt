@@ -1,0 +1,180 @@
+PREPD 2025/2026
+Planeamento da Dissertação
+
+Construção do cronograma
+
+      Alberto Borges Pereira
+         abp@isep.ipp.pt
+Ciclo de vida do projeto
+Elementos a adotar:
+Construção do cronograma
+
+• Estimativas
+
+• Dependências
+
+• Datas (milestones e deadlines)
+
+• Calendário (Projeto, Recursos, tarefa)
+
+• Método do Caminho crítico (CPM)
+Dependências entre tarefas
+• Dependências obrigatórias, externas ou opcionais
+• Condiciona o inicio e/ou o fim
+• Efeito da transitividade
+Rede lógica do projeto
+Rede lógica
+• Foca nas dependências e no fluxo do trabalho
+• Deve ser o modelo base para estimar as datas de inicio e fim das tarefas
+• Base do processo de planeamento (schedule development)
+
+
+
+
+Estimativa das durações / datas
+• Em última análise deve ser realizada pelos executantes
+• O GP deve dar a informação necessária, validar e considerar reserva
+• Pode-se considerar expert judgement, informação histórica e analogia
+Rede lógica do projeto
+• Foca nas dependências e no fluxo do trabalho
+
+• Deve ser o modelo base para estimar as datas de inicio e fim das tarefas
+
+• Base do processo de planeamento (schedule development)
+
+• Time Scaled Network Diagram vs. Gantt Chart
+
+• Produz a estimativa da duração do projeto
+
+• Resulta da sequenciação das tarefas terminais da WBS (activity sequencing)
+
+• Tipos de representação: AON ou PDM: 4 tipos de dependências, lags e leads
+Caminho crítico
+O caminho crítico de um projeto é definido pelo conjunto de tarefas que não podem sofrer atraso de
+qualquer ordem na sua execução sem impactar na data de término do projeto.
+Caminho crítico
+Aspetos sobre o Critical Path :
+
+• Pode existir mais do que um caminho crítico, embora não seja desejável pois aumenta o risco do
+  projeto
+• O caminho crítico pode mudar no correr do projecto
+• Pode existir folga negativa se for imposta externamente uma data para o final do projeto
+• O caminho crítico pode ser mais longo que a soma da duração das tarefas se a data imposta
+  externamente for superior a essa duração
+• A imposição de uma data final não altera, per si, a rede lógica
+• Uma folga negativa reflete um atraso garantido e deve implicar uma alteração ao plano
+Calendário
+Milestones e deadlines – eventos no plano
+Free Slack (Folga Livre ou Folga Local): tempo que uma actividade pode atrasar sem comprometer a data de início das suas
+actividades sucessoras;
+Total Slack (Folga Total): tempo que uma actividade pode atrasar sem comprometer a data de final do projecto ou de uma
+deadline do projecto;
+
+
+
+
+Crashing – exige uma análise de tradeoff entre os custos e os prazos do projecto, com o objectivo de obtermos uma redução da
+duração das tarefas críticas conseguida através da afectação de mais recursos a partir de tarefas não críticas ou a partir de
+recursos externos, ou seja, fora da equipa do projecto. Quase sempre aumenta o custo do projecto devido à diminuição da
+produtividade individual.
+
+Fast tracking – realização simultânea de trabalho que geralmente seria realizado em sequência e normalmente mais tarde no
+projecto. Tipicamente aumenta o risco do projecto traduzindo-se em rework e requer mais atenção aos aspectos de comunicação
+para coordenação do trabalho que está a ser realizado em paralelo.
+Desfasamentos
+Lag e Lead: Desfasamento temporal da tarefa sucessora relativamente à tarefa
+precedente
+
+2 tipos a considerar:
+    Desfasamento positivo
+    Desfasamento negativo
+
+Unidades:
+    Tempo
+    Percentagem
+
+Exercício Prático:
+        Testar para cada tipo de dependência Finish-Start uma lag positiva e uma lag negativa com diferentes
+            unidades
+Desfasamentos
+Lag e Lead: Desfasamento temporal da tarefa sucessora relativamente à tarefa
+precedente
+
+2 tipos a considerar:
+    Desfasamento positivo
+    Desfasamento negativo
+
+Unidades:
+    Tempo
+    Percentagem
+
+Exercício Prático:
+        Testar para cada tipo de dependência Finish-Start uma lag positiva e uma lag negativa com diferentes
+            unidades
+Estimativas
+  •   Analogia
+      •   Usar como base a duração em projectos anteriores
+      •   Pode aplicar-se a estimar duração de actividades ou á duração global do projecto
+      •   Estabelece as expectativas da gestão
+      •   Usar quando há pouca informação disponível
+      •   Uma forma de expert judgement
+      •   Pressupõe que existem actividades anterior similares de facto
+
+  •   Detalhada (Bottom-up) baseada na WBS
+      •   Estima-se o detalhe e agrupa-se para análise
+      •   Necessita do conhecimento prévio do produto e todos os seus entregáveis
+      •   Baseia-se em muitos pressupostos
+      •   Demora bastante tempo a realizar
+Estimativas
+  •   Paramétrica
+      •   Usa a inferência estatística para a partir de dados históricos relacionar a duração com outras variáveis do
+          projecto (ex: estimar o esforço de desenvolvimento à medida com base no número de funcionalidades a
+          desenvolver)
+      •   Pode ser muito precisa, dependendo da sofisticação e do volume de dados do modelo
+
+  •   Três- pontos
+      •   Usa a estimativa optimista, mais provável e pessimista
+      •   Estimativa PERT = (O+4M+P)/6
+      •   Desvio padrão = (P-O)/6 (1 Sigma = 68% de confiança, 3 Sigma = 99.73%)
+      •   Variância = ((P-O)/6)^2
+      •   Desvio padrão de uma actividade mede a confiança ou risco
+      •   O desvio padrão do projecto dá o grau de confiança em atingir o objectivo
+                                                                                       O      M   E       P
+Custo
+Planeamento dos recursos:
+
+• São os responsáveis por executar as tarefas do projecto
+
+• São utilizados para indicar quem é responsável e quem executa as as tarefas do projecto
+
+Existem dois tipos de recursos no MS Project:
+
+Work:
+• Pessoas e equipamentos que executam as tarefas do projecto e consomem tempo durante a sua
+  execução
+• Unidades: tempo (dias, horas, minutos)
+
+Material:
+• Material usado para executar as tarefas do projecto
+• Unidades: Qt. Fixa (30 unid.) ou Qt. Variável (3 unid./hora)
+Baseline
+Baseline:
+• Existência de um plano que abranja a totalidade do âmbito do projeto
+• A gravação da primeira baseline deverá ocorrer antes do início da execução do projeto
+
+Alterações á Baseline
+• Alterações que deverão dar origem a uma nova versão de baseline:
+✓ Pedido de alteração pelo cliente e aprovado
+✓ Detalhe no processo de planeamento (Rolling Wave)
+✓ Baseline irrealista ou comprometida (SPI ou CPI corrigidos <0,6 ou >1,6 e Physical % Complete
+   >25%, p.ex.)
+• Utilização das versões de baseline no MS Project, de forma circular mantendo fixa a baseline 10
+   como a primeira
+PREPD 2025/2026
+Planeamento da Dissertação
+
+Construção do cronograma
+
+      Alberto Borges Pereira
+         abp@isep.ipp.pt
+

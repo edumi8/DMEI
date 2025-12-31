@@ -1,0 +1,331 @@
+Sentence Structure of
+ Technical Writing
+                    Nicole Kelley
+  Program in Writing and Humanistic Studies @ MIT
+                   2.671, Fall 2006
+
+
+  Lecture materials derived from The Craft of Scientific Writing © Michael Alley
+          and “The Science of Scientific Writing” by Gopen and Swan
+“The fundamental purpose of scientific discourse is not
+the mere presentation of information and thought but
+rather its actual communication. It does not matter how
+pleased an author might be to have converted all the
+right data into sentences and paragraphs; it matters only
+whether a large majority of the reading audience
+accurately perceives what the author had in mind.”
+                         --George Gopen and Judith Swan
+                           The Science of Scientific Writing
+  Good Tech Writers Practice
+• Planning
+• Clarity
+• Brevity         Planning/
+                                          Writing
+                  Rethinking
+• Simplicity
+• Word Choice
+• Active Voice
+• Committing to
+  Writing as a                 Revising
+
+  Process
+                                                    3
+  Planning: Before You Begin
+Identify your audience and their expectations
+
+
+
+Know your purpose     Know your material
+
+
+
+Understand the writing task at hand
+
+
+
+Organize your thoughts and materials
+
+
+
+Budget adequate time to write, review, revise and edit
+
+                                                         4
+   Clarity: Avoid Jargon
+• Jargon: a vocabulary particular to a
+  place of work (abbreviations, slang)
+• Audience familiarity with the topic
+  determines appropriate use of jargon
+    Ex. 1: For the first year, the links with SDPC and the HAC
+    were not connected, and all required OCS input data were
+    artificially loaded. Thus CATCH22 and MERWIN were not
+    available.
+    Ex. 2: Because some of the links in the computer
+    system were not connected the first year, we could
+    not run all the software codes.
+
+                                                           5
+Clarity: Define the Unfamiliar
+ • If you must abbreviate, define the term in its
+   first occurrence, and put abbreviations in
+   parentheses
+     Ex: Edgartown Great Pond (EGP) is a vital body of water.
+     Unfortunately, due to an unpredictable influx of saltwater,
+     the delicate ecosystem is in danger of destabilizing.
+ • Italicize first occurrence of unfamiliar
+   terms and define them right away
+     Ex: Retina is a light-sensitive tissue, found at the back of
+     the eye, that converts light impulses to nerve impulses.
+
+
+                                                               6
+Brevity: Use Words Efficiently
+ • Never use two words when one
+   word will do.
+
+    Ex. 1: The relationship between the nature of salt water to
+    fresh water in the Edgartown Great Pond that fluctuates
+    often is extremely important to everyone including
+    scientists, residents, and environmentalists on Martha’s
+    Vineyard.
+
+    Ex. 2: The fluctuating salinity of EGP concerns many
+    environmentalists, scientists, and residents.
+
+
+                                                            7
+   Brevity: Less Is More
+• Pare your language down to the
+  essential message you want to get across
+  to your readers:
+
+    Ex: Earthquakes can occur at predictable
+    intervals along a given fault segment.
+    Depending on the length and slip in each
+    mainshock, the exact interval can vary by a
+    factor of two. The southern segment of the
+    San Andreas fault has an interval of 145
+    years, plus or minus a few decades.
+
+                                              8
+Brevity: Most Important First
+ • Place key information in the main clause
+
+     Ex. 1: Despite winning the game, the Patriots
+     made several errors in the first half.
+
+     Ex. 2: Despite making several errors in the
+     first half, the Patriots won the game.
+
+     Ex. 3: The Patriots won the game, despite
+     making several errors in the first half.
+                                                     9
+Brevity: Remove Redundancy
+ • Combine overlapping sentences when
+   possible
+    Ex. 1: Water quality in Hawk River declined in
+    March. This decline occurred because of the
+    heavy rainfall that month. All the extra water
+    overloaded Tomlin county’s water treatment
+    plant.
+
+    Ex. 2: Water quality in Hawk River declined
+    in March because heavy rainfalls overloaded
+    Tomlin County water treatment plant.
+                                                 10
+Simplicity: Use Details Wisely
+ • Specific details are desirable, but be careful
+   to balance detail with audience needs for
+   clarity—significance is more important.
+
+     Ex. 1: The average house in the area has a
+     radon level of 0.4 picocuries per litre.
+
+     Ex. 2: The average house in the area has a
+     radon level of 0.4 picocuries per litre, which
+     is considered low by the EPA [Lafavore,
+     1987]. Levels between 20 and 200 picocuries
+     per liter are considered high, and levels
+     above 200 picocuries per liter are considered
+     dangerous. For reference, the average radon
+     level in outdoor air is about 0.2 picocuries 11
+     per litre.
+Simplicity: Use Details Wisely
+ • Many engineers want to provide as
+   much specific detail as possible, but this
+   can come at the expense of readers
+   understanding and their main point
+
+     Ex. 1: The number of particular hydrocarbon combinations
+     in our study is enormous. For example, the number of
+     possible C20H 42 is 366,319 and the number of C40H 82 is
+     62,491,178,805,831.
+     Ex. 2: The number of hydrocarbon combinations in
+     our study is enormous. For example, the number of
+     possible C40H 82 is over 60 trillion.
+
+
+                                                         12
+Language: Needless Complexity
+ Category     Example              Substitute
+ nouns        utilization          use
+              functionality        feature
+ verbs        facilitate           cause
+              finalize             end
+ adjectives   aforementioned       mentioned
+              individualized       individual
+ adverbs      firstly, secondly,   first, second
+              heretofore           previous
+
+                                                   13
+  Language: Abstraction
+• Avoid too many abstract nouns
+   Ex. 1: The existing nature of Mount St.
+   Helens’ volcanic ash spewage was
+   handled through the applied use of
+   computer modeling capabilities.
+
+   Ex. 2: With Cray computers, we
+   modeled how much ash spewed from
+   Mount St. Helens.
+                                             14
+Language: Needless Words
+(already) existing        never (before)
+at (the) present (time)   none (at all)
+(basic) fundamentals      now (at this time)
+(completely) eliminate    period (of time)
+(continue to) remain      (private) industry
+currently (being)         (separate) entities
+(currently) underway      start (out)
+(empty) space             write (out)
+had done (previously)     (still) persists
+introduced (a new)
+mix (together)
+                                                15
+   Language: Ambiguity
+• Choose words whose meanings are clear
+
+    Ex. 1: T cells, rather than B cells, appeared as
+    the lymphocytes migrated to the thymus gland.
+
+    Ex. 2: T cells, rather than B cells, appeared
+    because the lymphocytes migrated to the
+    thymus gland.
+
+
+
+                                                  16
+   Language: Ambiguity
+• Order the words in your sentences
+  carefully
+
+    Ex. 1: In low water temperatures and high
+    toxicity levels of oil, we tested how well the
+    microorganisms survived.
+
+    Ex. 2: We tested how well the
+    microorganisms survived in low water
+    temperatures and high toxicity levels of oil.
+                                                     17
+   Language: Ambiguity
+• Do not overuse pronouns—particularly
+  “it” and “this”—because it is often difficult
+  to identify the antecedent
+
+    Ex: Because the receiver presented the
+    radiometer with a high-flux environment, it was
+    mounted in a silver-plated stainless steel
+    container.
+
+    Because the receiver presented the radiometer
+    with a high-flux environment, it was mounted in
+    a silver-plated stainless steel container.
+                                                 18
+Language: Weak vs. Strong
+  • Avoid too many “to be” verbs
+    “is” “was” “were” “has been” “have been”
+  • Avoid excess words, which slow
+    comprehension of the main point
+    made arrangements for          arranged
+    made the decision              decided
+    made the measurement of        measured
+    performed the development of   developed
+    is working as expected         works as expected
+
+                                                       19
+Active Voice: Strong Verbs
+• Technical writers want to communicate as
+  efficiently as possible, and active voice is
+  more straightforward and is stronger than
+  passive voice
+
+    Ex 1: The feedthrough was composed of a
+    sapphire optical fiber, which was pressed
+    against the pyrotechnic that was used to confine
+    the charge.
+
+    Ex 2: The feedthrough contained a sapphire
+    optical fiber, which pressed against the
+    pyrotechnic that contained the charge.
+                                                 20
+Active Voice: Natural Sound
+• When in doubt, read passages out loud to
+  determine the natural sound*
+
+    Ex 1: A new process for eliminating nitrogen oxides from
+    diesel exhaust engines is presented. Flow tube
+    experiments to test this process are discussed. A
+    chemical reaction scheme to account for this process is
+    proposed.
+
+    Ex 2: We present a new process for eliminating
+    nitrogen oxides from the exhaust of diesel engines.
+    To test this process, we performed experiments in
+    flow tubes. To explain this process, we developed a
+    scheme of chemical reactions.
+
+    *always defer to your professor, your journal, or your company style
+    guide for use of “I” and “we” in technical papers                    21
+       Writing Is a Process
+•   Good writing doesn’t
+                                  Final Draft
+    happen overnight; it
+    requires planning,            Revised Draft
+    drafting, rereading,
+    revising, and editing.        First Draft
+
+
+
+•   Learning and improvement
+    requires self-review, peer-
+    review, subject-matter
+    expert feedback, and
+    practice.
+
+•   There are no shortcuts;
+    practice makes perfect!
+
+                                          22
+        To summarize
+• Plan your project before you begin
+  drafting.
+• Understand basic qualities of good
+  technical writing; use the examples
+  presented to guide you in your writing
+  and revising process.
+• Good writing is a habit that takes
+  time to develop; practice makes
+  perfect.
+                                      23
+           Questions?
+• MIT Writing Center
+  http://web.mit.edu/writing/
+• CI Instructor, Nicole Kelley, Mary Caulfield,
+   Lydia Volaitis, Thalia Rubio
+  Stata Center 32-083 x33039
+  Make an appt., email, or call directly
+  nkelley@mit.edu, lydiav@mit.edu,
+  trubio@mit.edu, mcaulf@mit.edu
+  (email preferred)
+
+                                             24
+
