@@ -35,17 +35,7 @@
 \begin{abstract}
 
 	% here you put the abstract in the main language of the work.
-
-	This document explains the main formatting rules to apply to a TMDEI Master Dissertation work for the MSc in Computer Engineering of the Computer Engineering Department (DEI) of the School of Engineering (ISEP) of the Polytechnic of Porto (IPP).
-
-	The rules here presented are a set of recommended good practices for formatting the disseration work. Please note that this document does not have definite hard rules, and the discussion of these and other aspects of the development of the work should be discussed with the respective supervisor(s).
-
-	This document is based on a previous document prepared by Dr. Fátima Rodrigues (DEI/ISEP).
-
-	The abstract should usually not exceed 200 words, or one page. When the work is written in Portuguese, it should have an abstract in English.
-
-	Please define up to 6 keywords that better describe your work, in the \emph{THESIS INFORMATION} block of the \file{main.tex} file.
-
+Internal CI/CD services (GitLab, Jenkins, Nexus, SonarQube, Dependency‑Track) often run in Docker on mixed Linux/Windows hosts without administrative access. In these constrained environments, teams struggle to detect faults quickly and to diagnose root causes because telemetry is fragmented and host‑level instrumentation is not permitted. This work proposes a container‑first observability architecture that collects metrics, logs and traces from non‑privileged containers using sidecar exporters, agent collectors and runtime APIs, and correlates signals in a unified metrics pipeline with dashboards and alerts. The approach is validated on a four‑server, on‑premise setup and evaluated with MTTD, MTTR, pipeline throughput, alert precision and overhead (target below 5\%). The expected contribution is a reference architecture, reproducible prototype and decision guidance that improve CI/CD reliability under strict privilege constraints.
 \end{abstract}
 
 \begin{abstractotherlanguage}
@@ -63,12 +53,12 @@
 %	ACKNOWLEDGEMENTS (optional)
 %----------------------------------------------------------------------------------------
 
-\begin{acknowledgements}
+% \begin{acknowledgements}
 
-	The optional Acknowledgment goes here\ldots Below is an example of a humorous acknowledgment.
+% 	The optional Acknowledgment goes here\ldots Below is an example of a humorous acknowledgment.
 
-	"I'd also like to thank the Van Allen belts for protecting us from the harmful solar wind, and the earth for being just the right distance from the sun for being conducive to life, and for the ability for water atoms to clump so efficiently, for pretty much the same reason. Finally, I'd like to thank every single one of my forebears for surviving long enough in this hostile world to procreate. Without any one of you, this book would not have been possible." in "The Woman Who Died a Lot" by Jasper Fforde.
-\end{acknowledgements}
+% 	"I'd also like to thank the Van Allen belts for protecting us from the harmful solar wind, and the earth for being just the right distance from the sun for being conducive to life, and for the ability for water atoms to clump so efficiently, for pretty much the same reason. Finally, I'd like to thank every single one of my forebears for surviving long enough in this hostile world to procreate. Without any one of you, this book would not have been possible." in "The Woman Who Died a Lot" by Jasper Fforde.
+% \end{acknowledgements}
 
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
@@ -81,15 +71,15 @@
 \listoftables % Prints the list of tables
 
 % Keep English name by default; remove conditional Portuguese redefinitions
-\renewcommand{\listalgorithmname}{List of Algorithms}
-\listofalgorithms % Prints the list of algorithms
-\addchaptertocentry{\listalgorithmname}
+% \renewcommand{\listalgorithmname}{List of Algorithms}
+% \listofalgorithms % Prints the list of algorithms
+% \addchaptertocentry{\listalgorithmname}
 
 
-\renewcommand{\lstlistlistingname}{List of Source Code}
-\renewcommand{\lstlistlistingname}{List of Source Code}
-\lstlistoflistings % Prints the list of listings (programming language source code)
-\addchaptertocentry{\lstlistlistingname}
+% \renewcommand{\lstlistlistingname}{List of Source Code}
+% \renewcommand{\lstlistlistingname}{List of Source Code}
+% \lstlistoflistings % Prints the list of listings (programming language source code)
+% \addchaptertocentry{\lstlistlistingname}
 
 
 %----------------------------------------------------------------------------------------

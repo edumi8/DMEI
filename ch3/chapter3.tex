@@ -5,16 +5,83 @@
 
 %----------------------------------------------------------------------------------------
 \section{PRISMA Methodology Overview}
+A systematic literature review will be conducted following \ac{PRISMA} guidelines to ensure comprehensive and reproducible coverage of the research domain. The search strategy encompasses the following elements:
+
+\textbf{Information sources:}
+\begin{itemize}
+    \item \textbf{Academic databases:} IEEE Xplore, ACM Digital Library, Springer, ScienceDirect, and Google Scholar for peer‑reviewed publications
+    \item \textbf{Technical repositories:} arXiv for preprints and working papers in systems and software engineering
+    \item \textbf{Gray literature:} Technical documentation from established open‑source observability projects, industry whitepapers, and practitioner reports from reputable sources (given the rapid evolution of container observability practices)
+\end{itemize}
+
+\textbf{Search terms and queries:}
+Core search queries will combine terms from three concept groups using Boolean operators:
+\begin{enumerate}
+    \item \textit{Observability concepts:} ``observability'', ``monitoring'', ``telemetry'', ``instrumentation'', ``metrics'', ``logging'', ``tracing'', ``distributed tracing''
+    \item \textit{Container and deployment context:} ``container'', ``containerized'', ``Docker'', ``non‑privileged'', ``unprivileged'', ``sidecar'', ``agent''
+    \item \textit{Application domain:} ``CI/CD'', ``continuous integration'', ``continuous deployment'', ``DevOps'', ``reliability'', ``incident response'', ``MTTD'', ``MTTR''
+\end{enumerate}
+
+Example query structure: (\textit{observability} OR \textit{monitoring} OR \textit{telemetry}) AND (\textit{container} OR \textit{containerized} OR \textit{non‑privileged}) AND (\textit{CI/CD} OR \textit{reliability} OR \textit{incident response})
+
+\textbf{Inclusion and exclusion criteria:}
+\begin{itemize}
+    \item \textbf{Inclusion:} Peer‑reviewed publications from 2018–2025, technical reports and documentation addressing container telemetry collection, instrumentation patterns, performance evaluation, or reliability improvement in constrained or heterogeneous environments, comparative studies of observability approaches, and empirical evaluations of monitoring overhead
+    \item \textbf{Exclusion:} Publications exclusively focused on privileged host access patterns without discussion of constraints, cloud‑provider‑specific solutions that cannot generalize to on‑premise infrastructure, purely theoretical work without practical implementation guidance, and papers predating 2018 (unless seminal works establishing foundational concepts)
+\end{itemize}
+
+\textbf{Selection process:}
+Literature selection will follow a three‑stage process: (1) title and abstract screening to identify potentially relevant sources, (2) full‑text review to assess relevance against inclusion/exclusion criteria, and (3) quality assessment focusing on methodological rigor, reproducibility, and applicability to constrained environments. Reference chaining (backward and forward citation tracking) will supplement database searches to identify additional relevant work.
 \subsection{Identification}
+The identification stage will record search queries, databases queried, and the number of retrieved records. Queries will be versioned and documented to enable replication of the search process.
+
 \subsection{Screening}
+Title and abstract screening will be performed using documented inclusion/exclusion criteria; screening decisions and reasons for exclusion at this stage will be recorded. When uncertain, items will be advanced to full\-text review to avoid premature exclusion.
+
 \subsection{Eligibility}
-\subsection{Inclusion}
+Full\-text review assesses whether the study meets the inclusion criteria and whether it reports sufficient methodological detail for quality assessment. Studies that lack sufficient detail will be noted but may be excluded from quantitative synthesis.
+
+\subsection{Inclusion and Data Extraction}
+Included studies will have data extracted into structured evidence tables. Extraction fields include: study context, deployment environment (cloud/on\-premise), privilege assumptions, telemetry modalities used, evaluation metrics and experimental design. Extraction will be double\-checked for accuracy.
 \section{Prisma Flow Diagram}
+The PRISMA flow diagram will be generated from the recorded counts at each stage (identification, screening, eligibility, inclusion) and included in the thesis as a visual summary of the search process.
+
+\subsection{Quality assessment criteria}
+Quality assessment will evaluate internal validity (study design, controls), external validity (generalizability to constrained \ac{CICD} environments), and reporting transparency (availability of artifacts, measurement procedures). Assessment outcomes will guide whether a study contributes to quantitative synthesis or only qualitative insight.
 \section{Related Work on Observability in CICD Environments}
-\subsection{Observability Frameworks}
-\subsection{Telemetry Collection Techniques}
-\subsection{Correlation Mechanisms}
-\subsection{Performance Metrics and Analysis}
+
+The literature review will examine existing approaches to container observability, deployment patterns for telemetry collection (agent‑based, sidecar, host‑level), instrumentation frameworks and their privilege requirements, performance and overhead studies, and empirical evaluations of monitoring interventions.
+
+Preliminary reading indicates that much of the documented practice and empirical evaluation in the literature assumes elevated privileges, homogeneous cloud environments and a high degree of control over service code and deployment (for example, the use of sidecar patterns and Kubernetes operators). There is comparatively less empirical guidance for internal, on\-premise \ac{CICD} deployments where host administration is restricted and third\-party packaged services cannot be modified.
+
+Below we summarise representative studies and identify areas where evidence is limited or absent. These summaries are intended to guide the systematic review rather than to be exhaustive.
+
+\subsection{Representative studies}
+Pappula et al. (2021)~\cite{pappula2021building} propose a multi\-signal observability pipeline that integrates OpenTelemetry, Prometheus and centralized tracing to improve fault detection and diagnosis. The study reports reductions in detection and repair times in microservices contexts, and discusses practical considerations such as sampling and storage trade\-offs. Siddiqui et al. (2023)~\cite{siddiqui2023jenkins} present a Jenkins\-centric monitoring approach using Prometheus and Grafana, with concrete KPIs and dashboard templates for pipeline observability. Both studies are informative for architecture and KPI selection but assume administrative access or plugin installation capability.
+
+Each representative study will be summarised in an evidence table capturing scope, methods, results, and limitations. These tables will support cross\-study comparisons and feed into the gap analysis.
+
+\subsection{Preliminary findings from the extended abstract}
+The extended abstract contains preliminary synthesis of prior work and initial observations that inform the prototype design. In particular, it highlights two representative studies that shaped the initial selection of KPIs and architectural options: a multi\-signal pipeline integrating OpenTelemetry, Prometheus and tracing backends~\cite{pappula2021building}, and a Jenkins\-focused Prometheus+Grafana monitoring approach~\cite{siddiqui2023jenkins}. These preliminary findings motivate the selection of \ac{MTTD} and \ac{MTTR} as primary outcome measures, and support exploring sidecar and collector deployment patterns that do not require host administrative privileges.
+
+The systematic review will test these preliminary inferences by extracting comparable metrics and contexts from the literature and by documenting differences in how studies define and measure outcomes such as \ac{MTTD} and \ac{MTTR}.
+
+\subsection{Observability frameworks and telemetry collection}
+The review will compare architectural families (push vs pull, agent vs sidecar, collector topologies) and practical collection techniques (metrics exposition, log forwarding, trace context propagation). For each family, the review will document privilege assumptions and cross\-platform applicability.
+
+\subsection{Correlation mechanisms}
+Correlation across signals (metrics, logs, traces) typically relies on propagated identifiers and consistent instrumentation. The review will identify correlation patterns that can operate without modifying application code, for example by leveraging request identifiers available in network or proxy layers, or by enriching logs via sidecar processes.
+
+\subsection{Performance metrics and evaluation methods}
+The systematic review will identify common evaluation metrics (\ac{MTTD}, \ac{MTTR}, throughput, overhead) and experimental methods (controlled fault injection, A/B comparisons, longitudinal collection), and note measurement pitfalls and reporting gaps.
+
+When extracting metrics, the review will record definitions and measurement procedures used by each study (for example, how \ac{MTTD} and \ac{MTTR} are operationalised) to ensure that subsequent comparisons use compatible definitions or explicitly document differences.
+
 \section{Gaps in Existing Research}
+Early indications suggest the following gaps: (1) scarce empirical studies focusing on non\-privileged, on\-premise \ac{CICD} environments; (2) limited guidance for instrumenting third\-party packaged services without code changes; and (3) few reproducible artifacts (templates, scripts) targeted at constrained deployments. The systematic review will verify and refine this preliminary gap analysis.
+
 \section{Summary}
+This chapter establishes the review protocol and situates the initial findings that motivate the design and evaluation phases. The systematic review results will inform technology selection and prototype design in subsequent chapters.
+
 \section{Answering the Research Question}
+The systematic review will produce an evidence base to answer the research questions by: (a) identifying feasible telemetry collection patterns under privilege constraints; (b) documenting evaluation methods and KPIs suitable for constrained environments; and (c) providing references and examples to inform the prototype implementation and measurement strategy.

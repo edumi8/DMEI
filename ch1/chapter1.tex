@@ -1,22 +1,64 @@
 % Chapter 1
-% 
-\chapter{Thesis Structure} % Main chapter title
-\label{chap:Chapter1} % For referencing the chapter elsewhere, use Chapter~\ref{Chapter1}
+\chapter{Introduction}
+\label{chap:Chapter1}
 
+\section{Context and Motivation}
+Internal continuous integration and continuous delivery (\ac{CICD}) services such as GitLab, Jenkins, SonarQube, Nexus and Dependency\-Track are central components of many software delivery pipelines. Failures or degraded performance in these services reduce development velocity and can delay releases. This dissertation examines practical observability approaches for containerized \ac{CICD} deployments operating under restricted administrative privileges and in heterogeneous operating environments (mixed Linux and Windows hosts).
 
-%-------------------------------------------------------------------------------
-%---------
-%
-\section{Introduction}
-\label{sec:chap1_introduction} %For referencing this section elsewhere, use Section~\ref{sec:chap1_introduction}
-Internal \ac{CICD} services (GitLab, Jenkins, SonarQube, Nexus, Dependency‑Track) deployed in Docker containers are critical to software delivery pipelines. Reliability issues directly affect development velocity and release cadence. However, constrained deployment contexts, non‑privileged containers, no host administrative access, and heterogeneous operating systems (Linux and Windows).
+The motivation for focusing on constrained, non\-privileged deployments arises from repeated operational observations in industry settings where teams manage their own on\-premise infrastructure but lack host administrative access. In such contexts, conventional cloud\-native approaches — for example, using privileged host exporters or privileged DaemonSets in Kubernetes — may be unavailable. The research therefore prioritises deployment patterns and tooling that can be applied without modifying service images or requiring host admin rights.
 
-This research examines integrated observability (systematic collection, correlation and analysis of metrics, logs and distributed traces) in such constrained environments. The proposed solution combines non‑privileged telemetry collection (sidecar exporters, agent collectors, runtime APIs) with correlation mechanisms to improve \ac{MTTD}, \ac{MTTR}, and pipeline throughput while maintaining sub-5\% resource overhead. The work is grounded in a real‑world, four‑server on‑premise deployment (three Linux, one Windows) with no administrative access, exemplifying operational constraints typical of internally‑managed infrastructure where third‑party services deployed via Docker~\cite{docker2014} cannot be modified.
-
-The central research problem is: \textit{How can an integrated observability framework be designed and implemented for containerized \ac{CICD} platforms operating under non‑privileged access constraints and heterogeneous infrastructure, to measurably improve reliability and reduce incident response times?}
 \section{Problem Statement}
+The specific research problem addressed in this work is: how to design and implement an integrated observability framework for containerized \ac{CICD} platforms operating under non\-privileged access constraints and heterogeneous infrastructure, such that the resulting artifact supports reproducible evaluation of reliability and incident response improvements.
+
+\subsection{Extended abstract summary}
+Internal \ac{CICD} services (GitLab, Jenkins, Nexus, SonarQube, Dependency\-Track) often run in Docker containers on mixed Linux/Windows hosts without administrative access. In these constrained environments, teams commonly face difficulty detecting faults promptly and diagnosing root causes because telemetry is fragmented and host\-level instrumentation is not permitted. This dissertation proposes a container\-first observability architecture that collects metrics, logs and traces from non\-privileged containers using sidecar exporters, agent collectors and runtime APIs, and correlates signals in a unified telemetry pipeline with dashboards and alerts. The approach will be validated on a four\-server, on\-premise deployment (three Linux, one Windows) and evaluated using \ac{MTTD}, \ac{MTTR}, pipeline throughput, alert precision and instrumentation overhead (operational target: below 5\%). The expected contribution is a documented reference architecture, a reproducible prototype and decision guidance to improve \ac{CICD} reliability under strict privilege constraints.
+
+\subsection{Contributions}
+The primary contributions expected from this research are:
+\begin{itemize}
+    \item A container\-first reference architecture for collecting metrics, logs and traces from non\-privileged containers in mixed OS on\-premise environments.
+    \item A reproducible prototype (container images and deployment templates) demonstrating feasible instrumentation patterns (sidecars, collectors, log forwarding) that do not require host administrative privileges.
+    \item An empirical evaluation reporting measured changes in \ac{MTTD}, \ac{MTTR}, pipeline throughput and measured instrumentation overhead, including a documented measurement methodology to support reproducibility.
+    \item Practical decision guidance and configuration artefacts to support adoption by operations teams that cannot modify service images or obtain host administrative access.
+\end{itemize}
+
 \section{Research Objectives}
-\section{Research Question}
+The research objectives are:
+\begin{itemize}
+    \item \textbf{O1 Reference architecture:} Define a container\-first reference architecture specifying exporters, collectors, storage backends and visualization components deployable without host administrative privileges.
+    \item \textbf{O2 Prototype implementation:} Produce a reproducible prototype (container images and deployment templates) that instruments representative \ac{CICD} services in the target environment.
+    \item \textbf{O3 Quantitative evaluation:} Define and execute an empirical evaluation comparing \ac{MTTD}, \ac{MTTR}, telemetry pipeline throughput and instrumentation overhead before and after deployment, with documented measurement procedures.
+    \item \textbf{O4 Performance constraints:} Characterize resource overhead and document trade\-offs; the evaluation includes targets and thresholds (for example, an operational target of under 5\% resource overhead) to guide assessment.
+    \item \textbf{O5 Reproducibility and guidance:} Provide configuration templates, deployment scripts and adoption guidance for constrained, on\-premise environments.
+\end{itemize}
+
+Each objective is scoped to be actionable and measurable. For example, Objective O3 includes explicit measurement procedures (baseline collection, controlled fault injection and paired comparisons) to enable reproducible evaluation rather than solely qualitative assessment.
+
+\section{Research Questions}
+The dissertation is guided by the following questions:
+\begin{enumerate}
+    \item How can metrics, logs and distributed traces be collected from containerized \ac{CICD} services when only non\-privileged containers are available (no host administrative access)?
+    \item Which instrumentation and deployment patterns (sidecars, agent collectors, push vs pull pipelines) best support cross\-server correlation in mixed OS environments while maintaining acceptable resource overhead?
+    \item What are the practical constraints and trade\-offs (data fidelity, retention, network and CPU overhead, security) introduced by non\-privileged telemetry collection, and how can they be mitigated in a reproducible reference architecture?
+\end{enumerate}
+
 \section{Methodology Overview}
+This research follows a design science approach~\cite{hevner2004design}, combining a systematic literature review, comparative technology assessment, artifact design, prototype implementation and empirical evaluation. The work proceeds in five phases:
+
+\begin{description}
+    \item[Phase 1 -- Problem Analysis and Literature Review:] A PRISMA\-guided systematic review of observability frameworks, containerized monitoring and \ac{CICD} reliability to identify approaches and gaps relevant to constrained environments.
+    \item[Phase 2 -- Technology Assessment:] Evaluate candidate tools (for example, Prometheus~\cite{prometheus2016}, Loki, Jaeger, OpenTelemetry) against criteria including non\-privileged execution, cross\-platform support and resource overhead.
+    \item[Phase 3 -- Architecture Design:] Specify component placement (exporters, collectors, storage and visualization), data flows and correlation mechanisms, producing deployment diagrams and configuration templates.
+    \item[Phase 4 -- Prototype Implementation:] Implement and document a reproducible prototype using sidecars and collector containers where appropriate; provide deployment automation and configuration artifacts.
+    \item[Phase 5 -- Evaluation and Validation:] Quantitatively evaluate \ac{MTTD}, \ac{MTTR} and instrumentation overhead; perform controlled fault\-injection experiments and collect qualitative feedback from practitioners.
+\end{description}
+
+The methodological choices reflect the dual goals of creating a practical artefact (the reference architecture and prototype) and generating evaluative evidence about its efficacy. Quantitative evaluation is complemented by qualitative data from practitioner interviews to capture operational acceptability and deployment constraints that are difficult to reproduce in laboratory conditions.
+
 \section{Ethical Considerations}
+Human subjects activity (structured interviews) and access to operational telemetry will follow approved protocols. Participants provide informed consent; data are anonymized and handled according to institutional and organizational policies. Production deployments will be preceded by staging tests and change\-management procedures to avoid operational disruption.
+
+The study will also observe data minimisation principles for telemetry collection and will avoid collecting personal data unless explicitly required and justified; any such collection will follow institutional review procedures and applicable regulations. When presenting empirical results, host identifiers and other sensitive configuration details will be anonymised to protect organisational confidentiality.
+
 \section{Structure of the Dissertation}
+The remainder of the dissertation is organised as follows: Chapter~2 presents project planning and skill management; Chapter~3 describes the systematic literature review and related work; Chapter~4 summarises conclusions and outlines next steps for prototype implementation and evaluation. Appendices provide supplementary materials and configuration artifacts.
