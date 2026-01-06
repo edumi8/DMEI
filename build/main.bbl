@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.2 $
+% $ biblatex bbl format version 3.3 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{none/global//global/global}
-    \entry{hevner2004design}{article}{}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{hevner2004design}{article}{}{}
       \name{author}{4}{}{%
         {{hash=e054261c7f1739e1ba1db0a45e385c1b}{%
            family={Hevner},
@@ -42,12 +42,14 @@
            given={Sudha},
            giveni={S\bibinitperiod}}}%
       }
-      \strng{namehash}{0b457fdf99b8e237500180a790709ce0}
+      \strng{namehash}{77b3350005135e016e7a83431f326d8f}
       \strng{fullhash}{b163bef761d9a2c79a3d232595321775}
+      \strng{fullhashraw}{b163bef761d9a2c79a3d232595321775}
       \strng{bibnamehash}{b163bef761d9a2c79a3d232595321775}
       \strng{authorbibnamehash}{b163bef761d9a2c79a3d232595321775}
-      \strng{authornamehash}{0b457fdf99b8e237500180a790709ce0}
+      \strng{authornamehash}{77b3350005135e016e7a83431f326d8f}
       \strng{authorfullhash}{b163bef761d9a2c79a3d232595321775}
+      \strng{authorfullhashraw}{b163bef761d9a2c79a3d232595321775}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -60,7 +62,7 @@
       \field{pages}{75\bibrangedash 105}
       \range{pages}{31}
     \endentry
-    \entry{prometheus2016}{article}{}
+    \entry{prometheus2016}{article}{}{}
       \name{author}{1}{}{%
         {{hash=bc9ac1c452c3aa120a750a832c6ee9a3}{%
            family={Volz},
@@ -70,10 +72,12 @@
       }
       \strng{namehash}{bc9ac1c452c3aa120a750a832c6ee9a3}
       \strng{fullhash}{bc9ac1c452c3aa120a750a832c6ee9a3}
+      \strng{fullhashraw}{bc9ac1c452c3aa120a750a832c6ee9a3}
       \strng{bibnamehash}{bc9ac1c452c3aa120a750a832c6ee9a3}
       \strng{authorbibnamehash}{bc9ac1c452c3aa120a750a832c6ee9a3}
       \strng{authornamehash}{bc9ac1c452c3aa120a750a832c6ee9a3}
       \strng{authorfullhash}{bc9ac1c452c3aa120a750a832c6ee9a3}
+      \strng{authorfullhashraw}{bc9ac1c452c3aa120a750a832c6ee9a3}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -82,99 +86,7 @@
       \field{title}{Prometheus: Monitoring at SoundCloud}
       \field{year}{2016}
     \endentry
-    \entry{pappula2021building}{article}{}
-      \name{author}{3}{}{%
-        {{hash=514e841e168206a926a114baa3232b55}{%
-           family={Pappula},
-           familyi={P\bibinitperiod},
-           given={Kiran\bibnamedelima Kumar},
-           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=95c9e69356ce9f5234b89d76aa32af19}{%
-           family={Anasuri},
-           familyi={A\bibinitperiod},
-           given={Sunil},
-           giveni={S\bibinitperiod}}}%
-        {{hash=4bf1dad0eaa67fc7912812069fe1a4bb}{%
-           family={Rusum},
-           familyi={R\bibinitperiod},
-           given={Guru\bibnamedelima Pramod},
-           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-      }
-      \strng{namehash}{d0be03c89b9d7c0fb22437d444915ebc}
-      \strng{fullhash}{d0be03c89b9d7c0fb22437d444915ebc}
-      \strng{bibnamehash}{d0be03c89b9d7c0fb22437d444915ebc}
-      \strng{authorbibnamehash}{d0be03c89b9d7c0fb22437d444915ebc}
-      \strng{authornamehash}{d0be03c89b9d7c0fb22437d444915ebc}
-      \strng{authorfullhash}{d0be03c89b9d7c0fb22437d444915ebc}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{International Journal of Emerging Research in Engineering and Technology}
-      \field{number}{4}
-      \field{title}{Building Observability into Full-Stack Systems: Metrics That Matter}
-      \field{volume}{2}
-      \field{year}{2021}
-      \field{pages}{48\bibrangedash 58}
-      \range{pages}{11}
-    \endentry
-    \entry{siddiqui2023jenkins}{inproceedings}{}
-      \name{author}{6}{}{%
-        {{hash=39304a40ab7a178f9080e14c73ac3c48}{%
-           family={Siddiqui},
-           familyi={S\bibinitperiod},
-           given={Ishan},
-           giveni={I\bibinitperiod}}}%
-        {{hash=f92fec1a2b3a2249c6e102a3890ab4f3}{%
-           family={Pandey},
-           familyi={P\bibinitperiod},
-           given={Ankit},
-           giveni={A\bibinitperiod}}}%
-        {{hash=7232a25490dbeb9c887eb8b3b09f3edb}{%
-           family={Jain},
-           familyi={J\bibinitperiod},
-           given={Saurabh},
-           giveni={S\bibinitperiod}}}%
-        {{hash=b45a8a873fd2e0cfaa1d2bf71c08ed4c}{%
-           family={Kothadia},
-           familyi={K\bibinitperiod},
-           given={Hetang},
-           giveni={H\bibinitperiod}}}%
-        {{hash=5d6f07ce0dc4e14ed16bad35473a37a4}{%
-           family={Agrawal},
-           familyi={A\bibinitperiod},
-           given={Renuka},
-           giveni={R\bibinitperiod}}}%
-        {{hash=a0fd4d05377f1821909968a921134996}{%
-           family={Chankhore},
-           familyi={C\bibinitperiod},
-           given={Neha},
-           giveni={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{a0f7cacab05d28f73c8ac45f46b6242a}
-      \strng{fullhash}{f7ce5431527e1f3b0eefed01c3ef3091}
-      \strng{bibnamehash}{f7ce5431527e1f3b0eefed01c3ef3091}
-      \strng{authorbibnamehash}{f7ce5431527e1f3b0eefed01c3ef3091}
-      \strng{authornamehash}{a0f7cacab05d28f73c8ac45f46b6242a}
-      \strng{authorfullhash}{f7ce5431527e1f3b0eefed01c3ef3091}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{In the dynamic and ever-evolving realm of modern software development, the implementation of comprehensive monitoring and observability practices has emerged as a cornerstone for achieving software excellence. This paper serves as a comprehensive review and guide to integration strategies, best practices, and emerging trends in the field of comprehensive monitoring and observability, with a particular focus on harnessing the power of two pivotal tools: Jenkins and Grafana. Through an exploration of the historical context and the prevailing adoption trends of Jenkins and Grafana, this paper lays the foundation for a deep dive into the fundamental concepts of monitoring and observability. The core of this paper revolves around the essential understanding of monitoring and observability, elucidating the critical distinctions and interplay between the two. It underscores the importance of capturing key metrics that are paramount in quantifying system performance and behavior, allowing software teams to gain critical insights into their applications. These insights, in turn, drive informed decision-making and proactive issue resolution. As we navigate through the paper's content, it ventures into the heart of the matter by discussing a variety of integration strategies. Drawing inspiration from prior research and publications, this paper sheds light on real-world scenarios and best practices that enable organizations to seamlessly incorporate Jenkins and Grafana into their software development and monitoring workflows. These strategies are presented in a step-by-step manner, offering a clear and practical path for implementation. At its core, this paper underscores the pivotal role that Jenkins and Grafana play in addressing the evolving demands of continuous monitoring and observability. These tools are not just utilities; they are enablers of software excellence in an era where agility, reliability, and performance are paramount. With the insights and guidance provided in this paper, software teams are empowered to navigate the dynamic landscape of modern software development with confidence and competence. By embracing comprehensive monitoring and observability practices, organizations can ensure the delivery of high-quality software that meets the demands of today's fast-paced digital world. This paper stands as a foundational resource for those seeking to master these critical disciplines and leverage Jenkins and Grafana to achieve software excellence.}
-      \field{booktitle}{2023 7th International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT)}
-      \field{issn}{2770-7962}
-      \field{month}{10}
-      \field{title}{Comprehensive Monitoring and Observability with Jenkins and Grafana: A Review of Integration Strategies, Best Practices, and Emerging Trends}
-      \field{year}{2023}
-      \field{pages}{1\bibrangedash 5}
-      \range{pages}{5}
-      \verb{doi}
-      \verb 10.1109/ISMSIT58785.2023.10304904
-      \endverb
-      \keyw{Observability;Jenkins;Grafana;Monitoring;Integration}
-    \endentry
-    \entry{correiaMonintainerOrchestrationindependentExtensible2023}{article}{}
+    \entry{correiaMonintainerOrchestrationindependentExtensible2023}{article}{}{}
       \name{author}{3}{}{%
         {{hash=94bf404999be16249f36aec641dcfd76}{%
            family={Correia},
@@ -192,14 +104,16 @@
            given={José},
            giveni={J\bibinitperiod}}}%
       }
-      \strng{namehash}{01cbb96fb8b2be491f17f5be0a2edc9c}
+      \strng{namehash}{8f2c8a940afbb038a07445fe73f851eb}
       \strng{fullhash}{01cbb96fb8b2be491f17f5be0a2edc9c}
+      \strng{fullhashraw}{01cbb96fb8b2be491f17f5be0a2edc9c}
       \strng{bibnamehash}{01cbb96fb8b2be491f17f5be0a2edc9c}
       \strng{authorbibnamehash}{01cbb96fb8b2be491f17f5be0a2edc9c}
-      \strng{authornamehash}{01cbb96fb8b2be491f17f5be0a2edc9c}
+      \strng{authornamehash}{8f2c8a940afbb038a07445fe73f851eb}
       \strng{authorfullhash}{01cbb96fb8b2be491f17f5be0a2edc9c}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \strng{authorfullhashraw}{01cbb96fb8b2be491f17f5be0a2edc9c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{issn}{13837621}
@@ -215,7 +129,7 @@
       \verb 10.1016/j.sysarc.2023.103035
       \endverb
     \endentry
-    \entry{dingaEmpiricalEvaluationEnergy2023}{inproceedings}{}
+    \entry{dingaEmpiricalEvaluationEnergy2023}{inproceedings}{}{}
       \name{author}{5}{}{%
         {{hash=45a5c88868426b7fc4a6c3244a9390e0}{%
            family={Dinga},
@@ -249,14 +163,16 @@
       \list{publisher}{1}{%
         {Springer Nature Switzerland}%
       }
-      \strng{namehash}{6d9879c0c3b28ce32136594b8c645dd4}
+      \strng{namehash}{6a888aa488157d65bb5346ef3531a522}
       \strng{fullhash}{ca8a967a11260fc250fea383a81fa83f}
+      \strng{fullhashraw}{ca8a967a11260fc250fea383a81fa83f}
       \strng{bibnamehash}{ca8a967a11260fc250fea383a81fa83f}
       \strng{authorbibnamehash}{ca8a967a11260fc250fea383a81fa83f}
-      \strng{authornamehash}{6d9879c0c3b28ce32136594b8c645dd4}
+      \strng{authornamehash}{6a888aa488157d65bb5346ef3531a522}
       \strng{authorfullhash}{ca8a967a11260fc250fea383a81fa83f}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \strng{authorfullhashraw}{ca8a967a11260fc250fea383a81fa83f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Service-{{Oriented Computing}}}
@@ -268,7 +184,7 @@
       \verb 10.1007/978-3-031-48421-6_13
       \endverb
     \endentry
-    \entry{sharmaEBPFEnhancedCompleteObservability2024}{inproceedings}{}
+    \entry{sharmaEBPFEnhancedCompleteObservability2024}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=bdc61d8092bfa90d5ffe9e79e8b252b8}{%
            family={Sharma},
@@ -283,12 +199,14 @@
       }
       \strng{namehash}{f21d8c4045a383b251ada78b058c895a}
       \strng{fullhash}{f21d8c4045a383b251ada78b058c895a}
+      \strng{fullhashraw}{f21d8c4045a383b251ada78b058c895a}
       \strng{bibnamehash}{f21d8c4045a383b251ada78b058c895a}
       \strng{authorbibnamehash}{f21d8c4045a383b251ada78b058c895a}
       \strng{authornamehash}{f21d8c4045a383b251ada78b058c895a}
       \strng{authorfullhash}{f21d8c4045a383b251ada78b058c895a}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \strng{authorfullhashraw}{f21d8c4045a383b251ada78b058c895a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{{{ICC}} 2024 - {{IEEE International Conference}} on {{Communications}}}
@@ -302,7 +220,7 @@
       \verb 10.1109/ICC51166.2024.10622329
       \endverb
     \endentry
-    \entry{kannanDesigningLightweightNetwork2024}{inproceedings}{}
+    \entry{kannanDesigningLightweightNetwork2024}{inproceedings}{}{}
       \name{author}{5}{}{%
         {{hash=f0c4cd9da29f7f73fae500e075475aa7}{%
            family={Kannan},
@@ -336,14 +254,16 @@
       \list{publisher}{1}{%
         {Springer Nature Switzerland}%
       }
-      \strng{namehash}{fc86bdada2d5423b57324e0bca9579e0}
+      \strng{namehash}{a812feb5ca0d06119f0c2ad45ae4c9a5}
       \strng{fullhash}{a71eaf20a737a451aa5169252ceb24ba}
+      \strng{fullhashraw}{a71eaf20a737a451aa5169252ceb24ba}
       \strng{bibnamehash}{a71eaf20a737a451aa5169252ceb24ba}
       \strng{authorbibnamehash}{a71eaf20a737a451aa5169252ceb24ba}
-      \strng{authornamehash}{fc86bdada2d5423b57324e0bca9579e0}
+      \strng{authornamehash}{a812feb5ca0d06119f0c2ad45ae4c9a5}
       \strng{authorfullhash}{a71eaf20a737a451aa5169252ceb24ba}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \strng{authorfullhashraw}{a71eaf20a737a451aa5169252ceb24ba}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Passive and {{Active Measurement}}}
@@ -355,7 +275,7 @@
       \verb 10.1007/978-3-031-56249-5_11
       \endverb
     \endentry
-    \entry{hasanthEvaluatingPerformanceSidecarbased2024}{inproceedings}{}
+    \entry{hasanthEvaluatingPerformanceSidecarbased2024}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=6603607c5b53ba657ed609e47392b9ee}{%
            family={Hasanth},
@@ -370,12 +290,14 @@
       }
       \strng{namehash}{459d64bec5e334d85fc3099073823207}
       \strng{fullhash}{459d64bec5e334d85fc3099073823207}
+      \strng{fullhashraw}{459d64bec5e334d85fc3099073823207}
       \strng{bibnamehash}{459d64bec5e334d85fc3099073823207}
       \strng{authorbibnamehash}{459d64bec5e334d85fc3099073823207}
       \strng{authornamehash}{459d64bec5e334d85fc3099073823207}
       \strng{authorfullhash}{459d64bec5e334d85fc3099073823207}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \strng{authorfullhashraw}{459d64bec5e334d85fc3099073823207}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2024 {{IEEE International Conference}} on {{Advanced Networks}} and {{Telecommunications Systems}} ({{ANTS}})}
@@ -389,7 +311,7 @@
       \verb 10.1109/ANTS63515.2024.10897788
       \endverb
     \endentry
-    \entry{salcedo-navarroK8sidecarModularKubernetes2025}{article}{}
+    \entry{salcedo-navarroK8sidecarModularKubernetes2025}{article}{}{}
       \name{author}{3}{}{%
         {{hash=0364922e992b5ec2c7b9ea6081edab1d}{%
            family={{Salcedo-Navarro}},
@@ -407,14 +329,16 @@
            given={Juan},
            giveni={J\bibinitperiod}}}%
       }
-      \strng{namehash}{bb71f7c4de9cde903af8f189a0a90d28}
+      \strng{namehash}{3c3b546f7fd97c8382068301fc28954d}
       \strng{fullhash}{bb71f7c4de9cde903af8f189a0a90d28}
+      \strng{fullhashraw}{bb71f7c4de9cde903af8f189a0a90d28}
       \strng{bibnamehash}{bb71f7c4de9cde903af8f189a0a90d28}
       \strng{authorbibnamehash}{bb71f7c4de9cde903af8f189a0a90d28}
-      \strng{authornamehash}{bb71f7c4de9cde903af8f189a0a90d28}
+      \strng{authornamehash}{3c3b546f7fd97c8382068301fc28954d}
       \strng{authorfullhash}{bb71f7c4de9cde903af8f189a0a90d28}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \strng{authorfullhashraw}{bb71f7c4de9cde903af8f189a0a90d28}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{issn}{1097-024X}
@@ -430,7 +354,7 @@
       \verb 10.1002/spe.3423
       \endverb
     \endentry
-    \entry{sahuSidecarsCentralLane2023}{misc}{}
+    \entry{sahuSidecarsCentralLane2023}{misc}{}{}
       \name{author}{6}{}{%
         {{hash=d8d95c056d8eb1a9b24049ec0ac11335}{%
            family={Sahu},
@@ -466,14 +390,16 @@
       \list{publisher}{1}{%
         {arXiv}%
       }
-      \strng{namehash}{1cdf676ba8c0ff0deae36640232e08cb}
+      \strng{namehash}{51f73efe24924022b714cbdf6b09c638}
       \strng{fullhash}{237633074f9e47ca4939f56d434f561e}
+      \strng{fullhashraw}{237633074f9e47ca4939f56d434f561e}
       \strng{bibnamehash}{237633074f9e47ca4939f56d434f561e}
       \strng{authorbibnamehash}{237633074f9e47ca4939f56d434f561e}
-      \strng{authornamehash}{1cdf676ba8c0ff0deae36640232e08cb}
+      \strng{authornamehash}{51f73efe24924022b714cbdf6b09c638}
       \strng{authorfullhash}{237633074f9e47ca4939f56d434f561e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \strng{authorfullhashraw}{237633074f9e47ca4939f56d434f561e}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{eprintclass}{cs}
@@ -489,7 +415,7 @@
       \verb 2306.15792
       \endverb
     \endentry
-    \entry{TraceWeaverDistributedRequest}{misc}{}
+    \entry{TraceWeaverDistributedRequest}{misc}{}{}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{shorttitle}
@@ -500,7 +426,7 @@
       \verb 10.1145/3651890.3672254
       \endverb
     \endentry
-    \entry{liuJCallGraphTracingMicroservices2019}{inproceedings}{}
+    \entry{liuJCallGraphTracingMicroservices2019}{inproceedings}{}{}
       \name{author}{7}{}{%
         {{hash=3c1b78c51effc93277a04ce75c58422a}{%
            family={Liu},
@@ -544,12 +470,14 @@
       \list{publisher}{1}{%
         {Springer International Publishing}%
       }
-      \strng{namehash}{6a9d1c9f9a2ff5543f8650e9e53c2cd2}
+      \strng{namehash}{fec9ef6a8390c42fa2f270f70d25ef51}
       \strng{fullhash}{91356044cf2b6b0a104ce9f545ffb952}
-      \strng{bibnamehash}{6a9d1c9f9a2ff5543f8650e9e53c2cd2}
-      \strng{authorbibnamehash}{6a9d1c9f9a2ff5543f8650e9e53c2cd2}
-      \strng{authornamehash}{6a9d1c9f9a2ff5543f8650e9e53c2cd2}
+      \strng{fullhashraw}{91356044cf2b6b0a104ce9f545ffb952}
+      \strng{bibnamehash}{fec9ef6a8390c42fa2f270f70d25ef51}
+      \strng{authorbibnamehash}{fec9ef6a8390c42fa2f270f70d25ef51}
+      \strng{authornamehash}{fec9ef6a8390c42fa2f270f70d25ef51}
       \strng{authorfullhash}{91356044cf2b6b0a104ce9f545ffb952}
+      \strng{authorfullhashraw}{91356044cf2b6b0a104ce9f545ffb952}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -564,7 +492,7 @@
       \verb 10.1007/978-3-030-23502-4_20
       \endverb
     \endentry
-    \entry{InvestigatingPerformanceOverhead}{misc}{}
+    \entry{InvestigatingPerformanceOverhead}{misc}{}{}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
@@ -574,7 +502,7 @@
       \verb 10.1145/3680256.3721316
       \endverb
     \endentry
-    \entry{karkanPerformanceOverheadOpenTelemetry}{article}{}
+    \entry{karkanPerformanceOverheadOpenTelemetry}{article}{}{}
       \name{author}{1}{}{%
         {{hash=9363a8008986d9f6446fb89ebd3c9379}{%
            family={Karkan},
@@ -584,18 +512,20 @@
       }
       \strng{namehash}{9363a8008986d9f6446fb89ebd3c9379}
       \strng{fullhash}{9363a8008986d9f6446fb89ebd3c9379}
+      \strng{fullhashraw}{9363a8008986d9f6446fb89ebd3c9379}
       \strng{bibnamehash}{9363a8008986d9f6446fb89ebd3c9379}
       \strng{authorbibnamehash}{9363a8008986d9f6446fb89ebd3c9379}
       \strng{authornamehash}{9363a8008986d9f6446fb89ebd3c9379}
       \strng{authorfullhash}{9363a8008986d9f6446fb89ebd3c9379}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \strng{authorfullhashraw}{9363a8008986d9f6446fb89ebd3c9379}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
       \field{title}{Performance {{Overhead Of OpenTelemetry Sampling Methods In A Cloud Infrastructure}}}
     \endentry
-    \entry{norgrenOPTIMIZINGDISTRIBUTEDTRACING}{article}{}
+    \entry{norgrenOPTIMIZINGDISTRIBUTEDTRACING}{article}{}{}
       \name{author}{1}{}{%
         {{hash=e1122d6e311b00a5707ad13f3512b688}{%
            family={Norgren},
@@ -605,18 +535,20 @@
       }
       \strng{namehash}{e1122d6e311b00a5707ad13f3512b688}
       \strng{fullhash}{e1122d6e311b00a5707ad13f3512b688}
+      \strng{fullhashraw}{e1122d6e311b00a5707ad13f3512b688}
       \strng{bibnamehash}{e1122d6e311b00a5707ad13f3512b688}
       \strng{authorbibnamehash}{e1122d6e311b00a5707ad13f3512b688}
       \strng{authornamehash}{e1122d6e311b00a5707ad13f3512b688}
       \strng{authorfullhash}{e1122d6e311b00a5707ad13f3512b688}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \strng{authorfullhashraw}{e1122d6e311b00a5707ad13f3512b688}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
       \field{title}{{{OPTIMIZING DISTRIBUTED TRACING OVERHEAD IN A CLOUD ENVIRONMENT WITH OPENTELEMETRY}}}
     \endentry
-    \entry{ramachandranFUSEFaultDiagnosis2023}{inproceedings}{}
+    \entry{ramachandranFUSEFaultDiagnosis2023}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{hash=ad84445eed596d4cd0f8f54c356ce341}{%
            family={Ramachandran},
@@ -640,14 +572,16 @@
       \list{publisher}{1}{%
         {Springer Nature Switzerland}%
       }
-      \strng{namehash}{0a3a95afd64e8910acbdf722d2fea0e1}
+      \strng{namehash}{e42bdfde4729f202a780aa52624d1777}
       \strng{fullhash}{0a3a95afd64e8910acbdf722d2fea0e1}
+      \strng{fullhashraw}{0a3a95afd64e8910acbdf722d2fea0e1}
       \strng{bibnamehash}{0a3a95afd64e8910acbdf722d2fea0e1}
       \strng{authorbibnamehash}{0a3a95afd64e8910acbdf722d2fea0e1}
-      \strng{authornamehash}{0a3a95afd64e8910acbdf722d2fea0e1}
+      \strng{authornamehash}{e42bdfde4729f202a780aa52624d1777}
       \strng{authorfullhash}{0a3a95afd64e8910acbdf722d2fea0e1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \strng{authorfullhashraw}{0a3a95afd64e8910acbdf722d2fea0e1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{booktitle}{Service-{{Oriented Computing}}}
