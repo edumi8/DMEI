@@ -41,16 +41,14 @@ Internal CI/CD services (GitLab, Jenkins, Nexus, SonarQube, Dependency‑Track) 
 \setcounter{page}{1}
 \section{Introduction and Problem Framing}
 
-Internal \ac{CICD} services (GitLab, Jenkins, SonarQube, Nexus, Dependency‑Track) deployed in Docker containers are critical to software delivery pipelines. Reliability issues directly affect development velocity and release cadence. However, constrained deployment contexts, non‑privileged containers, no host administrative access, and heterogeneous operating systems (Linux and Windows).
+Internal \ac{CICD} services (GitLab, Jenkins, SonarQube, Nexus, Dependency‑Track) deployed in Docker containers are critical to software delivery pipelines. Reliability issues directly affect development velocity and release cadence. However, operational teams often face constrained deployment contexts: non‑privileged containers, no host administrative access, and heterogeneous operating systems.
 
-This research examines integrated observability (systematic collection, correlation and analysis of metrics, logs and distributed traces) in such constrained environments. The proposed solution combines non‑privileged telemetry collection (sidecar exporters, agent collectors, runtime APIs) with correlation mechanisms to improve \ac{MTTD}, \ac{MTTR}, and pipeline throughput while maintaining sub-5\% resource overhead. The work is grounded in a real‑world, four‑server on‑premise deployment (three Linux, one Windows) with no administrative access, exemplifying operational constraints typical of internally‑managed infrastructure where third‑party services deployed via Docker~\cite{docker2014} cannot be modified.
+This research examines integrated observability in such environments, combining container‑level telemetry collection with correlation mechanisms. The work targets a real‑world, four‑server on‑premise deployment (three Linux, one Windows) with no administrative access, exemplifying operational constraints where third‑party services deployed via Docker~\cite{docker2014} cannot be modified.
 
-The central research problem is: \textit{How can an integrated observability framework be designed and implemented for containerized \ac{CICD} platforms operating under non‑privileged access constraints and heterogeneous infrastructure, to measurably improve reliability and reduce incident response times?}
+The central research problem is: \textit{How can an integrated observability framework be designed and implemented to measurably improve reliability and reduce incident response times under these constraints?}
 
 \section{Research Questions and Objectives}
-This work is driven by the central question stated in the Introduction: how an integrated observability framework can be designed and implemented for containerized \ac{CICD} platforms operating under non‑privileged access constraints and heterogeneous infrastructure so as to measurably improve system reliability and reduce incident response times.
-
-Sub-questions:
+The research addresses this problem through four sub-questions:
 \begin{enumerate}
     \item How can metrics, logs and distributed traces be collected from containerized \ac{CICD} services when only non‑privileged containers are available (no host administrative access)?
     \item Which instrumentation and deployment patterns (sidecars, agent collectors, push vs pull pipelines) best support cross-server correlation in mixed OS environments (Linux and Windows) while keeping resource overhead minimal?
@@ -60,56 +58,44 @@ Sub-questions:
 
 Objectives:
 \begin{itemize}
-    \item \textbf{O1 Reference architecture:} Design a container‑first architecture specifying exporters, collectors, storage backends and visualization components deployable without host administrative privileges.
-    \item \textbf{O2 Prototype implementation:} Implement a reproducible prototype (container images and deployment templates) that instruments GitLab, Jenkins, SonarQube, Dependency‑Track and Nexus in the four‑server environment.
-    \item \textbf{O3 Quantitative evaluation:} Measure and compare \ac{MTTD}, \ac{MTTR}, telemetry pipeline throughput and resource overhead before and after deployment; document measurement methodology for repeatability.
-    \item \textbf{O4 Performance constraints:} Maintain resource overhead below an acceptable threshold (target: under 5\% of host capacity under normal load); document trade‑offs when targets are not met.
-    \item \textbf{O5 Reproducibility and guidance:} Provide configuration templates, deployment scripts and decision guidance for adoption in constrained environments.
+    \item \textbf{O1:} Design a container‑first architecture deployable without host administrative privileges.
+    \item \textbf{O2:} Implement a reproducible prototype instrumenting GitLab, Jenkins, SonarQube, Dependency‑Track and Nexus.
+    \item \textbf{O3:} Measure \ac{MTTD}, \ac{MTTR}, telemetry pipeline throughput and resource overhead; document methodology.
+    \item \textbf{O4:} Maintain resource overhead below 5\% under normal load; document trade‑offs when targets are not met.
+    \item \textbf{O5:} Provide configuration templates, deployment scripts and decision guidance.
 \end{itemize}
 
 \section{State of the Art}
 
-This section outlines the systematic approach to identifying, selecting, and analyzing relevant literature on observability for containerized systems, with particular focus on constrained deployment environments and \ac{CICD} platform reliability.
+A systematic literature review following \ac{PRISMA} guidelines will identify, select, and analyze relevant observability research for containerized systems in constrained deployments.
 
 \subsection{Literature Search Strategy}
 
 A systematic literature review will be conducted following \ac{PRISMA} guidelines to ensure comprehensive and reproducible coverage of the research domain. The search strategy encompasses the following elements:
 
 \textbf{Information sources:}
-\begin{itemize}
-    \item \textbf{Academic databases:} IEEE Xplore, ACM Digital Library, Springer, ScienceDirect, and Google Scholar for peer‑reviewed publications
-    \item \textbf{Technical repositories:} arXiv for preprints and working papers in systems and software engineering
-    \item \textbf{Gray literature:} Technical documentation from established open‑source observability projects, industry whitepapers, and practitioner reports from reputable sources (given the rapid evolution of container observability practices)
-\end{itemize}
+Academic databases (IEEE Xplore, ACM Digital Library, Springer, ScienceDirect, Google Scholar), technical repositories (arXiv), and gray literature (established open‑source observability projects, industry whitepapers).
 
 \textbf{Search terms and queries:}
-Core search queries will combine terms from three concept groups using Boolean operators:
-\begin{enumerate}
-    \item \textit{Observability concepts:} ``observability'', ``monitoring'', ``telemetry'', ``instrumentation'', ``metrics'', ``logging'', ``tracing'', ``distributed tracing''
-    \item \textit{Container and deployment context:} ``container'', ``containerized'', ``Docker'', ``non‑privileged'', ``unprivileged'', ``sidecar'', ``agent''
-    \item \textit{Application domain:} ``CI/CD'', ``continuous integration'', ``continuous deployment'', ``DevOps'', ``reliability'', ``incident response'', ``MTTD'', ``MTTR''
-\end{enumerate}
+Core queries combine three concept groups: (1) observability concepts (``observability'', ``monitoring'', ``telemetry'', ``tracing''), (2) container context (``container'', ``Docker'', ``non‑privileged'', ``sidecar''), and (3) application domain (``CI/CD'', ``continuous integration'', ``reliability'', ``MTTD'', ``MTTR'').
 
-Example query structure: (\textit{observability} OR \textit{monitoring} OR \textit{telemetry}) AND (\textit{container} OR \textit{containerized} OR \textit{non‑privileged}) AND (\textit{CI/CD} OR \textit{reliability} OR \textit{incident response})
+Example: (\textit{observability} OR \textit{monitoring}) AND (\textit{container} OR \textit{non‑privileged}) AND (\textit{CI/CD} OR \textit{reliability})
 
 \textbf{Inclusion and exclusion criteria:}
-\begin{itemize}
-    \item \textbf{Inclusion:} Peer‑reviewed publications from 2018–2025, technical reports and documentation addressing container telemetry collection, instrumentation patterns, performance evaluation, or reliability improvement in constrained or heterogeneous environments, comparative studies of observability approaches, and empirical evaluations of monitoring overhead
-    \item \textbf{Exclusion:} Publications exclusively focused on privileged host access patterns without discussion of constraints, cloud‑provider‑specific solutions that cannot generalize to on‑premise infrastructure, purely theoretical work without practical implementation guidance, and papers predating 2018 (unless seminal works establishing foundational concepts)
-\end{itemize}
+\textit{Inclusion:} Peer‑reviewed publications (2018–2025), technical reports on container telemetry, instrumentation patterns, performance evaluation, reliability improvement in constrained environments, comparative observability studies, and empirical overhead evaluations.
+
+\textit{Exclusion:} Publications requiring privileged host access without constraint discussion, cloud‑provider‑specific solutions not generalizing to on‑premise infrastructure, purely theoretical work lacking practical guidance, papers before 2018 (except seminal works).
 
 \textbf{Selection process:}
-Literature selection will follow a three‑stage process: (1) title and abstract screening to identify potentially relevant sources, (2) full‑text review to assess relevance against inclusion/exclusion criteria, and (3) quality assessment focusing on methodological rigor, reproducibility, and applicability to constrained environments. Reference chaining (backward and forward citation tracking) will supplement database searches to identify additional relevant work.
+Three‑stage process: (1) title/abstract screening, (2) full‑text relevance assessment, (3) quality assessment (methodological rigor, reproducibility, applicability). Reference chaining supplements database searches.
 
 \subsection{Expected Coverage and Research Gap}
 
-The literature review will systematically examine existing approaches to container observability, deployment patterns for telemetry collection (agent‑based, sidecar, host‑level), instrumentation frameworks and their privilege requirements, performance and overhead studies, and reliability improvements achieved through observability implementations.
+The review will systematically examine container observability approaches, deployment patterns for telemetry collection, instrumentation frameworks and privilege requirements, performance overhead studies, and reliability improvements through observability.
 
-Preliminary exploration suggests that while cloud‑native observability is well‑documented for environments with elevated privileges and homogeneous infrastructure, there is limited empirical guidance for teams operating internal, containerized \ac{CICD} platforms under strict privilege constraints and mixed operating systems.
+Preliminary exploration indicates that cloud‑native observability is well‑documented for elevated privileges and homogeneous infrastructure, but empirical guidance is limited for teams operating internal \ac{CICD} platforms under strict privilege constraints and mixed operating systems.
 
-An additional and frequently overlooked constraint is the fact that many critical services in such environments are packaged, third‑party applications (not developed in‑house). When teams do not own the service code or container images, they have reduced ability to add instrumentation or change deployment configurations, which narrows feasible telemetry approaches. Consequently, solutions that assume service ownership or unrestricted host access may not be applicable. This research targets that combined constraint set, no host administrative privileges and limited service ownership, and seeks empirical evidence and practical patterns that work within it.
-
-The subsequent section specifies the methodology for technology assessment, prototype development and empirical validation informed by the systematic review.
+A frequently overlooked constraint: many critical services are packaged, third‑party applications. When teams lack service ownership, they cannot add instrumentation or change deployment configurations, narrowing feasible telemetry approaches. This research targets that combined constraint set and seeks empirical evidence and practical patterns.
 
 \subsection{Preliminary Findings}
 
@@ -122,17 +108,17 @@ Both papers establish foundations for observability architecture, multi‑signal
 
 \section{Proposed Methodology}
 
-This research adopts a design science approach~\cite{hevner2004design}, combining systematic literature review, comparative technology assessment, architectural design, prototype implementation, and empirical evaluation. Five interconnected phases progress from problem understanding to artifact evaluation:
+This research adopts a design science approach~\cite{hevner2004design}, progressing through five phases:
 
-\textbf{Phase 1: Problem Analysis and Literature Review.} A \ac{PRISMA}-guided systematic review of observability frameworks, containerized monitoring, and \ac{CICD} reliability will identify existing approaches, their privilege assumptions, and gaps in constrained-environment guidance.
+\textbf{Phase 1: Problem Analysis and Literature Review.} A \ac{PRISMA}-guided systematic review identifies existing approaches, privilege assumptions, and gaps in constrained-environment guidance.
 
-\textbf{Phase 2: Technology Assessment.} Candidate tools (Prometheus~\cite{prometheus2016}, Loki, Jaeger, OpenTelemetry) will be evaluated against constraints: non‑privileged execution, Linux/Windows support, sub-5\% overhead, Docker compatibility. Assessment focuses on deployment complexity, resource consumption, correlation capabilities, and maturity.
+\textbf{Phase 2: Technology Assessment.} Candidate tools (Prometheus~\cite{prometheus2016}, Loki, Jaeger, OpenTelemetry) are evaluated against constraints: non‑privileged execution, Linux/Windows support, sub-5\% overhead, Docker compatibility.
 
-\textbf{Phase 3: Architecture Design.} A reference architecture will specify component placement (exporters, collectors, storage, visualization), data flow, correlation mechanisms, and integration with GitLab, Jenkins, SonarQube, Nexus, Dependency‑Track. Design artifacts include deployment diagrams, schemas, and configuration templates.
+\textbf{Phase 3: Architecture Design.} A reference architecture specifies component placement, data flow, correlation mechanisms, and integration with \ac{CICD} services. Deliverables include deployment diagrams, schemas, and configuration templates.
 
-\textbf{Phase 4: Prototype Implementation.} The architecture will be deployed on the four‑server containerized infrastructure using sidecars for instrumentation and agent-based collectors within privilege constraints. Configuration and deployment scripts will be version‑controlled for reproducibility.
+\textbf{Phase 4: Prototype Implementation.} The architecture is deployed on four‑server containerized infrastructure using sidecars and agent-based collectors. Configuration and deployment scripts are version‑controlled for reproducibility.
 
-\textbf{Phase 5: Evaluation and Validation.} Quantitative metrics include \ac{MTTD}, \ac{MTTR} (primary outcomes), alert precision, detection coverage, time to diagnostic context, telemetry pipeline health, and instrumentation overhead (target: below 5\%). Baseline measurements (current reactive approach) will be compared with post-deployment measurements. Controlled fault injection (service degradation, resource exhaustion) will test detection. Alignment with \ac{DORA}~\cite{forsgren2018accelerate,forsgren2024dora} will focus on change failure rate and recovery performance. Qualitative feedback from DevOps practitioners will assess operational impact.
+\textbf{Phase 5: Evaluation and Validation.} Quantitative metrics include \ac{MTTD}, \ac{MTTR}, alert precision, detection coverage, time to diagnostic context, telemetry pipeline health, and instrumentation overhead. Baseline measurements (current reactive approach) are compared with post-deployment measurements. Controlled fault injection tests detection. Alignment with \ac{DORA}~\cite{forsgren2018accelerate,forsgren2024dora} focuses on change failure rate and recovery performance. Qualitative feedback from DevOps practitioners assesses operational impact.
 
 \section{Work Plan}
 
