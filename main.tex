@@ -44,6 +44,8 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{tikz} % Required for creating graphics programmatically (can be removed if not used)
 %\usetikzlibrary{arrows} % Required for fancy arrows in TiKZ graphics (can be removed if not used)
 
+\usepackage{pgfgantt} % Gantt charts (project planning)
+
 \usepackage{pgfplots} % Required for drawing high--quality function plots (can be removed if not used)
 \pgfplotsset{compat=newest}
 
@@ -65,7 +67,7 @@ headsepline, % Uncomment to get a line under the header
 
 \addbibresource{mainbibliography.bib} % The filename of the bibliography
 
-% \makeglossaries % build the glossary -- commented out as main glossary is empty; uncomment when adding glossary entries
+\makeglossaries % build the glossary
 
 %----------------------------------------------------------------------------------------
 %	THESIS INFORMATION
@@ -146,7 +148,7 @@ headsepline, % Uncomment to get a line under the header
 % Uncomment the lines as you write the Appendices
 \begin{appendices}
 
-	\input{appendices/appendixA}
+	%\input{appendices/appendixA}
 	%\input{appendices/appendixB}
 	%\input{appendices/appendixC}
 

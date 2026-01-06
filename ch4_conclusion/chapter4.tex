@@ -3,38 +3,29 @@
 \chapter{Conclusion and Next Steps}
 \label{chap:Chapter4}
 
-This chapter summarises the dissertation scope and outlines the immediate next steps for prototype implementation and empirical evaluation. The work presented so far defines the problem context, research objectives, methodology and the protocol for a PRISMA\-guided literature review. The subsequent phases will apply the evidence collected in Chapter~\ref{chap:Chapter2} to select technologies, design a reproducible reference architecture and implement a prototype suitable for constrained, non\-privileged \ac{CICD} environments.
+This chapter concludes the \ac{PREPD} phase. The preparation work presented in this document establishes the foundation required to proceed into thesis execution. No results, findings, or experimental outcomes are presented in this document, as empirical work will be conducted during the subsequent dissertation phase.
 
-Next steps:
+\section{Synthesis of Preparation Work}
+
+Chapter~\ref{chap:Chapter1} framed the research problem: observability in containerized \ac{CICD} platforms operating under non\-privileged access constraints and heterogeneous infrastructure. The problem arises from the operational gap between standard monitoring assumptions (host administrative access, privileged container execution, cloud\-managed platforms) and organizational realities in on\-premise deployments where such capabilities are unavailable. The central research question examines how an integrated observability framework can be designed and evaluated to assess its potential to improve reliability and reduce incident response times under these constraints.
+
+Chapter~\ref{chap:Chapter2} synthesized the state of the art through systematic literature review following \ac{PRISMA} guidelines. The review identified relevant observability patterns, instrumentation techniques, and evaluation approaches documented in prior work. The synthesis established that while observability frameworks for cloud\-native environments are extensively documented, approaches specifically addressing non\-privileged containerized deployments in heterogeneous infrastructure remain underexplored in the literature.
+
+Chapter~\ref{chap:Chapter3} defined the project methodology and execution strategy. The approach centers on engineering\-oriented research involving the design, implementation, and evaluation of a container\-first observability solution. Planned artifacts include a reference architecture, prototype implementation, automation assets, evaluation protocol, and documentation package. The evaluation strategy specifies dimensions for assessing feasibility under constraints, operational overhead, observability usefulness, and maintainability.
+
+\section{Transition to Thesis Execution}
+
+The thesis execution phase will implement and evaluate the planned solution. The immediate next steps include:
+
 \begin{itemize}
-	\item Finalise the systematic literature review and produce the Prisma flow diagram and evidence tables.
-	\item Complete the technology assessment matrix and select the candidate stack for prototyping, documenting selection rationale and compatibility with privilege constraints.
-	\item Implement the prototype in a staging environment, produce deployment templates and instrument the selected \ac{CICD} services following the reference architecture.
-	\item Execute the measurement campaign (baseline and post\-deployment), including controlled fault\-injection experiments, and collect quantitative and qualitative data according to the evaluation plan.
-	\item Analyse results, generalise findings where appropriate, and prepare dissertation chapters describing implementation, evaluation and implications for practice.
+	\item Complete technology selection based on compatibility with identified constraints, documented in a technology assessment matrix with explicit selection rationale.
+	\item Design the reference architecture specifying components, deployment topology, data flows, and correlation mechanisms suitable for non\-privileged container environments.
+	\item Implement the prototype in a staging environment, producing deployment templates, configuration artifacts, and operational procedures.
+	\item Execute the evaluation campaign comparing baseline and instrumented deployments under defined workloads, including controlled fault injection scenarios.
+	\item Collect and analyze measurement data, prepare dissertation chapters documenting implementation, evaluation findings, and implications for practice.
 \end{itemize}
 
+Validation targets defined in project planning include quantitative metrics (\ac{MTTD}, \ac{MTTR}), telemetry pipeline throughput verification, alert precision and detection coverage assessment via fault injection, and instrumentation overhead quantification with an operational target below 5\% where feasible. These targets will be operationalized through specific measurement procedures and acceptance criteria documented in the evaluation protocol. Analysis will be restricted to tested contexts without overgeneralization.
 
-The project will avoid making definitive claims about generalisability until the prototype evaluation and analysis are complete; all conclusions will be grounded in the empirical evidence and contextualised relative to the reviewed literature. The following deliverables are expected at the end of the evaluation phase:
-\begin{itemize}
-	\item A documented reference architecture, including deployment templates and configuration artifacts.
-	\item A reproducible prototype that can be deployed in a staging environment using provided scripts and container images.
-	\item An evaluation report containing raw measurement data, analysis scripts, and a reproducible pipeline to regenerate key figures and tables.
-	\item A practitioner guidance note summarising deployment constraints, trade\-offs and recommended practices for non\-privileged \ac{CICD} observability.
-\end{itemize}
-
-Timelines and responsibilities for these deliverables are recorded in project artefacts and will be reviewed during milestone meetings. After the evaluation, results will be compared with the literature synthesis to position the contributions and limitations of the work.
-
-Potential dissemination channels include the thesis, technical reports, and possible conference or workshop submissions focusing on observability in constrained environments; decisions on dissemination will observe any organisational publication policies regarding operational data.
-
-\subsection{Validation targets from the extended abstract}
-The extended abstract proposes a focused set of evaluation targets that will be used to validate the prototype. These include:
-\begin{itemize}
-	\item Primary metrics: reductions in \ac{MTTD} and \ac{MTTR} compared to baseline measurements.
-	\item Pipeline throughput: verification that the telemetry pipeline can sustain the required ingestion rate without data loss under expected load profiles.
-	\item Alert precision and detection coverage: measured via controlled fault injection and post\-hoc analysis of alerting outcomes.
-	\item Instrumentation overhead: quantification of CPU, memory and network overhead introduced by the observability stack, with an operational target of keeping overhead below 5\% where feasible.
-\end{itemize}
-
-These targets will be operationalised with specific measurement procedures and acceptance criteria documented in the evaluation plan; conclusions will be restricted to the contexts and environments tested and will not be overgeneralised without supporting evidence.
+The work documented in this \ac{PREPD} confirms readiness to proceed with thesis execution. All preparatory activities required to initiate implementation and evaluation have been completed.
 

@@ -1,77 +1,295 @@
 % Chapter 3
-\chapter{Skill Management and Project Planning}
+\chapter{Project Planning and Methodology}
 \label{chap:Chapter3}
 
-\section{Skill Management}
-This section summarises the skills required for the research activities and the planned approach for acquiring or consolidating them.
+This chapter presents how the dissertation project will be carried out, planned, monitored, and managed during the execution period (January--June 2026). Building on the problem framing in Chapter~\ref{chap:Chapter1} and the state of the art in Chapter~\ref{chap:Chapter2}, the focus here is on the methodological approach, the planned artifacts and evaluation activities, the skills development plan (PREPD requirement), the project schedule, and risk management.
 
-\subsection{Skills Identification}
-Key technical skills include container orchestration and debugging, telemetry and observability tooling (OpenTelemetry, Prometheus, Loki, Jaeger), scripting for automation, and experimental design for empirical evaluation. Soft skills include project management and structured interviewing for qualitative validation.
+\section{Objectives and Scope Alignment}
 
-The selection emphasises skills that are directly relevant to the prototype implementation and evaluation: reliable collection of telemetry from containers without elevated privileges, cross\-platform troubleshooting (Linux and Windows containers), and reproducible deployment using containers and scripts. Competence in interpreting time\-series data and traces for incident diagnosis is also required to validate the proposed evaluation metrics.
+The project objectives and scope defined in Chapter~\ref{chap:Chapter1} remain aligned with the findings synthesized in Chapter~\ref{chap:Chapter2}. No scope changes are planned at this stage. Consequently, the work described below focuses on the execution strategy required to deliver the planned artifacts and produce defensible evidence for the dissertation.
 
-\subsection{Skills Assessment and Development}
-An initial self-assessment identifies gaps in advanced tracing and Windows container telemetry; these will be addressed through focused practical exercises, small proof\-of\-concepts, and targeted readings during Phase~1.
+\section{Methodological Approach}
+\label{sec:ch3_method}
 
-\subsection{Strategy to Improve Skills}
-The strategy combines short, time-boxed experiments, community documentation and tutorials, and incremental integration into the prototype. All skill development tasks are recorded and linked to project milestones to ensure traceability.
+The project is planned as an engineering-oriented research effort centered on the design, implementation, and evaluation of a container-first observability solution that can operate under the practical constraints identified in Chapter~\ref{chap:Chapter1}. The chosen approach is pragmatic and iterative: requirements and constraints inform successive design decisions, which are validated through a combination of controlled experimentation and practitioner-oriented feedback.
 
-Planned activities include the following practical exercises:
+\subsection{Planned Artifacts}
+\label{sec:ch3_artifacts}
+
+The project will produce a set of artifacts intended to be directly auditable and reusable:
 \begin{itemize}
-    \item Implement a minimal sidecar exporter for a simple containerised service to validate non\-privileged metrics collection.
-    \item Configure Prometheus scraping against non\-standard endpoints and verify collection reliability on both Linux and Windows hosts.
-    \item Perform lightweight tracing with OpenTelemetry to confirm context propagation using proxy or sidecar approaches.
-\end{itemize}
-Each exercise has acceptance criteria (e.g. successful metric collection for 24 hours under synthetic load) to provide objective evidence of skill acquisition.
-
-\section{Project Management}
-The research timeline comprises two main phases: the PREPD deliverable (November 2025–January 2026) and thesis development (January–June 2026). Each phase includes concrete deliverables and acceptance criteria.
-
-\subsection{Phase 1 -- PREPD deliverable (November 2025–January 2026)}
-\begin{itemize}
-    \item \textbf{Literature review:} Conduct a systematic review using PRISMA to identify observability frameworks and deployment patterns relevant to non\-privileged containers.
-    \item \textbf{Technology assessment:} Evaluate candidate technologies and produce a comparative matrix aligned with constraints.
-    \item \textbf{Initial architecture design:} Produce a high\-level reference architecture and validate it against constraints.
-    \item \textbf{Baseline data collection:} Establish baseline telemetry measurements and measurement procedures.
-    \item \textbf{PREPD delivery:} Submit the PREPD report and presentation materials.
+    \item \textbf{A1 -- Reference architecture:} a documented architecture describing components, deployment topology, data flows, and correlation mechanisms suitable for containerized environments with limited privileges.
+    \item \textbf{A2 -- Prototype implementation:} a working prototype implementing the reference architecture in a staging environment, including configuration and operational procedures.
+    \item \textbf{A3 -- Automation and reproducibility assets:} scripts and configuration files to provision, deploy, and execute the evaluation campaign in a repeatable manner.
+    \item \textbf{A4 -- Evaluation protocol and dataset:} an experimental plan (scenarios, workloads, baselines, metrics) and the resulting collected data, with clear provenance.
+    \item \textbf{A5 -- Documentation package:} technical documentation for the architecture, deployment, and evaluation procedures, prepared to support both thesis writing and oral defense.
 \end{itemize}
 
-\subsection{Work Plan (extended abstract)}
-The extended abstract summarises the planned activities and deliverables for the PREPD and thesis phases. It frames Phase~1 as focusing on literature review, technology assessment and baseline data collection, and Phase~2 as addressing prototype implementation, production deployment and evaluation. The present document adopts that plan and expands it with acceptance criteria and measurable outputs.
+\subsection{Development Process and Traceability}
+\label{sec:ch3_process}
 
-The main tasks from the extended abstract are reiterated here for traceability:
+The development process is intended to ensure traceability from constraints to design decisions and from design decisions to evaluation evidence:
 \begin{itemize}
-    \item \textbf{Phase 1 (Nov–Jan):} Systematic literature review using PRISMA; comparative technology assessment; initial architecture design; baseline telemetry collection; PREPD report submission.
-    \item \textbf{Phase 2 (Jan–Jun):} Finalise state of the art and select technologies (Jan–Feb); implement prototype and deployment automation (Feb–Mar); coordinate production deployment subject to approvals (Apr); collect observability data and run measurement campaigns (May); validate, analyse and write up results (Jun); final submission (mid‑Jun).
+    \item \textbf{Constraint-to-design mapping:} constraints (e.g., limited privileges, heterogeneous execution environments) will be mapped to explicit architectural and implementation decisions.
+    \item \textbf{Iterative refinement:} the architecture and prototype will be developed in short iterations, each concluding with a review of the produced artifact increment and the update of open issues.
+    \item \textbf{Configuration management:} all artifacts will be maintained under version control, including deployment manifests, configuration, and evaluation scripts.
+    \item \textbf{Acceptance criteria:} each major deliverable will be associated with objective acceptance criteria (e.g., successful deployment steps, reproducible execution of an experiment, completeness of documentation).
 \end{itemize}
 
-Each task includes acceptance criteria such as documented evidence tables for the review, a completed technology assessment matrix, reproducible deployment scripts for the prototype, and an archived dataset with analysis scripts for the evaluation phase.
+\subsection{Planned Evaluation Strategy}
+\label{sec:ch3_evaluation}
 
-\subsection{Phase 2 -- Thesis development (January–June 2026)}
+Evaluation will be planned to produce evidence that the proposed solution is feasible under the stated constraints and that it provides measurable utility when compared with a defined baseline. The evaluation design will be bounded to what can be executed within the dissertation schedule and the available infrastructure.
+
+		\textbf{Evaluation dimensions.} The evaluation is intended to cover:
 \begin{itemize}
-    \item \textbf{Detailed architecture and prototype implementation (Feb–Mar):} Implement the prototype in staging with reproducible deployment artifacts.
-    \item \textbf{Production deployment (Apr):} Coordinate deployment to target servers, following change\-management procedures.
-    \item \textbf{Observability data collection (May):} Execute the measurement campaign and collect quantitative metrics.
-    \item \textbf{Validation, analysis and writing (Jun):} Analyze results, collect practitioner feedback and complete thesis chapters.
-    \item \textbf{Final submission:} Incorporate feedback and submit the dissertation.
+    \item \textbf{Feasibility under constraints:} whether the deployment and operation steps are compatible with the assumed privilege and platform limitations.
+    \item \textbf{Operational overhead:} resource consumption and performance overhead introduced by the solution (measured using a defined workload and baseline).
+    \item \textbf{Observability usefulness:} the extent to which the collected telemetry supports diagnosing representative failure and degradation scenarios.
+    \item \textbf{Maintainability and operability:} the clarity of configuration, deployment, and troubleshooting procedures as captured in the documentation.
 \end{itemize}
 
-\subsection{Project Charter, Scope and Schedule}
-Detailed work breakdowns (WBS), acceptance criteria and the integrated schedule are maintained in project artefacts and updated at milestone reviews.
-
-Key deliverables and acceptance criteria (examples):
+		\textbf{Experimental design (planning level).} The experimental campaign will be structured as follows:
 \begin{itemize}
-    \item \textbf{Deliverable: Reference architecture diagram.} Acceptance: diagram includes component placement, data flows and privilege assumptions, and is reviewed by advisor.
-    \item \textbf{Deliverable: Prototype artifacts.} Acceptance: reproducible deployment scripts and container images that can be deployed in a staging environment following the provided README.
-    \item \textbf{Deliverable: Evaluation dataset and analysis.} Acceptance: raw telemetry and analysis scripts are archived and sufficient to reproduce primary metrics reported in the thesis.
+    \item \textbf{Baselines:} at least one baseline configuration will be defined to enable comparative measurements (e.g., no additional observability components, or minimal instrumentation).
+    \item \textbf{Workloads and scenarios:} a small set of representative workloads and fault/degradation scenarios will be specified to exercise logging, metrics, and tracing paths.
+    \item \textbf{Data collection:} procedures will be documented to collect resource metrics, request/trace metadata, and logs, ensuring consistent time windows and environment configuration.
+    \item \textbf{Analysis:} the analysis plan will define how measurements will be summarized and compared, and how qualitative observations will be recorded.
 \end{itemize}
 
-\subsection{Monitoring and Controlling Procedures}
-	extbf{Progress monitoring:} Regular meetings with the advisor and company supervisor and periodic written reports will track milestones and risks.
+		\textbf{Practitioner feedback (planning level).} Where access and availability permit, the project will include structured feedback from practitioners (e.g., hosting organization stakeholders) using an interview or review protocol. The protocol will define eligibility, consent, the question guide, and how responses will be summarized (e.g., thematic coding at a coarse granularity) to support defensible qualitative claims.
 
-	extbf{Risk management:} Key risks include infrastructure provisioning delays, limited production access and tooling incompatibilities. Mitigations include extended staging tests, alternative evaluation scenarios using staging data, and early proof\-of\-concept experiments.
+\section{Skills Development Plan (PREPD)}
+\label{sec:ch3_skills}
 
-\subsection{Risk Identification and Management}
-Risks will be logged in the project risk register, prioritised using an impact/probability matrix, and assigned mitigations and owners. The register will be reviewed at milestone checkpoints and adapted as new information arises.
+This section defines a skills development plan aligned with the project phases. The plan identifies the competencies required for the dissertation, the current diagnosis, development actions, and objective assessment criteria.
 
-An illustrative risk table will be maintained in project artefacts; examples of mitigations include the use of staging testbeds to emulate production behaviour and fallback measurement strategies if production deployment is delayed.
+\subsection{Competency Diagnosis}
+
+\begin{table}[htbp]
+\centering
+\caption{Competency Diagnosis and Targets}
+\label{tab:competencies}
+\footnotesize
+\begin{tabular}{@{}p{0.22\textwidth}p{0.25\textwidth}p{0.25\textwidth}p{0.22\textwidth}@{}}
+		\textbf{Competency} & \textbf{Current Level} & \textbf{Target Level} & \textbf{Relevance} \\
+\midrule
+		\textbf{C1: Observability engineering in containers} &
+Intermediate: operational familiarity with containers and basic telemetry tooling &
+Advanced: design and deploy a constrained, production-oriented telemetry stack &
+Core competency to implement A1--A3 \\
+\addlinespace
+		\textbf{C2: Experimental evaluation and validity} &
+Foundational: understanding of evaluation concepts; limited campaign execution &
+Intermediate: define baselines, run experiments, analyze results, discuss threats &
+Required to produce A4 and defensible evidence \\
+\addlinespace
+		\textbf{C3: Technical communication and stakeholder interaction} &
+Intermediate: academic writing; limited structured practitioner engagement &
+Advanced: concise documentation, structured feedback collection, synthesis &
+Required for A5 and oral defense readiness \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[htbp]
+\centering
+\caption{Skills Development Actions Mapped to Project Phases}
+\label{tab:development}
+\footnotesize
+\begin{tabular}{@{}p{0.14\textwidth}p{0.48\textwidth}p{0.30\textwidth}@{}}
+		\toprule
+		\textbf{Comp.} & \textbf{Planned Development Actions (by phase)} & \textbf{Assessment Criteria} \\
+\midrule
+		\textbf{C1} &
+		\textbf{P1--P2:} deep-dive on candidate tooling and deployment patterns; implement staging deployment; document operational procedures.\newline
+		\textbf{P3:} iterate architecture and prototype based on deployment feedback and constraint compliance. &
+Prototype deploys from documented procedure; architecture decisions are traceable to constraints; operational runbook is complete. \\
+\addlinespace
+		\textbf{C2} &
+		\textbf{P2:} define evaluation protocol (metrics, baselines, scenarios, data collection).\newline
+		\textbf{P3--P4:} execute measurement campaign; perform comparative analysis; document threats to validity. &
+Evaluation protocol is reproducible; dataset provenance is documented; analysis includes baselines and validity discussion. \\
+\addlinespace
+		\textbf{C3} &
+		\textbf{P1:} consolidate PREPD writing and structure.\newline
+		\textbf{P3--P5:} produce technical documentation; prepare interview/review protocol; synthesize practitioner feedback where applicable. &
+Documentation supports independent replication; feedback protocol is structured; writing and oral preparation are consistent and coherent. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Project Planning and Schedule}
+\label{sec:ch3_planning}
+
+The project plan is organized into phases with explicit deliverables and dependencies. The sequencing is designed to reduce risk by validating feasibility early (technology selection and staging deployment) before committing to extended evaluation work.
+
+\subsection{Phases, Activities, and Deliverables}
+
+\begin{table}[htbp]
+\centering
+\caption{Planned Phases, Activities, and Deliverables (January--June 2026)}
+\label{tab:phases}
+\footnotesize
+\begin{tabular}{@{}p{0.10\textwidth}p{0.20\textwidth}p{0.42\textwidth}p{0.22\textwidth}@{}}
+		\toprule
+		\textbf{Phase} & \textbf{Period} & \textbf{Key Activities} & \textbf{Main Deliverables} \\
+\midrule
+		\textbf{P1} & Jan &
+Project setup; consolidation of requirements and constraints; definition of acceptance criteria and logs (issues/risks). &
+Execution plan; project logs; refined acceptance criteria. \\
+\addlinespace
+		\textbf{P2} & Jan--Feb &
+Technology assessment and selection; proof-of-concept validations; definition of the architecture decision record structure. &
+Selection matrix and justification; initial architecture decisions. \\
+\addlinespace
+		\textbf{P3} & Feb--Mar &
+Reference architecture specification; prototype implementation; staging deployment; automation and reproducibility assets. &
+A1--A3 (architecture, prototype, automation); deployment runbook. \\
+\addlinespace
+		\textbf{P4} & Apr--May &
+Evaluation campaign execution: baseline definition, scenarios, measurements, data collection, preliminary analysis. &
+A4 (evaluation protocol and dataset); preliminary analysis notes. \\
+\addlinespace
+		\textbf{P5} & May--Jun &
+Consolidated analysis; practitioner feedback (when feasible); thesis writing and revision cycles; defense preparation. &
+A5 (documentation package); completed thesis manuscript. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Milestones and Dependencies}
+
+Milestones are defined to support periodic assessment and early detection of schedule risk. Key dependencies are: (i) technology selection before architecture freeze, (ii) staging deployment before extended evaluation, and (iii) availability of infrastructure and stakeholders before practitioner feedback.
+
+\begin{table}[htbp]
+\centering
+\caption{Planned Milestones and Acceptance Focus}
+\label{tab:milestones}
+\footnotesize
+\begin{tabular}{@{}p{0.10\textwidth}p{0.22\textwidth}p{0.26\textwidth}p{0.34\textwidth}@{}}
+		\toprule
+		\textbf{ID} & \textbf{Planned Date} & \textbf{Milestone} & \textbf{Acceptance Focus} \\
+\midrule
+		\textbf{M1} & End Jan & Technology selection completed & Selection rationale documented; fallbacks identified; feasibility validated via proof-of-concept. \\
+\addlinespace
+		\textbf{M2} & Mid Mar & Staging prototype deployed & Deployment is repeatable; core telemetry pipeline works end-to-end; runbook is usable. \\
+\addlinespace
+		\textbf{M3} & End Apr & Evaluation protocol frozen & Baselines and scenarios defined; collection procedures documented; validity considerations recorded. \\
+\addlinespace
+		\textbf{M4} & End May & Measurement campaign executed & Dataset collected with provenance; key analyses executed; issues and limitations captured. \\
+\addlinespace
+		\textbf{M5} & Mid Jun & Thesis ready for submission & Chapters integrated; evidence traceable to artifacts; revisions incorporated; defense preparation completed. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Gantt Chart}
+
+\begin{figure}[htbp]
+\centering
+\footnotesize
+\begin{ganttchart}[
+	hgrid,
+	vgrid,
+	x unit=0.32cm,
+	y unit chart=0.55cm,
+	bar height=0.55,
+	group height=0.7,
+	milestone height=0.6,
+	milestone label font=\footnotesize,
+	bar label font=\footnotesize,
+	group label font=\footnotesize,
+]{1}{26}
+
+\gantttitle{2026}{26}\\
+\gantttitle{Jan}{4}\gantttitle{Feb}{4}\gantttitle{Mar}{5}\gantttitle{Apr}{4}\gantttitle{May}{5}\gantttitle{Jun}{4}\\
+
+\ganttgroup{Project execution (Jan--Jun 2026)}{1}{26}\\
+
+\ganttbar[name=p1]{P1: Setup and planning}{1}{4}\\
+\ganttbar[name=p2]{P2: Tooling assessment and selection}{3}{8}\\
+\ganttbar[name=p3]{P3: Architecture and prototype}{5}{13}\\
+\ganttbar[name=p4]{P4: Evaluation campaign}{14}{22}\\
+\ganttbar[name=p5]{P5: Analysis, writing, defense prep}{19}{26}\\
+
+\ganttmilestone[name=m1]{M1: Tech selection complete}{4}\\
+\ganttmilestone[name=m2]{M2: Staging prototype deployed}{11}\\
+\ganttmilestone[name=m3]{M3: Eval protocol frozen}{17}\\
+\ganttmilestone[name=m4]{M4: Measurements executed}{22}\\
+\ganttmilestone[name=m5]{M5: Thesis submission-ready}{25}
+
+\ganttlink{p2}{m1}
+\ganttlink{p3}{m2}
+\ganttlink{p4}{m3}
+\ganttlink{p4}{m4}
+\ganttlink{p5}{m5}
+
+\end{ganttchart}
+\caption{Project schedule overview (Gantt chart; January--June 2026)}
+\label{fig:gantt}
+\end{figure}
+
+\section{Project Monitoring and Management}
+\label{sec:ch3_monitoring}
+
+Project monitoring will be structured to ensure timely control of scope, schedule, and quality:
+\begin{itemize}
+    \item \textbf{Governance and roles:} responsibilities will be split between the student (execution and reporting), the academic advisor (scientific guidance and quality control), and the hosting institution supervisor (infrastructure coordination and practitioner feedback facilitation when applicable).
+    \item \textbf{Cadence:} meetings will be held regularly (e.g., bi-weekly with the academic advisor; weekly or as-needed with the hosting supervisor) to review progress against the plan and to unblock dependencies.
+    \item \textbf{Progress tracking:} a lightweight project log will be maintained, including tasks, deliverables, open issues, decisions, and risk status.
+    \item \textbf{Change control:} any scope adjustment will be documented with rationale, impact analysis (schedule/risk), and approval by the advisor.
+    \item \textbf{Quality control:} each milestone will include an acceptance review focused on reproducibility, completeness of documentation, and alignment with constraints.
+\end{itemize}
+
+\section{Risk Management}
+\label{sec:ch3_risks}
+
+Risk management will be continuous and integrated with monitoring. Risks will be identified early, assessed by probability and impact, tracked through indicators, and mitigated through preventive actions. When mitigation is insufficient, a contingency plan will be activated to preserve the ability to complete the dissertation within the time constraints.
+
+To keep the assessment consistent and auditable, this project uses a lightweight qualitative scale for both \,\textit{Impact} and \,\textit{Probability}. Impact captures the consequence to delivery (scope, schedule, or validity of results); probability captures the likelihood of occurrence within the January--June 2026 execution window. Monitoring indicators are defined as observable signals with thresholds (where feasible) that trigger mitigation or contingency actions.
+
+\begin{table}[htbp]
+\centering
+\caption{Risk Rating Scales and Measurement Approach}
+\label{tab:risk_scales}
+\footnotesize
+\begin{tabular}{@{}p{0.14\textwidth}p{0.18\textwidth}p{0.60\textwidth}@{}}
+	\toprule
+	\textbf{Dimension} & \textbf{Class} & \textbf{Operational definition (how it is measured)} \\
+\midrule
+	\textbf{Impact} & H & Prevents delivering a core artifact (A1--A4) or forces a major scope reduction; or causes a schedule slip \textgreater{} 2 weeks on a milestone. \\
+ & M & Degrades evidence quality or requires rework; or causes a schedule slip of \textasciitilde{} 1--2 weeks. \\
+ & L & Localized issue with limited rework; schedule impact \textless{} 1 week. \\
+\addlinespace
+	\textbf{Probability} & H & Likely (\textgreater{} 60\%): already observed signals or strong prior evidence in similar environments. \\
+ & M & Possible (20--60\%): plausible given constraints; may occur depending on approvals/changes. \\
+ & L & Unlikely (\textless{} 20\%): would require unusual conditions or multiple contributing events. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Risk Register (technical, schedule, and external risks)}
+\label{tab:risks}
+\scriptsize
+\begin{tabular}{@{}p{0.06\textwidth}p{0.11\textwidth}p{0.26\textwidth}p{0.07\textwidth}p{0.07\textwidth}p{0.18\textwidth}p{0.18\textwidth}@{}}
+	\toprule
+		\textbf{ID} & \textbf{Type} & \textbf{Risk Description} & \textbf{Impact} & \textbf{Prob.} & \textbf{Monitoring Indicators} & \textbf{Mitigation / Contingency} \\
+\midrule
+R1 & Tech & Tooling or deployment does not comply with privilege/platform constraints, or is not reliable in the target environment. & H & M & Proof-of-concept fails to deploy \textgreater{}2 times; required capability missing; unstable telemetry pipeline. & Run early proof-of-concept; keep fallback options; freeze a minimal viable architecture and reduce scope if needed. \\
+\addlinespace
+R2 & Tech & Telemetry pipeline quality and/or overhead is insufficient for the planned diagnosis scenarios. & H & M & Trace/log correlation breaks; missing identifiers; CPU/memory overhead exceeds agreed bounds; latency regression beyond baseline tolerance. & Validate correlation end-to-end early; tune configuration and sampling; prioritize fewer scenarios with stronger instrumentation; bound evaluation and document limitations. \\
+\addlinespace
+R3 & Schedule & Infrastructure access, deployment approvals, or environment instability delays evaluation activities. & H & M & Access not granted by planned date; blocked deployments; long coordination cycles; repeated environment outages. & Use staging as primary target; parallelize protocol design and writing; maintain schedule buffers; adjust campaign size to preserve M3--M5. \\
+\addlinespace
+R4 & Schedule & Writing and review iteration compresses due to technical delays, reducing dissertation quality. & H & M & Missed weekly writing checkpoint; advisor review windows missed; late integration of chapters/evidence. & Enforce weekly writing output; draft chapters incrementally; lock review dates; de-scope non-essential work to protect submission readiness. \\
+\addlinespace
+R5 & External & Limited stakeholder availability or ecosystem/policy changes reduce feedback feasibility or impose new constraints. & M & M & Low response rate; repeated rescheduling; new restrictions; deprecations impacting selected components. & Recruit early; allow asynchronous reviews; complement with advisor/expert review; choose conservative components; document assumptions and adapt plan. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The risk register will be reviewed at least monthly and at each milestone review. For high-impact risks, mitigation status and contingency readiness will be explicitly reported in progress updates.

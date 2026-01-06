@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.3 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{none/global//global/global/global}
-    \entry{hevner2004design}{article}{}{}
+  \datalist[entry]{none/global//global/global}
+    \entry{hevner2004design}{article}{}
       \name{author}{4}{}{%
         {{hash=e054261c7f1739e1ba1db0a45e385c1b}{%
            family={Hevner},
@@ -42,16 +42,14 @@
            given={Sudha},
            giveni={S\bibinitperiod}}}%
       }
-      \strng{namehash}{77b3350005135e016e7a83431f326d8f}
+      \strng{namehash}{0b457fdf99b8e237500180a790709ce0}
       \strng{fullhash}{b163bef761d9a2c79a3d232595321775}
-      \strng{fullhashraw}{b163bef761d9a2c79a3d232595321775}
       \strng{bibnamehash}{b163bef761d9a2c79a3d232595321775}
       \strng{authorbibnamehash}{b163bef761d9a2c79a3d232595321775}
-      \strng{authornamehash}{77b3350005135e016e7a83431f326d8f}
+      \strng{authornamehash}{0b457fdf99b8e237500180a790709ce0}
       \strng{authorfullhash}{b163bef761d9a2c79a3d232595321775}
-      \strng{authorfullhashraw}{b163bef761d9a2c79a3d232595321775}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{MIS Quarterly}
@@ -62,7 +60,7 @@
       \field{pages}{75\bibrangedash 105}
       \range{pages}{31}
     \endentry
-    \entry{prometheus2016}{article}{}{}
+    \entry{prometheus2016}{article}{}
       \name{author}{1}{}{%
         {{hash=bc9ac1c452c3aa120a750a832c6ee9a3}{%
            family={Volz},
@@ -72,21 +70,68 @@
       }
       \strng{namehash}{bc9ac1c452c3aa120a750a832c6ee9a3}
       \strng{fullhash}{bc9ac1c452c3aa120a750a832c6ee9a3}
-      \strng{fullhashraw}{bc9ac1c452c3aa120a750a832c6ee9a3}
       \strng{bibnamehash}{bc9ac1c452c3aa120a750a832c6ee9a3}
       \strng{authorbibnamehash}{bc9ac1c452c3aa120a750a832c6ee9a3}
       \strng{authornamehash}{bc9ac1c452c3aa120a750a832c6ee9a3}
       \strng{authorfullhash}{bc9ac1c452c3aa120a750a832c6ee9a3}
-      \strng{authorfullhashraw}{bc9ac1c452c3aa120a750a832c6ee9a3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SoundCloud Developers Blog}
       \field{title}{Prometheus: Monitoring at SoundCloud}
       \field{year}{2016}
     \endentry
-    \entry{correiaMonintainerOrchestrationindependentExtensible2023}{article}{}{}
+    \entry{haddaway2022prisma2020}{software}{}
+      \name{author}{4}{}{%
+        {{hash=2d1ada6d2c48c912cb12f21cbcb80095}{%
+           family={Haddaway},
+           familyi={H\bibinitperiod},
+           given={Neal\bibnamedelima R.},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=016b86afb0a98379bf77b3f074f34761}{%
+           family={Page},
+           familyi={P\bibinitperiod},
+           given={Matthew\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=1ff7284f4d9bafe70fb527288d5b27a7}{%
+           family={Pritchard},
+           familyi={P\bibinitperiod},
+           given={Chris\bibnamedelima C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=b7314b4cde4c01764b4b3580e015b768}{%
+           family={McGuinness},
+           familyi={M\bibinitperiod},
+           given={Luke\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{52c31518976a2be3cc2d817b4223b99e}
+      \strng{fullhash}{1e752ab820d593d9dcd2f1ee9b2fc204}
+      \strng{bibnamehash}{1e752ab820d593d9dcd2f1ee9b2fc204}
+      \strng{authorbibnamehash}{1e752ab820d593d9dcd2f1ee9b2fc204}
+      \strng{authornamehash}{52c31518976a2be3cc2d817b4223b99e}
+      \strng{authorfullhash}{1e752ab820d593d9dcd2f1ee9b2fc204}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{PRISMA2020}: An {R} package and {Shiny} app for producing {PRISMA} 2020-compliant flow diagrams, with interactivity for optimised digital transparency and Open Synthesis}
+      \field{version}{1.1.1}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.5281/zenodo.5082518
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5281/zenodo.5082518
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5281/zenodo.5082518
+      \endverb
+    \endentry
+    \entry{correiaMonintainerOrchestrationindependentExtensible2023}{article}{}
       \name{author}{3}{}{%
         {{hash=94bf404999be16249f36aec641dcfd76}{%
            family={Correia},
@@ -104,16 +149,14 @@
            given={José},
            giveni={J\bibinitperiod}}}%
       }
-      \strng{namehash}{8f2c8a940afbb038a07445fe73f851eb}
+      \strng{namehash}{01cbb96fb8b2be491f17f5be0a2edc9c}
       \strng{fullhash}{01cbb96fb8b2be491f17f5be0a2edc9c}
-      \strng{fullhashraw}{01cbb96fb8b2be491f17f5be0a2edc9c}
       \strng{bibnamehash}{01cbb96fb8b2be491f17f5be0a2edc9c}
       \strng{authorbibnamehash}{01cbb96fb8b2be491f17f5be0a2edc9c}
-      \strng{authornamehash}{8f2c8a940afbb038a07445fe73f851eb}
+      \strng{authornamehash}{01cbb96fb8b2be491f17f5be0a2edc9c}
       \strng{authorfullhash}{01cbb96fb8b2be491f17f5be0a2edc9c}
-      \strng{authorfullhashraw}{01cbb96fb8b2be491f17f5be0a2edc9c}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{issn}{13837621}
@@ -129,7 +172,7 @@
       \verb 10.1016/j.sysarc.2023.103035
       \endverb
     \endentry
-    \entry{dingaEmpiricalEvaluationEnergy2023}{inproceedings}{}{}
+    \entry{dingaEmpiricalEvaluationEnergy2023}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=45a5c88868426b7fc4a6c3244a9390e0}{%
            family={Dinga},
@@ -163,16 +206,14 @@
       \list{publisher}{1}{%
         {Springer Nature Switzerland}%
       }
-      \strng{namehash}{6a888aa488157d65bb5346ef3531a522}
+      \strng{namehash}{6d9879c0c3b28ce32136594b8c645dd4}
       \strng{fullhash}{ca8a967a11260fc250fea383a81fa83f}
-      \strng{fullhashraw}{ca8a967a11260fc250fea383a81fa83f}
       \strng{bibnamehash}{ca8a967a11260fc250fea383a81fa83f}
       \strng{authorbibnamehash}{ca8a967a11260fc250fea383a81fa83f}
-      \strng{authornamehash}{6a888aa488157d65bb5346ef3531a522}
+      \strng{authornamehash}{6d9879c0c3b28ce32136594b8c645dd4}
       \strng{authorfullhash}{ca8a967a11260fc250fea383a81fa83f}
-      \strng{authorfullhashraw}{ca8a967a11260fc250fea383a81fa83f}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Service-{{Oriented Computing}}}
@@ -184,43 +225,123 @@
       \verb 10.1007/978-3-031-48421-6_13
       \endverb
     \endentry
-    \entry{sharmaEBPFEnhancedCompleteObservability2024}{inproceedings}{}{}
+    \entry{grossmannMonitoringContainerServices2017}{inproceedings}{}
       \name{author}{2}{}{%
-        {{hash=bdc61d8092bfa90d5ffe9e79e8b252b8}{%
-           family={Sharma},
-           familyi={S\bibinitperiod},
-           given={Bhavye},
-           giveni={B\bibinitperiod}}}%
+        {{hash=cf3413a08966d76f42e865aac0717125}{%
+           family={Gro{ß}mann},
+           familyi={G\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d315538a35e42c9c3dc7d7d02562ed52}{%
+           family={Klug},
+           familyi={K\bibinitperiod},
+           given={Holger},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbe98b160babb9baa72ced3f893ab6b1}
+      \strng{fullhash}{cbe98b160babb9baa72ced3f893ab6b1}
+      \strng{bibnamehash}{cbe98b160babb9baa72ced3f893ab6b1}
+      \strng{authorbibnamehash}{cbe98b160babb9baa72ced3f893ab6b1}
+      \strng{authornamehash}{cbe98b160babb9baa72ced3f893ab6b1}
+      \strng{authorfullhash}{cbe98b160babb9baa72ced3f893ab6b1}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 29th {{International Teletraffic Congress}} ({{ITC}} 29)}
+      \field{month}{9}
+      \field{title}{Monitoring {{Container Services}} at the {{Network Edge}}}
+      \field{volume}{1}
+      \field{year}{2017}
+      \field{pages}{130\bibrangedash 133}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.23919/ITC.2017.8064348
+      \endverb
+    \endentry
+    \entry{hasanthEvaluatingPerformanceSidecarbased2024}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=6603607c5b53ba657ed609e47392b9ee}{%
+           family={Hasanth},
+           familyi={H\bibinitperiod},
+           given={Karumuri\bibnamedelima Meher},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
         {{hash=2e48217a8688e38796cd2e18715575a7}{%
            family={Nadig},
            familyi={N\bibinitperiod},
            given={Deepak},
            giveni={D\bibinitperiod}}}%
       }
-      \strng{namehash}{f21d8c4045a383b251ada78b058c895a}
-      \strng{fullhash}{f21d8c4045a383b251ada78b058c895a}
-      \strng{fullhashraw}{f21d8c4045a383b251ada78b058c895a}
-      \strng{bibnamehash}{f21d8c4045a383b251ada78b058c895a}
-      \strng{authorbibnamehash}{f21d8c4045a383b251ada78b058c895a}
-      \strng{authornamehash}{f21d8c4045a383b251ada78b058c895a}
-      \strng{authorfullhash}{f21d8c4045a383b251ada78b058c895a}
-      \strng{authorfullhashraw}{f21d8c4045a383b251ada78b058c895a}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \strng{namehash}{459d64bec5e334d85fc3099073823207}
+      \strng{fullhash}{459d64bec5e334d85fc3099073823207}
+      \strng{bibnamehash}{459d64bec5e334d85fc3099073823207}
+      \strng{authorbibnamehash}{459d64bec5e334d85fc3099073823207}
+      \strng{authornamehash}{459d64bec5e334d85fc3099073823207}
+      \strng{authorfullhash}{459d64bec5e334d85fc3099073823207}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{{{ICC}} 2024 - {{IEEE International Conference}} on {{Communications}}}
-      \field{issn}{1938-1883}
-      \field{month}{6}
-      \field{title}{{{eBPF-Enhanced Complete Observability Solution}} for {{Cloud-native Microservices}}}
+      \field{booktitle}{2024 {{IEEE International Conference}} on {{Advanced Networks}} and {{Telecommunications Systems}} ({{ANTS}})}
+      \field{issn}{2153-1684}
+      \field{month}{12}
+      \field{title}{Evaluating the {{Performance}} of {{Sidecar-based}} and {{Sidecarless Cloud-native Service Mesh Solutions}}}
       \field{year}{2024}
-      \field{pages}{1980\bibrangedash 1985}
+      \field{pages}{1\bibrangedash 6}
       \range{pages}{6}
       \verb{doi}
-      \verb 10.1109/ICC51166.2024.10622329
+      \verb 10.1109/ANTS63515.2024.10897788
       \endverb
     \endentry
-    \entry{kannanDesigningLightweightNetwork2024}{inproceedings}{}{}
+    \entry{InvestigatingPerformanceOverhead}{misc}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://dl.acm.org/doi/epdf/10.1145/3680256.3721316}
+      \field{title}{Investigating {{Performance Overhead}} of {{Distributed Tracing}} in {{Microservices}} and {{Serverless Systems}}}
+      \verb{doi}
+      \verb 10.1145/3680256.3721316
+      \endverb
+    \endentry
+    \entry{janecekContainerWorkloadCharacterization2021}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=4266acdab28e6fbb1ab62e93fcd7910d}{%
+           family={Janecek},
+           familyi={J\bibinitperiod},
+           given={Madeline},
+           giveni={M\bibinitperiod}}}%
+        {{hash=198f68b68a7d820f7c24afee2400ce5c}{%
+           family={{Ezzati-Jivan}},
+           familyi={E\bibinitperiod},
+           given={Naser},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ac18b603808762fa9950c167355df87e}{%
+           family={Azhari},
+           familyi={A\bibinitperiod},
+           given={Seyed\bibnamedelima Vahid},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{38a7dddaf440cc4f1c03801721db1990}
+      \strng{fullhash}{38a7dddaf440cc4f1c03801721db1990}
+      \strng{bibnamehash}{38a7dddaf440cc4f1c03801721db1990}
+      \strng{authorbibnamehash}{38a7dddaf440cc4f1c03801721db1990}
+      \strng{authornamehash}{38a7dddaf440cc4f1c03801721db1990}
+      \strng{authorfullhash}{38a7dddaf440cc4f1c03801721db1990}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2021 {{IEEE International Conference}} on {{Cloud Engineering}} ({{IC2E}})}
+      \field{month}{10}
+      \field{title}{Container {{Workload Characterization Through Host System Tracing}}}
+      \field{year}{2021}
+      \field{pages}{9\bibrangedash 19}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/IC2E52221.2021.00015
+      \endverb
+    \endentry
+    \entry{kannanDesigningLightweightNetwork2024}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=f0c4cd9da29f7f73fae500e075475aa7}{%
            family={Kannan},
@@ -254,16 +375,14 @@
       \list{publisher}{1}{%
         {Springer Nature Switzerland}%
       }
-      \strng{namehash}{a812feb5ca0d06119f0c2ad45ae4c9a5}
+      \strng{namehash}{fc86bdada2d5423b57324e0bca9579e0}
       \strng{fullhash}{a71eaf20a737a451aa5169252ceb24ba}
-      \strng{fullhashraw}{a71eaf20a737a451aa5169252ceb24ba}
       \strng{bibnamehash}{a71eaf20a737a451aa5169252ceb24ba}
       \strng{authorbibnamehash}{a71eaf20a737a451aa5169252ceb24ba}
-      \strng{authornamehash}{a812feb5ca0d06119f0c2ad45ae4c9a5}
+      \strng{authornamehash}{fc86bdada2d5423b57324e0bca9579e0}
       \strng{authorfullhash}{a71eaf20a737a451aa5169252ceb24ba}
-      \strng{authorfullhashraw}{a71eaf20a737a451aa5169252ceb24ba}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Passive and {{Active Measurement}}}
@@ -275,158 +394,49 @@
       \verb 10.1007/978-3-031-56249-5_11
       \endverb
     \endentry
-    \entry{hasanthEvaluatingPerformanceSidecarbased2024}{inproceedings}{}{}
-      \name{author}{2}{}{%
-        {{hash=6603607c5b53ba657ed609e47392b9ee}{%
-           family={Hasanth},
-           familyi={H\bibinitperiod},
-           given={Karumuri\bibnamedelima Meher},
-           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=2e48217a8688e38796cd2e18715575a7}{%
-           family={Nadig},
-           familyi={N\bibinitperiod},
-           given={Deepak},
-           giveni={D\bibinitperiod}}}%
+    \entry{karkanPerformanceOverheadOpenTelemetry}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9363a8008986d9f6446fb89ebd3c9379}{%
+           family={Karkan},
+           familyi={K\bibinitperiod},
+           given={Tahir\bibnamedelima Mert},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
-      \strng{namehash}{459d64bec5e334d85fc3099073823207}
-      \strng{fullhash}{459d64bec5e334d85fc3099073823207}
-      \strng{fullhashraw}{459d64bec5e334d85fc3099073823207}
-      \strng{bibnamehash}{459d64bec5e334d85fc3099073823207}
-      \strng{authorbibnamehash}{459d64bec5e334d85fc3099073823207}
-      \strng{authornamehash}{459d64bec5e334d85fc3099073823207}
-      \strng{authorfullhash}{459d64bec5e334d85fc3099073823207}
-      \strng{authorfullhashraw}{459d64bec5e334d85fc3099073823207}
+      \strng{namehash}{9363a8008986d9f6446fb89ebd3c9379}
+      \strng{fullhash}{9363a8008986d9f6446fb89ebd3c9379}
+      \strng{bibnamehash}{9363a8008986d9f6446fb89ebd3c9379}
+      \strng{authorbibnamehash}{9363a8008986d9f6446fb89ebd3c9379}
+      \strng{authornamehash}{9363a8008986d9f6446fb89ebd3c9379}
+      \strng{authorfullhash}{9363a8008986d9f6446fb89ebd3c9379}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{2024 {{IEEE International Conference}} on {{Advanced Networks}} and {{Telecommunications Systems}} ({{ANTS}})}
-      \field{issn}{2153-1684}
-      \field{month}{12}
-      \field{title}{Evaluating the {{Performance}} of {{Sidecar-based}} and {{Sidecarless Cloud-native Service Mesh Solutions}}}
-      \field{year}{2024}
-      \field{pages}{1\bibrangedash 6}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/ANTS63515.2024.10897788
-      \endverb
+      \field{langid}{english}
+      \field{title}{Performance {{Overhead Of OpenTelemetry Sampling Methods In A Cloud Infrastructure}}}
     \endentry
-    \entry{salcedo-navarroK8sidecarModularKubernetes2025}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=0364922e992b5ec2c7b9ea6081edab1d}{%
-           family={{Salcedo-Navarro}},
-           familyi={S\bibinitperiod},
-           given={Andoni},
-           giveni={A\bibinitperiod}}}%
-        {{hash=3609a8677eafd9ab6978e5ad07c4f8f3}{%
-           family={{Garcia-Pineda}},
-           familyi={G\bibinitperiod},
-           given={Miguel},
-           giveni={M\bibinitperiod}}}%
-        {{hash=e7bb0f3bb34fa13877b1b8fddc741569}{%
-           family={{Gutiérrez-Aguado}},
-           familyi={G\bibinitperiod},
-           given={Juan},
+    \entry{levinViperProbeUsingEBPF2020}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ba29264368a6702f6a4954d2930d5ce5}{%
+           family={Levin},
+           familyi={L\bibinitperiod},
+           given={Joshua},
            giveni={J\bibinitperiod}}}%
       }
-      \strng{namehash}{3c3b546f7fd97c8382068301fc28954d}
-      \strng{fullhash}{bb71f7c4de9cde903af8f189a0a90d28}
-      \strng{fullhashraw}{bb71f7c4de9cde903af8f189a0a90d28}
-      \strng{bibnamehash}{bb71f7c4de9cde903af8f189a0a90d28}
-      \strng{authorbibnamehash}{bb71f7c4de9cde903af8f189a0a90d28}
-      \strng{authornamehash}{3c3b546f7fd97c8382068301fc28954d}
-      \strng{authorfullhash}{bb71f7c4de9cde903af8f189a0a90d28}
-      \strng{authorfullhashraw}{bb71f7c4de9cde903af8f189a0a90d28}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \strng{namehash}{ba29264368a6702f6a4954d2930d5ce5}
+      \strng{fullhash}{ba29264368a6702f6a4954d2930d5ce5}
+      \strng{bibnamehash}{ba29264368a6702f6a4954d2930d5ce5}
+      \strng{authorbibnamehash}{ba29264368a6702f6a4954d2930d5ce5}
+      \strng{authornamehash}{ba29264368a6702f6a4954d2930d5ce5}
+      \strng{authorfullhash}{ba29264368a6702f6a4954d2930d5ce5}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{issn}{1097-024X}
-      \field{journaltitle}{Software: Practice and Experience}
-      \field{number}{8}
-      \field{shorttitle}{K8sidecar}
-      \field{title}{K8sidecar: {{A Modular Kubernetes Chain}} of {{Sidecar Proxies}} for {{Microservices}} and {{Serverless Architectures}}}
-      \field{volume}{55}
-      \field{year}{2025}
-      \field{pages}{1305\bibrangedash 1319}
-      \range{pages}{15}
-      \verb{doi}
-      \verb 10.1002/spe.3423
-      \endverb
+      \field{labeltitlesource}{title}
+      \field{title}{{{ViperProbe}}: {{Using eBPF Metrics}} to {{Improve Microservice Observability}}}
+      \field{year}{2020}
     \endentry
-    \entry{sahuSidecarsCentralLane2023}{misc}{}{}
-      \name{author}{6}{}{%
-        {{hash=d8d95c056d8eb1a9b24049ec0ac11335}{%
-           family={Sahu},
-           familyi={S\bibinitperiod},
-           given={Prateek},
-           giveni={P\bibinitperiod}}}%
-        {{hash=7ca3b12aa49810d973a68fa0ab7d2336}{%
-           family={Zheng},
-           familyi={Z\bibinitperiod},
-           given={Lucy},
-           giveni={L\bibinitperiod}}}%
-        {{hash=e3a55ed22dc2f5b269f59064eb976643}{%
-           family={Bueso},
-           familyi={B\bibinitperiod},
-           given={Marco},
-           giveni={M\bibinitperiod}}}%
-        {{hash=bd5f8f28e6767b81afca0cf64e0e1d69}{%
-           family={Wei},
-           familyi={W\bibinitperiod},
-           given={Shijia},
-           giveni={S\bibinitperiod}}}%
-        {{hash=eed33aea43aa5a9891e3b677b2aad123}{%
-           family={Yadwadkar},
-           familyi={Y\bibinitperiod},
-           given={Neeraja\bibnamedelima J.},
-           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=79d54f8e5ce7442e0df8c75b3e17fa79}{%
-           family={Tiwari},
-           familyi={T\bibinitperiod},
-           given={Mohit},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {arXiv}%
-      }
-      \strng{namehash}{51f73efe24924022b714cbdf6b09c638}
-      \strng{fullhash}{237633074f9e47ca4939f56d434f561e}
-      \strng{fullhashraw}{237633074f9e47ca4939f56d434f561e}
-      \strng{bibnamehash}{237633074f9e47ca4939f56d434f561e}
-      \strng{authorbibnamehash}{237633074f9e47ca4939f56d434f561e}
-      \strng{authornamehash}{51f73efe24924022b714cbdf6b09c638}
-      \strng{authorfullhash}{237633074f9e47ca4939f56d434f561e}
-      \strng{authorfullhashraw}{237633074f9e47ca4939f56d434f561e}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{eprintclass}{cs}
-      \field{month}{10}
-      \field{number}{arXiv:2306.15792}
-      \field{shorttitle}{Sidecars on the {{Central Lane}}}
-      \field{title}{Sidecars on the {{Central Lane}}: {{Impact}} of {{Network Proxies}} on {{Microservices}}}
-      \field{year}{2023}
-      \verb{doi}
-      \verb 10.48550/arXiv.2306.15792
-      \endverb
-      \verb{eprint}
-      \verb 2306.15792
-      \endverb
-    \endentry
-    \entry{TraceWeaverDistributedRequest}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labeltitlesource}{shorttitle}
-      \field{howpublished}{https://dl.acm.org/doi/epdf/10.1145/3651890.3672254}
-      \field{shorttitle}{{{TraceWeaver}}}
-      \field{title}{{{TraceWeaver}}: {{Distributed Request Tracing}} for {{Microservices Without Application Modification}}}
-      \verb{doi}
-      \verb 10.1145/3651890.3672254
-      \endverb
-    \endentry
-    \entry{liuJCallGraphTracingMicroservices2019}{inproceedings}{}{}
+    \entry{liuJCallGraphTracingMicroservices2019}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=3c1b78c51effc93277a04ce75c58422a}{%
            family={Liu},
@@ -470,16 +480,14 @@
       \list{publisher}{1}{%
         {Springer International Publishing}%
       }
-      \strng{namehash}{fec9ef6a8390c42fa2f270f70d25ef51}
+      \strng{namehash}{6a9d1c9f9a2ff5543f8650e9e53c2cd2}
       \strng{fullhash}{91356044cf2b6b0a104ce9f545ffb952}
-      \strng{fullhashraw}{91356044cf2b6b0a104ce9f545ffb952}
-      \strng{bibnamehash}{fec9ef6a8390c42fa2f270f70d25ef51}
-      \strng{authorbibnamehash}{fec9ef6a8390c42fa2f270f70d25ef51}
-      \strng{authornamehash}{fec9ef6a8390c42fa2f270f70d25ef51}
+      \strng{bibnamehash}{6a9d1c9f9a2ff5543f8650e9e53c2cd2}
+      \strng{authorbibnamehash}{6a9d1c9f9a2ff5543f8650e9e53c2cd2}
+      \strng{authornamehash}{6a9d1c9f9a2ff5543f8650e9e53c2cd2}
       \strng{authorfullhash}{91356044cf2b6b0a104ce9f545ffb952}
-      \strng{authorfullhashraw}{91356044cf2b6b0a104ce9f545ffb952}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{booktitle}{Cloud {{Computing}} -- {{CLOUD}} 2019}
@@ -492,40 +500,7 @@
       \verb 10.1007/978-3-030-23502-4_20
       \endverb
     \endentry
-    \entry{InvestigatingPerformanceOverhead}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://dl.acm.org/doi/epdf/10.1145/3680256.3721316}
-      \field{title}{Investigating {{Performance Overhead}} of {{Distributed Tracing}} in {{Microservices}} and {{Serverless Systems}}}
-      \verb{doi}
-      \verb 10.1145/3680256.3721316
-      \endverb
-    \endentry
-    \entry{karkanPerformanceOverheadOpenTelemetry}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=9363a8008986d9f6446fb89ebd3c9379}{%
-           family={Karkan},
-           familyi={K\bibinitperiod},
-           given={Tahir\bibnamedelima Mert},
-           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \strng{namehash}{9363a8008986d9f6446fb89ebd3c9379}
-      \strng{fullhash}{9363a8008986d9f6446fb89ebd3c9379}
-      \strng{fullhashraw}{9363a8008986d9f6446fb89ebd3c9379}
-      \strng{bibnamehash}{9363a8008986d9f6446fb89ebd3c9379}
-      \strng{authorbibnamehash}{9363a8008986d9f6446fb89ebd3c9379}
-      \strng{authornamehash}{9363a8008986d9f6446fb89ebd3c9379}
-      \strng{authorfullhash}{9363a8008986d9f6446fb89ebd3c9379}
-      \strng{authorfullhashraw}{9363a8008986d9f6446fb89ebd3c9379}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{title}{Performance {{Overhead Of OpenTelemetry Sampling Methods In A Cloud Infrastructure}}}
-    \endentry
-    \entry{norgrenOPTIMIZINGDISTRIBUTEDTRACING}{article}{}{}
+    \entry{norgrenOPTIMIZINGDISTRIBUTEDTRACING}{article}{}
       \name{author}{1}{}{%
         {{hash=e1122d6e311b00a5707ad13f3512b688}{%
            family={Norgren},
@@ -535,20 +510,152 @@
       }
       \strng{namehash}{e1122d6e311b00a5707ad13f3512b688}
       \strng{fullhash}{e1122d6e311b00a5707ad13f3512b688}
-      \strng{fullhashraw}{e1122d6e311b00a5707ad13f3512b688}
       \strng{bibnamehash}{e1122d6e311b00a5707ad13f3512b688}
       \strng{authorbibnamehash}{e1122d6e311b00a5707ad13f3512b688}
       \strng{authornamehash}{e1122d6e311b00a5707ad13f3512b688}
       \strng{authorfullhash}{e1122d6e311b00a5707ad13f3512b688}
-      \strng{authorfullhashraw}{e1122d6e311b00a5707ad13f3512b688}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
       \field{title}{{{OPTIMIZING DISTRIBUTED TRACING OVERHEAD IN A CLOUD ENVIRONMENT WITH OPENTELEMETRY}}}
     \endentry
-    \entry{ramachandranFUSEFaultDiagnosis2023}{inproceedings}{}{}
+    \entry{pappula2021building}{article}{}
+      \name{author}{3}{}{%
+        {{hash=514e841e168206a926a114baa3232b55}{%
+           family={Pappula},
+           familyi={P\bibinitperiod},
+           given={Kiran\bibnamedelima Kumar},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=95c9e69356ce9f5234b89d76aa32af19}{%
+           family={Anasuri},
+           familyi={A\bibinitperiod},
+           given={Sunil},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4bf1dad0eaa67fc7912812069fe1a4bb}{%
+           family={Rusum},
+           familyi={R\bibinitperiod},
+           given={Guru\bibnamedelima Pramod},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0be03c89b9d7c0fb22437d444915ebc}
+      \strng{fullhash}{d0be03c89b9d7c0fb22437d444915ebc}
+      \strng{bibnamehash}{d0be03c89b9d7c0fb22437d444915ebc}
+      \strng{authorbibnamehash}{d0be03c89b9d7c0fb22437d444915ebc}
+      \strng{authornamehash}{d0be03c89b9d7c0fb22437d444915ebc}
+      \strng{authorfullhash}{d0be03c89b9d7c0fb22437d444915ebc}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Emerging Research in Engineering and Technology}
+      \field{number}{4}
+      \field{title}{Building Observability into Full-Stack Systems: Metrics That Matter}
+      \field{volume}{2}
+      \field{year}{2021}
+      \field{pages}{48\bibrangedash 58}
+      \range{pages}{11}
+    \endentry
+    \entry{piProfilingDistributedSystems2018}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=912a94d54cdaa640310cabf00ae5ea57}{%
+           family={Pi},
+           familyi={P\bibinitperiod},
+           given={Aidi},
+           giveni={A\bibinitperiod}}}%
+        {{hash=06debc36f6b61a405e8f0da1c7ccd6ca}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=596e565ae03135b3d3a3dbfeeda86737}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xiaobo},
+           giveni={X\bibinitperiod}}}%
+        {{hash=80f073729e100d89c49fd83ea4496e14}{%
+           family={Ji},
+           familyi={J\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{a703b8b440ee131eadebb27afc33f1c7}
+      \strng{fullhash}{7577a499fde11daa16eeaee8c4491626}
+      \strng{bibnamehash}{7577a499fde11daa16eeaee8c4491626}
+      \strng{authorbibnamehash}{7577a499fde11daa16eeaee8c4491626}
+      \strng{authornamehash}{a703b8b440ee131eadebb27afc33f1c7}
+      \strng{authorfullhash}{7577a499fde11daa16eeaee8c4491626}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 27th {{International Symposium}} on {{High-Performance Parallel}} and {{Distributed Computing}}}
+      \field{month}{6}
+      \field{series}{{{HPDC}} '18}
+      \field{title}{Profiling Distributed Systems in Lightweight Virtualized Environments with Logs and Resource Metrics}
+      \field{year}{2018}
+      \field{pages}{168\bibrangedash 179}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/3208040.3208044
+      \endverb
+    \endentry
+    \entry{raithEndtoEndFrameworkBenchmarking2022}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=2833487b66970f45df29cfe16f673171}{%
+           family={Raith},
+           familyi={R\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=08296bb13f8d84579ba4d5167abf8bf5}{%
+           family={Rausch},
+           familyi={R\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=80db0f360d20b3ec34003da6a39ac055}{%
+           family={Prüller},
+           familyi={P\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=453843fe0305d6937fc82a38975beeee}{%
+           family={Furutanpey},
+           familyi={F\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=748d3aa7019baff9dd392f0f9e793368}{%
+           family={Dustdar},
+           familyi={D\bibinitperiod},
+           given={Schahram},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0379278bc40825dda324ea81a9df8a95}
+      \strng{fullhash}{3f46c316148d06af12350e58cf79e7c1}
+      \strng{bibnamehash}{3f46c316148d06af12350e58cf79e7c1}
+      \strng{authorbibnamehash}{3f46c316148d06af12350e58cf79e7c1}
+      \strng{authornamehash}{0379278bc40825dda324ea81a9df8a95}
+      \strng{authorfullhash}{3f46c316148d06af12350e58cf79e7c1}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 {{IEEE International Conference}} on {{Cloud Engineering}} ({{IC2E}})}
+      \field{month}{9}
+      \field{title}{An {{End-to-End Framework}} for {{Benchmarking Edge-Cloud Cluster Management Techniques}}}
+      \field{year}{2022}
+      \field{pages}{22\bibrangedash 28}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/IC2E55432.2022.00010
+      \endverb
+    \endentry
+    \entry{ramachandranFUSEFaultDiagnosis2023}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=ad84445eed596d4cd0f8f54c356ce341}{%
            family={Ramachandran},
@@ -572,16 +679,14 @@
       \list{publisher}{1}{%
         {Springer Nature Switzerland}%
       }
-      \strng{namehash}{e42bdfde4729f202a780aa52624d1777}
+      \strng{namehash}{0a3a95afd64e8910acbdf722d2fea0e1}
       \strng{fullhash}{0a3a95afd64e8910acbdf722d2fea0e1}
-      \strng{fullhashraw}{0a3a95afd64e8910acbdf722d2fea0e1}
       \strng{bibnamehash}{0a3a95afd64e8910acbdf722d2fea0e1}
       \strng{authorbibnamehash}{0a3a95afd64e8910acbdf722d2fea0e1}
-      \strng{authornamehash}{e42bdfde4729f202a780aa52624d1777}
+      \strng{authornamehash}{0a3a95afd64e8910acbdf722d2fea0e1}
       \strng{authorfullhash}{0a3a95afd64e8910acbdf722d2fea0e1}
-      \strng{authorfullhashraw}{0a3a95afd64e8910acbdf722d2fea0e1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{booktitle}{Service-{{Oriented Computing}}}
@@ -592,6 +697,670 @@
       \range{pages}{15}
       \verb{doi}
       \verb 10.1007/978-3-031-48421-6_17
+      \endverb
+    \endentry
+    \entry{sahuSidecarsCentralLane2023}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=d8d95c056d8eb1a9b24049ec0ac11335}{%
+           family={Sahu},
+           familyi={S\bibinitperiod},
+           given={Prateek},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7ca3b12aa49810d973a68fa0ab7d2336}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Lucy},
+           giveni={L\bibinitperiod}}}%
+        {{hash=e3a55ed22dc2f5b269f59064eb976643}{%
+           family={Bueso},
+           familyi={B\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bd5f8f28e6767b81afca0cf64e0e1d69}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Shijia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=eed33aea43aa5a9891e3b677b2aad123}{%
+           family={Yadwadkar},
+           familyi={Y\bibinitperiod},
+           given={Neeraja\bibnamedelima J.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=79d54f8e5ce7442e0df8c75b3e17fa79}{%
+           family={Tiwari},
+           familyi={T\bibinitperiod},
+           given={Mohit},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{1cdf676ba8c0ff0deae36640232e08cb}
+      \strng{fullhash}{237633074f9e47ca4939f56d434f561e}
+      \strng{bibnamehash}{237633074f9e47ca4939f56d434f561e}
+      \strng{authorbibnamehash}{237633074f9e47ca4939f56d434f561e}
+      \strng{authornamehash}{1cdf676ba8c0ff0deae36640232e08cb}
+      \strng{authorfullhash}{237633074f9e47ca4939f56d434f561e}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{eprintclass}{cs}
+      \field{month}{10}
+      \field{number}{arXiv:2306.15792}
+      \field{shorttitle}{Sidecars on the {{Central Lane}}}
+      \field{title}{Sidecars on the {{Central Lane}}: {{Impact}} of {{Network Proxies}} on {{Microservices}}}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.48550/arXiv.2306.15792
+      \endverb
+      \verb{eprint}
+      \verb 2306.15792
+      \endverb
+    \endentry
+    \entry{salcedo-navarroK8sidecarModularKubernetes2025}{article}{}
+      \name{author}{3}{}{%
+        {{hash=0364922e992b5ec2c7b9ea6081edab1d}{%
+           family={{Salcedo-Navarro}},
+           familyi={S\bibinitperiod},
+           given={Andoni},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3609a8677eafd9ab6978e5ad07c4f8f3}{%
+           family={{Garcia-Pineda}},
+           familyi={G\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e7bb0f3bb34fa13877b1b8fddc741569}{%
+           family={{Gutiérrez-Aguado}},
+           familyi={G\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{bb71f7c4de9cde903af8f189a0a90d28}
+      \strng{fullhash}{bb71f7c4de9cde903af8f189a0a90d28}
+      \strng{bibnamehash}{bb71f7c4de9cde903af8f189a0a90d28}
+      \strng{authorbibnamehash}{bb71f7c4de9cde903af8f189a0a90d28}
+      \strng{authornamehash}{bb71f7c4de9cde903af8f189a0a90d28}
+      \strng{authorfullhash}{bb71f7c4de9cde903af8f189a0a90d28}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{1097-024X}
+      \field{journaltitle}{Software: Practice and Experience}
+      \field{number}{8}
+      \field{shorttitle}{K8sidecar}
+      \field{title}{K8sidecar: {{A Modular Kubernetes Chain}} of {{Sidecar Proxies}} for {{Microservices}} and {{Serverless Architectures}}}
+      \field{volume}{55}
+      \field{year}{2025}
+      \field{pages}{1305\bibrangedash 1319}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1002/spe.3423
+      \endverb
+    \endentry
+    \entry{sandbergEvaluatingOpenTelemetrysImpact}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f00304fde081182a4695a4f4d01b028c}{%
+           family={Sandberg},
+           familyi={S\bibinitperiod},
+           given={Frode},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{f00304fde081182a4695a4f4d01b028c}
+      \strng{fullhash}{f00304fde081182a4695a4f4d01b028c}
+      \strng{bibnamehash}{f00304fde081182a4695a4f4d01b028c}
+      \strng{authorbibnamehash}{f00304fde081182a4695a4f4d01b028c}
+      \strng{authornamehash}{f00304fde081182a4695a4f4d01b028c}
+      \strng{authorfullhash}{f00304fde081182a4695a4f4d01b028c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Evaluating {{OpenTelemetry}}'s {{Impact}} on {{Performance}} in {{Microservice Architectures}}}
+    \endentry
+    \entry{sharmaEBPFEnhancedCompleteObservability2024}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=bdc61d8092bfa90d5ffe9e79e8b252b8}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Bhavye},
+           giveni={B\bibinitperiod}}}%
+        {{hash=2e48217a8688e38796cd2e18715575a7}{%
+           family={Nadig},
+           familyi={N\bibinitperiod},
+           given={Deepak},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f21d8c4045a383b251ada78b058c895a}
+      \strng{fullhash}{f21d8c4045a383b251ada78b058c895a}
+      \strng{bibnamehash}{f21d8c4045a383b251ada78b058c895a}
+      \strng{authorbibnamehash}{f21d8c4045a383b251ada78b058c895a}
+      \strng{authornamehash}{f21d8c4045a383b251ada78b058c895a}
+      \strng{authorfullhash}{f21d8c4045a383b251ada78b058c895a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{{ICC}} 2024 - {{IEEE International Conference}} on {{Communications}}}
+      \field{issn}{1938-1883}
+      \field{month}{6}
+      \field{title}{{{eBPF-Enhanced Complete Observability Solution}} for {{Cloud-native Microservices}}}
+      \field{year}{2024}
+      \field{pages}{1980\bibrangedash 1985}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICC51166.2024.10622329
+      \endverb
+    \endentry
+    \entry{sharmaIMPROVINGMICROSERVICESOBSERVABILITY2023}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=bdc61d8092bfa90d5ffe9e79e8b252b8}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Bhavye},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Purdue University Graduate School}%
+      }
+      \strng{namehash}{bdc61d8092bfa90d5ffe9e79e8b252b8}
+      \strng{fullhash}{bdc61d8092bfa90d5ffe9e79e8b252b8}
+      \strng{bibnamehash}{bdc61d8092bfa90d5ffe9e79e8b252b8}
+      \strng{authorbibnamehash}{bdc61d8092bfa90d5ffe9e79e8b252b8}
+      \strng{authornamehash}{bdc61d8092bfa90d5ffe9e79e8b252b8}
+      \strng{authorfullhash}{bdc61d8092bfa90d5ffe9e79e8b252b8}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{{{IMPROVING MICROSERVICES OBSERVABILITY IN CLOUD-NATIVE INFRASTRUCTURE USING EBPF}}}
+      \field{type}{Thesis}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.25394/PGS.22682623.v1
+      \endverb
+    \endentry
+    \entry{soldaniEBPFNewApproach2023}{article}{}
+      \name{author}{9}{}{%
+        {{hash=098c68ac0ac23d34599c217e8a41d6ec}{%
+           family={Soldani},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=45f588207c1409de70835ae49f194e34}{%
+           family={Nahi},
+           familyi={N\bibinitperiod},
+           given={Petrit},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0dacf6dfd0cb8d0ca0c78064550cb294}{%
+           family={Bour},
+           familyi={B\bibinitperiod},
+           given={Hami},
+           giveni={H\bibinitperiod}}}%
+        {{hash=242c63f7c78f02f0c7ab01a48e7edb91}{%
+           family={Jafarizadeh},
+           familyi={J\bibinitperiod},
+           given={Saber},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ad5fc7ffa9f44d0a6732053945872b7e}{%
+           family={Soliman},
+           familyi={S\bibinitperiod},
+           given={Mohammed\bibnamedelima F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=09fc960d482b1ad5094f41f35ce749d0}{%
+           family={Di\bibnamedelima Giovanna},
+           familyi={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Leonardo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=1ee805e98be99efb02ad473167d14424}{%
+           family={Monaco},
+           familyi={M\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d971a5af4f5f54d9c36c3ed297d65b2c}{%
+           family={Ognibene},
+           familyi={O\bibinitperiod},
+           given={Giuseppe},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e5b4c0ff5d267573271e9b14aeb05113}{%
+           family={Risso},
+           familyi={R\bibinitperiod},
+           given={Fulvio},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{19084bf0359bb58171a5996af10fc8cf}
+      \strng{fullhash}{7a4786a72f9c0fbf591160516b9a39f2}
+      \strng{bibnamehash}{19084bf0359bb58171a5996af10fc8cf}
+      \strng{authorbibnamehash}{19084bf0359bb58171a5996af10fc8cf}
+      \strng{authornamehash}{19084bf0359bb58171a5996af10fc8cf}
+      \strng{authorfullhash}{7a4786a72f9c0fbf591160516b9a39f2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{2169-3536}
+      \field{journaltitle}{IEEE Access}
+      \field{shorttitle}{{{eBPF}}}
+      \field{title}{{{eBPF}}: {{A New Approach}} to {{Cloud-Native Observability}}, {{Networking}} and {{Security}} for {{Current}} ({{5G}}) and {{Future Mobile Networks}} ({{6G}} and {{Beyond}})}
+      \field{volume}{11}
+      \field{year}{2023}
+      \field{pages}{57174\bibrangedash 57202}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2023.3281480
+      \endverb
+    \endentry
+    \entry{tanResearchLightweightService2023}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=3e6899c8c8dd99294364ea33fe751be9}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Yukai},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=00e792548c71139fa77a9f28bf9d407c}{%
+           family={Quan},
+           familyi={Q\bibinitperiod},
+           given={Shuo},
+           giveni={S\bibinitperiod}}}%
+        {{hash=396ab22e3b4b85bc45a9caf2737529eb}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Zeya},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=71edd88034e9c5ddbc7d389f1ade7365}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Shen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{16949e0c0388b829259a4ec8921cab0f}
+      \strng{fullhash}{bc8a65e07d156806691a67a05308d991}
+      \strng{bibnamehash}{bc8a65e07d156806691a67a05308d991}
+      \strng{authorbibnamehash}{bc8a65e07d156806691a67a05308d991}
+      \strng{authornamehash}{16949e0c0388b829259a4ec8921cab0f}
+      \strng{authorfullhash}{bc8a65e07d156806691a67a05308d991}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2023 4th {{International Conference}} on {{Computer Engineering}} and {{Application}} ({{ICCEA}})}
+      \field{issn}{2159-1288}
+      \field{month}{4}
+      \field{title}{Research on {{A Lightweight Service Mesh Architecture Using eBPF}}}
+      \field{year}{2023}
+      \field{pages}{52\bibrangedash 55}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICCEA58433.2023.10135394
+      \endverb
+    \endentry
+    \entry{taylorOpenFormatScalable2020}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=c3d4e6794340def2b20677fef1a1514a}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Teryl},
+           giveni={T\bibinitperiod}}}%
+        {{hash=97d3eec47b0b4ca49c1a21417bb3ffc9}{%
+           family={Araujo},
+           familyi={A\bibinitperiod},
+           given={Frederico},
+           giveni={F\bibinitperiod}}}%
+        {{hash=f038cc36990b06957b94359566562b14}{%
+           family={Shu},
+           familyi={S\bibinitperiod},
+           given={Xiaokui},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{f621776e15d7aa7a83ea22a5018e06b8}
+      \strng{fullhash}{f621776e15d7aa7a83ea22a5018e06b8}
+      \strng{bibnamehash}{f621776e15d7aa7a83ea22a5018e06b8}
+      \strng{authorbibnamehash}{f621776e15d7aa7a83ea22a5018e06b8}
+      \strng{authornamehash}{f621776e15d7aa7a83ea22a5018e06b8}
+      \strng{authorfullhash}{f621776e15d7aa7a83ea22a5018e06b8}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 {{IEEE International Conference}} on {{Big Data}} ({{Big Data}})}
+      \field{month}{12}
+      \field{title}{Towards an {{Open Format}} for {{Scalable System Telemetry}}}
+      \field{year}{2020}
+      \field{pages}{1031\bibrangedash 1040}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/BigData50022.2020.9378294
+      \endverb
+    \endentry
+    \entry{TraceWeaverDistributedRequest}{misc}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{shorttitle}
+      \field{howpublished}{https://dl.acm.org/doi/epdf/10.1145/3651890.3672254}
+      \field{shorttitle}{{{TraceWeaver}}}
+      \field{title}{{{TraceWeaver}}: {{Distributed Request Tracing}} for {{Microservices Without Application Modification}}}
+      \verb{doi}
+      \verb 10.1145/3651890.3672254
+      \endverb
+    \endentry
+    \entry{usmanDESKDistributedObservability2023}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=9b188d486913142cb26c6acb66a85531}{%
+           family={Usman},
+           familyi={U\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b952f314829e25ffe26d52502b4c7bc1}{%
+           family={Ferlin},
+           familyi={F\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9843cfd8391865c184f5c70856d97f01}{%
+           family={Brunstrom},
+           familyi={B\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d27c02b38e0f9391739cc9bcc0474ebe}{%
+           family={Taheri},
+           familyi={T\bibinitperiod},
+           given={Javid},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e3606fc9f562f01944798cee98e9a89}
+      \strng{fullhash}{a5461e305c346846f202bda31614e6ab}
+      \strng{bibnamehash}{a5461e305c346846f202bda31614e6ab}
+      \strng{authorbibnamehash}{a5461e305c346846f202bda31614e6ab}
+      \strng{authornamehash}{2e3606fc9f562f01944798cee98e9a89}
+      \strng{authorfullhash}{a5461e305c346846f202bda31614e6ab}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{booktitle}{2023 {{Joint European Conference}} on {{Networks}} and {{Communications}} \& {{6G Summit}} ({{EuCNC}}/{{6G Summit}})}
+      \field{issn}{2575-4912}
+      \field{month}{6}
+      \field{shorttitle}{{{DESK}}}
+      \field{title}{{{DESK}}: {{Distributed Observability Framework}} for {{Edge-Based Containerized Microservices}}}
+      \field{year}{2023}
+      \field{pages}{617\bibrangedash 622}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/EuCNC/6GSummit58263.2023.10188344
+      \endverb
+    \endentry
+    \entry{opentelemetryCollectorDocs}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0eb461beebb1085099be94b0796ad6d3}{%
+           family={{OpenTelemetry Authors}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{0eb461beebb1085099be94b0796ad6d3}
+      \strng{fullhash}{0eb461beebb1085099be94b0796ad6d3}
+      \strng{bibnamehash}{0eb461beebb1085099be94b0796ad6d3}
+      \strng{authorbibnamehash}{0eb461beebb1085099be94b0796ad6d3}
+      \strng{authornamehash}{0eb461beebb1085099be94b0796ad6d3}
+      \strng{authorfullhash}{0eb461beebb1085099be94b0796ad6d3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Official documentation describing collector deployment patterns, configuration options, and operational considerations}
+      \field{title}{{{OpenTelemetry Collector}}: {{Architecture}} and {{Deployment Patterns}}}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://opentelemetry.io/docs/collector/
+      \endverb
+      \verb{url}
+      \verb https://opentelemetry.io/docs/collector/
+      \endverb
+    \endentry
+    \entry{prometheusOperationalGuide}{online}{}
+      \name{author}{1}{}{%
+        {{hash=6cf8f74708cd9ab082f17d5df3da9242}{%
+           family={{Prometheus Authors}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cf8f74708cd9ab082f17d5df3da9242}
+      \strng{fullhash}{6cf8f74708cd9ab082f17d5df3da9242}
+      \strng{bibnamehash}{6cf8f74708cd9ab082f17d5df3da9242}
+      \strng{authorbibnamehash}{6cf8f74708cd9ab082f17d5df3da9242}
+      \strng{authornamehash}{6cf8f74708cd9ab082f17d5df3da9242}
+      \strng{authorfullhash}{6cf8f74708cd9ab082f17d5df3da9242}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Operational guidelines for pull-based metric collection, service discovery, and deployment patterns}
+      \field{title}{Prometheus: {{Operational Aspects}}}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://prometheus.io/docs/introduction/overview/
+      \endverb
+      \verb{url}
+      \verb https://prometheus.io/docs/introduction/overview/
+      \endverb
+    \endentry
+    \entry{grafanaLokiDocs}{online}{}
+      \name{author}{1}{}{%
+        {{hash=92d1002bbeda9145e9369766ab6d96a9}{%
+           family={{Grafana Labs}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{fullhash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{bibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authorbibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authornamehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authorfullhash}{92d1002bbeda9145e9369766ab6d96a9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Technical documentation describing log aggregation architecture, indexing strategies, and storage trade-offs}
+      \field{title}{Grafana {{Loki}}: {{Log Aggregation System}}}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://grafana.com/docs/loki/latest/
+      \endverb
+      \verb{url}
+      \verb https://grafana.com/docs/loki/latest/
+      \endverb
+    \endentry
+    \entry{datadogHybridCloud}{online}{}
+      \name{author}{1}{}{%
+        {{hash=3983159b26a23291e755be54ac03be23}{%
+           family={{Datadog}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{3983159b26a23291e755be54ac03be23}
+      \strng{fullhash}{3983159b26a23291e755be54ac03be23}
+      \strng{bibnamehash}{3983159b26a23291e755be54ac03be23}
+      \strng{authorbibnamehash}{3983159b26a23291e755be54ac03be23}
+      \strng{authornamehash}{3983159b26a23291e755be54ac03be23}
+      \strng{authorfullhash}{3983159b26a23291e755be54ac03be23}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Technical blog and whitepapers discussing agent deployment models and observability across hybrid infrastructure}
+      \field{title}{Hybrid {{Cloud Monitoring}}: {{Best Practices}}}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.datadoghq.com/blog/
+      \endverb
+      \verb{url}
+      \verb https://www.datadoghq.com/blog/
+      \endverb
+    \endentry
+    \entry{dynatraceObservability}{online}{}
+      \name{author}{1}{}{%
+        {{hash=5e6df72aa62dc025da4085db6bf5027f}{%
+           family={{Dynatrace}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{5e6df72aa62dc025da4085db6bf5027f}
+      \strng{fullhash}{5e6df72aa62dc025da4085db6bf5027f}
+      \strng{bibnamehash}{5e6df72aa62dc025da4085db6bf5027f}
+      \strng{authorbibnamehash}{5e6df72aa62dc025da4085db6bf5027f}
+      \strng{authornamehash}{5e6df72aa62dc025da4085db6bf5027f}
+      \strng{authorfullhash}{5e6df72aa62dc025da4085db6bf5027f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Technical documentation on agent deployment in customer-managed environments and multi-tenant observability}
+      \field{title}{Enterprise {{Observability Architecture}}}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.dynatrace.com/docs
+      \endverb
+      \verb{url}
+      \verb https://docs.dynatrace.com/docs
+      \endverb
+    \endentry
+    \entry{elasticObservability}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a078ed5ade8df4aac54efbdb57e63ad2}{%
+           family={{Elastic}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{fullhash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{bibnamehash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{authorbibnamehash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{authornamehash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{authorfullhash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Documentation describing hybrid push-pull patterns, agent architecture, and enterprise deployment considerations}
+      \field{title}{Elastic {{Observability}}: {{Architecture}} and {{Deployment}}}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.elastic.co/guide/en/observability/current/index.html
+      \endverb
+      \verb{url}
+      \verb https://www.elastic.co/guide/en/observability/current/index.html
+      \endverb
+    \endentry
+    \entry{jenkinsObservability}{online}{}
+      \name{author}{1}{}{%
+        {{hash=02a38d66196ea8b07ce61d8ab979e6c4}{%
+           family={{Jenkins Project}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{02a38d66196ea8b07ce61d8ab979e6c4}
+      \strng{fullhash}{02a38d66196ea8b07ce61d8ab979e6c4}
+      \strng{bibnamehash}{02a38d66196ea8b07ce61d8ab979e6c4}
+      \strng{authorbibnamehash}{02a38d66196ea8b07ce61d8ab979e6c4}
+      \strng{authornamehash}{02a38d66196ea8b07ce61d8ab979e6c4}
+      \strng{authorfullhash}{02a38d66196ea8b07ce61d8ab979e6c4}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Official documentation on pipeline observability, logging practices, and troubleshooting workflows}
+      \field{title}{Jenkins: {{Monitoring}} and {{Observability}}}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.jenkins.io/doc/book/system-administration/monitoring/
+      \endverb
+      \verb{url}
+      \verb https://www.jenkins.io/doc/book/system-administration/monitoring/
+      \endverb
+    \endentry
+    \entry{gitlabObservability}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cf0a6993a4b526850302726c7cca0e7f}{%
+           family={{GitLab}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf0a6993a4b526850302726c7cca0e7f}
+      \strng{fullhash}{cf0a6993a4b526850302726c7cca0e7f}
+      \strng{bibnamehash}{cf0a6993a4b526850302726c7cca0e7f}
+      \strng{authorbibnamehash}{cf0a6993a4b526850302726c7cca0e7f}
+      \strng{authornamehash}{cf0a6993a4b526850302726c7cca0e7f}
+      \strng{authorfullhash}{cf0a6993a4b526850302726c7cca0e7f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Platform documentation describing log-based troubleshooting and pipeline monitoring capabilities}
+      \field{title}{{{GitLab CI/CD}}: {{Observability}} and {{Monitoring}}}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.gitlab.com/ee/ci/
+      \endverb
+      \verb{url}
+      \verb https://docs.gitlab.com/ee/ci/
+      \endverb
+    \endentry
+    \entry{jenkinsOpenTelemetry}{online}{}
+      \name{author}{1}{}{%
+        {{hash=02a38d66196ea8b07ce61d8ab979e6c4}{%
+           family={{Jenkins Project}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{02a38d66196ea8b07ce61d8ab979e6c4}
+      \strng{fullhash}{02a38d66196ea8b07ce61d8ab979e6c4}
+      \strng{bibnamehash}{02a38d66196ea8b07ce61d8ab979e6c4}
+      \strng{authorbibnamehash}{02a38d66196ea8b07ce61d8ab979e6c4}
+      \strng{authornamehash}{02a38d66196ea8b07ce61d8ab979e6c4}
+      \strng{authorfullhash}{02a38d66196ea8b07ce61d8ab979e6c4}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Plugin documentation for distributed tracing integration in Jenkins pipelines}
+      \field{title}{Jenkins {{OpenTelemetry Plugin}}}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://plugins.jenkins.io/opentelemetry/
+      \endverb
+      \verb{url}
+      \verb https://plugins.jenkins.io/opentelemetry/
       \endverb
     \endentry
   \enddatalist
