@@ -25,10 +25,9 @@ Core search queries will combine terms from three concept groups using Boolean o
 Example query structure: (\textit{observability} OR \textit{monitoring} OR \textit{telemetry}) AND (\textit{container} OR \textit{containerized} OR \textit{non‑privileged}) AND (\textit{CI/CD} OR \textit{reliability} OR \textit{incident response})
 
 \textbf{Inclusion and exclusion criteria:}
-\begin{itemize}
-    \item \textbf{Inclusion:} Peer-reviewed publications from 2018 to 2025, technical reports and documentation addressing container telemetry collection, instrumentation patterns, performance evaluation, or reliability improvement in constrained or heterogeneous environments, comparative studies of observability approaches, and empirical evaluations of monitoring overhead
-    \item \textbf{Exclusion:} Publications exclusively focused on privileged host access patterns without discussion of constraints, cloud-provider-specific solutions that cannot generalize to on-premise infrastructure, purely theoretical work without practical implementation guidance, and papers predating 2018 (unless seminal works establishing foundational concepts)
-\end{itemize}
+\textit{Inclusion:} Peer-reviewed publications (2018 to 2025), technical reports on container telemetry, instrumentation patterns, performance evaluation, reliability improvement in constrained environments, comparative observability studies, and empirical overhead evaluations.
+
+\textit{Exclusion:} Publications requiring privileged host access without constraint discussion, cloud-provider-specific solutions not generalizing to on-premise infrastructure, purely theoretical work lacking practical guidance, papers before 2018 (except seminal works).
 
 \textbf{Selection process:}
 Literature selection followed a three‑stage process: (1) title and abstract screening to identify potentially relevant sources, (2) full‑text review to assess relevance against inclusion/exclusion criteria, and (3) quality assessment focusing on methodological rigor, reproducibility, and applicability to constrained environments. Reference chaining (backward and forward citation tracking) supplemented database searches to identify additional relevant work.
