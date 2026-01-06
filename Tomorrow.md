@@ -4,7 +4,7 @@
 
 Get a **bounded starter set** of industry (non-academic) articles about **CI/CD observability** so I can extract "industry cards" and have momentum tomorrow.
 
-**Stop condition:** stop after **10 industry cards** (even if more exist).
+**Stop condition:** stop after **20 industry cards** (even if more exist).
 
 ---
 
@@ -85,7 +85,7 @@ If a result is marketing-only, skip it and open the next result.
 #### Jenkins
 
 - `site:jenkins.io monitoring`
-- `site:jenkins.io blog pipeline troubleshooting`
+- `site:jenkins.io blog pipeline tracing`
 - `site:plugins.jenkins.io monitoring`
 
 #### Grafana / Logs

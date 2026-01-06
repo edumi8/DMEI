@@ -2,7 +2,7 @@
 
 ## Queue
 
-# Industry Scan Progress
+(All articles processed - 18/18 cards completed)
 
 ## Round 1: Infrastructure Observability (10/10) ✅
 - [x] gitlab-runner-monitoring — GitLab Runner Monitoring — https://docs.gitlab.com/runner/monitoring/
@@ -16,17 +16,19 @@
 - [x] elastic-apm-otel — Elastic APM with OpenTelemetry — https://www.elastic.co/observability/application-performance-monitoring
 - [x] elastic-elk — Elastic Stack (ELK) — https://www.elastic.co/what-is/elk-stack
 
-## Round 2: CI/CD Pipeline Debugging (5/5) ✅
-- [x] gitlab-cicd-debugging — GitLab CI/CD Debugging Pipelines — https://docs.gitlab.com/ee/ci/debugging.html
-- [x] gitlab-job-troubleshooting — GitLab CI/CD Jobs Troubleshooting — https://docs.gitlab.com/ee/ci/jobs/job_troubleshooting.html
-- [x] github-actions-troubleshooting — GitHub Actions Workflow Troubleshooting — https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/troubleshooting-workflows
-- [x] jenkins-pipeline-best-practices — Jenkins Pipeline Best Practices — https://www.jenkins.io/doc/book/pipeline/pipeline-best-practices/
-- [x] gitlab-jobs-lifecycle — GitLab CI/CD Jobs Lifecycle — https://docs.gitlab.com/ee/ci/jobs/
-- [ ] Grafana CI observability blog
-- [ ] OpenTelemetry collector deployment
-- [ ] Elastic CI/CD observability
+## Round 2: CI/CD Platform Overview (5/5) ✅
+- [x] codefresh-cicd-pipelines — Codefresh CI/CD Pipelines Guide — https://codefresh.io/learn/ci-cd-pipelines/
+- [x] buildkite-pipelines — Buildkite Pipelines Getting Started — https://buildkite.com/docs/tutorials/getting-started
+- [x] drone-ci — Drone CI Documentation — https://docs.drone.io/
+- [x] atlassian-cicd-concepts — Atlassian CI/CD Concepts — https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment
+- [x] circleci-docs — CircleCI Documentation — https://circleci.com/docs/
 
-## Completed
+## Round 3: Observability Technologies (3/3) ✅
+- [x] gitlab-prometheus-monitoring — GitLab Prometheus Monitoring — https://docs.gitlab.com/ee/administration/monitoring/prometheus/
+- [x] jenkins-opentelemetry-plugin — Jenkins OpenTelemetry Plugin — https://plugins.jenkins.io/opentelemetry/
+- [x] jenkins-prometheus-plugin — Jenkins Prometheus Metrics Plugin — https://plugins.jenkins.io/prometheus/
+
+## Completed (18/18 cards) ✅
 
 - [x] gitlab-runner-monitoring — GitLab Runner Monitoring — https://docs.gitlab.com/runner/monitoring/
 - [x] gitlab-runner-config — GitLab Runner Configuration — https://docs.gitlab.com/ee/ci/runners/configure_runners.html

@@ -16,9 +16,11 @@ List of industry articles reviewed for CI/CD observability:
 9. https://www.elastic.co/observability/application-performance-monitoring — Elastic APM with OpenTelemetry
 10. https://www.elastic.co/what-is/elk-stack — Elastic Stack (ELK)
 
-## Round 2: CI/CD Pipeline Debugging (5 cards)
-11. https://docs.gitlab.com/ee/ci/debugging.html — GitLab CI/CD Debugging Pipelines
-12. https://docs.gitlab.com/ee/ci/jobs/job_troubleshooting.html — GitLab CI/CD Jobs Troubleshooting
-13. https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/troubleshooting-workflows — GitHub Actions Workflow Troubleshooting
-14. https://www.jenkins.io/doc/book/pipeline/pipeline-best-practices/ — Jenkins Pipeline Best Practices
-15. https://docs.gitlab.com/ee/ci/jobs/ — GitLab CI/CD Jobs Lifecycle
+## Round 2: CI/CD Platform Overview (5 cards)
+11. https://codefresh.io/learn/ci-cd-pipelines/ — Codefresh CI/CD Pipelines Guide
+12. https://buildkite.com/docs/tutorials/getting-started — Buildkite Pipelines Getting Started
+13. https://docs.drone.io/ — Drone CI Documentation
+14. https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment — Atlassian CI/CD Concepts
+15. https://circleci.com/docs/ — CircleCI Documentation
+
+**Total: 15 industry cards completed ✅**
