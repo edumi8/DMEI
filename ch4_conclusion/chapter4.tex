@@ -3,13 +3,13 @@
 \chapter{Conclusion and Next Steps}
 \label{chap:Chapter4}
 
-This chapter concludes the \ac{PREPD} phase, establishing the foundation for thesis execution. No results, findings, or experimental outcomes are presented, as empirical work will be conducted during the dissertation phase.
+This chapter concludes the \ac{PREPD} phase. The preparation work presented in this document establishes the foundation for thesis execution. No results, findings, or experimental outcomes are presented, as empirical work will be conducted during the subsequent dissertation phase.
 
 \section{Synthesis of Preparation Work}
 
 Chapter~\ref{chap:Chapter1} framed the research problem: observability in containerized \ac{CICD} platforms under non\-privileged access constraints and heterogeneous infrastructure. The problem arises from the gap between standard monitoring assumptions (host administrative access, privileged containers, cloud\-managed platforms) and organizational realities where such capabilities are unavailable. The central research question examines how an integrated observability framework can be designed and evaluated to improve reliability and reduce incident response times under these constraints.
 
-Chapter~\ref{chap:Chapter2} synthesized the state of the art through systematic literature review following \ac{PRISMA} guidelines. The review identified relevant observability patterns, instrumentation techniques, and evaluation approaches. The synthesis established that while observability frameworks for cloud\-native environments are extensively documented, approaches specifically addressing non\-privileged containerized deployments in heterogeneous infrastructure remain underexplored.
+Chapter~\ref{chap:Chapter2} synthesized the state of the art through systematic literature review following \ac{PRISMA} guidelines. The review identified relevant observability patterns, instrumentation techniques, and evaluation approaches documented in prior work. The synthesis established that while observability frameworks for cloud\-native environments are extensively documented, approaches addressing non\-privileged containerized deployments in heterogeneous infrastructure remain underexplored in the literature.
 
 Chapter~\ref{chap:Chapter3} defined the project methodology and execution strategy. The approach centers on engineering\-oriented research involving design, implementation, and evaluation of a container\-first observability solution. Planned artifacts include reference architecture, prototype implementation, automation assets, evaluation protocol, and documentation package. The evaluation strategy specifies assessment dimensions: feasibility under constraints, operational overhead, observability usefulness, and maintainability.
 
@@ -25,7 +25,7 @@ The thesis execution phase will implement and evaluate the planned solution. Imm
 	\item Collect and analyze measurement data, prepare dissertation chapters documenting implementation, evaluation findings, and implications.
 \end{itemize}
 
-Validation targets include quantitative metrics (\ac{MTTD}, \ac{MTTR}), telemetry pipeline throughput, alert precision and detection coverage via fault injection, and instrumentation overhead quantification with operational target below 5\% where feasible. These targets will be operationalized through specific measurement procedures documented in the evaluation protocol. Analysis will be restricted to tested contexts without overgeneralization.
+Validation targets defined in project planning include quantitative metrics (\ac{MTTD}, \ac{MTTR}), telemetry pipeline throughput verification, alert precision and detection coverage assessment via fault injection, and instrumentation overhead quantification with an operational target below 5\% where feasible. These targets are operationalized through specific measurement procedures and acceptance criteria documented in the evaluation protocol. Analysis is restricted to tested contexts without overgeneralization.
 
 The work documented in this \ac{PREPD} confirms readiness to proceed with thesis execution. All preparatory activities required to initiate implementation and evaluation have been completed.
 
