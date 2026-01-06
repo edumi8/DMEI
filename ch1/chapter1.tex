@@ -27,7 +27,7 @@ Two organizational constraints fundamentally shape the problem space. First, ope
 
 These constraints create a gap between operational needs and available deployment options. Many standard monitoring approaches require capabilities that are unavailable in this environment: host\-level access for system metrics, privileged container execution for kernel instrumentation, or the ability to modify service container images. The organization currently relies on application\-level logs accessed through Docker CLI commands, manual inspection of container resource usage and reactive troubleshooting after incidents are reported by end users. This reactive posture results in prolonged incident detection (often measured in hours rather than minutes) and diagnosis cycles that require coordinated investigation across multiple disconnected log sources.
 
-The practical impact manifests in three measurable ways: delayed detection of service degradation until user complaints escalate, extended root cause analysis requiring manual correlation of logs from five or more services, and inability to establish proactive capacity planning due to lack of historical resource utilization data. Development teams experience unpredictable pipeline failures attributed to infrastructure issues that operations teams cannot rapidly diagnose or prevent.
+The practical impact manifests in three ways: delayed detection of service degradation until user complaints escalate, extended root cause analysis requiring manual correlation of logs from five or more services, and inability to establish proactive capacity planning due to lack of historical resource utilization data. Development teams experience unpredictable pipeline failures attributed to infrastructure issues that operations teams cannot rapidly diagnose or prevent.
 
 \section{Problem Statement}
 
@@ -53,7 +53,7 @@ These incidents share common characteristics: detection relies on user reports r
 
 
 \subsection{Scope and Boundaries}
-This research is explicitly scoped to non\-privileged containerized environments with mixed operating systems (Linux and Windows). The investigation examines container\-first observability patterns and does not address scenarios where host\-level access or privileged execution is available. The work focuses on \ac{CICD} platform services (source control, build automation, static analysis) rather than general\-purpose application monitoring. Evaluation will be conducted within a single organizational context; generalizability to other constraint patterns and organizational settings remains to be established through future research.
+This research is scoped to non\-privileged containerized environments with mixed operating systems (Linux and Windows). The investigation examines container\-first observability patterns and does not address scenarios where host\-level access or privileged execution is available. The work focuses on \ac{CICD} platform services (source control, build automation, static analysis) rather than general\-purpose application monitoring. Evaluation will be conducted within a single organizational context; generalizability to other constraint patterns and organizational settings remains to be established through future research.
 
 \section{Intended Contributions}
 The primary contributions planned for this project are:
@@ -74,7 +74,7 @@ The objectives guiding this project are:
     \item \textbf{O5 Reproducibility and guidance:} Provide configuration templates, deployment scripts and documented procedures for constrained on\-premise environments. Include decision criteria for tool selection and deployment pattern choices, subject to validation through practitioner feedback.
 \end{itemize}
 
-Each objective is defined with measurable outcomes and explicit deliverables. Objective O3 includes concrete measurement procedures (baseline collection, controlled fault injection, paired comparisons) to support quantitative assessment rather than qualitative description. Objective O4 establishes an explicit threshold (5\% overhead target) to guide evaluation and inform adoption decisions; the research will assess whether this threshold can be achieved in practice.
+Each objective is defined with measurable outcomes and explicit deliverables. Objective O3 includes concrete measurement procedures (baseline collection, controlled fault injection, paired comparisons) to support quantitative assessment. Objective O4 establishes an explicit threshold (5\% overhead target) to guide evaluation and inform adoption decisions; the research will assess whether this threshold can be achieved in practice.
 
 \section{Research Questions}
 This project addresses the following questions:
@@ -95,7 +95,7 @@ This project follows a design science research approach~\cite{hevner2004design},
     \item[Phase 5 (Evaluation and Validation):] Quantitative evaluation of \ac{MTTD}, \ac{MTTR} and instrumentation overhead through controlled fault\-injection experiments with documented baseline measurements. Qualitative validation through structured practitioner interviews captures operational acceptability and deployment constraints not reproducible in laboratory conditions.
 \end{description}
 
-The methodology balances artifact creation (reference architecture and prototype) with empirical validation (quantitative metrics and qualitative feedback). Quantitative evaluation establishes measurable outcomes; qualitative data addresses operational acceptability and real\-world deployment considerations that quantitative metrics alone cannot capture.
+The methodology balances artifact creation (reference architecture and prototype) with empirical validation (quantitative metrics and qualitative feedback). Quantitative evaluation establishes measurable outcomes; qualitative data addresses operational acceptability and deployment considerations that quantitative metrics alone cannot capture.
 
 \section{Ethical Considerations}
 This research involves human subjects activities (structured practitioner interviews) and access to operational telemetry data. All activities will follow institutional ethical review procedures and approved protocols. Ethical clearance will be obtained before commencing interviews or collecting operational data. Participants will provide documented informed consent, and will be informed of their right to withdraw at any stage. Interview data and operational telemetry will be anonymized to remove identifying information (names, email addresses, specific host identifiers). Data handling will conform to institutional policies and applicable data protection regulations, including GDPR where relevant.
