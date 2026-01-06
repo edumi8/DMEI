@@ -15,9 +15,14 @@ A systematic literature review following \ac{PRISMA} guidelines ensures comprehe
 \end{itemize}
 
 \textbf{Search terms and queries:}
-Core queries combine three concept groups: (1) observability concepts (``observability'', ``monitoring'', ``telemetry'', ``tracing''), (2) container context (``container'', ``Docker'', ``non‑privileged'', ``sidecar''), and (3) application domain (``CI/CD'', ``continuous integration'', ``reliability'', ``MTTD'', ``MTTR'').
+Core search queries will combine terms from three concept groups using Boolean operators:
+\begin{enumerate}
+    \item \textit{Observability concepts:} ``observability'', ``monitoring'', ``telemetry'', ``instrumentation'', ``metrics'', ``logging'', ``tracing'', ``distributed tracing''
+    \item \textit{Container and deployment context:} ``container'', ``containerized'', ``Docker'', ``non‑privileged'', ``unprivileged'', ``sidecar'', ``agent''
+    \item \textit{Application domain:} ``CI/CD'', ``continuous integration'', ``continuous deployment'', ``DevOps'', ``reliability'', ``incident response'', ``MTTD'', ``MTTR''
+\end{enumerate}
 
-Example: (\textit{observability} OR \textit{monitoring}) AND (\textit{container} OR \textit{non‑privileged}) AND (\textit{CI/CD} OR \textit{reliability})
+Example query structure: (\textit{observability} OR \textit{monitoring} OR \textit{telemetry}) AND (\textit{container} OR \textit{containerized} OR \textit{non‑privileged}) AND (\textit{CI/CD} OR \textit{reliability} OR \textit{incident response})
 
 \textbf{Inclusion and exclusion criteria:}
 \textit{Inclusion:} Peer-reviewed publications (2018 to 2025), technical reports on container telemetry, instrumentation patterns, performance evaluation, reliability improvement in constrained environments, comparative observability studies, and empirical overhead evaluations.
