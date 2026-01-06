@@ -11,7 +11,7 @@ The project objectives and scope defined in Chapter~\ref{chap:Chapter1} remain a
 \section{Methodological Approach}
 \label{sec:ch3_method}
 
-The project is planned as an engineering-oriented research effort centered on the design, implementation, and evaluation of a container-first observability solution that can operate under the practical constraints identified in Chapter~\ref{chap:Chapter1}. The chosen approach is pragmatic and iterative: requirements and constraints inform successive design decisions, which are validated through a combination of controlled experimentation and practitioner-oriented feedback.
+The project is planned as an engineering-oriented research effort centered on the design, implementation, and evaluation of a container-first observability solution that operates under the practical constraints identified in Chapter~\ref{chap:Chapter1}. The chosen approach is pragmatic and iterative: requirements and constraints inform successive design decisions, which are validated through controlled experimentation and practitioner-oriented feedback.
 
 \subsection{Planned Artifacts}
 \label{sec:ch3_artifacts}
@@ -28,20 +28,20 @@ The project will produce a set of artifacts intended to be directly auditable an
 \subsection{Development Process and Traceability}
 \label{sec:ch3_process}
 
-The development process is intended to ensure traceability from constraints to design decisions and from design decisions to evaluation evidence:
+The development process ensures traceability from constraints to design decisions and from design decisions to evaluation evidence:
 \begin{itemize}
-    \item \textbf{Constraint-to-design mapping:} constraints (e.g., limited privileges, heterogeneous execution environments) will be mapped to explicit architectural and implementation decisions.
-    \item \textbf{Iterative refinement:} the architecture and prototype will be developed in short iterations, each concluding with a review of the produced artifact increment and the update of open issues.
-    \item \textbf{Configuration management:} all artifacts will be maintained under version control, including deployment manifests, configuration, and evaluation scripts.
-    \item \textbf{Acceptance criteria:} each major deliverable will be associated with objective acceptance criteria (e.g., successful deployment steps, reproducible execution of an experiment, completeness of documentation).
+    \item \textbf{Constraint-to-design mapping:} constraints (e.g., limited privileges, heterogeneous execution environments) are mapped to explicit architectural and implementation decisions.
+    \item \textbf{Iterative refinement:} the architecture and prototype are developed in short iterations, each concluding with a review of the produced artifact increment and the update of open issues.
+    \item \textbf{Configuration management:} all artifacts are maintained under version control, including deployment manifests, configuration, and evaluation scripts.
+    \item \textbf{Acceptance criteria:} each major deliverable is associated with objective acceptance criteria (e.g., successful deployment steps, reproducible execution of an experiment, completeness of documentation).
 \end{itemize}
 
 \subsection{Planned Evaluation Strategy}
 \label{sec:ch3_evaluation}
 
-Evaluation will be planned to produce evidence that the proposed solution is feasible under the stated constraints and that it provides measurable utility when compared with a defined baseline. The evaluation design will be bounded to what can be executed within the dissertation schedule and the available infrastructure.
+Evaluation is planned to produce evidence that the proposed solution is feasible under the stated constraints and provides measurable utility when compared with a defined baseline. The evaluation design is bounded to what can be executed within the dissertation schedule and the available infrastructure.
 
-		\textbf{Evaluation dimensions.} The evaluation is intended to cover:
+		\textbf{Evaluation dimensions.} The evaluation covers:
 \begin{itemize}
     \item \textbf{Feasibility under constraints:} whether the deployment and operation steps are compatible with the assumed privilege and platform limitations.
     \item \textbf{Operational overhead:} resource consumption and performance overhead introduced by the solution (measured using a defined workload and baseline).
@@ -49,15 +49,15 @@ Evaluation will be planned to produce evidence that the proposed solution is fea
     \item \textbf{Maintainability and operability:} the clarity of configuration, deployment, and troubleshooting procedures as captured in the documentation.
 \end{itemize}
 
-		\textbf{Experimental design (planning level).} The experimental campaign will be structured as follows:
+		\textbf{Experimental design (planning level).} The experimental campaign is structured as follows:
 \begin{itemize}
-    \item \textbf{Baselines:} at least one baseline configuration will be defined to enable comparative measurements (e.g., no additional observability components, or minimal instrumentation).
-    \item \textbf{Workloads and scenarios:} a small set of representative workloads and fault/degradation scenarios will be specified to exercise logging, metrics, and tracing paths.
-    \item \textbf{Data collection:} procedures will be documented to collect resource metrics, request/trace metadata, and logs, ensuring consistent time windows and environment configuration.
-    \item \textbf{Analysis:} the analysis plan will define how measurements will be summarized and compared, and how qualitative observations will be recorded.
+    \item \textbf{Baselines:} at least one baseline configuration is defined to enable comparative measurements (e.g., no additional observability components, or minimal instrumentation).
+    \item \textbf{Workloads and scenarios:} a small set of representative workloads and fault/degradation scenarios are specified to exercise logging, metrics, and tracing paths.
+    \item \textbf{Data collection:} procedures are documented to collect resource metrics, request/trace metadata, and logs, ensuring consistent time windows and environment configuration.
+    \item \textbf{Analysis:} the analysis plan defines how measurements are summarized and compared, and how qualitative observations are recorded.
 \end{itemize}
 
-		\textbf{Practitioner feedback (planning level).} Where access and availability permit, the project will include structured feedback from practitioners (e.g., hosting organization stakeholders) using an interview or review protocol. The protocol will define eligibility, consent, the question guide, and how responses will be summarized (e.g., thematic coding at a coarse granularity) to support defensible qualitative claims.
+		\textbf{Practitioner feedback (planning level).} Where access and availability permit, the project includes structured feedback from practitioners (e.g., hosting organization stakeholders) using an interview or review protocol. The protocol defines eligibility, consent, the question guide, and how responses are summarized (e.g., thematic coding at a coarse granularity) to support defensible qualitative claims.
 
 \section{Skills Development Plan (PREPD)}
 \label{sec:ch3_skills}
@@ -234,19 +234,19 @@ Milestones are defined to support periodic assessment and early detection of sch
 \section{Project Monitoring and Management}
 \label{sec:ch3_monitoring}
 
-Project monitoring will be structured to ensure timely control of scope, schedule, and quality:
+Project monitoring is structured to ensure timely control of scope, schedule, and quality:
 \begin{itemize}
-    \item \textbf{Governance and roles:} responsibilities will be split between the student (execution and reporting), the academic advisor (scientific guidance and quality control), and the hosting institution supervisor (infrastructure coordination and practitioner feedback facilitation when applicable).
-    \item \textbf{Cadence:} meetings will be held regularly (e.g., bi-weekly with the academic advisor; weekly or as-needed with the hosting supervisor) to review progress against the plan and to unblock dependencies.
-    \item \textbf{Progress tracking:} a lightweight project log will be maintained, including tasks, deliverables, open issues, decisions, and risk status.
-    \item \textbf{Change control:} any scope adjustment will be documented with rationale, impact analysis (schedule/risk), and approval by the advisor.
-    \item \textbf{Quality control:} each milestone will include an acceptance review focused on reproducibility, completeness of documentation, and alignment with constraints.
+    \item \textbf{Governance and roles:} responsibilities are split between the student (execution and reporting), the academic advisor (scientific guidance and quality control), and the hosting institution supervisor (infrastructure coordination and practitioner feedback facilitation when applicable).
+    \item \textbf{Cadence:} meetings are held regularly (e.g., bi-weekly with the academic advisor; weekly or as-needed with the hosting supervisor) to review progress against the plan and to unblock dependencies.
+    \item \textbf{Progress tracking:} a lightweight project log is maintained, including tasks, deliverables, open issues, decisions, and risk status.
+    \item \textbf{Change control:} any scope adjustment is documented with rationale, impact analysis (schedule/risk), and approval by the advisor.
+    \item \textbf{Quality control:} each milestone includes an acceptance review focused on reproducibility, completeness of documentation, and alignment with constraints.
 \end{itemize}
 
 \section{Risk Management}
 \label{sec:ch3_risks}
 
-Risk management will be continuous and integrated with monitoring. Risks will be identified early, assessed by probability and impact, tracked through indicators, and mitigated through preventive actions. When mitigation is insufficient, a contingency plan will be activated to preserve the ability to complete the dissertation within the time constraints.
+Risk management is continuous and integrated with monitoring. Risks are identified early, assessed by probability and impact, tracked through indicators, and mitigated through preventive actions. When mitigation is insufficient, a contingency plan is activated to preserve the ability to complete the dissertation within the time constraints.
 
 To keep the assessment consistent and auditable, this project uses a lightweight qualitative scale for both \,\textit{Impact} and \,\textit{Probability}. Impact captures the consequence to delivery (scope, schedule, or validity of results); probability captures the likelihood of occurrence within the January--June 2026 execution window. Monitoring indicators are defined as observable signals with thresholds (where feasible) that trigger mitigation or contingency actions.
 
@@ -292,4 +292,4 @@ R5 & External & Limited stakeholder availability or ecosystem/policy changes red
 \end{tabular}
 \end{table}
 
-The risk register will be reviewed at least monthly and at each milestone review. For high-impact risks, mitigation status and contingency readiness will be explicitly reported in progress updates.
+The risk register is reviewed at least monthly and at each milestone review. For high-impact risks, mitigation status and contingency readiness are reported in progress updates.
