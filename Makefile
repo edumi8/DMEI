@@ -30,37 +30,14 @@ all: main.pdf
 # -interaction=nonstopmode keeps the pdflatex backend from stopping at a
 # missing file reference and interactively asking you for an alternative.
 
-# -f forces latexmk to continue despite errors (useful for glossary warnings)
-
 main.pdf: main.tex
-	latexmk -r latexmk.rc -outdir=build -auxdir=build -f -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make main.tex || true
-	@-mv ./build/main.pdf ./ 2>/dev/null || true
-	@if [ ! -f main.pdf ] && [ -f build/main.pdf ]; then cp build/main.pdf main.pdf; fi
-	@if [ -f main.pdf ]; then echo "PDF successfully created: main.pdf"; else echo "Error: PDF not created"; exit 1; fi
+	latexmk -outdir=build -auxdir=build  -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make main.tex
+	@-makeglossaries -d build main 2>/dev/null || true
+	@-mv ./build/main.pdf ./ 2>/dev/null  
 
 clean:
-	latexmk -r latexmk.rc -outdir=build -auxdir=build -C
+	latexmk  -outdir=build -auxdir=build -C
 
 clean-all:
 	@-rm -Rf `biber --cache` # might return error if files do not exist; this will not work in windows...
 	@-rm -rf ./build 2>/dev/null # might return error if files do not exist; this will not work in windows...
-
-# Release target for thesis submission
-release:
-	@bash release.sh
-
-release-draft:
-	@bash release.sh --draft
-
-release-final:
-	@bash release.sh --final
-
-# GitHub release targets
-github-release:
-	@bash release.sh --github-release
-
-github-draft:
-	@bash release.sh --draft --github-release
-
-github-final:
-	@bash release.sh --final --github-release

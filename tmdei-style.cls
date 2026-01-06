@@ -323,7 +323,7 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\dissertationdisclamer}{A dissertation submitted in partial fulfilment of the \\ requirements for the degree of Master of Science, Area of}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dissertationdisclamer}{A dissertation preparation for the degree of \\ of Master of Science, Specialisation Area of}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dissertationdisclamer}{A dissertation proposal work plan for the degree of \\ of Master of Science, Specialisation Area of}
 \providecaptionname{portuguese}{\dissertationdisclamer}{Disserta\c{c}\~ao para obten\c{c}\~ao do Grau de Mestre em \\ Engenharia Inform\'atica, \'Area de Especializa\c{c}\~ao em\\} % Portuguese 
 \newcommand{\advisorlabel}{Advisor}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\advisorlabel}{\ifdefined\advplural{Advisors}\else{Advisor}\fi}

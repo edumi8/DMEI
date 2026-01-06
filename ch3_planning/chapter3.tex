@@ -1,0 +1,77 @@
+% Chapter 3
+\chapter{Skill Management and Project Planning}
+\label{chap:Chapter3}
+
+\section{Skill Management}
+This section summarises the skills required for the research activities and the planned approach for acquiring or consolidating them.
+
+\subsection{Skills Identification}
+Key technical skills include container orchestration and debugging, telemetry and observability tooling (OpenTelemetry, Prometheus, Loki, Jaeger), scripting for automation, and experimental design for empirical evaluation. Soft skills include project management and structured interviewing for qualitative validation.
+
+The selection emphasises skills that are directly relevant to the prototype implementation and evaluation: reliable collection of telemetry from containers without elevated privileges, cross\-platform troubleshooting (Linux and Windows containers), and reproducible deployment using containers and scripts. Competence in interpreting time\-series data and traces for incident diagnosis is also required to validate the proposed evaluation metrics.
+
+\subsection{Skills Assessment and Development}
+An initial self-assessment identifies gaps in advanced tracing and Windows container telemetry; these will be addressed through focused practical exercises, small proof\-of\-concepts, and targeted readings during Phase~1.
+
+\subsection{Strategy to Improve Skills}
+The strategy combines short, time-boxed experiments, community documentation and tutorials, and incremental integration into the prototype. All skill development tasks are recorded and linked to project milestones to ensure traceability.
+
+Planned activities include the following practical exercises:
+\begin{itemize}
+    \item Implement a minimal sidecar exporter for a simple containerised service to validate non\-privileged metrics collection.
+    \item Configure Prometheus scraping against non\-standard endpoints and verify collection reliability on both Linux and Windows hosts.
+    \item Perform lightweight tracing with OpenTelemetry to confirm context propagation using proxy or sidecar approaches.
+\end{itemize}
+Each exercise has acceptance criteria (e.g. successful metric collection for 24 hours under synthetic load) to provide objective evidence of skill acquisition.
+
+\section{Project Management}
+The research timeline comprises two main phases: the PREPD deliverable (November 2025–January 2026) and thesis development (January–June 2026). Each phase includes concrete deliverables and acceptance criteria.
+
+\subsection{Phase 1 -- PREPD deliverable (November 2025–January 2026)}
+\begin{itemize}
+    \item \textbf{Literature review:} Conduct a systematic review using PRISMA to identify observability frameworks and deployment patterns relevant to non\-privileged containers.
+    \item \textbf{Technology assessment:} Evaluate candidate technologies and produce a comparative matrix aligned with constraints.
+    \item \textbf{Initial architecture design:} Produce a high\-level reference architecture and validate it against constraints.
+    \item \textbf{Baseline data collection:} Establish baseline telemetry measurements and measurement procedures.
+    \item \textbf{PREPD delivery:} Submit the PREPD report and presentation materials.
+\end{itemize}
+
+\subsection{Work Plan (extended abstract)}
+The extended abstract summarises the planned activities and deliverables for the PREPD and thesis phases. It frames Phase~1 as focusing on literature review, technology assessment and baseline data collection, and Phase~2 as addressing prototype implementation, production deployment and evaluation. The present document adopts that plan and expands it with acceptance criteria and measurable outputs.
+
+The main tasks from the extended abstract are reiterated here for traceability:
+\begin{itemize}
+    \item \textbf{Phase 1 (Nov–Jan):} Systematic literature review using PRISMA; comparative technology assessment; initial architecture design; baseline telemetry collection; PREPD report submission.
+    \item \textbf{Phase 2 (Jan–Jun):} Finalise state of the art and select technologies (Jan–Feb); implement prototype and deployment automation (Feb–Mar); coordinate production deployment subject to approvals (Apr); collect observability data and run measurement campaigns (May); validate, analyse and write up results (Jun); final submission (mid‑Jun).
+\end{itemize}
+
+Each task includes acceptance criteria such as documented evidence tables for the review, a completed technology assessment matrix, reproducible deployment scripts for the prototype, and an archived dataset with analysis scripts for the evaluation phase.
+
+\subsection{Phase 2 -- Thesis development (January–June 2026)}
+\begin{itemize}
+    \item \textbf{Detailed architecture and prototype implementation (Feb–Mar):} Implement the prototype in staging with reproducible deployment artifacts.
+    \item \textbf{Production deployment (Apr):} Coordinate deployment to target servers, following change\-management procedures.
+    \item \textbf{Observability data collection (May):} Execute the measurement campaign and collect quantitative metrics.
+    \item \textbf{Validation, analysis and writing (Jun):} Analyze results, collect practitioner feedback and complete thesis chapters.
+    \item \textbf{Final submission:} Incorporate feedback and submit the dissertation.
+\end{itemize}
+
+\subsection{Project Charter, Scope and Schedule}
+Detailed work breakdowns (WBS), acceptance criteria and the integrated schedule are maintained in project artefacts and updated at milestone reviews.
+
+Key deliverables and acceptance criteria (examples):
+\begin{itemize}
+    \item \textbf{Deliverable: Reference architecture diagram.} Acceptance: diagram includes component placement, data flows and privilege assumptions, and is reviewed by advisor.
+    \item \textbf{Deliverable: Prototype artifacts.} Acceptance: reproducible deployment scripts and container images that can be deployed in a staging environment following the provided README.
+    \item \textbf{Deliverable: Evaluation dataset and analysis.} Acceptance: raw telemetry and analysis scripts are archived and sufficient to reproduce primary metrics reported in the thesis.
+\end{itemize}
+
+\subsection{Monitoring and Controlling Procedures}
+	extbf{Progress monitoring:} Regular meetings with the advisor and company supervisor and periodic written reports will track milestones and risks.
+
+	extbf{Risk management:} Key risks include infrastructure provisioning delays, limited production access and tooling incompatibilities. Mitigations include extended staging tests, alternative evaluation scenarios using staging data, and early proof\-of\-concept experiments.
+
+\subsection{Risk Identification and Management}
+Risks will be logged in the project risk register, prioritised using an impact/probability matrix, and assigned mitigations and owners. The register will be reviewed at milestone checkpoints and adapted as new information arises.
+
+An illustrative risk table will be maintained in project artefacts; examples of mitigations include the use of staging testbeds to emulate production behaviour and fallback measurement strategies if production deployment is delayed.

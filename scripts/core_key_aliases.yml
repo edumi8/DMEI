@@ -1,0 +1,17 @@
+# Core Citation Key Aliases
+# Maps citation keys from full_text_priority.md to actual BibTeX keys
+#
+# Format:
+#   markdown_key: bibtex_key
+#
+# Use this when the markdown file uses shortened or variant keys
+# that don't exactly match the BibTeX citation keys.
+
+# Papers with year suffix mismatches
+karkanPerformanceOverheadOpenTelemetry: karkanPerformanceOverheadOpenTelemetry2024
+
+# Papers with author name prefix missing
+InvestigatingPerformanceOverhead: nouInvestigatingPerformanceOverhead
+
+# Note: Papers marked as "Drop" in full_text_priority.md should not be included
+# as they are duplicates or should be excluded from Core analysis.

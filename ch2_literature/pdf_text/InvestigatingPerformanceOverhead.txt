@@ -1,0 +1,1023 @@
+
+
+--- PAGE 1 ---
+Vrije Universiteit Amsterdam
+Universiteit van Amsterdam
+Master Thesis
+Investigating Performance Overhead of
+Distributed Tracing in Microservices and
+Serverless Systems
+Author:
+Anders Nõu
+(2779368)
+1st supervisor:
+Dr. Daniele Bonetta
+daily supervisor:
+Ir. Sacheendra Talluri
+2nd reader:
+Prof. Dr. Alexandru Iosup
+A thesis submitted in fulfillment of the requirements for
+the joint UvA-VU Master of Science degree in Computer Science
+January 29, 2025
+
+
+
+--- PAGE 2 ---
+Abstract
+In modern software architecture, distributed tracing has become essential for
+achieving observability in distributed systems. However, distributed tracing
+also introduces a trade-off between the depth of visibility and overhead. This
+thesis explores the performance impact of distributed tracing on microser-
+vices and serverless applications by measuring the throughput and latency of
+microservices and sererless applications across different configurations. We
+use the TechEmpower Framework Benchmarks and the Serverless Bench-
+mark Suite (SeBS) for evaluation.
+We categorize and quantify overhead
+sources into configuration, instrumentation, and exporting to understand
+which operations contribute the most to performance degradation. We de-
+signed and conducted three experiments with different programming frame-
+works and instrumentation tools. The results show that distributed trac-
+ing significantly affects the throughput and latency of microservices, with
+throughput decreasing in the range of 19-80%. In addition, we observe that
+the performance impact on serverless applications is significant, with short-
+duration applications exhibiting up to 175% latency increase and longer-
+duration applications showing an increase of 6.7%. The median latency in-
+creased around 7-42% for microservice applications. The main contributors
+to performance degradation were the configuration and export stages, with
+configuration significantly impacting serverless cold-start scenarios.
+The
+findings from this research help us understand the performance impact of
+distributed tracing on applications and what are the main contributors to
+overhead.
+
+
+
+--- PAGE 3 ---
+Contents
+List of Figures
+iii
+List of Tables
+v
+1
+Introduction to Distributed Tracing, Visibility, and Overhead
+1
+1.1
+Concept of Visibility, Monitoring, and Overhead . . . . . . . . . . . . . .
+2
+1.2
+Problem Statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+1.3
+Research Questions and Methodology . . . . . . . . . . . . . . . . . . . .
+5
+1.4
+Main Contributions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7
+1.5
+Thesis Structure
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+2
+Background on Distributed Tracing, Automatic Instrumentation, and
+Serverless Applications
+11
+2.1
+Distributed Tracing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11
+2.2
+Instrumentation and Instrumentation Frameworks
+. . . . . . . . . . . .
+12
+2.3
+Function as a Service Platform
+. . . . . . . . . . . . . . . . . . . . . . .
+15
+2.4
+Experiment Environment
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+17
+3
+Evaluation of Request-Based Applications’ Tracing Overhead: Exper-
+imental Design and Results
+21
+3.1
+Experiment Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+21
+3.2
+Metrics and Data Collection . . . . . . . . . . . . . . . . . . . . . . . . .
+28
+3.3
+Experiment Setup
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+31
+3.4
+Experiment Configuration . . . . . . . . . . . . . . . . . . . . . . . . . .
+36
+3.5
+Experiment Deployment . . . . . . . . . . . . . . . . . . . . . . . . . . .
+37
+3.6
+Experiment Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+39
+i
+
+
+
+--- PAGE 4 ---
+CONTENTS
+4
+Evaluation of Serverless Applications’ Tracing Overhead: Experimen-
+tal Design and Results
+47
+4.1
+Experiment Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+47
+4.2
+Metrics and Data Collection . . . . . . . . . . . . . . . . . . . . . . . . .
+51
+4.3
+Experiment Setup
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+53
+4.4
+Experiment Configuration . . . . . . . . . . . . . . . . . . . . . . . . . .
+55
+4.5
+Experiment Deployment . . . . . . . . . . . . . . . . . . . . . . . . . . .
+59
+4.6
+Experiment Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+61
+5
+Sources of Overhead in Distributed Tracing
+69
+5.1
+Experiment Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+69
+5.2
+Metrics and Data Collection . . . . . . . . . . . . . . . . . . . . . . . . .
+72
+5.3
+Experiment Setup
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+76
+5.4
+Experiment Configuration . . . . . . . . . . . . . . . . . . . . . . . . . .
+78
+5.5
+Experiment Deployment . . . . . . . . . . . . . . . . . . . . . . . . . . .
+79
+5.6
+Experiment Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+82
+6
+Related Work
+89
+6.1
+Research Gaps
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+89
+6.2
+Performance Overhead of Tracing . . . . . . . . . . . . . . . . . . . . . .
+90
+6.3
+Comparative Analysis of Tracing Tools . . . . . . . . . . . . . . . . . . .
+91
+7
+Conclusion
+95
+7.1
+Research Questions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+96
+Appendix
+99
+A
+Results Data
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+99
+B
+Task-based application experiment benchmark execution record . . . . .
+99
+C
+Task-based application graph-pagerank manual instrumentation code ex-
+ample
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100
+References
+103
+ii
+
+
+
+--- PAGE 5 ---
+List of Figures
+1.1
+Illustration of the relationship between monitoring, visibility, and over-
+head. The intersection of the concepts represents balanced monitoring
+with sufficient visibility and acceptable overhead. . . . . . . . . . . . . .
+3
+1.2
+Overview of the three experiments conducted in the thesis. The figure
+highlights the technology stacks and tracing tools used in the experi-
+ments. Experiment 1 is described in Chapter 3, experiment 2 in Chapter
+4, and experiment 3 in Chapter 5. . . . . . . . . . . . . . . . . . . . . . .
+7
+1.3
+The thesis contents and reading structure. . . . . . . . . . . . . . . . . .
+9
+2.1
+Example of a trace displaying a request traveling through four differ-
+ent services. The request is an example from the OpenTelemetry Demo
+system1. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+13
+3.1
+Request-based application requests-per-second throughput calibration work-
+flow. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+25
+3.2
+Architecture overview of the request-based (microservices) applications
+latency and throughput overhead experiment. . . . . . . . . . . . . . . .
+28
+3.3
+Aggregated throughput (requests per second) for request-based appli-
+cations with different instrumentation configurations (Standard, Open-
+Telemetry, Elastic APM) across the evaluated programming stacks (Python
+Flask, Java Spring, Go http, Node.js).
+. . . . . . . . . . . . . . . . . . .
+40
+3.4
+The median HTTP request duration in milliseconds for request-based ap-
+plications across different instrumentation configurations for four bench-
+mark endpoints. The request durations are aggregated over the program-
+ming frameworks (Python Flask, Java Spring, and Go http). . . . . . . .
+43
+iii
+
+
+
+--- PAGE 6 ---
+LIST OF FIGURES
+4.1
+Task-based application experiment architecture diagram.
+Kubernetes
+hosts the serverless platform OpenWhisk, which deploys the benchmark
+applications, and the SeBS invokes the benchmarks. The OpenTelemetry
+Collector and Kibana are containerized in Docker. . . . . . . . . . . . . .
+48
+4.2
+Configuration example for manually instrumented Python application
+with OpenTelemetry. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+57
+4.3
+Comparison of Python and Node.js code snippets for the graph-pagerank
+application. This figure shows part of the code responsible for manually
+instrumenting using OpenTelemetry. The code examples highlight the
+similarities in how the instrumentation is implemented in both frame-
+works. Both examples demonstrate span creation, context propagation,
+and attribute setting. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+58
+4.4
+Comparison of performance impacts of distributed tracing for different
+task-based benchmarks, showing the mean benchmark time for non-
+instrumented and instrumented configurations across multiple bench-
+marks.
+The results are combined from both Python and Node.js ap-
+plications. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+65
+5.1
+Flame graph of the dynamic-html task-based application with Open-
+Telemetry instrumentation. The CPU threshold for displaying function
+calls is set to 2.5%. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+76
+5.2
+DOT graph of a task-based application with OpenTelemetry instrumen-
+tation. The graph is generated with gprof2dot (1). The edge and node
+CPU threshold is set to 9.5%, and the depth of the graph is set to two
+for readability.
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+77
+5.3
+Experiment architecture for evaluating the performance impact of dis-
+tributed tracing processes. . . . . . . . . . . . . . . . . . . . . . . . . . .
+81
+5.4
+Distribution of tracing overhead categories (Configuration, Instrumen-
+tation, Export, Task) across 100 runs for task-based applications under
+cold start and warm start scenarios.
+. . . . . . . . . . . . . . . . . . . .
+85
+5.5
+Comparison of distributed tracing overhead across configuration, instru-
+mentation, and export phases for serverless applications and microservices. 86
+iv
+
+
+
+--- PAGE 7 ---
+List of Tables
+2.1
+Software components and their versions used throughout the experiments. 19
+3.1
+The evaluation of request-based applications’ tracing overhead experi-
+ment design overview.
+. . . . . . . . . . . . . . . . . . . . . . . . . . . .
+22
+3.2
+Initial requests per second configuration for the throughput evaluation
+for request-based applications. . . . . . . . . . . . . . . . . . . . . . . . .
+26
+3.3
+Requests per second incrementation values for the throughput evaluation
+of request-based applications. . . . . . . . . . . . . . . . . . . . . . . . .
+26
+3.4
+The list of metrics used to evaluate the request-based applications’ per-
+formances in the experiments. . . . . . . . . . . . . . . . . . . . . . . . .
+29
+3.5
+Experiment configuration parameters for the request-based application
+experiments. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+36
+3.6
+Throughput (requests per second) comparison of OpenTelemetry, Elastic
+APM, and non-instrumented request-based applications across Python
+Flask, Java Spring, Go http, and Node.js frameworks.
+. . . . . . . . . .
+41
+3.7
+Request-based applications latency comparison across different instru-
+mentation configurations and programming languages.
+All values are
+displayed in milliseconds.
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+44
+4.1
+Task-based applications memory limit and timeout configuration. . . . .
+59
+4.2
+Performance metrics (mean and p99) for the serverless benchmarks com-
+paring instrumented (Instr.) and non-instrumented (Non-Instr.) config-
+urations. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+62
+v
+
+
+
+--- PAGE 8 ---
+LIST OF TABLES
+4.3
+Benchmark and Client results for Python and Node.js overhead percent-
+ages.
+Overhead indicates the latency increase with the instrumented
+version of the benchmark. . . . . . . . . . . . . . . . . . . . . . . . . . .
+64
+5.1
+Parameters used for the request-based and task-based benchmarks for
+evaluating the sources of overhead. . . . . . . . . . . . . . . . . . . . . .
+80
+5.2
+Sources of distributed tracing overhead in request-based and task-based
+applications based on profiling data. The percentages for each category
+represent the average contribution of the operations. . . . . . . . . . . .
+83
+6.1
+Performance overhead comparison of various tracing tools across frame-
+works and metrics. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+93
+vi
+
+
+
+--- PAGE 9 ---
+1
+Introduction to Distributed
+Tracing, Visibility, and Overhead
+In recent years, the adoption of serverless computing has changed the way applications
+are developed and deployed, offering significant advantages such as reduced operational
+complexity, automatic scaling, and cost efficiency (2, 3). Serverless computing allows
+developers to execute task-based applications without managing the underlying infras-
+tructure, significantly simplifying the development process and reducing the operational
+overhead (4, 5). This paradigm shift has led to widespread adoption in various do-
+mains, including web development, data processing, and microservice architectures (6).
+However, as serverless computing becomes more prevalent, the necessity for reliable
+monitoring and debugging tools has grown significantly more important (7).
+Distributed tracing has emerged as a necessary tool for monitoring and diagnosing
+the performance of distributed systems, including microservices and serverless applica-
+tions (8, 9). By tracking requests as they move through various services and compo-
+nents, distributed tracing provides insights into the behavior and interactions within
+systems (10, 11). This level of observability is necessary for identifying performance
+bottlenecks, understanding system dependencies, and ensuring the reliable operation of
+distributed applications (9). Despite its benefits, distributed tracing introduces addi-
+tional overhead, which can impact the throughput and performance of the applications
+being monitored (12, 13, 14, 15, 16).
+Understanding the performance implications of distributed tracing is important for
+optimizing applications (10).
+Applications that break work into independently pro-
+1
+
+
+
+--- PAGE 10 ---
+1. INTRODUCTION TO DISTRIBUTED TRACING, VISIBILITY, AND
+OVERHEAD
+cessed tasks can be particularly sensitive to the overhead introduced by tracing (17, 18).
+These applications involve low-latency operations, where even small increases in latency
+can significantly impact overall performance. As a result, to understand the impact of
+distributed tracing, we need to quantify the performance overhead of distributed tracing
+and identify the main contributors to the performance overhead.
+1.1
+Concept of Visibility, Monitoring, and Overhead
+We introduce and define three key concepts addressed throughout this thesis: visibil-
+ity, monitoring, and overhead. Visibility refers to understanding a system’s state and
+behavior, while monitoring involves collecting the data needed to achieve the under-
+standing. Overhead is the cost in terms of the performance impact that comes with
+data collection. We explore each concept and the interactions between these concepts.
+1.1.1
+What is Visibility?
+Visibility is the ability to understand the state and behavior of a system. Collecting data
+is part of gaining visibility, but gaining useful insights that can be used for diagnosing
+issues, optimizing performance, or making informed decisions is a challenge. Effective
+visibility means having the right level of detail to understand how a system behaves. It
+involves not only the quantity of the data but also the quality of the data and how it is
+analyzed and interpreted.
+1.1.2
+What is Monitoring?
+Monitoring is the process of collecting, analyzing, and visualizing data, such as metrics,
+logs, and traces, about a system (19, 20). The data can be about various indicators of
+a system’s behavior, such as resource usage, error counts, and request durations. Moni-
+toring is essential to achieve visibility but does not guarantee it (19). The effectiveness
+of monitoring depends on selecting insightful information to monitor.
+1.1.3
+What is Overhead?
+In this thesis, we refer to overhead as the additional resource consumption and per-
+formance impact introduced by monitoring tracing activities (15). Collecting detailed
+metrics from a system requires additional processing and storage capabilities, which
+2
+
+
+
+--- PAGE 11 ---
+1.1 Concept of Visibility, Monitoring, and Overhead
+can impact the system’s performance. Tracing and instrumentation can add latency,
+consume more resources, and increase the network traffic by exporting the trace data.
+1.1.4
+Relations Between Monitoring, Visibility, and Overhead
+Overhead
+Monitoring
+Extensive Monitoring
+High Overhead and Low Visibility
+Effective Monitoring
+High Visibility, Low Overhead
+Balanced Monitoring
+Acceptable Overhead and
+Sufficient Visibility
+Targeted Data Collection
+High Overhead, High Visibility
+Visibility
+Figure 1.1: Illustration of the relationship between monitoring, visibility, and overhead.
+The intersection of the concepts represents balanced monitoring with sufficient visibility
+and acceptable overhead.
+The goal is to balance monitoring, visibility, and overhead to achieve as much visibil-
+ity as needed to understand the system while keeping the overhead as low as possible.
+However, it is also important to understand the relations between these concepts in
+3
+
+
+
+--- PAGE 12 ---
+1. INTRODUCTION TO DISTRIBUTED TRACING, VISIBILITY, AND
+OVERHEAD
+order to achieve the goal. Figure 1.1 displays some of the relations between monitor-
+ing, visibility, and overhead. Ideally, we want to have Effective Monitoring with high
+visibility and minimal overhead. However, due to the trade-off between visibility and
+overhead, extensive monitoring can lead to high overhead but still with limited visi-
+bility. Targeted data collection or optimizing the monitoring can reduce the amount
+of monitoring and increase visibility. The overhead can remain high if a large amount
+of data is collected. We highlight that excessive monitoring does not guarantee better
+visibility, and higher visibility can be achieved without increasing monitoring (21).
+Some of the relations we observe between monitoring, visibility, and overhead are
+the following:
+Extensive Monitoring or High Overhead
+̸=⇒High Visibility
+Collecting large
+amounts of data through monitoring or having high overhead does not always imply
+high visibility.
+The data collected must be relevant and helpful in diagnosing and
+understanding the system.
+Excessive data can create additional noise, making the
+effort counterproductive.
+High Visibility Without Extensive Monitoring
+High visibility does not always
+require extensive monitoring. Using efficient sampling techniques or limiting the amount
+of data collected can provide sufficient information about the system while minimizing
+the amount of data collected. For example, in high-throughput services, the majority
+of interesting events are likely to occur often enough to be recorded (15).
+Reducing Monitoring While Maintaining Visibility
+Reducing the scope or in-
+tensity of monitoring is possible without reducing visibility by focusing on infrequent
+and interesting data instead of noise (21). This allows us to maintain visibility in the
+system while decreasing overhead.
+Balancing Overhead and Visibility
+Monitoring aims to achieve sufficient visibility
+to support the system’s reliability. Meanwhile, we also want to keep the overhead at
+acceptable levels to reduce the performance impact on the service. Additional moni-
+toring can increase the overhead, but this data might be needed for higher visibility.
+Therefore, a balanced trade-off point should be found between the amount of data and
+the performance impact it causes.
+4
+
+
+
+--- PAGE 13 ---
+1.2 Problem Statement
+1.2
+Problem Statement
+In this thesis, we address two main problems: the trade-off between system visibility
+and performance and the unclear sources of overhead in the distributed tracing process.
+Performance and Visibility Trade-Off
+The integration of distributed tracing in-
+troduces a challenge: a trade-off between visibility into the system and the overhead
+caused by tracing. While tracing significantly enhances our understanding of distributed
+systems by shedding light on interactions and dependencies, it also introduces additional
+overhead, which can negatively impact performance, leading to increased latency and
+reduced throughput. Therefore, it’s essential to understand the extent of this overhead
+and its effects on the performance of various applications.
+Sources of Overhead
+Another aspect of the problem is that the sources of overhead
+within distributed tracing process are not clearly understood. The tracing lifecycle con-
+sists of multiple stages, such as initialization, propagation, data collection, and export,
+each may contribute differently to performance degradation.
+Identifying and quan-
+tifying the most resource-intensive stages is important for effectively mitigating the
+performance penalties associated with distributed tracing.
+1.3
+Research Questions and Methodology
+This study aims to examine the effects of distributed tracing on applications by study-
+ing different types of applications—focusing on request-based (microservices) and task-
+based (serverless) models—and finally identifying the sources of the overheads associ-
+ated with tracing implementation. We establish three research questions and describe
+the methodology used to study each question. The research questions (RQ) are the
+following:
+RQ1. How does the implementation of distributed tracing affect the through-
+put and latency of request-based applications? This research question ex-
+plores the impact of distributed tracing on the performance and latency of request-
+based applications. Request-based applications have a client-server model, where
+a client sends a request to the server and the server provides a response. The goal
+5
+
+
+
+--- PAGE 14 ---
+1. INTRODUCTION TO DISTRIBUTED TRACING, VISIBILITY, AND
+OVERHEAD
+is to measure how tracing affects the throughput and the latency of such applica-
+tions. By comparing applications with and without tracing, we aim to quantify
+the performance impact and trade-offs for request-based applications (22).
+The methodology involves designing and setting up a controlled experiment with
+various web application endpoints (23, 24). We also set up the endpoints on four
+frameworks (Python Flask, Java Spring Boot, Go http, and JavaScript Node.js).
+We configure three sets of applications: non-instrumented, instrumented with
+OpenTelemetry, and instrumented with Elastic APM. We analyze throughput and
+latency to analyze and understand the tracing overhead (23, 25). The experiment
+is discussed in Chapter 3.
+RQ2. What are the effects of distributed tracing instrumentation on the per-
+formance of task-based applications? This research question aims to assess
+the impact of distributed tracing instrumentation on the performance of task-
+based applications (22). These applications, which, for example, provide image
+processing, data processing, and object management, can break work into inde-
+pendently processed tasks. While distributed tracing provides insight into the
+operation of such applications, it may also introduce a significant performance
+overhead (12, 13).
+We study the effect of the performance impact on task-based applications by
+designing an experiment that measures the latency of these applications with
+and without tracing instrumentation on the OpenWhisk platform (26, 27). The
+benchmarks are implemented in Python and Node.js to compare the impact of
+tracing with different technology stacks. We quantify the performance impact by
+comparing the latency of instrumented and non-instrumented variations of each
+benchmark. The experiment is described in Chapter 4.
+RQ3. What are the primary sources of overhead introduced by distributed
+tracing, and which of them are the main contributors to overhead?
+We desire to understand which components of distributed tracing systems most
+significantly contribute to the overhead and how these contributions occur. This
+research seeks to quantify the overhead of distributed tracing processes, such as
+6
+
+
+
+--- PAGE 15 ---
+1.4 Main Contributions
+initialization, instrumentation, and export. After categorizing and quantifying
+the overhead sources, we provide the main contributors of overhead in distributed
+tracing.
+The methodology to investigate this research question consists of two steps: (1)
+categorizing distributed tracing processes into distinct groups and (2) measuring
+the performance impact caused by each group. We categorize the processes by
+analyzing and visualizing the profiling data.
+Then, we evaluate each group’s
+overhead by profiling the applications and calculating the total time spent on
+each category. We discuss the experiment design, setup, and results in Chapter 5.
+Figure 1.2 displays an overview of the experiments we conduct to answer the research
+questions RQ1, RQ2, and RQ3. It displays the technology stack of the applications and
+the instrumentation tools used for each experiment.
+Python
+Flask
+Go http
+Java
+Spring Boot
+Elastic
+APM
+OpenTelemetry
+OpenTelemetry
+Node.js
+Python
+OpenTelemetry
+Python
+Flask
+Request-Based 
+Applications
+(Microservices)
+Task-Based 
+Applications
+(Serverless)
+Sources of
+Overhead
+01
+RQ1
+02
+RQ2
+03
+RQ3
+Python
+Node.js
+Figure 1.2:
+Overview of the three experiments conducted in the thesis.
+The figure
+highlights the technology stacks and tracing tools used in the experiments. Experiment 1
+is described in Chapter 3, experiment 2 in Chapter 4, and experiment 3 in Chapter 5.
+1.4
+Main Contributions
+The thesis has the following research contributions (RC):
+RC1. Developed a framework to quantify the overhead in microservice appli-
+cations: We designed an experimental framework to quantify the performance
+7
+
+
+
+--- PAGE 16 ---
+1. INTRODUCTION TO DISTRIBUTED TRACING, VISIBILITY, AND
+OVERHEAD
+overhead introduced by distributed tracing in microservice applications.
+The
+framework measures the overhead for two metrics: throughput and request dura-
+tion. The experimental framework assessed multiple programming environments:
+Python Flask, Java Spring Boot, Go HTTP, and JavaScript Node.js.
+RC2. Extended an existing framework to quantify the overhead in server-
+less applications: We adapted and extended an existing evaluation framework
+(SeBS (28)) to benchmark the serverless applications, enabling the measurement
+of tracing overhead in Node.js and Python-based serverless workloads. As part of
+the extension, we developed the missing Node.js implementations in the framework
+and the instrumented versions for each application. This work focused on evalu-
+ating the performance impact of tracing with the execution time of the serverless
+workloads.
+RC3. Quantifying the overhead in microservices and serverless applications:
+We conducted experiments on request-based (microservices) and task-based (server-
+less) applications. This research provides a comparative insight into the effect that
+distributed tracing has on different types of applications and frameworks. We also
+examine two instrumentation tools (OpenTelemetry and Elastic APM) and how
+the instrumentation overhead between these tools varies. The study examines
+performance degradation in terms of latency and throughput.
+RC4. Categorizing and analyzing the overhead sources in distributed tracing:
+We categorized the tracing function calls into three distinct groups: configuration,
+instrumentation, and exporting. The configuration includes initializing and con-
+figuring the tracing tool, setting up the exporter, sampling, and creating high-level
+metadata for the tracer. Instrumentation consists of adding the trace points to
+capture and enrich the tracing data. Exporting includes transmitting the trace
+data to an external system for storage and analysis. Furthermore, we measured
+the overhead of each category and found that exporting and configuration are the
+main contributors to the overhead. Instrumentation had a relatively low impact
+on the performance of the system.
+8
+
+
+
+--- PAGE 17 ---
+1.5 Thesis Structure
+Chapter 1:
+Introduction
+Chapter 2:
+Background
+Chapter 3:
+Request-Based
+Applications'
+Tracing
+Overhead
+Chapter 4:
+Task-based
+Applications'
+Tracing
+Overhead
+Chapter 5:
+Sources of
+Distributed
+Tracing
+Overhead
+Chapter 6:
+Related Work
+Chapter 7:
+Conclusion
+Figure 1.3: The thesis contents and reading structure.
+1.5
+Thesis Structure
+The thesis is organized into six chapters, and the structure is shown in Figure 1.3.
+The Background chapter (Chapter 2) describes the background knowledge required
+for the thesis. We cover the following topics: distributed tracing, instrumentation tools
+used in the experiments, Function as a service (FaaS) platforms, Kubernetes, and the
+software and hardware specifications used.
+Chapter 3 details the experimental design, setup, and results for assessing tracing
+overhead in request-based applications. The experiment studies the performance impact
+of distributed tracing (instrumentation with OpenTelemetry and Elastic APM) on a
+selection of programming frameworks (Python Flask, Go http, Java Spring, Node.js).
+Chapter 4 extends the evaluation to task-based applications, focusing on indepen-
+dently processed serverless tasks. The experiment compares the performance impact of
+Python and Node.js on different kinds of workloads.
+In Chapter 5, we explore the sources of overhead introduced by distributed tracing.
+First, we formulate a list of categories for the tracing processes and then evaluate the
+overhead caused by each category’s operations.
+Chapter 6 gives an overview of research gaps in the current literature, provides a
+list of distributed tracing overheads measured in research, and briefly compares the
+instrumentation tools used and analyzed in the literature.
+We conclude the thesis with Chapter 7 that summarizes the key insights from the
+research, reflects on the contributions, and answers the research questions proposed in
+the introduction (RQ1, RQ2, RQ3).
+9
+
+
+
+--- PAGE 18 ---
+1. INTRODUCTION TO DISTRIBUTED TRACING, VISIBILITY, AND
+OVERHEAD
+10
+
+
+
+--- PAGE 19 ---
+2
+Background on Distributed Tracing,
+Automatic Instrumentation, and
+Serverless Applications
+2.1
+Distributed Tracing
+Distributed tracing is a technique used to monitor and track requests as they move
+through different services in a distributed system. Capturing a request’s lifecycle pro-
+vides insights into how services interact, the sequence of operations, and where time is
+spent within the system. This visibility offers several key benefits, including:
+• End-to-End Visibility: Allows comprehensive monitoring in complex, distributed
+architectures.
+• Performance Insights: Provides performance data such as the latency of re-
+quests and individual operations within the applications.
+• Root Cause Analysis: Provides additional context for troubleshooting errors,
+making it easier to pinpoint the cause of issues.
+• Understanding Service Dependencies: Offers a clear picture of service rela-
+tionships and interactions within the architecture (9).
+The following key concepts need to be understood about distributed tracing, which
+are frequently referenced throughout this thesis: We define the following key concepts
+related to distributed tracing used and mentioned in this thesis:
+11
+
+
+
+--- PAGE 20 ---
+2. BACKGROUND ON DISTRIBUTED TRACING, AUTOMATIC
+INSTRUMENTATION, AND SERVERLESS APPLICATIONS
+Trace
+A trace represents the journey of a single request as it travels through one or
+multiple services within a system. Trace consists of a collection of spans, representing
+an operation carried out by one of the services. It provides detailed information such as
+the sequence of the operations, time spent on each process, and any errors that occur.
+An example of a trace is shown in Figure 2.1.
+Span
+Span represents a single operation in a request’s lifecycle. This operation can
+be an operation such as a database query, HTTP request, or an external API call. A
+span records information about its start time, duration, and metadata that provides
+additional context about the specific request.
+Spans are organized hierarchically to
+show the relationship between different operations and how they are placed inside the
+trace. In Figure 2.1, each colored rectangle is a separate span.
+Sampling
+Sampling is a technique used in distributed tracing to reduce the trace vol-
+ume generated by the applications (12, 15, 21). Capturing every single trace in systems
+with high traffic can quickly cause significant performance overhead and increase storage
+costs (13, 15, 29). Sampling strategies, such as probabilistic sampling (randomly cap-
+turing a percentage of traces) or rate-limited sampling (limiting the number of traces
+collected over a specified time), help mitigate these issues. By selectively capturing
+traces, sampling maintains visibility while minimizing the performance impact on the
+system.
+2.2
+Instrumentation and Instrumentation Frameworks
+Instrumentation is the process of adding code to an application to collect trace data.
+In this study, we use two methods to instrument and collect the tracing data in our
+experiments: manual instrumentation and zero-code (automatic) instrumentation. Our
+experiments use two instrumentation tools: OpenTelemetry and Elastic APM. We se-
+lected these tools mainly because of two reasons: (1) both support instrumentation for
+a wide range of languages and frameworks (manual and automatic), and (2) both offer
+the installation and instrumentation for free (30). In addition, Elastic APM is part
+2https://github.com/open-telemetry/opentelemetry-demo
+12
+
+
+
+--- PAGE 21 ---
+2.2 Instrumentation and Instrumentation Frameworks
+HTTP 3xx Ingress –⁠ 1.8 ms
+HTTP 2xx GET –⁠ 15 ms
+router frontend egress –⁠ 1.5 ms
+HTTP 3xx GET –⁠ 997 µs
+HTTP 2xx Ingress –⁠ 11 ms
+router frontend egress –⁠ 11 ms
+HTTP 2xx GET –⁠ 11 ms
+HTTP 2xx GET /api/data –⁠ 10 ms
+loadgenerator
+frontend-proxy
+frontend
+adservice
+Services
+OK oteldemo.AdService/GetAds – 5.1 ms
+executing api route (pages) /api/data –⁠ 9.8 ms
+grpc.oteldemo.AdService/GetAds –⁠ 9.3 ms
+Figure 2.1:
+Example of a trace displaying a request traveling through four different
+services. The request is an example from the OpenTelemetry Demo system2.
+of the Elastic stack, which also contains a locally deployable observability backend to
+visualize traces.
+Manual Instrumentation
+Manual instrumentation involves explicitly adding code
+to an application to capture telemetry data. Developers have fine-grained control over
+specifying where spans start and end, what metadata to include, and configuring trace
+exporters and sampling rates. While this method offers precise control over the collected
+data, it can be time-consuming to implement, especially in complex architectures with
+thousands of services.
+Zero-Code Instrumentation:
+Zero-code, or automatic instrumentation, simplifies
+the process by automatically adding the necessary hooks to an application without
+modifying its code. This is usually achieved by attaching an agent or initializing libraries
+at runtime. Although this method reduces the effort needed to set up instrumentation,
+it is less flexible than manual instrumentation because developers have limited control
+over the details of the collected data.
+13
+
+
+
+--- PAGE 22 ---
+2. BACKGROUND ON DISTRIBUTED TRACING, AUTOMATIC
+INSTRUMENTATION, AND SERVERLESS APPLICATIONS
+2.2.1
+OpenTelemetry
+OpenTelemetry is an open-source observability framework that provides standardized
+methods for collecting, processing, and exporting telemetry data, including traces, met-
+rics, and logs (31). As part of the Cloud Native Computing Foundation (CNCF), it
+aims to offer consistent observability across various programming languages and envi-
+ronments.
+OpenTelemetry consists of several core components. The key components used or
+mentioned in the thesis are the following:
+1. API: The OpenTelemetry API provides interfaces for adding instrumentation to
+an application. It defines methods for creating and managing traces, metrics, and
+logs, ensuring a consistent approach across different programming languages and
+environments.
+2. SDK: The OpenTelemetry SDK works alongside the API to collect and process
+telemetry data. It offers flexibility through configurable options like samplers and
+processors, giving developers control over how the data is gathered, managed, and
+sent to different systems.
+3. Collector: The OpenTelemetry Collector is a vendor-agnostic component that
+can receive the traces generated by the application, process them, and then export
+to a backend for storage and visualization (32). It acts as a standalone service,
+providing flexibility and scalability in the observability architecture. In our ex-
+periments, the Collector forwards data to Elasticsearch for storage, enabling trace
+visualization in Kibana.
+2.2.2
+Elastic APM
+Elastic APM is an application performance monitoring system designed to provide de-
+tailed performance data and end-to-end distributed tracing for applications (33). It is
+part of the Elastic Stack, an observability framework intended for collecting, analyzing
+and visualizing logs, metrics, and traces.
+In this thesis, we use the following Elastic Stack components to collect and store
+the traces for offloading, storage, and visualization:
+14
+
+
+
+--- PAGE 23 ---
+2.3 Function as a Service Platform
+• Elastic APM Server: The APM Server functions similarly to the OpenTeleme-
+try Collector, serving as the primary ingestion point for trace data collected from
+Elastic APM agents or manually instrumented applications. It processes and for-
+wards the data to Elasticsearch for storage.
+• Elasticsearch: Elasticsearch is responsible for storage, searching, and analytics
+in the Elastic Stack (34).
+It indexes and stores the incoming trace data and
+provides fast querying and retrieval of traces for analysis.
+• Kibana: Kibana provides the visualization interface for the Elastic Stack, en-
+abling users to explore and analyze telemetry data.
+It offers a detailed view
+of individual traces and overall application performance. This experiment uses
+Kibana to validate the successful collection and visualization of trace data from
+both OpenTelemetry and Elastic APM instrumented applications.
+2.3
+Function as a Service Platform
+Function as a Service (FaaS) is a computing model used for deploying individual func-
+tions without managing host machines for the workloads (35, 36). The infrastructure
+manages the scaling of the functions in response to incoming traffic, which provides
+more efficient resource utilization. With the FaaS model, the code is packed into state-
+less functions that are triggered by events, such as HTTP requests or changes in a data
+store.
+Several cloud platforms offer FaaS, such as AWS Lambda3, Google Cloud Functions4,
+and Azure Functions5. While these managed services do not require any underlying
+infrastructure management, some FaaS platforms can also be deployed in a self-managed
+environment using Kubernetes.
+For the experiments discussed in Chapter 4, we considered three platforms that
+are deployable on Kubernetes: OpenWhisk6, OpenFaas7, and Knative8. We ultimately
+chose OpenWhisk due to its compatibility with our selected experimental framework.
+3https://aws.amazon.com/lambda/
+4https://cloud.google.com/functions?hl=en
+5https://azure.microsoft.com/en-us/products/functions
+6https://openwhisk.apache.org/
+7https://www.openfaas.com/
+8https://knative.dev/
+15
+
+
+
+--- PAGE 24 ---
+2. BACKGROUND ON DISTRIBUTED TRACING, AUTOMATIC
+INSTRUMENTATION, AND SERVERLESS APPLICATIONS
+Below, we briefly overview each platform and the considerations that influenced our
+choice.
+OpenWhisk
+Apache OpenWhisk is an open-source serverless platform that can be
+deployed on Kubernetes or Docker Compose environments (35). It is well-documented,
+with comprehensive installation guides and a large contributor community, making it a
+widely adopted option for serverless computing. According to GitHub metrics, Open-
+Whisk is the second most popular among the platforms considered9.
+The primary reason for selecting OpenWhisk was its built-in support within the
+Serverless Benchmark Suite (SeBS) framework (28, 37), which we used for our experi-
+ments. This compatibility eliminated the need for additional integration work, stream-
+lining the setup process and allowing us to focus on the experiment.
+OpenFaaS
+OpenFaaS is another open-source serverless platform designed to be run
+on Kubernetes. It supports various programming languages through templates, making
+it flexible for different use cases. At the time of this research, OpenFaaS was the most
+popular of the three platforms, as measured by GitHub repository activity10. It also
+offers a built-in user interface, a command-line tool, and an easy installation process.
+While OpenFaaS presented a viable option for our serverless experiments, we chose
+not to proceed with it due to its lack of native support in the SeBS framework. Integrat-
+ing OpenFaaS into our experimental setup would have required significant additional
+development effort.
+Knative
+Knative is a Kubernetes-based serverless platform designed to simplify the
+deployment and management of serverless applications (36). It features built-in traffic
+splitting, allowing users to direct traffic across multiple versions of a deployed applica-
+tion. However, our initial and brief research showed that Knative seemed to be the most
+difficult to set up compared to the other platforms considered. Additionally, the SeBS
+framework did not natively support Knative, which would have increased the complex-
+ity of our experimental setup. As a result, we decided against using Knative for our
+experiments.
+9https://github.com/apache/openwhisk
+10https://github.com/openfaas/faas
+16
+
+
+
+--- PAGE 25 ---
+2.4 Experiment Environment
+2.3.1
+Introduction to Kubernetes
+Kubernetes is an open-source container orchestration platform designed to automate
+the deployment, scaling, and management of containerized applications (38). Origi-
+nally developed by Google, it is now maintained as a project under the Cloud Native
+Computing Foundation11 (CNCF). Kubernetes enables applications to run reliably at
+scale across both on-premise and cloud environments. It follows a declarative model,
+where users specify the desired state of their applications, and Kubernetes continuously
+works to achieve and maintain that state (38). The platform simplifies the management
+of distributed systems by handling essential tasks such as load balancing, auto-scaling,
+and self-healing.
+The following key concepts are essential to understanding how Kubernetes operates
+and are used throughout this thesis:
+Cluster
+A Kubernetes cluster, consisting of a group of machines (nodes) that run
+containerized applications, forms the platform’s foundational structure. A cluster is
+divided into two main components: the control plane and one or more worker nodes.
+The control plane is responsible for managing the overall state and operation of the
+cluster while the worker nodes execute the application workloads.
+Node
+A node is a single machine within a Kubernetes cluster, which can be virtual
+or physical. It serves as a worker that runs containerized applications. There are two
+types of nodes: control plane nodes, which manage the cluster, and worker nodes, which
+handle the execution of application containers.
+Pod
+A pod is the smallest deployable unit in the Kubernetes ecosystem. It consists of
+a group of one or more tightly coupled containers. The network and storage are shared
+between the containers inside a single pod.
+2.4
+Experiment Environment
+This section outlines the software and hardware configurations used for the experiments
+presented in Chapters3, 4, and 5. We also describe the hardware specifications of the
+11https://www.cncf.io/
+17
