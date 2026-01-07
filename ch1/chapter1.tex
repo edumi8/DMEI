@@ -2,6 +2,10 @@
 \chapter{Introduction}
 \label{chap:Chapter1}
 
+This chapter establishes the foundation for investigating observability frameworks in constrained containerized \ac{CICD} environments. It frames the research problem within both theoretical and organizational contexts, articulates the specific challenges arising from non\-privileged deployment constraints, and defines the scope and objectives that guide this work.
+
+The chapter begins by presenting the operational challenges that motivate this research, then examines the gap between standard observability assumptions and the realities of organizations managing on\-premise infrastructure without administrative privileges. Research questions, intended contributions, and methodological approach are subsequently outlined, providing a roadmap for the investigation documented in this preparation report.
+
 \section{Introduction and Problem Framing}
 
 Infrastructure failures in containerized \ac{CICD} platforms create immediate operational challenges: determining which service failed, identifying root cause, and restoring functionality before development teams are blocked. In organizations running on\-premise \ac{CICD} infrastructure, diagnostic processes often require manual log inspection across multiple servers, timestamp correlation between disconnected systems, and inference from incomplete information. This fragmentation extends detection and resolution times, directly affecting development velocity and release schedules.
@@ -15,6 +19,8 @@ The central research problem is: \textit{How can an integrated observability fra
 
 \section{Context and Motivation}
 
+The motivation for this research emerges from the intersection of theoretical understanding of observability frameworks and the operational realities encountered in specific organizational deployments. This section examines both the conceptual foundations established in software engineering research and the practical constraints that shape observability requirements in the target environment. The two subsections establish the theoretical basis for observability in \ac{CICD} systems and describe the specific organizational context that defines the problem space for this investigation.
+
 \subsection{Theoretical Context}
 Continuous integration and continuous delivery (\ac{CICD}) pipelines constitute critical infrastructure for software development organizations. Research in software engineering has established that pipeline reliability and observability directly influence development velocity, defect detection rates and time\-to\-market~\cite{hevner2004design}. Modern \ac{CICD} platforms typically comprise multiple specialized services: source control management (such as GitLab), build automation (such as Jenkins), static analysis (such as SonarQube), artifact management (such as Nexus) and security scanning (such as Dependency\-Track). Each service generates distinct telemetry streams (metrics, logs, traces) that must be collected, correlated and analyzed to maintain operational visibility.
 
@@ -25,11 +31,13 @@ The organization where this project is developed manages on\-premise \ac{CICD} i
 
 Two organizational constraints fundamentally shape the problem space. First, operations teams lack administrative privileges on host systems. Infrastructure administration is centralized under a separate IT department following corporate security policies, preventing installation of host\-level monitoring agents, kernel modules or system\-wide instrumentation. Second, \ac{CICD} service containers must run without elevated privileges due to corporate security policy prohibiting privileged container execution.
 
-These constraints create a gap between operational needs and available deployment options. The organization currently relies on application\-level logs accessed through Docker CLI commands, manual inspection of container resource usage and reactive troubleshooting after user-reported incidents. This reactive posture results in prolonged incident detection (hours rather than minutes) and diagnosis cycles requiring coordinated investigation across disconnected log sources.
+These constraints create a gap between operational needs and available deployment options. The organization currently relies on application\-level logs accessed through Docker CLI commands, manual inspection of container resource usage and reactive troubleshooting after user\-reported incidents. This reactive posture results in prolonged incident detection (hours rather than minutes) and diagnosis cycles requiring coordinated investigation across disconnected log sources.
 
 The practical impact manifests in three ways: delayed detection of service degradation until user complaints escalate, extended root cause analysis requiring manual correlation of logs from five or more services, and inability to establish proactive capacity planning due to lack of historical resource utilization data. Development teams experience unpredictable pipeline failures attributed to infrastructure issues that operations teams cannot rapidly diagnose or prevent.
 
 \section{Problem Statement}
+
+The problem addressed in this research comprises interrelated technical and organizational dimensions that collectively define the observability challenge in constrained \ac{CICD} environments. This section structures the problem statement across three complementary perspectives: the technical instrumentation challenges arising from privilege restrictions and platform heterogeneity, the organizational impact manifested through operational incidents and diagnostic delays, and the explicit boundaries that define what falls within and outside the scope of this investigation.
 
 \subsection{Technical Problem}
 Containerized \ac{CICD} platforms deployed on\-premise with non\-privileged container execution and mixed operating systems present observability challenges requiring careful investigation. The technical problem comprises three interconnected dimensions:
@@ -98,11 +106,16 @@ This project follows a design science research approach~\cite{hevner2004design},
 The methodology balances artifact creation (reference architecture and prototype) with empirical validation (quantitative metrics and qualitative feedback). Quantitative evaluation establishes measurable outcomes; qualitative data addresses operational acceptability and deployment considerations that quantitative metrics alone cannot capture.
 
 \section{Ethical Considerations}
+This work adheres to the ethical guidelines established by Instituto Superior de Engenharia do Porto (\ac{ISEP}) and the IEEE Code of Ethics \parencite{IEEEXploreFullText}. The research, analysis, experimental design, and all scientific contributions presented in this document are authored by the student. The student assumes full responsibility for the integrity, accuracy and validity of all research findings, interpretations and conclusions.
+
 This research involves human subjects activities (structured practitioner interviews) and access to operational telemetry data. All activities will follow institutional ethical review procedures. Ethical clearance will be obtained before commencing interviews or data collection. Participants will provide documented informed consent and will be informed of their right to withdraw. Interview data and operational telemetry will be anonymized to remove identifying information. Data handling will conform to institutional policies and applicable data protection regulations, including GDPR where relevant.
 
 Production deployments will be preceded by staging environment validation and change management approval to minimize operational disruption risk. The project observes data minimization principles: telemetry collection is limited to technical metrics necessary for evaluation objectives. Personal data collection, if required, will be explicitly justified, documented and subject to institutional review board approval.
 
 When presenting empirical results, host identifiers, network topology details and sensitive configuration information will be anonymized to protect organizational confidentiality. Access to production systems and telemetry data will be governed by organizational access control policies. All collected data will be stored securely and retained only for the duration necessary to complete the research, after which it will be securely disposed of in accordance with institutional data retention policies.
+
+\subsection{AI Usage Disclosure}
+Artificial intelligence tools were employed in a limited supporting capacity during the preparation of this work. AI assistance was restricted to: generating search keyword suggestions to support systematic literature identification; assisting with title and abstract screening during PRISMA\-guided literature review; offering alternative phrasings for sentence reformulation to improve clarity and readability; and performing spell checking and grammar verification. AI tools were not used to generate scientific arguments, formulate research contributions, design experiments, analyze results, or draw conclusions. All intellectual content, methodological decisions, and scientific judgments remain the original work of the author.
 
 \section{Document Structure}
 This preparation report documents the research plan, including problem framing, literature review, and planned methodology. The remainder of this document is organized as follows: Chapter~\ref{chap:Chapter2} presents the systematic literature review following \ac{PRISMA} methodology, synthesizing existing observability research and identifying gaps relevant to constrained \ac{CICD} environments; Chapter~\ref{chap:Chapter3} describes project planning, methodology details, skill management, resource allocation and the execution timeline; Chapter~\ref{chap:Chapter4} summarizes the work presented and outlines next steps.
