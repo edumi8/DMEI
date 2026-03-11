@@ -1,26 +1,26 @@
 % Chapter 3
 \chapter{Project Planning and Methodology}
-\label{chap:Chapter3}
+\label{chap:planning}
 
-This chapter presents how the dissertation project will be carried out during execution (January--June 2026). Building on the problem framing in Chapter~\ref{chap:Chapter1} and state of the art in Chapter~\ref{chap:Chapter2}, the focus is on methodological approach, planned artifacts, evaluation activities, skills development, schedule, and risk management.
+This chapter presents how the dissertation project will be carried out during execution (January--June 2026). Building on the problem framing in Chapter~\ref{chap:introduction} and state of the art in Chapter~\ref{chap:literature}, the focus is on methodological approach, planned artifacts, evaluation activities, skills development, schedule, and risk management.
 
 \section{Objectives and Scope Alignment}
 
-The project objectives and scope defined in Chapter~\ref{chap:Chapter1} remain aligned with findings synthesized in Chapter~\ref{chap:Chapter2}. No scope changes are planned. The work focuses on execution strategy to deliver planned artifacts and produce defensible evidence.
+The project objectives and scope defined in Chapter~\ref{chap:introduction} remain aligned with findings synthesized in Chapter~\ref{chap:literature}. No scope changes are planned. The work focuses on execution strategy to deliver planned artifacts and produce defensible evidence.
 
 \section{Methodological Approach}
 \label{sec:ch3_method}
 
-The project is planned as an engineering\-oriented research effort centered on the design, implementation, and evaluation of a container\-first observability solution that operates under the practical constraints identified in Chapter~\ref{chap:Chapter1}. The chosen approach is pragmatic and iterative: requirements and constraints inform successive design decisions, which are validated through controlled experimentation and practitioner\-oriented feedback.
+The project is planned as an engineering-oriented research effort centered on the design, implementation, and evaluation of an observability solution for heterogeneous containerized environments. The chosen approach is pragmatic and iterative: requirements and platform characteristics inform successive design decisions, which are validated through controlled experimentation and practitioner-oriented feedback.
 
-This section describes the methodological structure guiding the dissertation execution. The subsections specify the concrete artifacts to be produced, the development process ensuring traceability from constraints to design decisions, and the evaluation strategy for generating defensible empirical evidence. Together, these components establish how the research moves from problem framing and literature synthesis to implemented solutions and validated outcomes.
+This section describes the methodological structure guiding the dissertation execution. The subsections specify the concrete artifacts to be produced, the development process ensuring traceability from requirements to design decisions, and the evaluation strategy for generating defensible empirical evidence. Together, these components establish how the research moves from problem framing and literature synthesis to implemented solutions and validated outcomes.
 
 \subsection{Planned Artifacts}
 \label{sec:ch3_artifacts}
 
 The project will produce a set of artifacts intended to be directly auditable and reusable:
 \begin{itemize}
-    \item \textbf{A1 -- Reference architecture:} a documented architecture describing components, deployment topology, data flows, and correlation mechanisms suitable for containerized environments with limited privileges.
+    \item \textbf{A1 -- Reference architecture:} a documented architecture describing components, deployment topology, data flows, and correlation mechanisms for heterogeneous containerized environments, including comparative analysis of alternative instrumentation patterns and documented trade-off evaluation.
     \item \textbf{A2 -- Prototype implementation:} a working prototype implementing the reference architecture in a staging environment, including configuration and operational procedures.
     \item \textbf{A3 -- Automation and reproducibility assets:} scripts and configuration files to provision, deploy, and execute the evaluation campaign in a repeatable manner.
     \item \textbf{A4 -- Evaluation protocol and dataset:} an experimental plan (scenarios, workloads, baselines, metrics) and the resulting collected data, with clear provenance.
@@ -30,9 +30,9 @@ The project will produce a set of artifacts intended to be directly auditable an
 \subsection{Development Process and Traceability}
 \label{sec:ch3_process}
 
-The development process ensures traceability from constraints to design decisions and from design decisions to evaluation evidence:
+The development process ensures traceability from requirements to design decisions and from design decisions to evaluation evidence:
 \begin{itemize}
-    \item \textbf{Constraint\-to\-design mapping:} constraints (e.g., limited privileges, heterogeneous execution environments) are mapped to explicit architectural and implementation decisions.
+    \item \textbf{Requirements-to-design mapping:} platform characteristics and operational requirements (e.g., heterogeneous execution environments, cross-platform support) are mapped to explicit architectural and implementation decisions.
     \item \textbf{Iterative refinement:} the architecture and prototype are developed in short iterations, each concluding with a review of the produced artifact increment and the update of open issues.
     \item \textbf{Configuration management:} all artifacts are maintained under version control, including deployment manifests, configuration, and evaluation scripts.
     \item \textbf{Acceptance criteria:} each major deliverable is associated with objective acceptance criteria (e.g., successful deployment steps, reproducible execution of an experiment, completeness of documentation).
@@ -41,11 +41,11 @@ The development process ensures traceability from constraints to design decision
 \subsection{Planned Evaluation Strategy}
 \label{sec:ch3_evaluation}
 
-Evaluation is planned to produce evidence that the proposed solution is feasible under the stated constraints and provides measurable utility when compared with a defined baseline. The evaluation design is bounded to what can be executed within the dissertation schedule and the available infrastructure.
+Evaluation is planned to produce evidence that the proposed solution provides measurable utility when compared with a defined baseline, and to characterize trade-offs between alternative instrumentation approaches. The evaluation design is bounded to what can be executed within the dissertation schedule and the available infrastructure.
 
 		\textbf{Evaluation dimensions.} The evaluation covers:
 \begin{itemize}
-    \item \textbf{Feasibility under constraints:} whether the deployment and operation steps are compatible with the assumed privilege and platform limitations.
+    \item \textbf{Architectural alternatives:} comparative analysis of different instrumentation patterns (sidecar, privileged containers, host-level agents) against defined criteria including implementation complexity, resource overhead, and diagnostic capability.
     \item \textbf{Operational overhead:} resource consumption and performance overhead introduced by the solution (measured using a defined workload and baseline).
     \item \textbf{Observability usefulness:} the extent to which the collected telemetry supports diagnosing representative failure and degradation scenarios.
     \item \textbf{Maintainability and operability:} the clarity of configuration, deployment, and troubleshooting procedures as captured in the documentation.
@@ -80,7 +80,7 @@ The competency framework organizes required capabilities into three domains: obs
 \midrule
 		\textbf{C1: Observability engineering in containers} &
 Intermediate: operational familiarity with containers and basic telemetry tooling &
-Advanced: design and deploy a constrained, production\-oriented telemetry stack &
+Advanced: design and deploy a production-oriented telemetry stack; evaluate alternative instrumentation patterns &
 Core competency to implement A1--A3 \\
 \addlinespace
 		\textbf{C2: Experimental evaluation and validity} &
@@ -107,9 +107,9 @@ Required for A5 and oral defense readiness \\
 		\textbf{Comp.} & \textbf{Planned Development Actions (by phase)} & \textbf{Assessment Criteria} \\
 \midrule
 		\textbf{C1} &
-		\textbf{P1--P2:} deep\-dive on candidate tooling and deployment patterns; implement staging deployment; document operational procedures.\newline
-		\textbf{P3:} iterate architecture and prototype based on deployment feedback and constraint compliance. &
-Prototype deploys from documented procedure; architecture decisions are traceable to constraints; operational runbook is complete. \\
+		\textbf{P1--P2:} deep-dive on candidate tooling and deployment patterns; comparative evaluation of instrumentation approaches; implement staging deployment; document operational procedures.\newline
+		\textbf{P3:} iterate architecture and prototype based on deployment feedback and evaluation of alternatives. &
+Prototype deploys from documented procedure; architecture decisions include trade-off analysis; operational runbook is complete; alternative patterns are evaluated and documented. \\
 \addlinespace
 		\textbf{C2} &
 		\textbf{P2:} define evaluation protocol (metrics, baselines, scenarios, data collection).\newline
@@ -178,9 +178,9 @@ Milestones are defined to support periodic assessment and early detection of sch
 		\toprule
 		\textbf{ID} & \textbf{Planned Date} & \textbf{Milestone} & \textbf{Acceptance Focus} \\
 \midrule
-		\textbf{M1} & End Jan & Technology selection completed & Selection rationale documented; fallbacks identified; feasibility validated via proof\-of\-concept. \\
+		\textbf{M1} & End Jan & Technology selection completed & Selection rationale documented; fallbacks identified; feasibility validated via proof-of-concept. \\
 \addlinespace
-		\textbf{M2} & Mid Mar & Staging prototype deployed & Deployment is repeatable; core telemetry pipeline works end\-to\-end; runbook is usable. \\
+		\textbf{M2} & Mid Mar & Staging prototype deployed & Deployment is repeatable; core telemetry pipeline works end-to-end; runbook is usable. \\
 \addlinespace
 		\textbf{M3} & End Apr & Evaluation protocol frozen & Baselines and scenarios defined; collection procedures documented; validity considerations recorded. \\
 \addlinespace
@@ -243,7 +243,7 @@ Milestones are defined to support periodic assessment and early detection of sch
 Project monitoring is structured to ensure timely control of scope, schedule, and quality:
 \begin{itemize}
     \item \textbf{Governance and roles:} responsibilities are split between the student (execution and reporting), the academic advisor (scientific guidance and quality control), and the hosting institution supervisor (infrastructure coordination and practitioner feedback facilitation when applicable).
-    \item \textbf{Cadence:} meetings are held regularly (e.g., bi\-weekly with the academic advisor; weekly or as\-needed with the hosting supervisor) to review progress against the plan and to unblock dependencies.
+    \item \textbf{Cadence:} meetings are held regularly (e.g., bi-weekly with the academic advisor; weekly or as-needed with the hosting supervisor) to review progress against the plan and to unblock dependencies.
     \item \textbf{Progress tracking:} a lightweight project log is maintained, including tasks, deliverables, open issues, decisions, and risk status.
     \item \textbf{Change control:} any scope adjustment is documented with rationale, impact analysis (schedule/risk), and approval by the advisor.
     \item \textbf{Quality control:} each milestone includes an acceptance review focused on reproducibility, completeness of documentation, and alignment with constraints.
@@ -285,13 +285,13 @@ To keep the assessment consistent and auditable, this project uses a lightweight
 	\toprule
 		\textbf{ID} & \textbf{Type} & \textbf{Risk Description} & \textbf{Impact} & \textbf{Prob.} & \textbf{Monitoring Indicators} & \textbf{Mitigation / Contingency} \\
 \midrule
-R1 & Tech & Tooling or deployment does not comply with privilege/platform constraints, or is not reliable in the target environment. & H & M & Proof\-of\-concept fails to deploy \textgreater{}2 times; required capability missing; unstable telemetry pipeline. & Run early proof\-of\-concept; keep fallback options; freeze a minimal viable architecture and reduce scope if needed. \\
+R1 & Tech & Selected tooling or deployment pattern does not meet operational requirements, or is not reliable in the heterogeneous target environment. & H & M & Proof-of-concept fails to deploy \textgreater{}2 times; required capability missing; unstable telemetry pipeline. & Run early proof-of-concept; evaluate multiple architectural alternatives; keep fallback options; freeze a minimal viable architecture and reduce scope if needed. \\
 \addlinespace
-R2 & Tech & Telemetry pipeline quality and/or overhead is insufficient for the planned diagnosis scenarios. & H & M & Trace/log correlation breaks; missing identifiers; CPU/memory overhead exceeds agreed bounds; latency regression beyond baseline tolerance. & Validate correlation end\-to\-end early; tune configuration and sampling; prioritize fewer scenarios with stronger instrumentation; bound evaluation and document limitations. \\
+R2 & Tech & Telemetry pipeline quality and/or overhead is insufficient for the planned diagnosis scenarios. & H & M & Trace/log correlation breaks; missing identifiers; CPU/memory overhead exceeds agreed bounds; latency regression beyond baseline tolerance. & Validate correlation end-to-end early; tune configuration and sampling; prioritize fewer scenarios with stronger instrumentation; bound evaluation and document limitations. \\
 \addlinespace
 R3 & Schedule & Infrastructure access, deployment approvals, or environment instability delays evaluation activities. & H & M & Access not granted by planned date; blocked deployments; long coordination cycles; repeated environment outages. & Use staging as primary target; parallelize protocol design and writing; maintain schedule buffers; adjust campaign size to preserve M3--M5. \\
 \addlinespace
-R4 & Schedule & Writing and review iteration compresses due to technical delays, reducing dissertation quality. & H & M & Missed weekly writing checkpoint; advisor review windows missed; late integration of chapters/evidence. & Enforce weekly writing output; draft chapters incrementally; lock review dates; de\-scope non\-essential work to protect submission readiness. \\
+R4 & Schedule & Writing and review iteration compresses due to technical delays, reducing dissertation quality. & H & M & Missed weekly writing checkpoint; advisor review windows missed; late integration of chapters/evidence. & Enforce weekly writing output; draft chapters incrementally; lock review dates; de-scope non-essential work to protect submission readiness. \\
 \addlinespace
 R5 & External & Limited stakeholder availability or ecosystem/policy changes reduce feedback feasibility or impose new constraints. & M & M & Low response rate; repeated rescheduling; new restrictions; deprecations impacting selected components. & Recruit early; allow asynchronous reviews; complement with advisor/expert review; choose conservative components; document assumptions and adapt plan. \\
 \bottomrule

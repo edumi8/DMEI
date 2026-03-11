@@ -1,0 +1,3 @@
+- [ ] Faz sentido ter um sistema numerico de avaliação das ferramentas. Baseado nos criterios definidos, cada critério pode ser avaliado numa escala.
+- [ ] Juntar a escolha das ferramentas e a arquitetura faz sentido num só capitulo ou devo separar?
+- [ ] Mensão a ambientes de staging ou isso é depois de development and deployment?

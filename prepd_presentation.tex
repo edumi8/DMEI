@@ -86,26 +86,26 @@ Cybersecurity and Systems Administration}
 \begin{frame}{Problem Statement}
 \begin{columns}[T,onlytextwidth]
   \column{0.52\textwidth}
-  \begin{block}{Technical constraints}
+  \begin{block}{Technical challenges}
   \begin{itemize}
-    \item \textbf{Non-privileged containers}: no host-level metrics
-    \item \textbf{Telemetry fragmentation}: across CI/CD services
+    \item \textbf{Architectural choices}: multiple instrumentation patterns available
+    \item \textbf{Telemetry integration}: across CI/CD services
     \item \textbf{Mixed platforms}: Linux and Windows
   \end{itemize}
   \end{block}
 
   \column{0.46\textwidth}
-  \begin{block}{Organizational constraints}
+  \begin{block}{Design requirements}
   \begin{itemize}
-    \item \textbf{No host privileges}: administrative access denied
-    \item \textbf{Security policy}: privileged containers forbidden
-    \item \textbf{Diagnosis}: slow and manual on-prem
+    \item \textbf{Docker access}: leveraging container capabilities
+    \item \textbf{Trade-off analysis}: overhead vs visibility
+    \item \textbf{Diagnosis}: improving on-prem observability
   \end{itemize}
   \end{block}
 \end{columns}
 
 \vspace{0.4em}
-\textbf{Scope:} non-privileged containerized CI/CD on mixed OS
+\textbf{Scope:} heterogeneous containerized CI/CD on mixed OS
 \end{frame}
 
 
@@ -115,18 +115,18 @@ Cybersecurity and Systems Administration}
   \column{0.54\textwidth}
   \begin{block}{What the literature assumes}
   \begin{itemize}
-    \item \textbf{Privileged access}: host or cloud-managed
-    \item \textbf{Kernel mechanisms}: eBPF with elevated capabilities
-    \item \textbf{Sidecar patterns}: Kubernetes contexts
+    \item \textbf{Cloud platforms}: managed observability
+    \item \textbf{Kubernetes focus}: native patterns
+    \item \textbf{Homogeneous}: single OS environments
   \end{itemize}
   \end{block}
 
   \column{0.44\textwidth}
   \begin{block}{Gap in practice}
   \begin{itemize}
-    \item \textbf{Non-privileged}: mixed OS deployments
-    \item \textbf{CI/CD workloads}: limited empirical guidance
-    \item \textbf{Ephemeral tasks}: post hoc correlation underexplored
+    \item \textbf{On-premise}: mixed OS deployments
+    \item \textbf{CI/CD workloads}: limited comparative evaluation
+    \item \textbf{Trade-offs}: instrumentation alternatives underexplored
   \end{itemize}
   \end{block}
 \end{columns}
@@ -135,14 +135,14 @@ Cybersecurity and Systems Administration}
 \begin{frame}{Objectives and Research Question}
 \begin{block}{Central question}
   How can an \textbf{integrated observability framework} be designed and evaluated for
-  \textbf{privilege-restricted CI/CD} environments?
+  \textbf{heterogeneous containerized CI/CD} environments, and what are the \textbf{trade-offs} between different instrumentation approaches?
 \end{block}
 
 \begin{block}{Objectives}
   \begin{itemize}
-    \item \textbf{Architecture}: container-first without host privileges
+    \item \textbf{Architecture}: comparative analysis of instrumentation patterns
     \item \textbf{Prototype}: reproducible images + deployment templates
-    \item \textbf{Evaluation}: controlled fault injection + operational metrics
+    \item \textbf{Evaluation}: controlled fault injection + overhead characterization
   \end{itemize}
 \end{block}
 \end{frame}
@@ -233,7 +233,7 @@ Cybersecurity and Systems Administration}
   \column{0.50\textwidth}
   \begin{block}{Established}
   \begin{itemize}
-    \item \textbf{Problem framing}: privilege-restricted CI/CD
+    \item \textbf{Problem framing}: heterogeneous containerized CI/CD
     \item \textbf{PRISMA review}: gaps identified
     \item \textbf{Methodology}: execution plan defined
   \end{itemize}
