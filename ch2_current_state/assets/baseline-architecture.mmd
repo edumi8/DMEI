@@ -1,0 +1,41 @@
+flowchart TB
+    subgraph ENV["On-Premise CI/CD Environment (Baseline)"]
+        subgraph N1["Node 1 - Linux Host"]
+            GITLAB["GitLab"]
+            GITLAB_DB["PostgreSQL (GitLab DB)"]
+        end
+
+        subgraph N2["Node 2 - Linux Host"]
+            JENKINS["Jenkins"]
+            SONAR["SonarQube"]
+            SONAR_DB["PostgreSQL (SonarQube DB)"]
+        end
+
+        subgraph N3["Node 3 - Linux Host"]
+            NEXUS["Nexus Repository"]
+            DEPTRACK["Dependency-Track"]
+            DEPTRACK_DB["PostgreSQL (Dependency-Track DB)"]
+        end
+
+        subgraph N4["Node 4 - Windows Server 2019"]
+            RUNNERS["CI/CD Runners / Build Agents"]
+        end
+    end
+
+    DEV["Development Teams"] --> GITLAB
+    %% setas unicas para cada lado
+    GITLAB --> JENKINS
+    JENKINS --> GITLAB
+    JENKINS --> SONAR
+    JENKINS --> NEXUS
+    JENKINS --> DEPTRACK
+    JENKINS --> RUNNERS
+
+    GITLAB --> GITLAB_DB
+    SONAR --> SONAR_DB
+    DEPTRACK --> DEPTRACK_DB
+
+    classDef linux fill:#E8F4FD,stroke:#1D4E89,stroke-width:1.5px;
+    classDef windows fill:#FDECEC,stroke:#8A1D1D,stroke-width:1.5px;
+    class N1,N2,N3 linux;
+    class N4 windows;

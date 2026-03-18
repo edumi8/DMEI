@@ -1,0 +1,34 @@
+% Chapter 6
+\chapter{Evaluation Framework and A-priori Metrics}
+\label{chap:evaluation}
+
+This chapter defines how the implemented observability solution will be evaluated. The evaluation framework is specified before execution to ensure methodological rigor, reduce bias, and guarantee traceability between objectives, measurements, and conclusions.
+
+\section{Evaluation Goals}
+
+The evaluation assesses whether the solution improves operational visibility and incident handling while maintaining acceptable overhead. The analysis compares baseline and instrumented configurations under controlled scenarios.
+
+\section{A-priori Metrics Definition}
+
+The following metrics are defined \textit{a priori}:
+\begin{itemize}
+    \item \textbf{\ac{MTTD}}: elapsed time from fault occurrence to reliable detection.
+    \item \textbf{\ac{MTTR}}: elapsed time from detection to service recovery.
+    \item \textbf{Telemetry pipeline throughput}: sustained ingestion and processing rate.
+    \item \textbf{Alert quality}: precision and coverage for predefined scenarios.
+    \item \textbf{Instrumentation overhead}: incremental CPU, memory, and network usage.
+\end{itemize}
+
+The overhead target remains below 5\% where feasible, as established in prior planning.
+
+\section{Evaluation Design}
+
+The campaign is structured around baseline comparison and fault-injection scenarios. Each scenario includes explicit preconditions, execution steps, expected telemetry signals, and acceptance criteria. Measurements are collected in consistent windows and analyzed with documented aggregation rules.
+
+\section{Threats to Validity and Mitigation}
+
+To strengthen credibility, the evaluation protocol explicitly addresses internal, external, and construct validity threats. Mitigation actions include configuration freeze during tests, repeated runs, and transparent reporting of context-specific constraints.
+
+\section{Chapter Summary}
+
+This chapter established the evaluation protocol and predefined metrics that will be used to assess implementation outcomes. The final chapter consolidates conclusions and future work.

@@ -1,5 +1,5 @@
 % Chapter 3
-\chapter{Project Planning and Methodology}
+\chapter{Methodology and Requirements Planning}
 \label{chap:planning}
 
 This chapter presents how the dissertation project will be carried out during execution (January--June 2026). Building on the problem framing in Chapter~\ref{chap:introduction} and state of the art in Chapter~\ref{chap:literature}, the focus is on methodological approach, planned artifacts, evaluation activities, skills development, schedule, and risk management.
@@ -7,6 +7,17 @@ This chapter presents how the dissertation project will be carried out during ex
 \section{Objectives and Scope Alignment}
 
 The project objectives and scope defined in Chapter~\ref{chap:introduction} remain aligned with findings synthesized in Chapter~\ref{chap:literature}. No scope changes are planned. The work focuses on execution strategy to deliver planned artifacts and produce defensible evidence.
+
+\section{Requirements Definition}
+\label{sec:ch3_requirements}
+
+This section consolidates the functional and non-functional requirements that guide architecture and implementation decisions.
+
+\textbf{Functional requirements} include: collection of metrics, logs, and traces across core \ac{CICD} services; centralized visualization; and support for cross-service incident analysis.
+
+\textbf{Non-functional requirements} include: operation in heterogeneous environments (Linux and Windows), reproducible deployment procedures, acceptable instrumentation overhead, and operational maintainability for infrastructure teams.
+
+These requirements are used as acceptance criteria during design reviews and as reference points for evaluation planning in subsequent chapters.
 
 \section{Methodological Approach}
 \label{sec:ch3_method}

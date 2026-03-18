@@ -1,0 +1,43 @@
+% Chapter 2
+\chapter{Current State of the Target Environment}
+\label{chap:current_state}
+
+This chapter characterizes the current operational state of the target \ac{CICD} environment before intervention. The objective is to document the baseline context that motivates the proposed observability solution and supports later comparison during implementation and evaluation.
+
+\section{Infrastructure and Platform Baseline}
+
+The target environment is an on-premise, containerized \ac{CICD} platform distributed across mixed operating systems (Linux and Windows). Core platform services include source control, build automation, static analysis, and artifact management. The environment is operationally relevant because failures in one service can propagate to the full delivery pipeline.
+
+\subsection{Baseline Node and Service Topology}
+
+The baseline architecture is represented as a node-to-service topology diagram. The diagram source is maintained in Mermaid format to simplify iterative updates during thesis development: \texttt{ch2\_current\_state/assets/baseline-architecture.mmd}.
+
+\begin{figure}[htbp]
+    \centering
+    \fbox{\parbox{0.92\textwidth}{\centering \vspace{1.7cm}
+    Baseline Node/Service Architecture Diagram (Mermaid Source)\\
+    \texttt{ch2\_current\_state/assets/baseline-architecture.mmd}
+    \vspace{1.7cm}}}
+    \caption{Baseline node and service topology for the target \ac{CICD} environment.}
+    \label{fig:baseline-node-service-topology}
+\end{figure}
+
+\section{Current Observability Posture}
+
+The current monitoring posture is predominantly reactive. Diagnostic activities rely on manual inspection of container logs, ad-hoc resource checks, and service-specific troubleshooting interfaces. Telemetry remains fragmented across tools, with limited cross-service correlation and no consolidated operational view.
+
+\section{Operational Pain Points}
+
+The baseline assessment highlights recurrent constraints:
+\begin{itemize}
+    \item Delayed incident detection due to limited proactive alerting.
+    \item High diagnostic effort caused by fragmented logs and metrics.
+    \item Limited historical evidence for capacity planning and trend analysis.
+    \item Inconsistent troubleshooting procedures across Linux and Windows hosts.
+\end{itemize}
+
+These pain points establish the need for a structured observability architecture that integrates metrics, logs, and traces under the real constraints of the environment.
+
+\section{Chapter Summary}
+
+This chapter documented the baseline operational state and the main observability limitations currently affecting reliability and troubleshooting efficiency. The next chapter reviews the literature to position these constraints within existing research and practitioner evidence.
