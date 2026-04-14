@@ -1,41 +1,44 @@
-flowchart TB
-    subgraph ENV["On-Premise CI/CD Environment (Baseline)"]
-        subgraph N1["Node 1 - Linux Host"]
-            GITLAB["GitLab"]
-            GITLAB_DB["PostgreSQL (GitLab DB)"]
-        end
-
-        subgraph N2["Node 2 - Linux Host"]
-            JENKINS["Jenkins"]
-            SONAR["SonarQube"]
-            SONAR_DB["PostgreSQL (SonarQube DB)"]
-        end
-
-        subgraph N3["Node 3 - Linux Host"]
-            NEXUS["Nexus Repository"]
-            DEPTRACK["Dependency-Track"]
-            DEPTRACK_DB["PostgreSQL (Dependency-Track DB)"]
-        end
-
-        subgraph N4["Node 4 - Windows Server 2019"]
-            RUNNERS["CI/CD Runners / Build Agents"]
-        end
+%%{init: {"theme": "base", "themeVariables": {"fontSize": "16px", "primaryColor": "#FFFFFF", "primaryTextColor": "#111111", "lineColor": "#111111", "fontFamily": "Arial"}, "flowchart": {"curve": "linear", "nodeSpacing": 45, "rankSpacing": 65}} }%%
+flowchart LR
+    subgraph LIN1["le-s-po-lin1 (Primary CI/CD Host)"]
+        direction TB
+        SONAR["SonarQube"]
+        GITLAB["GitLab"]
+        JENKINS["Jenkins Controller"]
+        DEPTRACK["Dependency-Track"]
+        NEXUS["Nexus"]
+        PLATFORM["Shared CI/CD Platform Services"]
     end
 
-    DEV["Development Teams"] --> GITLAB
-    %% setas unicas para cada lado
-    GITLAB --> JENKINS
-    JENKINS --> GITLAB
-    JENKINS --> SONAR
-    JENKINS --> NEXUS
-    JENKINS --> DEPTRACK
-    JENKINS --> RUNNERS
+    subgraph LIN2["le-s-po-lin2"]
+        direction TB
+        W_LIN2["Jenkins Worker"]
+        DB_LIN2["Database Services"]
+    end
 
-    GITLAB --> GITLAB_DB
-    SONAR --> SONAR_DB
-    DEPTRACK --> DEPTRACK_DB
+    subgraph APP1["le-s-po-app1"]
+        direction TB
+        W_APP1["Jenkins Worker"]
+        STAGE_APP1["Test/Staging Deployments"]
+    end
 
-    classDef linux fill:#E8F4FD,stroke:#1D4E89,stroke-width:1.5px;
-    classDef windows fill:#FDECEC,stroke:#8A1D1D,stroke-width:1.5px;
-    class N1,N2,N3 linux;
-    class N4 windows;
+    subgraph WIN1["le-s-po-win1"]
+        direction TB
+        W_WIN1["Jenkins Worker"]
+        WIN_TASKS["Platform-Specific Tasks"]
+    end
+
+    classDef core fill:#F2F2F2,stroke:#111111,stroke-width:2.2px,color:#111111;
+    classDef workers fill:#FFFFFF,stroke:#333333,stroke-width:1.8px,color:#111111;
+    classDef control fill:#FFFFFF,stroke:#111111,stroke-width:2px,color:#111111;
+    classDef service fill:#FAFAFA,stroke:#222222,stroke-width:1.8px,color:#111111;
+    classDef workerNode fill:#FFFFFF,stroke:#222222,stroke-width:2px,color:#111111;
+    classDef envNode fill:#F7F7F7,stroke:#444444,stroke-dasharray: 4 2,stroke-width:1.8px,color:#111111;
+
+    class LIN1 core;
+    class APP1,LIN2,WIN1 workers;
+    class GITLAB,JENKINS control;
+    class SONAR,DEPTRACK,NEXUS,PLATFORM,DB_LIN2,STAGE_APP1,WIN_TASKS service;
+    class W_LIN2,W_APP1,W_WIN1 workerNode;
+    class ENVS workers;
+    class ENV1,ENV2,ENVN envNode;

@@ -2,29 +2,79 @@
 \chapter{Current State of the Target Environment}
 \label{chap:current_state}
 
-This chapter characterizes the current operational state of the target \ac{CICD} environment before intervention. The objective is to document the baseline context that motivates the proposed observability solution and supports later comparison during implementation and evaluation.
+This chapter characterizes the current operational state of the target \ac{CICD} environment before intervention. The objective is to document the baseline architecture currently mounted in production-like operation, motivate the proposed observability solution, and support later comparison during implementation and evaluation.
 
 \section{Infrastructure and Platform Baseline}
 
-The target environment is an on-premise, containerized \ac{CICD} platform distributed across mixed operating systems (Linux and Windows). Core platform services include source control, build automation, static analysis, and artifact management. The environment is operationally relevant because failures in one service can propagate to the full delivery pipeline.
+The target environment is an on-premise, containerized \ac{CICD} platform distributed across mixed operating systems (Linux and Windows). Core platform services include source control, pipeline orchestration, static analysis, software composition analysis, and artifact management. The environment is operationally relevant because failures in one service can propagate across the full delivery pipeline.
 
 \subsection{Baseline Node and Service Topology}
 
-The baseline architecture is represented as a node-to-service topology diagram. The diagram source is maintained in Mermaid format to simplify iterative updates during thesis development: \texttt{ch2\_current\_state/assets/baseline-architecture.mmd}.
+The baseline architecture is represented as a structural node-to-service topology diagram. This view intentionally focuses on host and service placement (without runtime interaction links). The diagram source is maintained in Mermaid format to simplify iterative updates during thesis development: \texttt{ch2\_current\_state/assets/baseline-architecture.mmd}.
+
+At infrastructure level, the mounted structure is centered on four hosts: \texttt{le-s-po-lin1}, \texttt{le-s-po-lin2}, \texttt{le-s-po-app1}, and \texttt{le-s-po-win1}. The primary host (\texttt{le-s-po-lin1}) provides shared \ac{CICD} control services. The remaining nodes provide execution capacity and environment support: a secondary Linux host with database and test support (\texttt{le-s-po-lin2}), an application-side deployment host for test and staging workloads (\texttt{le-s-po-app1}), and a Windows worker for platform-specific execution tasks (\texttt{le-s-po-win1}).
 
 \begin{figure}[htbp]
     \centering
-    \fbox{\parbox{0.92\textwidth}{\centering \vspace{1.7cm}
-    Baseline Node/Service Architecture Diagram (Mermaid Source)\\
-    \texttt{ch2\_current\_state/assets/baseline-architecture.mmd}
-    \vspace{1.7cm}}}
+    \includegraphics[width=0.96\textwidth]{ch2_current_state/assets/baseline-architecture.pdf}
     \caption{Baseline node and service topology for the target \ac{CICD} environment.}
     \label{fig:baseline-node-service-topology}
 \end{figure}
 
+\subsection{Baseline Server and Service Inventory}
+
+To complement the topology diagram, \autoref{tab:baseline-server-inventory} and \autoref{tab:baseline-service-inventory} provide a structured inventory of baseline servers and services with unique identifiers and short operational descriptions.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Baseline server inventory.}
+    \label{tab:baseline-server-inventory}
+    \begin{tabular}{|p{0.12\textwidth}|p{0.24\textwidth}|p{0.52\textwidth}|}
+        \hline
+        \textbf{ID} & \textbf{Server / Node} & \textbf{Operational Role} \\
+        \hline
+        SRV-01 & \texttt{le-s-po-lin1} & Primary \ac{CICD} host running core orchestration and shared platform services. \\
+        \hline
+        SRV-02 & \texttt{le-s-po-lin2} & Secondary Linux host supporting \ac{CICD} and test operations; also runs database services. \\
+        \hline
+        SRV-03 & \texttt{le-s-po-app1} & Application-side host where test and staging deployments are executed. \\
+        \hline
+        SRV-04 & \texttt{le-s-po-win1} & Windows worker host for platform-specific build, test, and deployment tasks. \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Baseline service inventory.}
+    \label{tab:baseline-service-inventory}
+    \begin{tabular}{|p{0.12\textwidth}|p{0.24\textwidth}|p{0.52\textwidth}|}
+        \hline
+        \textbf{ID} & \textbf{Service} & \textbf{Operational Role} \\
+        \hline
+        SVC-01 & GitLab & Hosts source repositories and triggers \ac{CICD} workflows through commits, merges, and webhooks. \\
+        \hline
+        SVC-02 & Jenkins Controller & Orchestrates pipeline workflows, schedules stages, and dispatches jobs to available workers. \\
+        \hline
+        SVC-03 & Jenkins Worker & Executes build, test, analysis, packaging, and deployment steps assigned by the controller. \\
+        \hline
+        SVC-04 & SonarQube & Performs static code analysis and enforces quality-gate checks during pipeline execution. \\
+        \hline
+        SVC-05 & Dependency-Track & Ingests software bills of materials and tracks dependency and vulnerability risk. \\
+        \hline
+        SVC-06 & Nexus Repository & Stores and serves versioned build artifacts and dependencies consumed by pipeline jobs. \\
+        \hline
+        SVC-07 & Test Environments & Isolated environments for pre-release deployment and validation. \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
 \section{Current Observability Posture}
 
 The current monitoring posture is predominantly reactive. Diagnostic activities rely on manual inspection of container logs, ad-hoc resource checks, and service-specific troubleshooting interfaces. Telemetry remains fragmented across tools, with limited cross-service correlation and no consolidated operational view.
+
+In practice, the primary diagnostic mechanism is \texttt{docker logs}. Teams typically inspect container output only after incidents occur, which limits early detection and increases mean time to identify root causes. This log-only approach also provides weak correlation with host-level resource behavior, inter-service dependencies, and end-to-end request execution.
 
 \section{Operational Pain Points}
 
