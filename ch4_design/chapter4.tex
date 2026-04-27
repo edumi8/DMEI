@@ -6,157 +6,172 @@
 \chapter{Tool Selection and Architecture Design}
 \label{chap:design}
 
-\glsresetall % reset the glossary to expand acronyms once more
+\glsresetall
 
-%********************************** %First Section  **************************************
 \section{Introduction}
 \label{sec:design_intro}
 
-This chapter presents the methodology for selecting appropriate tools and designing the architecture for \gls{CICD} observability in containerized environments. Building upon the literature review in \autoref{chap:literature}, we establish evaluation criteria, compare candidate solutions, and propose an architecture that addresses the identified challenges.
+This chapter defines the selection of the observability stack and the architecture adopted for \gls{CICD} observability in containerized environments. The goal is not to compare tools in the abstract. The goal is to choose a stack that can be deployed with low friction, integrated with heterogeneous pipeline services, and evaluated through a reproducible proof of concept.
 
-The chapter is organized as follows: \autoref{sec:tool_selection} presents the tool selection methodology and evaluation criteria; \autoref{sec:candidate_tools} analyzes candidate tools for each observability pillar; \autoref{sec:architecture_design} describes the proposed architecture; and \autoref{sec:design_summary} summarizes the design decisions.
+The chapter follows four steps. First, it defines the evaluation criteria used to assess the candidates. Second, it compares the main alternatives for metrics, logs, traces, and visualization. Third, it consolidates the final technology stack and justifies the selection. Fourth, it presents the proposed architecture and the design trade offs that guide implementation.
 
-%********************************** %Second Section  *************************************
+The resulting design adopts a unified stack centered on Prometheus, Grafana, Loki, Tempo, and the OpenTelemetry Collector. This combination provides native support for containerized workloads, strong alignment with open standards, and a coherent path for correlating metrics, logs, and traces through a single operational interface.
+
 \section{Tool Selection Methodology}
 \label{sec:tool_selection}
 
 \subsection{Evaluation Criteria}
 \label{subsec:evaluation_criteria}
 
-The selection of observability tools must address the constraints and requirements identified for \gls{CICD} environments:
+The evaluation criteria were derived from the requirements identified in the literature review and from the practical constraints of \gls{CICD} environments. The selected platform must support short lived workloads, containerized services, constrained execution environments, and incremental adoption.
 
-\begin{itemize}
-    \item \textbf{Containerization Compatibility}: Native support for Docker/containers
-    \item \textbf{Limited Privileges}: Ability to operate without root access or administrative rights
-    \item \textbf{Cross-platform Support}: Compatibility with Linux, macOS, and Windows
-    \item \textbf{Integration Capabilities}: APIs and compatibility with common \gls{CICD} platforms
-    \item \textbf{Performance Overhead}: Minimal impact on build/deployment times
-    \item \textbf{Storage Efficiency}: Reasonable resource consumption for logs and metrics
-    \item \textbf{Learning Curve}: Documentation quality and ease of adoption
-    \item \textbf{Community and Support}: Active development and community
-    \item \textbf{Cost}: Open-source or acceptable licensing model
-\end{itemize}
+Six criteria were used.
+
+\begin{enumerate}
+    \item \textbf{Environment compatibility}: ability to operate in containerized environments and to support local, self hosted, or orchestrated deployment models.
+    \item \textbf{Integration fit}: compatibility with standard telemetry pipelines, common \gls{CICD} platforms, and application level instrumentation.
+    \item \textbf{Cross signal correlation}: ability to relate metrics, logs, and traces during diagnosis.
+    \item \textbf{Operational complexity}: deployment effort, number of moving parts, and maintenance burden.
+    \item \textbf{Cost and licensing}: suitability for an academic and open implementation context.
+    \item \textbf{Community and documentation maturity}: quality of documentation, ecosystem support, and evidence of continued adoption.
+\end{enumerate}
+
+These criteria are intentionally broad enough to compare complete stacks and not only isolated tools. This is important because observability value emerges from the interaction between collection, storage, querying, and visualization.
 
 \subsection{Selection Process}
 \label{subsec:selection_process}
 
-The tool selection follows a systematic four-phase approach:
-
+The selection process followed four phases:
 \begin{enumerate}
-    \item \textbf{Identification}: Catalog potential tools from literature review and industry practice
-    \item \textbf{Initial Screening}: Filter based on fundamental requirements (open-source, containerization support)
-    \item \textbf{Comparative Analysis}: Detailed evaluation using criteria matrix
-    \item \textbf{Proof-of-Concept}: Validate top candidates through practical implementation
+    \item \textbf{Identification}: candidate tools and stacks were collected from the literature review, current practice, and official documentation.
+    \item \textbf{Screening}: clearly unsuitable options were removed when they introduced excessive licensing restrictions, high entry cost, or weak container support.
+    \item \textbf{Comparative analysis}: the remaining candidates were compared against the six evaluation criteria.
+    \item \textbf{Architectural consolidation}: the best performing combination was translated into a deployable architecture for the proof of concept.
 \end{enumerate}
 
-%********************************** %Third Section  *************************************
+The process deliberately emphasizes stack coherence. A tool that performs well in isolation may still be a poor choice if it increases integration effort or weakens cross signal navigation.
+
 \section{Candidate Tool Analysis}
 \label{sec:candidate_tools}
 
-\subsection{Monitoring Tools}
+\subsection{Candidate Stacks Considered}
+\label{subsec:candidate_stacks}
+
+Three practical alternatives were retained for detailed comparison:
+\begin{itemize}
+    \item \textbf{Stack A}: Prometheus + Grafana + Loki + Tempo + OpenTelemetry Collector
+    \item \textbf{Stack B}: Prometheus + Grafana + Loki + Jaeger + OpenTelemetry Collector
+    \item \textbf{Stack C}: Elastic Observability
+\end{itemize}
+
+The first two options share the same metrics, logs, and visualization layers. They differ in the tracing backend. The third option represents an integrated alternative with strong search and analytics capabilities.
+
+\subsection{Metrics Layer}
 \label{subsec:monitoring_tools}
 
 \subsubsection{Prometheus}
 \label{subsubsec:prometheus}
 
-\textbf{Overview:} [Description of Prometheus - pull-based monitoring system, time-series database]
+Prometheus was selected as the metrics backbone. Its model fits cloud native environments particularly well because it stores dimensional time series data, uses a pull based scraping model over HTTP, and integrates with service discovery and exporter based collection. These characteristics are especially useful in \gls{CICD} systems where services may appear and disappear dynamically and where metric endpoints can be exposed with minimal intrusion.
 
-\textbf{Strengths:}
+The main strengths of Prometheus in this context are the following:
 \begin{itemize}
-    \item Native Kubernetes/container support
-    \item Pull-based model (vs push)
-    \item PromQL query language
-    \item Extensive exporter ecosystem
+    \item strong compatibility with containerized and orchestrated workloads;
+    \item mature exporter ecosystem for hosts, containers, and services;
+    \item expressive query model through PromQL;
+    \item good fit for alerting and dashboard aggregation.
 \end{itemize}
 
-\textbf{Weaknesses:}
+Its main limitations are also relevant:
 \begin{itemize}
-    \item Storage scalability challenges
-    \item Limited support for long-term retention
-    \item [Additional limitations]
+    \item long term retention is not its strongest point without additional components;
+    \item large scale storage and federation require deliberate design;
+    \item pull based scraping is simple for reachable targets and less direct for ephemeral or externally hosted jobs.
 \end{itemize}
 
-\textbf{Evaluation Score:} [TBD based on criteria]
+For the scope of this work, these limitations are acceptable. The proof of concept prioritizes short to medium retention, local or self hosted deployment, and reproducible collection paths.
 
-\subsubsection{Other Monitoring Candidates}
+\subsubsection{Other Metrics Candidates}
 \label{subsubsec:other_monitoring}
 
-\paragraph{InfluxDB} [Placeholder for analysis]
-\begin{itemize}
-    \item Time-series database
-    \item [Pros/cons to be filled]
-\end{itemize}
+InfluxDB and Graphite were considered as historical alternatives for time series storage. They remain relevant in specific domains, although they offer less direct alignment with the modern container and exporter ecosystem used in this project. Elastic also supports metric ingestion inside its broader observability platform. Still, the stack comparison showed that Prometheus provides the clearest operational path for the target scenario.
 
-\paragraph{Graphite} [Placeholder for analysis]
-
-\paragraph{Datadog / NewRelic} [Commercial alternatives - brief mention]
-
-\subsection{Logging Tools}
+\subsection{Logs and Traces}
 \label{subsec:logging_tools}
-
-\subsubsection{ELK/EFK Stack}
-\label{subsubsec:elk}
-
-\textbf{Overview:} [Elasticsearch, Logstash/Fluentd, Kibana]
-
-\textbf{Component Analysis:}
-\begin{itemize}
-    \item \textbf{Elasticsearch}: Distributed search and analytics
-    \item \textbf{Fluentd/Logstash}: Log collection and forwarding
-    \item \textbf{Kibana}: Visualization and dashboards
-\end{itemize}
-
-\textbf{Evaluation:} [Detailed analysis]
 
 \subsubsection{Loki}
 \label{subsubsec:loki}
 
-\textbf{Overview:} [Grafana Loki - log aggregation system designed for Kubernetes]
+Loki was selected for log aggregation. Its most important architectural property is that it does not index the full content of each log line. Instead, it groups entries into streams and indexes them by labels. This model lowers storage and indexing cost when compared with full text indexing systems and aligns well with Grafana based workflows.
 
-\textbf{Strengths:}
+Its main strengths are:
 \begin{itemize}
-    \item Cost-effective (indexes labels, not full text)
-    \item Native Grafana integration
-    \item Container-native design
+    \item low cost log indexing model;
+    \item natural integration with Grafana;
+    \item good fit for structured labels such as service, namespace, job, environment, and pipeline identifiers;
+    \item adequate support for container native log collection.
 \end{itemize}
 
-\textbf{Weaknesses:} [To be analyzed]
+Its trade offs are the following:
+\begin{itemize}
+    \item label design must be disciplined;
+    \item high cardinality labels create operational and performance problems;
+    \item full text search expectations must be adjusted to Loki's label first model.
+\end{itemize}
 
-\subsubsection{Other Logging Candidates}
-\label{subsubsec:other_logging}
+For \gls{CICD} observability this trade off is acceptable because many diagnostic paths rely on service labels, execution windows, job identifiers, and trace context rather than unrestricted search over arbitrarily indexed content.
 
-\paragraph{Splunk} [Brief commercial alternative mention]
-\paragraph{Graylog} [Open-source alternative]
-\paragraph{CloudWatch Logs / Azure Monitor} [Cloud-native options]
+\subsubsection{Tempo}
+\label{subsubsec:tempo}
 
-\subsection{Tracing Tools}
-\label{subsec:tracing_tools}
+Tempo was selected as the tracing backend in the final architecture. Tempo supports both monolithic and microservices deployment modes, which makes it suitable for a small scale proof of concept and for later scaling scenarios. It also provides TraceQL and integrates tightly with Grafana for trace exploration and cross signal navigation.
+
+The selection of Tempo is motivated by four factors:
+\begin{enumerate}
+    \item it preserves stack consistency inside the Grafana ecosystem;
+    \item it supports a simple entry point for the proof of concept;
+    \item it scales into a multi component model when required;
+    \item it offers a direct path to trace based analysis and correlation workflows.
+\end{enumerate}
 
 \subsubsection{Jaeger}
 \label{subsubsec:jaeger}
 
-\textbf{Overview:} [CNCF distributed tracing platform]
+Jaeger remains a strong alternative. It is mature, widely adopted, and provides simple local deployment through its all in one distribution. It also supports separated roles such as collector and query services in larger deployments. Jaeger would therefore be a defensible choice for the tracing layer.
 
-\textbf{Features:}
+It was not selected as the primary backend because Tempo offers a more cohesive experience in the final stack chosen for this work. Since Grafana is also the selected visualization layer, the Tempo based path reduces architectural fragmentation and simplifies the correlation workflow.
+
+\subsubsection{Elastic Observability}
+\label{subsubsec:elastic}
+
+Elastic Observability offers a unified platform for logs, metrics, and traces. It supports strong search and analytics capabilities and provides a consolidated user experience. This makes it attractive from a feature perspective.
+
+Even so, the evaluation identified three disadvantages for the scope of this work:
 \begin{itemize}
-    \item OpenTelemetry compatible
-    \item Service dependency visualization
-    \item Root cause analysis capabilities
+    \item licensing and distribution choices are less straightforward than the selected open stack;
+    \item the platform introduces a broader operational surface when self hosted;
+    \item the architecture does not align as directly with the lightweight, incremental proof of concept targeted by this dissertation.
 \end{itemize}
 
-\textbf{Evaluation:} [Detailed analysis]
+Elastic therefore remains a valid benchmark alternative, though it is not the best fit for the selected implementation strategy.
 
-\subsubsection{Zipkin}
-\label{subsubsec:zipkin}
+\subsection{Instrumentation and Collection}
+\label{subsec:tracing_tools}
 
-\textbf{Overview:} [Twitter's distributed tracing system]
-
-\textbf{Comparison with Jaeger:} [Analysis]
-
-\subsubsection{OpenTelemetry}
+\subsubsection{OpenTelemetry Collector}
 \label{subsubsec:opentelemetry}
 
-\textbf{Note:} OpenTelemetry is an instrumentation framework rather than a backend system. Discussion of its role as vendor-neutral standard for telemetry data.
+The OpenTelemetry Collector is a central design choice in this work. It is not a backend in the same sense as Prometheus, Loki, or Tempo. It is the collection and processing layer that receives, processes, and exports telemetry to one or more backends.
+
+Its role in the architecture is the following:
+\begin{itemize}
+    \item receive traces, metrics, and logs from instrumented services;
+    \item normalize and enrich telemetry before export;
+    \item decouple application instrumentation from backend specific concerns;
+    \item enable future backend substitution with reduced application impact.
+\end{itemize}
+
+This collector centered approach improves architectural flexibility and keeps the design aligned with open telemetry standards.
 
 \subsection{Visualization and Dashboarding}
 \label{subsec:visualization_tools}
@@ -164,62 +179,71 @@ The tool selection follows a systematic four-phase approach:
 \subsubsection{Grafana}
 \label{subsubsec:grafana}
 
-\textbf{Overview:} [Multi-source observability platform]
+Grafana was selected as the unified user interface. It supports multiple data sources, mixed panels, and explicit correlation features that help connect traces to logs and metrics. In practical terms, this makes Grafana the operational front end of the whole architecture.
 
-\textbf{Strengths:}
+The reasons for selection are clear:
 \begin{itemize}
-    \item Multiple data source support (Prometheus, Loki, Elasticsearch, etc.)
-    \item Rich visualization options
-    \item Alerting capabilities
-    \item Plugin ecosystem
+    \item native support for Prometheus, Loki, and Tempo;
+    \item flexible dashboards for infrastructure, services, and pipelines;
+    \item strong support for correlation driven exploration;
+    \item provisioning support through configuration files, which helps reproducibility.
 \end{itemize}
 
-\subsubsection{Kibana}
-\label{subsubsec:kibana}
-
-\textbf{Overview:} [Elasticsearch visualization - already covered in ELK]
+Kibana was considered as part of the Elastic option. It was not selected independently because its value is tightly coupled to the Elastic backend choice.
 
 \subsection{Comparison Matrix}
 \label{subsec:comparison_matrix}
 
+Table \ref{tab:stack_comparison} summarizes the stack level comparison.
+
 \begin{table}[htbp]
 \centering
-\caption{Tool Comparison Matrix}
-\label{tab:tool_comparison}
-\begin{tabular}{@{}lcccccc@{}}
+\caption{Comparison of candidate observability stacks}
+\label{tab:stack_comparison}
+\begin{tabular}{@{}lccccccc@{}}
 \toprule
-\textbf{Tool} & \textbf{Container} & \textbf{Privileges} & \textbf{Cross-platform} & \textbf{Integration} & \textbf{Performance} & \textbf{Score} \\
+\textbf{Stack} & \textbf{C1} & \textbf{C2} & \textbf{C3} & \textbf{C4} & \textbf{C5} & \textbf{C6} & \textbf{Total} \\
 \midrule
-Prometheus    & +++  & ++  & ++ & +++ & ++  & [TBD] \\
-Loki          & +++  & ++  & ++ & +++ & +++ & [TBD] \\
-Jaeger        & +++  & ++  & ++ & ++  & ++  & [TBD] \\
-Grafana       & +++  & +++ & +++& +++ & +++ & [TBD] \\
-\midrule
-ELK Stack     & ++   & +   & ++ & ++  & +   & [TBD] \\
+Stack A: Prometheus + Grafana + Loki + Tempo + OTel Collector & 5 & 5 & 5 & 3 & 4 & 5 & 27 \\
+Stack B: Prometheus + Grafana + Loki + Jaeger + OTel Collector & 5 & 4 & 4 & 3 & 5 & 5 & 26 \\
+Stack C: Elastic Observability & 4 & 4 & 5 & 3 & 3 & 4 & 23 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textit{Note: +++ (Excellent), ++ (Good), + (Adequate), - (Poor)}
+The comparison shows that Stack A provides the best overall balance for this dissertation. Stack B remains a strong alternative. Stack C is functionally attractive, although less aligned with the implementation boundaries and cost posture of the work.
 
-%********************************** %Fourth Section  ************************************
+\section{Selected Stack}
+\label{sec:selected_stack}
+
+The final stack selected for the proof of concept is:
+\begin{itemize}
+    \item \textbf{Prometheus} for metrics storage and querying;
+    \item \textbf{Loki} for log aggregation;
+    \item \textbf{Tempo} for distributed traces;
+    \item \textbf{Grafana} for dashboards, exploration, and cross signal navigation;
+    \item \textbf{OpenTelemetry Collector} for telemetry reception, processing, and export.
+\end{itemize}
+
+This selection follows three principles. First, each component must solve a clear architectural responsibility. Second, the stack must remain open and reproducible. Third, the final user experience must support practical diagnosis rather than isolated telemetry silos.
+
 \section{Proposed Architecture}
 \label{sec:architecture_design}
 
 \subsection{Architecture Overview}
 \label{subsec:architecture_overview}
 
-\textbf{[Placeholder for architecture diagram]}
-
-The proposed architecture follows a modular design based on the three pillars of observability:
+The architecture follows a layered design with explicit separation between telemetry producers, collection and processing, storage backends, and user facing analysis.
 
 \begin{figure}[htbp]
   \centering
   % \includegraphics[width=0.9\textwidth]{ch4_design/assets/architecture_overview}
-  \fbox{\parbox{0.9\textwidth}{\centering \vspace{2cm} [Architecture Diagram Placeholder] \\ High-level system architecture \vspace{2cm}}}
-  \caption{High-level Architecture for CI/CD Observability}
+  \fbox{\parbox{0.9\textwidth}{\centering \vspace{2cm} [Architecture Diagram Placeholder] \\ Telemetry producers $\rightarrow$ OpenTelemetry Collector and exporters $\rightarrow$ Prometheus, Loki, Tempo $\rightarrow$ Grafana \vspace{2cm}}}
+  \caption{High level architecture for \gls{CICD} observability}
   \label{fig:architecture_overview}
 \end{figure}
+
+At a high level, services, containers, runners, and supporting infrastructure emit telemetry. Metrics are scraped or forwarded to Prometheus. Logs are collected and sent to Loki. Traces are exported to Tempo through the OpenTelemetry Collector. Grafana connects to the three backends and provides the analysis interface.
 
 \subsection{Component Architecture}
 \label{subsec:component_architecture}
@@ -227,75 +251,80 @@ The proposed architecture follows a modular design based on the three pillars of
 \subsubsection{Metrics Collection Layer}
 \label{subsubsec:metrics_layer}
 
-\textbf{Components:}
+The metrics layer is composed of the following elements:
 \begin{itemize}
-    \item \textbf{Prometheus}: Core metrics storage and querying
-    \item \textbf{Node Exporter}: System-level metrics
-    \item \textbf{cAdvisor}: Container-specific metrics
-    \item \textbf{Custom Exporters}: Application-level metrics
+    \item \textbf{Prometheus}: core metrics database and query engine;
+    \item \textbf{Node Exporter}: host level metrics where host access is available;
+    \item \textbf{cAdvisor}: container resource metrics;
+    \item \textbf{Application endpoints}: service level metrics exposed in Prometheus format;
+    \item \textbf{OpenTelemetry Collector}: optional processing and forwarding path for OTLP metrics.
 \end{itemize}
 
-\textbf{Data Flow:} [Description of how metrics are collected, stored, and queried]
+The preferred path is simple. Prometheus scrapes exporters and service endpoints at configured intervals. This keeps the architecture transparent and easy to inspect. For services instrumented through OpenTelemetry, the Collector can enrich or route metrics before storage when needed.
 
 \subsubsection{Logging Layer}
 \label{subsubsec:logging_layer}
 
-\textbf{Components:}
+The logging layer is centered on structured collection and label discipline.
+
 \begin{itemize}
-    \item \textbf{Promtail/Fluentd}: Log collection agents
-    \item \textbf{Loki}: Log aggregation and storage
-    \item \textbf{Docker Logging Drivers}: Container log capture
+    \item \textbf{Container stdout and stderr}: primary source for application logs in the proof of concept;
+    \item \textbf{Collector agents}: responsible for log forwarding and label enrichment;
+    \item \textbf{Loki}: log storage and query backend.
 \end{itemize}
 
-\textbf{Data Flow:} [Description]
+The design assumes that logs are tagged with service, environment, container, and execution metadata whenever possible. This supports focused queries and later correlation with traces and metrics.
 
 \subsubsection{Tracing Layer}
 \label{subsubsec:tracing_layer}
 
-\textbf{Components:}
+The tracing layer includes:
 \begin{itemize}
-    \item \textbf{OpenTelemetry}: Instrumentation framework
-    \item \textbf{Jaeger}: Trace collection and visualization
-    \item \textbf{Jaeger Agent}: Sidecar for trace collection
+    \item \textbf{OpenTelemetry SDKs or auto instrumentation}: used in selected services;
+    \item \textbf{OpenTelemetry Collector}: receives spans and applies processing rules;
+    \item \textbf{Tempo}: stores and serves trace data.
 \end{itemize}
 
-\textbf{Data Flow:} [Description]
+This design avoids direct application coupling to a specific tracing backend. Instrumented services emit telemetry to the Collector through \gls{OTLP}. The Collector then exports traces to Tempo. This keeps future changes localized to collector configuration and backend integration.
 
 \subsubsection{Visualization Layer}
 \label{subsubsec:visualization_layer}
 
-\textbf{Grafana as Unified Interface:}
+Grafana is configured with three primary data sources:
 \begin{itemize}
-    \item Metrics visualization (Prometheus data source)
-    \item Log exploration (Loki data source)
-    \item Trace integration (Jaeger data source)
-    \item Custom dashboards for CI/CD pipelines
+    \item Prometheus for metrics;
+    \item Loki for logs;
+    \item Tempo for traces.
 \end{itemize}
 
-\subsection{Integration with CI/CD Platforms}
+Dashboards are supplemented by Explore based workflows. This is important because \gls{CICD} diagnosis often starts with a symptom and then branches into multiple signal types. Grafana supports this operational pattern well.
+
+\subsection{Integration with \gls{CICD} Platforms}
 \label{subsec:cicd_integration}
 
-\subsubsection{GitLab CI/CD Integration}
+The proposed architecture integrates with \gls{CICD} platforms through common observability hooks instead of relying on platform specific lock in.
+
+\subsubsection{GitLab \gls{CICD}}
 \label{subsubsec:gitlab_integration}
 
-[Placeholder for GitLab-specific integration approach]
-
-\textbf{Integration Points:}
+GitLab pipelines can be observed at three levels:
 \begin{itemize}
-    \item Pipeline instrumentation
-    \item Runner metrics
-    \item Job-level tracing
+    \item runner and host metrics through exporters;
+    \item job and service logs through container log collection;
+    \item application traces through OpenTelemetry instrumentation in the executed services.
 \end{itemize}
 
-\subsubsection{Jenkins Integration}
+This makes GitLab a suitable primary target for the proof of concept.
+
+\subsubsection{Jenkins}
 \label{subsubsec:jenkins_integration}
 
-[Placeholder for Jenkins integration]
+Jenkins can be integrated using the same architectural logic. Metrics are collected from Jenkins or the host runtime. Logs are captured from containers or system services. Traces depend on whether the workloads triggered by Jenkins are instrumented.
 
-\subsubsection{GitHub Actions Integration}
+\subsubsection{GitHub Actions}
 \label{subsubsec:github_integration}
 
-[Placeholder for GitHub Actions integration]
+GitHub Actions is more constrained in hosted environments. For this reason, the architecture is more naturally applicable to self hosted runners, where exporters, collectors, and log shippers can be deployed with greater control.
 
 \subsection{Deployment Model}
 \label{subsec:deployment_model}
@@ -303,182 +332,150 @@ The proposed architecture follows a modular design based on the three pillars of
 \subsubsection{Containerized Deployment}
 \label{subsubsec:containerized_deployment}
 
-\textbf{Docker Compose Configuration:} [Overview]
+The reference deployment model for the proof of concept is Docker Compose. This choice supports local reproducibility, reduces setup friction, and matches the experimental nature of the implementation. The same architecture can later be translated to Kubernetes if scaling or orchestration becomes necessary.
 
-\textbf{Kubernetes Deployment:} [Alternative for production environments]
+The initial deployment therefore prioritizes:
+\begin{itemize}
+    \item explicit configuration over hidden automation;
+    \item low resource overhead;
+    \item reproducible startup and reset procedures.
+\end{itemize}
 
 \subsubsection{Security Considerations}
 \label{subsubsec:security_considerations}
 
+The proof of concept does not require full enterprise hardening, though the architecture still includes basic safeguards:
 \begin{itemize}
-    \item \textbf{Access Control}: RBAC for observability components
-    \item \textbf{Data Encryption}: TLS for inter-component communication
-    \item \textbf{Secrets Management}: Handling credentials and API keys
-    \item \textbf{Network Isolation}: Separation of observability network
+    \item separated service credentials where required;
+    \item explicit configuration for exposed ports;
+    \item restricted data source administration in Grafana;
+    \item documented retention and deletion behavior for telemetry data.
 \end{itemize}
 
 \subsection{Scalability and Performance}
 \label{subsec:scalability}
 
-\subsubsection{Horizontal Scaling}
+\subsubsection{Scaling Strategy}
 \label{subsubsec:horizontal_scaling}
 
-[Placeholder for scaling strategy - multiple replicas, sharding, etc.]
+The selected stack supports a small initial deployment and a later transition to more distributed operation. Prometheus can be federated or paired with long term storage extensions if necessary. Loki and Tempo both support more distributed deployment models when ingestion and storage pressure increase. This gives the architecture a credible growth path without complicating the first implementation.
 
-\subsubsection{Data Retention Policies}
+\subsubsection{Retention Strategy}
 \label{subsubsec:data_retention}
 
+Retention is defined according to the evaluation scope.
 \begin{itemize}
-    \item Short-term retention: [Duration - e.g., 7 days]
-    \item Long-term retention: [Archival strategy]
-    \item Aggregation strategies for historical data
+    \item metrics: short to medium term retention sufficient for platform validation;
+    \item logs: short retention with focused label design to control storage cost;
+    \item traces: limited retention for end to end diagnostic workflows.
 \end{itemize}
+
+The proof of concept values clarity and repeatability over archival completeness.
 
 \subsubsection{Performance Optimization}
 \label{subsubsec:performance_optimization}
 
+Performance control relies on four practical measures:
 \begin{itemize}
-    \item Sampling strategies for tracing
-    \item Log filtering and preprocessing
-    \item Metric aggregation and downsampling
+    \item scraping only the necessary metrics at appropriate intervals;
+    \item avoiding high cardinality labels in Loki;
+    \item applying trace sampling where workload volume justifies it;
+    \item limiting unnecessary telemetry duplication across components.
 \end{itemize}
 
-%********************************** %Fifth Section  ************************************
 \section{Design Rationale}
 \label{sec:design_rationale}
 
 \subsection{Technology Stack Justification}
 \label{subsec:stack_justification}
 
+The final selection reflects both technical fit and implementation realism.
+
 \subsubsection{Why Prometheus for Metrics}
 \label{subsubsec:why_prometheus}
 
-[Placeholder for detailed justification based on evaluation criteria]
+Prometheus is the strongest choice for the metrics layer because it combines a mature exporter ecosystem, a proven dimensional data model, and a deployment style that fits modern containerized systems. It also integrates naturally with Grafana and with the broader open observability ecosystem.
 
-Key reasons:
-\begin{enumerate}
-    \item Industry standard for cloud-native monitoring
-    \item Excellent container/Kubernetes support
-    \item Powerful query language (PromQL)
-    \item Extensive ecosystem of exporters
-\end{enumerate}
-
-\subsubsection{Why Loki/ELK for Logging}
+\subsubsection{Why Loki for Logging}
 \label{subsubsec:why_logging_choice}
 
-[Placeholder for logging choice justification - likely Loki given Grafana integration]
+Loki was selected because it offers the most coherent balance between cost, simplicity, and integration. Its label based indexing model requires discipline. It also avoids the weight of a broader search platform when the main objective is operational diagnosis in a bounded proof of concept.
 
-\subsubsection{Why Jaeger for Tracing}
-\label{subsubsec:why_jaeger}
+\subsubsection{Why Tempo for Tracing}
+\label{subsubsec:why_tempo}
 
-[Placeholder for tracing choice justification]
+Tempo was selected because it integrates smoothly with Grafana, supports both simple and scalable deployment modes, and fits well in an OpenTelemetry centered architecture. Jaeger remains a technically valid option. Tempo better supports stack cohesion in this dissertation.
 
-\subsection{Architectural Trade-offs}
+\subsubsection{Why the OpenTelemetry Collector}
+\label{subsubsec:why_collector}
+
+The Collector keeps the architecture backend aware without making the applications backend dependent. This separation improves maintainability, portability, and long term adaptability.
+
+\subsection{Architectural Trade offs}
 \label{subsec:architectural_tradeoffs}
 
-\subsubsection{Monolithic vs. Distributed Architecture}
+\subsubsection{Integrated stack versus best of breed assembly}
 \label{subsubsec:monolithic_vs_distributed}
 
-[Discussion of why distributed, component-based architecture was chosen]
+The selected architecture is integrated in user experience and modular in implementation. This is a deliberate compromise. A fully unified commercial platform would reduce some integration work. It would also reduce transparency and flexibility for the academic objective of this dissertation.
 
-\subsubsection{Pull vs. Push Model}
+\subsubsection{Pull and push coexistence}
 \label{subsubsec:pull_vs_push}
 
-[Discussion of metric collection model - Prometheus pull vs. push gateways]
+Metrics collection uses a pull oriented model through Prometheus where feasible. Traces and some logs use push oriented export through the OpenTelemetry Collector. This coexistence is not a design flaw. It is an intentional adaptation to the characteristics of each signal type.
 
-\subsubsection{Self-hosted vs. Cloud-managed}
+\subsubsection{Self hosted priority}
 \label{subsubsec:selfhosted_vs_cloud}
 
-[Rationale for self-hosted approach given CI/CD environment constraints]
+The architecture prioritizes self hosted deployment because it improves reproducibility and keeps implementation decisions inside the scope of the dissertation. Managed cloud services would simplify some operational work, though they would also weaken the control and repeatability required for a rigorous evaluation.
 
-\subsection{Addressing CI/CD-Specific Challenges}
+\subsection{Addressing \gls{CICD} Specific Challenges}
 \label{subsec:cicd_challenges}
 
-\subsubsection{Limited Privileges}
+\subsubsection{Limited privileges}
 \label{subsubsec:privilege_solution}
 
-[How the architecture addresses the limited privilege constraint - e.g., user-space agents, no root required]
+The architecture minimizes privilege requirements by relying on container level telemetry, application instrumentation, and user space collectors wherever possible. Some host level metrics remain dependent on broader access. These are treated as optional enrichments and not as architectural prerequisites.
 
-\subsubsection{Cross-platform Compatibility}
+\subsubsection{Cross platform compatibility}
 \label{subsubsec:crossplatform_solution}
 
-[How tools were chosen and configured to work across Linux/macOS/Windows]
+Docker based deployment is the main cross platform strategy. It provides a common execution substrate across Linux, macOS, and Windows development environments. Full host observability differs by platform. The proof of concept therefore focuses on portable telemetry paths first.
 
-\subsubsection{Integration with Existing Pipelines}
+\subsubsection{Integration with existing pipelines}
 \label{subsubsec:integration_solution}
 
-[How observability can be integrated with minimal pipeline disruption]
+The architecture avoids intrusive modification of pipelines. Existing services continue to run through their normal execution flow. Observability is added through exporters, collectors, log forwarding, and selective instrumentation. This keeps adoption effort within realistic limits.
 
-%********************************** %Sixth Section  ************************************
 \section{Implementation Considerations}
 \label{sec:implementation_considerations}
 
-\subsection{Proof of Concept}
+This chapter closes with the implementation boundary that will guide the next chapter.
+
+\subsection{Proof of Concept Scope}
 \label{subsec:poc}
 
-\textbf{Scope:} [Definition of PoC scope]
-
-\textbf{Test Environment:}
+The proof of concept will validate the following minimum capabilities:
 \begin{itemize}
-    \item Docker Compose setup
-    \item Sample CI/CD pipeline (e.g., GitLab CI)
-    \item Representative workloads
+    \item metrics collection through Prometheus;
+    \item log aggregation through Loki;
+    \item trace collection through the OpenTelemetry Collector and Tempo;
+    \item unified analysis through Grafana;
+    \item integration with at least one \gls{CICD} execution scenario.
 \end{itemize}
 
-\textbf{Success Criteria:}
-\begin{itemize}
-    \item [ ] All three observability pillars functional
-    \item [ ] Integration with at least one CI/CD platform
-    \item [ ] Runs without elevated privileges
-    \item [ ] Cross-platform compatibility demonstrated
-    \item [ ] Performance overhead < [X]%
-\end{itemize}
-
-\subsection{Validation Plan}
+\subsection{Success Criteria}
 \label{subsec:validation_plan}
 
-[Placeholder for how the architecture will be validated]
-
-\textbf{Functional Testing:}
+The selected architecture will be considered ready for implementation when the following conditions are satisfied:
 \begin{itemize}
-    \item Component integration tests
-    \item End-to-end observability workflow
-    \item Failure scenario testing
+    \item each signal type is observable end to end;
+    \item Grafana can be used to navigate across at least two signal types for one diagnostic path;
+    \item the deployment can be reproduced from configuration files and documented steps;
+    \item the stack operates within the resource limits of the proof of concept environment.
 \end{itemize}
 
-\textbf{Non-functional Testing:}
-\begin{itemize}
-    \item Performance benchmarking
-    \item Resource consumption measurement
-    \item Scalability testing
-\end{itemize}
-
-\subsection{Open Questions and Future Work}
-\label{subsec:open_questions}
-
-\begin{itemize}
-    \item [Q1] Optimal sampling rate for distributed tracing in CI/CD context?
-    \item [Q2] Best practices for log retention in ephemeral environments?
-    \item [Q3] Cost-benefit analysis of compression vs. query performance?
-    \item [Q4] Integration with emerging tools (e.g., eBPF-based observability)?
-\end{itemize}
-
-%********************************** %Seventh Section  ***********************************
 \section{Chapter Summary}
 \label{sec:design_summary}
 
-This chapter presented the methodology for selecting observability tools and designing an architecture for \gls{CICD} environments. Key contributions include:
-
-\begin{itemize}
-    \item Systematic evaluation criteria tailored to CI/CD constraints
-    \item Comprehensive analysis of candidate tools across monitoring, logging, and tracing domains
-    \item Modular architecture design integrating Prometheus, Loki, Jaeger, and Grafana
-    \item Integration patterns for major CI/CD platforms
-    \item Justification of design decisions based on evaluation criteria
-\end{itemize}
-
-The proposed architecture addresses the unique challenges of containerized CI/CD environments while maintaining flexibility, scalability, and ease of deployment. The next chapter will [describe what comes next - implementation, evaluation, or conclusion depending on thesis structure].
-
-%********************************** % Bibliography  *************************************
-% No bibliography is required for each chapter, but you can include it if you want
-% \printbibliography[heading=subbibintoc]
+This chapter defined the evaluation criteria, compared the most relevant candidate stacks, and justified the selection of Prometheus, Loki, Tempo, Grafana, and the OpenTelemetry Collector as the reference observability architecture for this dissertation. The selected stack offers strong support for containerized environments, open integration paths, and practical cross signal diagnosis. The next chapter converts these design decisions into an implementation plan with phases, work packages, quality gates, and validation checkpoints.

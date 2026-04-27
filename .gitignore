@@ -1,5 +1,6 @@
 # LaTeX build files
 *.acn
+*.alg
 *.aux
 *.bcf
 *.glo
@@ -35,6 +36,11 @@ build/
 
 # Generated PDF (uncomment if you don't want to track PDFs)
 # *.pdf
+main.pdf
+prepd_presentation.pdf
+presentation.pdf
+PRED_*.pdf
+PREPD_Presentation_*.pdf
 
 # Glossary and acronyms
 *.acr
@@ -72,6 +78,10 @@ ehthumbs_vista.db
 
 # Release directory and archives
 releases/
+out/
+indent.log
+prepd_presentation.*
+presentation.*
 *.zip
 *.tar.gz
 *.tar.bz2
@@ -385,6 +395,8 @@ papers/notes/siddiqui_2023_ismsit.md
 .venv_wsl/lib/python3.12/site-packages/pip/_vendor/six.py
 .venv_wsl/lib/python3.12/site-packages/pip/_vendor/typing_extensions.py
 .venv_wsl/lib/python3.12/site-packages/pip/_vendor/vendor.txt
+.venv/
+.venv_wsl/
 .venv_wsl/lib/python3.12/site-packages/pip/_vendor/__pycache__/__init__.cpython-312.pyc
 .venv_wsl/lib/python3.12/site-packages/pip/_vendor/__pycache__/six.cpython-312.pyc
 .venv_wsl/lib/python3.12/site-packages/pip/_vendor/__pycache__/typing_extensions.cpython-312.pyc
