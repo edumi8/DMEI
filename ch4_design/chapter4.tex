@@ -137,23 +137,76 @@ The selection of Tempo is motivated by four factors:
 \subsubsection{Jaeger}
 \label{subsubsec:jaeger}
 
-Jaeger remains a strong alternative. It is mature, widely adopted, and provides simple local deployment through its all in one distribution. It also supports separated roles such as collector and query services in larger deployments. Jaeger would therefore be a defensible choice for the tracing layer.
+Jaeger remains a strong alternative for the tracing layer. It is mature, widely adopted across the cloud-native ecosystem, and provides simple local deployment through its all-in-one distribution. It also supports separated roles such as collector and query services in larger deployments, making it suitable for both small proof-of-concepts and scaled production configurations. Jaeger would therefore be a defensible choice for the tracing layer.
 
-It was not selected as the primary backend because Tempo offers a more cohesive experience in the final stack chosen for this work. Since Grafana is also the selected visualization layer, the Tempo based path reduces architectural fragmentation and simplifies the correlation workflow.
+\textbf{Key advantages of Jaeger:}
+\begin{itemize}
+    \item All-in-one Docker image for rapid evaluation and proof-of-concept deployment;
+    \item Mature query UI with support for trace exploration, latency analysis, and dependency mapping;
+    \item Strong community adoption and extensive documentation;
+    \item Horizontal scaling through separated collector, query, and storage components;
+    \item Support for multiple storage backends (Elasticsearch, Cassandra, memory, badger).
+\end{itemize}
+
+\textbf{Operational considerations for Jaeger:}
+\begin{itemize}
+    \item All-in-one mode requires careful resource tuning for CI/CD workloads;
+    \item Query UI is separate from other dashboarding and visualization (not integrated with Grafana);
+    \item Operator context switching between Jaeger UI and Grafana for correlated analysis;
+    \item Storage backend selection adds complexity (Cassandra/Elasticsearch are operational burden);
+    \item Trace sampling and retention policies require explicit configuration.
+\end{itemize}
+
+\textbf{Why Tempo was selected over Jaeger:}
+
+Jaeger was not selected as the primary backend because Tempo offers a more cohesive experience in the final stack chosen for this work. Since Grafana is also the selected visualization layer, the Tempo-based path reduces architectural fragmentation and simplifies the correlation workflow. Specifically:
+
+\begin{enumerate}
+    \item \textbf{Unified UI:} All telemetry (metrics, logs, traces) is accessed through Grafana, reducing operator tool switching.
+    \item \textbf{Tighter integration:} Grafana's TraceQL support and direct trace exploration features are purpose-built for Tempo.
+    \item \textbf{Lower initial operational surface:} Tempo monolithic mode requires fewer components in the proof-of-concept phase.
+    \item \textbf{Future scaling alignment:} Both Tempo and Grafana mature together; Jaeger's separation implies eventual tool duplication.
+\end{enumerate}
+
+For alternative implementations or future comparison work, Jaeger remains a viable option with comparable trace collection capabilities. Stack B in the comparison matrix reflects this alternative.
 
 \subsubsection{Elastic Observability}
 \label{subsubsec:elastic}
 
-Elastic Observability offers a unified platform for logs, metrics, and traces. It supports strong search and analytics capabilities and provides a consolidated user experience. This makes it attractive from a feature perspective.
+Elastic Observability offers a unified platform integrating logs, metrics, and traces under a single architecture with powerful search and analytics capabilities. It provides a consolidated user experience, strong full-text search across all signal types, and business-ready machine learning features for anomaly detection. This makes it attractive from a feature perspective and represents a compelling alternative for organizations with existing Elasticsearch deployments.
 
-Even so, the evaluation identified three disadvantages for the scope of this work:
+\textbf{Key advantages of Elastic Observability:}
 \begin{itemize}
-    \item licensing and distribution choices are less straightforward than the selected open stack;
-    \item the platform introduces a broader operational surface when self hosted;
-    \item the architecture does not align as directly with the lightweight, incremental proof of concept targeted by this dissertation.
+    \item Unified platform eliminates data source switching in dashboarding;
+    \item Powerful search and analytics across all three signal types simultaneously;
+    \item Built-in anomaly detection and machine learning capabilities;
+    \item Strong visualization and alerting infrastructure;
+    \item Extensive marketplace of integrations and pre-built dashboards;
+    \item Proven at large scale in enterprise environments.
 \end{itemize}
 
-Elastic therefore remains a valid benchmark alternative, though it is not the best fit for the selected implementation strategy.
+\textbf{Operational considerations for Elastic:}
+\begin{itemize}
+    \item Licensing model: free tier limited in retention and features; paid tiers required for production features;
+    \item Operational surface: Elasticsearch cluster management, Kibana, Beats agents create multiple moving parts;
+    \item Self-hosted deployment: requires persistent storage, careful capacity planning, and index lifecycle management;
+    \item Data ingestion cost: resource consumption scales with data volume (expensive for high-volume CI/CD telemetry);
+    \item Lock-in risk: proprietary query language (KQL) and data model create switching costs.
+\end{itemize}
+
+\textbf{Why Elastic was not selected:}
+
+The evaluation identified three specific disadvantages for the scope of this dissertation work:
+
+\begin{enumerate}
+    \item \textbf{Licensing and cost model:} The open-source tier provides limited retention and features. Production-grade observability requires paid licensing, which adds cost and complexity to an academic proof-of-concept. The selected Stack A (all open-source components) provides clarity on licensing boundaries and reproducibility constraints.
+
+    \item \textbf{Operational surface complexity:} Elastic Observability requires Elasticsearch cluster management, index lifecycle policies, and data retention tuning. The proof-of-concept prioritizes rapid experimentation and reproducibility over optimizing for production scale. The lighter operational footprint of Stack A aligns better with the dissertation scope.
+
+    \item \textbf{Architecture alignment with proof-of-concept strategy:} The dissertation emphasizes open standards (OTLP, W3C Trace Context) and component modularity to support future comparison and extension. Elastic's integrated approach, while operationally elegant, couples the implementation tightly to a single platform. The selected Stack A's explicit component boundaries support clearer artifact isolation and easier alternative comparison during evaluation.
+\end{enumerate}
+
+Elastic therefore remains a valid and potentially superior choice for production observability deployments in resource-rich environments. For this dissertation, the emphasis on open standards, clear licensing, and component modularity favors the selected Stack A approach.
 
 \subsection{Instrumentation and Collection}
 \label{subsec:tracing_tools}
@@ -237,9 +290,50 @@ The architecture follows a layered design with explicit separation between telem
 
 \begin{figure}[htbp]
   \centering
-  % \includegraphics[width=0.9\textwidth]{ch4_design/assets/architecture_overview}
-  \fbox{\parbox{0.9\textwidth}{\centering \vspace{2cm} [Architecture Diagram Placeholder] \\ Telemetry producers $\rightarrow$ OpenTelemetry Collector and exporters $\rightarrow$ Prometheus, Loki, Tempo $\rightarrow$ Grafana \vspace{2cm}}}
-  \caption{High level architecture for \gls{CICD} observability}
+  \begin{tikzpicture}[
+    producer/.style={rectangle, draw, fill=blue!20, minimum width=2cm, minimum height=0.8cm},
+    collector/.style={rectangle, draw, fill=orange!20, minimum width=2.5cm, minimum height=0.8cm},
+    backend/.style={rectangle, draw, fill=green!20, minimum width=2cm, minimum height=0.8cm},
+    frontend/.style={rectangle, draw, fill=purple!20, minimum width=2cm, minimum height=0.8cm},
+    >=stealth,
+    ]
+
+    % Producers
+    \node[producer] (gitlab) at (0, 4) {GitLab Runners};
+    \node[producer] (jenkins) at (2, 4) {Jenkins Agents};
+    \node[producer] (services) at (4, 4) {CI/CD Services};
+
+    % Collection Layer
+    \node[collector] (otel) at (2, 2.5) {OpenTelemetry Collector};
+    \node[producer] (exporters) at (-1.5, 2.5) {Node Exporter, cAdvisor};
+
+    % Storage Backends
+    \node[backend] (prom) at (0, 1) {Prometheus};
+    \node[backend] (loki) at (2, 1) {Loki};
+    \node[backend] (tempo) at (4, 1) {Tempo};
+
+    % Frontend
+    \node[frontend] (grafana) at (2, -0.5) {Grafana};
+
+    % Arrows from producers to collection
+    \draw[->] (gitlab) -- (exporters);
+    \draw[->] (jenkins) -- (exporters);
+    \draw[->] (services) -- (otel);
+    \draw[->] (gitlab) -- (otel);
+
+    % Arrows from exporters/collectors to backends
+    \draw[->] (exporters) -- (prom);
+    \draw[->] (otel) -- (prom);
+    \draw[->] (otel) -- (loki);
+    \draw[->] (otel) -- (tempo);
+
+    % Arrows from backends to frontend
+    \draw[->] (prom) -- (grafana);
+    \draw[->] (loki) -- (grafana);
+    \draw[->] (tempo) -- (grafana);
+
+  \end{tikzpicture}
+  \caption{High level architecture for \gls{CICD} observability. Telemetry producers emit metrics, logs, and traces through collection and processing layers to unified storage backends, accessed through Grafana.}
   \label{fig:architecture_overview}
 \end{figure}
 
@@ -299,32 +393,157 @@ Grafana is configured with three primary data sources:
 
 Dashboards are supplemented by Explore based workflows. This is important because \gls{CICD} diagnosis often starts with a symptom and then branches into multiple signal types. Grafana supports this operational pattern well.
 
-\subsection{Integration with \gls{CICD} Platforms}
+\subsection{Data Flow and Signal Routing}
+\label{subsec:data_flow}
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+    producer/.style={rectangle, draw, fill=blue!20, minimum width=1.8cm, minimum height=0.7cm, font=\small},
+    collection/.style={rectangle, draw, fill=orange!20, minimum width=1.8cm, minimum height=0.7cm, font=\small},
+    backend/.style={rectangle, draw, fill=green!20, minimum width=1.8cm, minimum height=0.7cm, font=\small},
+    >=stealth,
+    ]
+
+    % Metrics flow
+    \node[producer] (app_metrics) at (0, 3) {App Metrics};
+    \node[producer] (host_metrics) at (2, 3) {Host Metrics};
+    \node[producer] (container_metrics) at (4, 3) {Container Metrics};
+
+    \node[collection] (prom_pull) at (2, 1.8) {Prometheus Pull};
+    \node[backend] (prom_store) at (2, 0.6) {Prometheus Storage};
+
+    \draw[->] (app_metrics) -- (prom_pull);
+    \draw[->] (host_metrics) -- (prom_pull);
+    \draw[->] (container_metrics) -- (prom_pull);
+    \draw[->] (prom_pull) -- (prom_store);
+
+    % Logs flow
+    \node[producer] (app_logs) at (0, 3) at (6, 3) {App Logs};
+    \node[producer] (svc_logs) at (8, 3) {Service Logs};
+
+    \node[collection] (log_forward) at (7, 1.8) {Log Forwarder};
+    \node[backend] (loki_store) at (7, 0.6) {Loki Storage};
+
+    \draw[->] (app_logs) -- (log_forward);
+    \draw[->] (svc_logs) -- (log_forward);
+    \draw[->] (log_forward) -- (loki_store);
+
+    % Traces flow
+    \node[producer] (instrumented) at (12, 3) {Instrumented Services};
+
+    \node[collection] (otel_collect) at (12, 1.8) {OTel Collector};
+    \node[backend] (tempo_store) at (12, 0.6) {Tempo Storage};
+
+    \draw[->] (instrumented) -- (otel_collect);
+    \draw[->] (otel_collect) -- (tempo_store);
+
+    % Labels
+    \node[text width=2cm, text centered] at (2, 2.4) {\textbf{Metrics}};
+    \node[text width=2cm, text centered] at (7, 2.4) {\textbf{Logs}};
+    \node[text width=2cm, text centered] at (12, 2.4) {\textbf{Traces}};
+
+  \end{tikzpicture}
+  \caption{Telemetry signal flows through collection and processing layers to distinct storage backends. Metrics use pull-based scraping via Prometheus; logs use push-based forwarding; traces use OTLP push via OpenTelemetry Collector.}
+  \label{fig:data_flow}
+\end{figure}
+
+The three signal types follow distinct collection patterns optimized for their characteristics:
+
+\begin{itemize}
+    \item \textbf{Metrics} employ a pull-based model: Prometheus periodically scrapes HTTP endpoints. This keeps collection centralized and transparent.
+    \item \textbf{Logs} use push-based collection: containers emit logs via stdout/stderr; forwarding agents push structured logs to Loki with enriched labels.
+    \item \textbf{Traces} use push-based export: instrumented services emit spans via OTLP to the OpenTelemetry Collector, which routes them to Tempo.
+\end{itemize}
+
+Correlation occurs at the visualization layer. Grafana enables operators to navigate from metrics anomalies to logs in the same time window, then to traces for detailed span-level analysis. The correlation mechanism relies on consistent labeling and trace context propagation across services.
+
+\subsection{Integration with \texorpdfstring{\gls{CICD}}{CI/CD} Platforms}
 \label{subsec:cicd_integration}
 
 The proposed architecture integrates with \gls{CICD} platforms through common observability hooks instead of relying on platform specific lock in.
 
-\subsubsection{GitLab \gls{CICD}}
+\subsubsection{GitLab \texorpdfstring{\gls{CICD}}{CI/CD}}
 \label{subsubsec:gitlab_integration}
 
-GitLab pipelines can be observed at three levels:
+GitLab pipelines can be observed at three distinct levels, each providing complementary visibility:
+
+\textbf{Runner and Host Metrics:}
 \begin{itemize}
-    \item runner and host metrics through exporters;
-    \item job and service logs through container log collection;
-    \item application traces through OpenTelemetry instrumentation in the executed services.
+    \item Node Exporter on runner hosts exposes CPU, memory, disk, and network metrics;
+    \item cAdvisor on Docker hosts captures per-container resource consumption;
+    \item GitLab Runner can expose internal metrics (queue depth, concurrent jobs, execution time) via HTTP endpoint;
+    \item Scrape targets: configured in Prometheus service discovery for dynamic runner registration.
 \end{itemize}
 
-This makes GitLab a suitable primary target for the proof of concept.
+\textbf{Job and Service Logs:}
+\begin{itemize}
+    \item Job logs: captured via container stdout/stderr collection;
+    \item Each job is containerized; logs are forwarded to Loki with labels \texttt{\{job: <job-name>, pipeline: <pipeline-id>, status: passed/failed\}};
+    \item Service logs: supporting services (cache, artifacts, helpers) also emit structured logs;
+    \item Log enrichment: correlation ID injection using GitLab CI variables (\texttt{\$CI\_PIPELINE\_ID}, \texttt{\$CI\_JOB\_ID}).
+\end{itemize}
+
+\textbf{Application Traces:}
+\begin{itemize}
+    \item Services executed by CI/CD jobs can be instrumented with OpenTelemetry SDKs;
+    \item Trace context propagation: W3C Trace Context headers injected by instrumented services;
+    \item Traces exported to Tempo via OpenTelemetry Collector (OTLP protocol);
+    \item Spans include job lifecycle context (queued $\rightarrow$ started $\rightarrow$ completed) mapped to build jobs.
+\end{itemize}
+
+This makes GitLab a suitable primary target for the proof of concept. All three levels of observability (runner metrics, job logs, application traces) can be implemented with standard tooling and without elevated privileges.
 
 \subsubsection{Jenkins}
 \label{subsubsec:jenkins_integration}
 
-Jenkins can be integrated using the same architectural logic. Metrics are collected from Jenkins or the host runtime. Logs are captured from containers or system services. Traces depend on whether the workloads triggered by Jenkins are instrumented.
+Jenkins can be integrated using the same architectural logic as GitLab, with specific considerations for Jenkins architecture:
+
+\textbf{Controller and Agent Metrics:}
+\begin{itemize}
+    \item Jenkins controller: exposes internal metrics via JMX or the \texttt{/metrics} endpoint (requires Prometheus plugin);
+    \item Build queue depth, executor load, and build duration tracked as time-series metrics;
+    \item Jenkins agents: Node Exporter on agent hosts for host-level resource metrics;
+    \item Scrape configuration: statically defined for known agents, or service discovery for dynamic registration.
+\end{itemize}
+
+\textbf{Build and System Logs:}
+\begin{itemize}
+    \item Build console output: captured from containers or Jenkins workspace logs;
+    \item Log forwarding: sidecar container or Jenkins plugin collects logs and exports to Loki;
+    \item System logs: Jenkins controller and agent logs parsed for errors, warnings, and diagnostic messages;
+    \item Log enrichment: build job ID, stage, and status added as structured labels.
+\end{itemize}
+
+\textbf{Pipeline Execution Traces:}
+\begin{itemize}
+    \item Declarative pipelines: instrumentation points added to pipeline stages (start, end, error);
+    \item Application traces: services invoked during build steps export traces to the OpenTelemetry Collector;
+    \item Span correlation: build ID and stage name included in trace context for later analysis.
+\end{itemize}
+
+Jenkins integration follows the same architectural pattern as GitLab. The key difference is agent-based scalability rather than container-based execution, which may require additional instrumentation on agent hosts.
 
 \subsubsection{GitHub Actions}
 \label{subsubsec:github_integration}
 
-GitHub Actions is more constrained in hosted environments. For this reason, the architecture is more naturally applicable to self hosted runners, where exporters, collectors, and log shippers can be deployed with greater control.
+GitHub Actions is more constrained in hosted (SaaS) environments. For this reason, the architecture is more naturally applicable to self-hosted runners, where exporters, collectors, and log shippers can be deployed with greater control.
+
+\textbf{Self-hosted runner instrumentation:}
+\begin{itemize}
+    \item Metrics: Node Exporter on runner host captures CPU, memory, disk, network metrics;
+    \item Logs: workflow job logs captured from container stdout/stderr, enriched with workflow name and job ID;
+    \item Traces: application services invoked by workflow jobs export traces via OpenTelemetry Collector.
+\end{itemize}
+
+\textbf{GitHub-hosted runner constraints:}
+\begin{itemize}
+    \item Limited instrumentation options: no root access, no external agents, no host-level collectors;
+    \item Workaround: export structured logs and traces from application code;
+    \item Correlation: GitHub Actions environment variables (\texttt{GITHUB\_JOB}, \texttt{GITHUB\_RUN\_ID}) mapped to trace context.
+\end{itemize}
+
+GitHub-hosted runners are suitable for basic telemetry export but lack the visibility of self-hosted infrastructure. For comprehensive observability, self-hosted runners are recommended.
 
 \subsection{Deployment Model}
 \label{subsec:deployment_model}
@@ -351,6 +570,217 @@ The proof of concept does not require full enterprise hardening, though the arch
     \item restricted data source administration in Grafana;
     \item documented retention and deletion behavior for telemetry data.
 \end{itemize}
+
+\subsection{Configuration Templates and Examples}
+\label{subsec:configuration_templates}
+
+This section provides concrete configuration examples for the reference deployment. These templates serve as templates for the proof-of-concept deployment described in Chapter \ref{chap:implementation}.
+
+\subsubsection{Docker Compose Service Definitions}
+\label{subsubsec:docker_compose_services}
+
+The reference deployment uses Docker Compose with five primary services: Prometheus, Loki, Tempo, Grafana, and OpenTelemetry Collector. The following template structure illustrates the key configuration patterns.
+
+\begin{verbatim}
+version: '3.8'
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=15d'
+
+  loki:
+    image: grafana/loki:latest
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./config/loki-config.yml:/etc/loki/local-config.yml
+      - loki_data:/loki
+    command: -config.file=/etc/loki/local-config.yml
+
+  tempo:
+    image: grafana/tempo:latest
+    ports:
+      - "3200:3200"
+    volumes:
+      - ./config/tempo.yml:/etc/tempo-config.yml
+      - tempo_data:/var/tempo
+    command: ["-config.file=/etc/tempo-config.yml"]
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    ports:
+      - "4317:4317"  # OTLP gRPC receiver
+      - "4318:4318"  # OTLP HTTP receiver
+    volumes:
+      - ./config/otel-collector-config.yml:/etc/otel-collector-config.yml
+    command: ["--config=/etc/otel-collector-config.yml"]
+    depends_on:
+      - tempo
+      - loki
+      - prometheus
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel
+    volumes:
+      - ./config/grafana-provisioning:/etc/grafana/provisioning
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+      - loki
+      - tempo
+
+volumes:
+  prometheus_data:
+  loki_data:
+  tempo_data:
+  grafana_data:
+\end{verbatim}
+
+\subsubsection{Prometheus Scrape Configuration}
+\label{subsubsec:prometheus_config}
+
+Prometheus is configured to scrape metrics from multiple sources at defined intervals. The following template shows typical targets:
+
+\begin{verbatim}
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # Prometheus self-metrics
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Node Exporter for host metrics
+  - job_name: 'node'
+    static_configs:
+      - targets: ['localhost:9100']
+
+  # Docker containers via cAdvisor
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['localhost:8080']
+
+  # CI/CD services exposing Prometheus metrics
+  - job_name: 'cicd-services'
+    static_configs:
+      - targets: ['gitlab-runner:9100', 'jenkins:8080', 'sonarqube:9000']
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
+
+  # OpenTelemetry Collector metrics
+  - job_name: 'otel-collector'
+    static_configs:
+      - targets: ['localhost:8888']
+\end{verbatim}
+
+\subsubsection{OpenTelemetry Collector Configuration}
+\label{subsubsec:otel_collector_config}
+
+The OpenTelemetry Collector receives telemetry from instrumented services and exports to the selected backends. The following template shows the pipeline architecture:
+
+\begin{verbatim}
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch:
+    send_batch_size: 1024
+    timeout: 10s
+
+  attributes:
+    actions:
+      - key: deployment.environment
+        value: staging
+        action: insert
+      - key: service.namespace
+        value: cicd
+        action: insert
+
+exporters:
+  prometheus:
+    endpoint: "0.0.0.0:8888"
+
+  loki:
+    endpoint: http://loki:3100/loki/api/v1/push
+    labels:
+      resource:
+        service.name: true
+        service.namespace: true
+
+  tempo:
+    endpoint: tempo:4317
+    tls:
+      insecure: true
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch, attributes]
+      exporters: [tempo]
+
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [prometheus]
+
+    logs:
+      receivers: [otlp]
+      processors: [batch, attributes]
+      exporters: [loki]
+\end{verbatim}
+
+\subsubsection{Grafana Data Source Provisioning}
+\label{subsubsec:grafana_provisioning}
+
+Grafana can be provisioned with data sources via YAML configuration, enabling reproducible dashboard setup. The following template shows data source declarations:
+
+\begin{verbatim}
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+
+  - name: Loki
+    type: loki
+    access: proxy
+    url: http://loki:3100
+
+  - name: Tempo
+    type: tempo
+    access: proxy
+    url: http://tempo:3200
+    jsonData:
+      nodeGraph:
+        enabled: true
+\end{verbatim}
+
+These templates provide the foundation for the proof-of-concept deployment. Detailed configuration procedures (retention policies, label strategies, sampling rules) are specified in Chapter \ref{chap:implementation}.
 
 \subsection{Scalability and Performance}
 \label{subsec:scalability}
@@ -429,7 +859,7 @@ Metrics collection uses a pull oriented model through Prometheus where feasible.
 
 The architecture prioritizes self hosted deployment because it improves reproducibility and keeps implementation decisions inside the scope of the dissertation. Managed cloud services would simplify some operational work, though they would also weaken the control and repeatability required for a rigorous evaluation.
 
-\subsection{Addressing \gls{CICD} Specific Challenges}
+\subsection{Addressing \texorpdfstring{\gls{CICD}}{CI/CD} Specific Challenges}
 \label{subsec:cicd_challenges}
 
 \subsubsection{Limited privileges}
