@@ -253,7 +253,8 @@ Table \ref{tab:stack_comparison} summarizes the stack level comparison.
 \centering
 \caption{Comparison of candidate observability stacks}
 \label{tab:stack_comparison}
-\begin{tabular}{@{}lccccccc@{}}
+{\small
+\begin{tabular}{@{}p{0.36\textwidth}ccccccc@{}}
 \toprule
 \textbf{Stack} & \textbf{C1} & \textbf{C2} & \textbf{C3} & \textbf{C4} & \textbf{C5} & \textbf{C6} & \textbf{Total} \\
 \midrule
@@ -261,7 +262,7 @@ Stack A: Prometheus + Grafana + Loki + Tempo + OTel Collector & 5 & 5 & 5 & 3 & 
 Stack B: Prometheus + Grafana + Loki + Jaeger + OTel Collector & 5 & 4 & 4 & 3 & 5 & 5 & 26 \\
 Stack C: Elastic Observability & 4 & 4 & 5 & 3 & 3 & 4 & 23 \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table}
 
 The comparison shows that Stack A provides the best overall balance for this dissertation. Stack B remains a strong alternative. Stack C is functionally attractive, although less aligned with the implementation boundaries and cost posture of the work.
@@ -419,7 +420,7 @@ Dashboards are supplemented by Explore based workflows. This is important becaus
     \draw[->] (prom_pull) -- (prom_store);
 
     % Logs flow
-    \node[producer] (app_logs) at (0, 3) at (6, 3) {App Logs};
+    \node[producer] (app_logs) at (6, 3) {App Logs};
     \node[producer] (svc_logs) at (8, 3) {Service Logs};
 
     \node[collection] (log_forward) at (7, 1.8) {Log Forwarder};
