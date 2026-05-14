@@ -6,7 +6,7 @@ This chapter presents how the dissertation project will be carried out during ex
 
 \section{Objectives and Scope Alignment}
 
-The project objectives and scope defined in Chapter~\ref{chap:introduction} remain aligned with findings synthesized in Chapter~\ref{chap:literature}. No scope changes are planned. The work focuses on execution strategy to deliver planned artifacts and produce defensible evidence.
+The project objectives and scope defined in Chapter~\ref{chap:introduction} remain aligned with findings synthesized in Chapter~\ref{chap:literature}. The execution environment has evolved: operations staff now have \texttt{docker} group access on Linux hosts, which relaxes several practical constraints that motivated tighter wording in earlier drafts (for example deployment of containerized collectors alongside production stacks). Core scope elements (heterogeneous on-premise \ac{CICD}, integrated metrics--logs--traces, empirical evaluation) are unchanged; requirements are updated to reflect the current access posture rather than the historically tighter one. The work focuses on execution strategy to deliver planned artifacts and produce defensible evidence.
 
 \section{Requirements Definition}
 \label{sec:ch3_requirements}
@@ -15,7 +15,7 @@ This section consolidates the functional and non-functional requirements that gu
 
 \textbf{Functional requirements} include: collection of metrics, logs, and traces across core \ac{CICD} services; centralized visualization; and support for cross-service incident analysis.
 
-\textbf{Non-functional requirements} include: operation in heterogeneous environments (Linux and Windows), reproducible deployment procedures, acceptable instrumentation overhead, and operational maintainability for infrastructure teams.
+\textbf{Non-functional requirements} include: operation in heterogeneous environments (Linux and Windows); reproducible deployment procedures; acceptable instrumentation overhead; operational maintainability for infrastructure teams; and feasibility under the access posture assumed for execution (operations accounts with \texttt{docker} group membership on Linux hosts, without requiring omnipotent root access across the estate unless explicitly approved for a given component).
 
 These requirements are used as acceptance criteria during design reviews and as reference points for evaluation planning in subsequent chapters.
 

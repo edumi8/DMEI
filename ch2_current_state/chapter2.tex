@@ -8,6 +8,8 @@ This chapter characterizes the current operational state of the target \ac{CICD}
 
 The target environment is an on-premise, containerized \ac{CICD} platform distributed across mixed operating systems (Linux and Windows). Core platform services include source control, pipeline orchestration, static analysis, software composition analysis, and artifact management. The environment is operationally relevant because failures in one service can propagate across the full delivery pipeline.
 
+Operations staff now have Unix \texttt{docker} group membership on the Linux hosts, which supports container-level diagnostics and deployment of observability components as containers alongside existing services. This relaxes constraints that applied when such access was unavailable; it does not, by itself, provide a unified telemetry stack, consistent retention, or cross-signal correlation, which remain gaps documented in the following sections.
+
 \subsection{Baseline Node and Service Topology}
 
 The baseline architecture is represented as a structural node-to-service topology diagram. This view intentionally focuses on host and service placement (without runtime interaction links). The diagram source is maintained in Mermaid format to simplify iterative updates during thesis development: \texttt{ch2\_current\_state/assets/baseline-architecture.mmd}.

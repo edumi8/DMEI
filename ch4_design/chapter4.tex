@@ -866,7 +866,7 @@ The architecture prioritizes self hosted deployment because it improves reproduc
 \subsubsection{Limited privileges}
 \label{subsubsec:privilege_solution}
 
-The architecture minimizes privilege requirements by relying on container level telemetry, application instrumentation, and user space collectors wherever possible. Some host level metrics remain dependent on broader access. These are treated as optional enrichments and not as architectural prerequisites.
+Granting operations staff \texttt{docker} group access on Linux hosts relaxes several constraints that applied when such access was absent, enabling container-native deployment of collectors and exporters and routine container inspection through the Docker API. The architecture nevertheless minimizes \emph{additional} privilege assumptions beyond what is justified for a given signal: it relies on container-level telemetry, application instrumentation, and user-space collectors wherever possible, and treats deeper host access (for example full root or kernel-level probes) as optional enrichment rather than a prerequisite for the core proof of concept.
 
 \subsubsection{Cross platform compatibility}
 \label{subsubsec:crossplatform_solution}
