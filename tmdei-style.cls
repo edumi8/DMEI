@@ -247,6 +247,8 @@
 
 \raggedbottom
 
+\RequirePackage{microtype} % Improves typography and helps reduce underfull/overfull box warnings
+
 %----------------------------------------------------------------------------------------
 %	PENALTIES
 %----------------------------------------------------------------------------------------

@@ -1,0 +1,44 @@
+%%{init: {"theme": "base", "themeVariables": {"fontSize": "16px", "primaryColor": "#FFFFFF", "primaryTextColor": "#111111", "lineColor": "#111111", "fontFamily": "Arial"}, "flowchart": {"curve": "linear", "nodeSpacing": 45, "rankSpacing": 65}} }%%
+flowchart LR
+    subgraph LIN1["le-s-po-lin1 (Primary CI/CD Host)"]
+        direction TB
+        SONAR["SonarQube"]
+        GITLAB["GitLab"]
+        JENKINS["Jenkins Controller"]
+        DEPTRACK["Dependency-Track"]
+        NEXUS["Nexus"]
+        PLATFORM["Shared CI/CD Platform Services"]
+    end
+
+    subgraph LIN2["le-s-po-lin2"]
+        direction TB
+        W_LIN2["Jenkins Worker"]
+        DB_LIN2["Database Services"]
+    end
+
+    subgraph APP1["le-s-po-app1"]
+        direction TB
+        W_APP1["Jenkins Worker"]
+        STAGE_APP1["Test/Staging Deployments"]
+    end
+
+    subgraph WIN1["le-s-po-win1"]
+        direction TB
+        W_WIN1["Jenkins Worker"]
+        WIN_TASKS["Platform-Specific Tasks"]
+    end
+
+    classDef core fill:#F2F2F2,stroke:#111111,stroke-width:2.2px,color:#111111;
+    classDef workers fill:#FFFFFF,stroke:#333333,stroke-width:1.8px,color:#111111;
+    classDef control fill:#FFFFFF,stroke:#111111,stroke-width:2px,color:#111111;
+    classDef service fill:#FAFAFA,stroke:#222222,stroke-width:1.8px,color:#111111;
+    classDef workerNode fill:#FFFFFF,stroke:#222222,stroke-width:2px,color:#111111;
+    classDef envNode fill:#F7F7F7,stroke:#444444,stroke-dasharray: 4 2,stroke-width:1.8px,color:#111111;
+
+    class LIN1 core;
+    class APP1,LIN2,WIN1 workers;
+    class GITLAB,JENKINS control;
+    class SONAR,DEPTRACK,NEXUS,PLATFORM,DB_LIN2,STAGE_APP1,WIN_TASKS service;
+    class W_LIN2,W_APP1,W_WIN1 workerNode;
+    class ENVS workers;
+    class ENV1,ENV2,ENVN envNode;
