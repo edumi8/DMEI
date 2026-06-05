@@ -33,6 +33,15 @@ The operations team has Docker group access on all hosts, enabling container man
 
 Currently, the organization relies on application-level logs accessed through Docker CLI commands, manual inspection of container resource usage and reactive troubleshooting after user-reported incidents. This reactive posture results in prolonged incident detection (hours rather than minutes) and diagnosis cycles requiring coordinated investigation across disconnected log sources. The absence of integrated observability infrastructure limits diagnostic capability and prevents proactive capacity planning.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{ch1/assets/current_architecture_baseline.png}
+    \caption{Current \ac{CICD} platform design baseline: distributed containerized services across four hosts with reactive, manual diagnostics and no integrated telemetry pipeline.}
+    \label{fig:current-architecture-baseline}
+\end{figure}
+
+Figure~\ref{fig:current-architecture-baseline} summarizes the current design baseline considered in this research: services are distributed across four hosts and operational visibility depends on manual per-service inspection instead of centralized metrics, logs and traces. This baseline motivates the architecture work developed in subsequent chapters.
+
 The practical impact manifests in three ways: delayed detection of service degradation until user complaints escalate, extended root cause analysis requiring manual correlation of logs from five or more services, and inability to establish proactive capacity planning due to lack of historical resource utilization data. Development teams experience unpredictable pipeline failures attributed to infrastructure issues that operations teams cannot rapidly diagnose or prevent. With Docker access now available, the organization can implement comprehensive observability solutions, but must evaluate different architectural approaches and their operational trade-offs.
 
 \section{Problem Statement}
