@@ -1,0 +1,38 @@
+flowchart TB
+  %% Current CI/CD architecture baseline (reactive, manual diagnostics)
+
+  subgraph HA[Linux Host A]
+    GL[GitLab]
+    PG[PostgreSQL]
+  end
+
+  subgraph HB[Linux Host B]
+    JK[Jenkins]
+    NX[Nexus]
+  end
+
+  subgraph HC[Linux Host C]
+    SQ[SonarQube]
+    DT[Dependency-Track]
+  end
+
+  subgraph HD[Windows Host D]
+    SC[Supporting Containers]
+  end
+
+  MD[Manual Diagnostics\nDocker CLI + Log Inspection]
+
+  GL --> MD
+  PG --> MD
+  JK --> MD
+  NX --> MD
+  SQ --> MD
+  DT --> MD
+  SC --> MD
+
+  classDef host fill:#f7f7f7,stroke:#555,stroke-width:1px;
+  classDef service fill:#e8f2ff,stroke:#2f5d8a,stroke-width:1px;
+  classDef manual fill:#fff4cc,stroke:#7a5a00,stroke-width:1.5px;
+
+  class GL,PG,JK,NX,SQ,DT,SC service;
+  class MD manual;
